@@ -1,0 +1,16 @@
+footer {
+  padding-top: 2em;
+  
+  nav, body > footer > p:first-child { 
+    display: block; 
+    height: 4em; 
+    line-height: 4em; 
+    padding: 0em;
+    margin: 0em;
+  }
+  
+  nav { float:right; }
+  a { padding: 2em 2em; color: #333 !important; }
+}
+
+
