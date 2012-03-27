@@ -132,8 +132,21 @@ header#header {
           color:#fff;
         }
 
-        a:focus, a.active, &:hover > a {
+        a:focus, a.selected, &:hover > a {
           box-shadow: inset 0px -4em 3em -2em  rgba(0,0,0,0.4);
+        }
+
+        a.selected:after {
+          content:"";
+          display:block;
+          position:absolute;
+          top:2.5em;
+          left:50%;
+          margin-left:-1em;;
+          border-width:0em 1em 1em 1em;
+          border-style:none solid solid solid;
+          border-color:transparent transparent white transparent;
+          z-index:9;
         }
 
         a {
@@ -159,10 +172,17 @@ header#header {
           background-color:#2e4e66;
           box-shadow: inset 0px -3.5em 2em -2em #1B2D3E;
                 
-          &.active {
+          &.selected {
             color:#fff;
             background-color:#42759d;
             position: relative;
+          }
+
+          &:hover {
+            /*box-shadow*/
+            -webkit-box-shadow: 0em 0em 1em rgba(0,0,0,0.32);
+            -moz-box-shadow: 0em 0em 1em rgba(0,0,0,0.32);
+            box-shadow: 0em 0em 1em rgba(0,0,0,0.32); cursor:pointer;
 
             &:after {
               z-index:9;
@@ -178,13 +198,6 @@ header#header {
               border-style:none solid solid  solid;
               border-color:transparent transparent #fff transparent;
             }
-          }
-
-          &:hover {
-            /*box-shadow*/
-            -webkit-box-shadow: 0em 0em 1em rgba(0,0,0,0.32);
-            -moz-box-shadow: 0em 0em 1em rgba(0,0,0,0.32);
-            box-shadow: 0em 0em 1em rgba(0,0,0,0.32); cursor:pointer;
           }
         }
       }
