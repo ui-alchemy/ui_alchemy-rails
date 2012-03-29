@@ -19,7 +19,7 @@ Summary:       A collection of assets
 Group:         Applications/System
 License:       GPLv2
 URL:           http://www.katello.org
-Version:       0.1
+Version:       0.2
 Release:       1%{?dist}
 Source0:       %{name}-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -54,5 +54,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc README LICENSE
 
 %changelog
+* Thu Mar 29 2012 Eric D Helms <ehelms@redhat.com> 0.2-1
+- new package built with tito
+
 * Wed Mar 28 2012 Eric D Helms <ehelms@redhat.com> 0.1-1
 - Changes to spec file. (ehelms@redhat.com)
