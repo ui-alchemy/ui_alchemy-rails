@@ -7,6 +7,14 @@ header#header {
   border-top: .4em solid #0e2231;
   box-shadow: inset 0em -0.1em #264463, inset  0px -2em 5em #152531;
  
+  * {
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+  }
+
   article {
     line-height: 2em;
     position: relative;
@@ -86,7 +94,7 @@ header#header {
     display: table; 
     font-weight:normal; 
     border:.2em solid #152531; border-bottom: none transparent 0px;
-    margin-top:2.25em;
+    margin-top:2.92em;
     border-radius: .25em .25em 0em 0em; white-space:nowrap;
     
     ul {

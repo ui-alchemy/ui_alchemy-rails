@@ -63,11 +63,3 @@ section:before, section:after, article:before, article:after {
 article:after, section:after {
   clear:both;
 }
-
-* {
-  -moz-box-sizing: border-box !important;
-  -webkit-box-sizing: border-box !important;
-  box-sizing: border-box !important;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
