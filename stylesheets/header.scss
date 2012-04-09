@@ -16,16 +16,6 @@ header#header {
   border-bottom: 4px solid $header_border_bottom-color;
   position: relative;
  
-  &:after {
-    content: ""; 
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    bottom: 0px;
-    border-top: 1px solid rgba(11, 15, 16, .55);
-    border-bottom: 1px solid rgba(205, 206, 208, .40);
-  }
-
   h1 {
     a {
       position: absolute;
@@ -37,7 +27,7 @@ header#header {
 
   #appnav {
     border: 1px solid rgba(11, 15, 16, .55);
-    border-bottom: none transparent 0px;
+    border-bottom: none;
     border-radius: 3px 3px 0 0; 
     white-space: nowrap;
     position: absolute;
@@ -45,6 +35,20 @@ header#header {
     left: 218px;
     margin-right: 138px;
     z-index: 2;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -21px;
+      border-radius: 0 0 3px 0;
+      width: 218px;
+      height: 1px;
+      z-index: 4;
+      border-bottom: 1px solid rgba(205, 206, 208, .40);
+      border-right: 1px solid rgba(11, 15, 16, .55);
+      background: rgba(11, 15, 16, .55);
+    }
     
     ul {
       position: relative;
@@ -107,7 +111,9 @@ header#header {
         }
 
         &:last-child > a {
-          //border-radius: 0 3px 0 0;
+          -webkit-border-radius: 0 3px 0 0;
+          -moz-border-radius: 0 3px 0 0;
+          border-radius: 0 3px 0 0;
           border-right: none;
         }
       }
