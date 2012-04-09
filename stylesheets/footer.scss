@@ -1,16 +1,39 @@
 footer {
-  padding-top: 2em;
-  
-  nav, body > footer > p:first-child { 
-    display: block; 
-    height: 4em; 
-    line-height: 4em; 
-    padding: 0em;
-    margin: 0em;
+  min-height: 45px;
+  background: #EBEBEB;
+  position: relative;
+ 
+  span {
+    height: 24px;
+    width: 74px;
+    position: relative;
+    left: 30px;
+    bottom: 16px;
   }
-  
-  nav { float:right; }
-  a { padding: 2em 2em; color: #333 !important; }
+ 
+  p.copyright {
+    margin: 0 auto;
+    width: 180px;
+  }
+
+  ul {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 16px;
+
+    li {
+      margin-right: 20px;
+      float: left;
+
+      a {
+        font-size: 11px;
+        color: #50505a;
+      }
+    }
+    
+    &:last-child {
+      margin-right: 30px;
+    }
+  }
 }
-
-

@@ -1,4 +1,6 @@
-body { background-color: #FFF; }
+body { 
+  background-color: #FFF; 
+}
 body, html {
   height:100%;
   font-family: sans-serif;
@@ -22,7 +24,7 @@ a:link,body a:visited{color:#36c;}
 body a:hover,body a:focus,body a:active{color:#000;}
 
 
-#maincontent, body > footer, header > article {max-width:85em;margin:0 auto;}
+#maincontent > section, header > article {max-width:85em;margin:0 auto;}
 
 
 section{color:#777;}
@@ -34,8 +36,9 @@ table th{text-align:left;font-weight:700;border-bottom:.1em solid #ccc;}
 .boxshadow {padding:1em 2em;box-shadow:0px 0px 1em rgba(0,0,0,0.20);border-style:none; border-radius: 0em 0em .5em .5em;}
 
 #maincontent {
-  margin: 0 auto;
   background-color: #fff;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
 
   blockquote.important a{color:#fff;}
   h1, h2, h3 { font-size: 1em; font-weight: normal; color:#333;}
@@ -43,6 +46,7 @@ table th{text-align:left;font-weight:700;border-bottom:.1em solid #ccc;}
 
   section {
     min-height:20em;
+    margin: 0 auto;
   
     h1 { 
       color:transparent;

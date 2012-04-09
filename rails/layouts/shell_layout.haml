@@ -15,6 +15,20 @@
       %section
         = yield :content
     %footer
+      %span
+        #{_("redhat")}
+      %p.copyright
+        #{_("Copyright &copy; ") + (Time.now).year.to_s + _(" Red Hat, Inc.") }
+      %ul
+        %li
+          %a{ "href" => "#" }
+            #{_("Disclaimer")}
+        %li
+          %a{ "href" => "#" }
+            #{_("Terms of Use")}
+        %li
+          %a{ "href" => "#" }
+            #{_("Support")}
       = yield :footer
     
     = yield :javascript
