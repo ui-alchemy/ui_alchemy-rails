@@ -1,6 +1,7 @@
 $header-height: 85px !default;
 $header_border_top-color: #01536d !default;
 $header_border_bottom-color: #D9D9D9 !default;
+$tab_background-color: rgba(25, 25, 30, .40);
 
 header#header {
   background: #009dcc; /* Old browsers */
@@ -74,7 +75,7 @@ header#header {
           color: #f1f1f1;
           padding: 0 13px;
           font-size: 13px;
-          background-color: rgba(25, 25, 30, .40);
+          background-color: $tab_background-color;
           height: 28px;
           line-height: 28px;
           border-right: 3px solid rgba(205, 206, 208, .40);
@@ -120,61 +121,24 @@ header#header {
     }
   }
 
-  article {
-    line-height: 2em;
-    position: relative;
-    padding: 0em;
- 
+  #widget-container {
+    position: absolute;
+    top: 22px;
+    right: 30px;
+  }
 
-    section {
-      text-align:right;  
-      position:absolute; 
-      top: -1.75em; 
-      right:0em; 
-      margin:0 auto; 
-      display:block;
-    
-      .header-widget { 
-        border: .1em solid rgba(255,255,255,0.2);  
-        color: #ccc !important; 
-        border-radius: 0em 0em .5em .5em;
-        color: #fff; 
-        text-decoration: none; 
-        background-color:#2e4e66; 
-        box-shadow: inset 0px 1.5em 1em -1em  rgba(222,222,255,0.1);
-        display: inline-block; 
-        padding:.1em 1em; 
-        position:relative;
-        margin: 1.25em .1em;
-
-        &:first-child, &:last-child { padding-right:2em; }
-        &:nth-child(2) { padding-left: 3em;   }
-        &:nth-child(2):after { 
-          content:"!"; 
-          color:#2e4e66;  
-          text-align:center; 
-          background-color: #ccc !important; 
-          width:1em; height: 1em; 
-          border-radius:50%; 
-          position: absolute; top:.25em; left: .5em;  
-          line-height:1em; 
-          font-size:1.5em; 
-          display:block; 
-          background-color:transparent;
-          z-index:2;
-        }
-        &:first-child:after, &:last-child:after { 
-          content:""; 
-          display:block; 
-          height:0px; width: 0px; 
-          position: absolute; 
-          top: .75em; right: .5em; 
-          border-style: solid solid none solid; 
-          border-width: .5em .5em 0em .5em; 
-          border-color:#ccc transparent transparent;
-        }
-      }
-    }
+  .header-widget {
+    background-color: $tab_background-color;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, .50);
+    font-size: 11px;
+    color: #FFF;
+    text-align: center;
+    margin-right: 8px;
+    padding: 1px 6px;
+    text-decoration: none;
   }
 }
 
