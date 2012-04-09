@@ -4,16 +4,16 @@ footer {
   position: relative;
  
   span {
-    height: 24px;
     width: 74px;
-    position: relative;
+    position: absolute;
     left: 30px;
     bottom: 16px;
   }
  
   p.copyright {
-    margin: 0 auto;
-    width: 180px;
+    position: relative;
+    bottom: -16px;
+    text-align: center;
   }
 
   ul {
