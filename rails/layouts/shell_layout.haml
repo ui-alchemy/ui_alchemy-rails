@@ -10,9 +10,8 @@
 
   %body
     %header#header
-      %article
-        = render :partial => "layouts/converge-ui/header_layout"
-    %article#content.boxshadow
+      = render :partial => "layouts/converge-ui/header_layout"
+    %article#maincontent
       %section
         = yield :content
     %footer
