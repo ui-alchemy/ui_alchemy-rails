@@ -1,5 +1,6 @@
 = content_for(:logo) do
-  = image_tag("logo.png", :alt => _('Example Logo'))
+  %a{ :href => "#" }
+    = image_tag("logo.png", :alt => _('Example Logo'))
 
 = content_for(:tabs) do
   %ul
