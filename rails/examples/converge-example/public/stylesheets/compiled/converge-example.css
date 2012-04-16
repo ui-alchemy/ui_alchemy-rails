@@ -1,0 +1,482 @@
+/* line 1, ../../../app/stylesheets/converge-ui/shell.scss */
+body {
+  background-color: #FFF;
+}
+
+/* line 4, ../../../app/stylesheets/converge-ui/shell.scss */
+body, html {
+  height: 100%;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: "overpass";
+}
+
+/* line 12, ../../../app/stylesheets/converge-ui/shell.scss */
+html {
+  /*forcing scrl*/
+  height: 100%;
+  margin-bottom: 1px !important;
+  overflow-y: scroll;
+}
+
+/* line 19, ../../../app/stylesheets/converge-ui/shell.scss */
+a:hover, a:focus, a:active {
+  color: #fa0;
+}
+
+/* line 20, ../../../app/stylesheets/converge-ui/shell.scss */
+a:focus {
+  outline: none!important;
+}
+
+/* some browsers don't respect outline none without important*/
+/* line 23, ../../../app/stylesheets/converge-ui/shell.scss */
+a:link, body a:visited {
+  color: #36c;
+}
+
+/* line 24, ../../../app/stylesheets/converge-ui/shell.scss */
+body a:hover, body a:focus, body a:active {
+  color: #000;
+}
+
+/* line 27, ../../../app/stylesheets/converge-ui/shell.scss */
+#maincontent > section, header > article {
+  max-width: 85em;
+  margin: 0 auto;
+}
+
+/* line 30, ../../../app/stylesheets/converge-ui/shell.scss */
+section {
+  color: #777;
+}
+
+/* line 31, ../../../app/stylesheets/converge-ui/shell.scss */
+table {
+  overflow: hidden;
+}
+
+/* line 32, ../../../app/stylesheets/converge-ui/shell.scss */
+table {
+  width: 100%;
+  line-height: 2em;
+}
+
+/* line 33, ../../../app/stylesheets/converge-ui/shell.scss */
+table th {
+  text-align: left;
+  font-weight: 700;
+  border-bottom: .1em solid #ccc;
+}
+
+/*dont worry i'll replace this stuff with something generic*/
+/* line 34, ../../../app/stylesheets/converge-ui/shell.scss */
+blockquote.important {
+  color: #fff!important;
+  background-color: #900!important;
+  border-color: #900!important;
+}
+
+/* line 36, ../../../app/stylesheets/converge-ui/shell.scss */
+.boxshadow {
+  padding: 1em 2em;
+  box-shadow: 0px 0px 1em rgba(0, 0, 0, 0.2);
+  border-style: none;
+  border-radius: 0em 0em .5em .5em;
+}
+
+/* line 38, ../../../app/stylesheets/converge-ui/shell.scss */
+#maincontent {
+  background-color: #fff;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+}
+/* line 43, ../../../app/stylesheets/converge-ui/shell.scss */
+#maincontent blockquote.important a {
+  color: #fff;
+}
+/* line 44, ../../../app/stylesheets/converge-ui/shell.scss */
+#maincontent h1, #maincontent h2, #maincontent h3 {
+  font-size: 1em;
+  font-weight: normal;
+  color: #333;
+}
+/* line 45, ../../../app/stylesheets/converge-ui/shell.scss */
+#maincontent h1 {
+  font-size: 2em;
+}
+/* line 47, ../../../app/stylesheets/converge-ui/shell.scss */
+#maincontent section {
+  min-height: 20em;
+  margin: 0 auto;
+}
+/* line 51, ../../../app/stylesheets/converge-ui/shell.scss */
+#maincontent section h1 {
+  color: transparent;
+  padding-top: 3em;
+  color: #ddd;
+  text-align: center;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+/* microclearfix on all areas */
+/* line 63, ../../../app/stylesheets/converge-ui/shell.scss */
+section:before, section:after, article:before, article:after {
+  content: "";
+  display: table;
+}
+
+/* line 68, ../../../app/stylesheets/converge-ui/shell.scss */
+article:after, section:after {
+  clear: both;
+}
+
+/* line 6, ../../../app/stylesheets/converge-ui/header.scss */
+header#header {
+  background: #009dcc;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #009dcc 0%, #009dcc 50%, #006f8f 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #009dcc), color-stop(50%, #009dcc), color-stop(100%, #006f8f));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #009dcc 0%, #009dcc 50%, #006f8f 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #009dcc 0%, #009dcc 50%, #006f8f 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #009dcc 0%, #009dcc 50%, #006f8f 100%);
+  /* IE10+ */
+  background: linear-gradient(top, #009dcc 0%, #009dcc 50%, #006f8f 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#009dcc', endColorstr='#006f8f',GradientType=0 );
+  /* IE6-9 */
+  height: 77px;
+  border-top: 4px solid #01536d;
+  border-bottom: 4px solid #d9d9d9;
+  position: relative;
+}
+/* line 21, ../../../app/stylesheets/converge-ui/header.scss */
+header#header h1 a {
+  position: absolute;
+  bottom: 25px;
+  left: 15px;
+  display: inline-block;
+}
+/* line 29, ../../../app/stylesheets/converge-ui/header.scss */
+header#header #appnav {
+  border: 1px solid rgba(11, 15, 16, 0.55);
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0px;
+  left: 218px;
+  margin-right: 138px;
+  z-index: 2;
+}
+/* line 40, ../../../app/stylesheets/converge-ui/header.scss */
+header#header #appnav:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -219px;
+  border-radius: 0 0 3px 0;
+  width: 218px;
+  height: 1px;
+  z-index: 4;
+  border-bottom: 1px solid rgba(205, 206, 208, 0.4);
+  border-right: 1px solid rgba(11, 15, 16, 0.55);
+  background: rgba(11, 15, 16, 0.55);
+}
+/* line 54, ../../../app/stylesheets/converge-ui/header.scss */
+header#header #appnav ul {
+  position: relative;
+  overflow: auto;
+  border-radius: 3px 3px 0 0;
+  border: 1px solid rgba(205, 206, 208, 0.4);
+  border-bottom: none;
+}
+/* line 61, ../../../app/stylesheets/converge-ui/header.scss */
+header#header #appnav ul li {
+  display: block;
+  float: left;
+  position: relative;
+}
+/* line 66, ../../../app/stylesheets/converge-ui/header.scss */
+header#header #appnav ul li a {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  font-weight: bold;
+  color: #f1f1f1;
+  padding: 0 13px;
+  font-size: 13px;
+  background-color: rgba(25, 25, 30, 0.4);
+  height: 28px;
+  line-height: 28px;
+  border-right: 3px solid rgba(205, 206, 208, 0.4);
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+}
+/* line 86, ../../../app/stylesheets/converge-ui/header.scss */
+header#header #appnav ul li a.selected {
+  color: #50505a;
+  position: relative;
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, white 0%, #ebebeb 50%, #d9d9d9 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(50%, #ebebeb), color-stop(100%, #d9d9d9));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, white 0%, #ebebeb 50%, #d9d9d9 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, white 0%, #ebebeb 50%, #d9d9d9 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, white 0%, #ebebeb 50%, #d9d9d9 100%);
+  /* IE10+ */
+  background: linear-gradient(top, #ffffff 0%, #ebebeb 50%, #d9d9d9 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#d9d9d9',GradientType=0 );
+  /* IE6-9 */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+}
+/* line 102, ../../../app/stylesheets/converge-ui/header.scss */
+header#header #appnav ul li a:hover {
+  background: rgba(25, 25, 30, 0.15);
+  color: #f1f1f1;
+}
+/* line 108, ../../../app/stylesheets/converge-ui/header.scss */
+header#header #appnav ul li:first-child > a {
+  -webkit-border-radius: 3px 0 0 0;
+  -moz-border-radius: 3px 0 0 0;
+  border-radius: 3px 0 0 0;
+}
+/* line 114, ../../../app/stylesheets/converge-ui/header.scss */
+header#header #appnav ul li:last-child > a {
+  -webkit-border-radius: 0 3px 0 0;
+  -moz-border-radius: 0 3px 0 0;
+  border-radius: 0 3px 0 0;
+  border-right: none;
+}
+/* line 124, ../../../app/stylesheets/converge-ui/header.scss */
+header#header #widget-container {
+  position: absolute;
+  top: 22px;
+  right: 30px;
+}
+/* line 130, ../../../app/stylesheets/converge-ui/header.scss */
+header#header .header-widget {
+  background-color: rgba(25, 25, 30, 0.4);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  font-size: 11px;
+  color: #FFF;
+  text-align: center;
+  margin-right: 8px;
+  padding: 1px 6px;
+  text-decoration: none;
+}
+
+/* line 146, ../../../app/stylesheets/converge-ui/header.scss */
+#notifications {
+  position: absolute;
+  right: 0em;
+  min-width: 20em;
+  max-width: 30em;
+  line-height: 1.5em;
+}
+/* line 153, ../../../app/stylesheets/converge-ui/header.scss */
+#notifications section {
+  /*border-radius*/
+  -webkit-border-radius: .5em;
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  margin: 0em;
+  right: 0;
+  display: block !important;
+  margin-top: 1em;
+  padding: 1em;
+  top: 0em;
+  background-color: #555;
+  color: #ddd;
+  text-shadow: none;
+  text-indent: 0em;
+  /*box-shadow*/
+  -webkit-box-shadow: 0px 0em 0em 0.1em white, 0px 0.2em 0.5em rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0em 0em 0.1em white, 0px 0.2em 0.5em rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0em 0em 0.1em white, 0px 0.2em 0.5em rgba(0, 0, 0, 0.1);
+}
+/* line 176, ../../../app/stylesheets/converge-ui/header.scss */
+#notifications section:before {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 0;
+  width: 0;
+  border-width: 0em .75em .75em .75em;
+  border-style: none solid solid solid;
+  top: -0.79em;
+  right: 6.75em;
+  border-color: transparent transparent #fff transparent;
+}
+/* line 189, ../../../app/stylesheets/converge-ui/header.scss */
+#notifications section:after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 0;
+  width: 0;
+  border-width: 0em .75em .75em .75em;
+  border-style: none solid solid solid;
+  top: -0.7em;
+  right: 6.75em;
+  border-color: transparent transparent #555 transparent;
+}
+/* line 202, ../../../app/stylesheets/converge-ui/header.scss */
+#notifications section a {
+  color: #fff;
+}
+/* line 204, ../../../app/stylesheets/converge-ui/header.scss */
+#notifications section .alert {
+  background-color: #a00;
+  color: #fff;
+  text-shadow: 0 -1px #990000;
+  /*box-shadow*/
+  -webkit-box-shadow: 0px 0em 0em 0.1em white, 0px 0.2em 0.5em 0.2em rgba(255, 0, 0, 0.21);
+  -moz-box-shadow: 0px 0em 0em 0.1em white, 0px 0.2em 0.5em 0.2em rgba(255, 0, 0, 0.21);
+  box-shadow: 0px 0em 0em 0.1em white, 0px 0.2em 0.5em 0.2em rgba(255, 0, 0, 0.21);
+}
+/* line 213, ../../../app/stylesheets/converge-ui/header.scss */
+#notifications section .alert:after {
+  border-color: transparent transparent #a00 transparent;
+}
+
+/* line 1, ../../../app/stylesheets/converge-ui/footer.scss */
+footer {
+  min-height: 45px;
+  background: #EBEBEB;
+  position: relative;
+}
+/* line 6, ../../../app/stylesheets/converge-ui/footer.scss */
+footer span {
+  width: 74px;
+  position: absolute;
+  left: 30px;
+  bottom: 16px;
+}
+/* line 13, ../../../app/stylesheets/converge-ui/footer.scss */
+footer p.copyright {
+  position: relative;
+  bottom: -16px;
+  text-align: center;
+}
+/* line 19, ../../../app/stylesheets/converge-ui/footer.scss */
+footer ul {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 16px;
+}
+/* line 25, ../../../app/stylesheets/converge-ui/footer.scss */
+footer ul li {
+  margin-right: 20px;
+  float: left;
+}
+/* line 29, ../../../app/stylesheets/converge-ui/footer.scss */
+footer ul li a {
+  font-size: 11px;
+  color: #50505a;
+}
+/* line 35, ../../../app/stylesheets/converge-ui/footer.scss */
+footer ul:last-child {
+  margin-right: 30px;
+}
+
+@media only screen and (max-width: 52em) {
+  /* line 4, ../../../app/stylesheets/converge-ui/media.scss */
+  header {
+    height: 8em;
+  }
+  /* line 7, ../../../app/stylesheets/converge-ui/media.scss */
+  header h1 {
+    text-indent: 1em;
+  }
+  /* line 8, ../../../app/stylesheets/converge-ui/media.scss */
+  header article {
+    padding-left: 0em;
+  }
+  /* line 11, ../../../app/stylesheets/converge-ui/media.scss */
+  header article section:last-child {
+    padding-right: 0.25em;
+  }
+  /* line 14, ../../../app/stylesheets/converge-ui/media.scss */
+  header article section:last-child a {
+    margin-right: 0em;
+  }
+  /* line 17, ../../../app/stylesheets/converge-ui/media.scss */
+  header #appnav {
+    margin-top: 4em;
+    width: 100%;
+  }
+  /* line 22, ../../../app/stylesheets/converge-ui/media.scss */
+  header #appnav ul li {
+    width: 20%;
+    padding: 0em;
+  }
+  /* line 26, ../../../app/stylesheets/converge-ui/media.scss */
+  header #appnav ul li:nth-child(1) {
+    width: 16%;
+  }
+  /* line 27, ../../../app/stylesheets/converge-ui/media.scss */
+  header #appnav ul li:nth-child(2) {
+    width: 29%;
+  }
+  /* line 28, ../../../app/stylesheets/converge-ui/media.scss */
+  header #appnav ul li:nth-child(3) {
+    width: 15%;
+  }
+  /* line 29, ../../../app/stylesheets/converge-ui/media.scss */
+  header #appnav ul li:nth-child(4) {
+    width: 20%;
+  }
+  /* line 30, ../../../app/stylesheets/converge-ui/media.scss */
+  header #appnav ul li:nth-child(5) {
+    width: 20%;
+  }
+  /* line 31, ../../../app/stylesheets/converge-ui/media.scss */
+  header #appnav ul li:last-child ul {
+    margin-left: -6.5em !important;
+  }
+  /* line 32, ../../../app/stylesheets/converge-ui/media.scss */
+  header #appnav ul li a {
+    padding-left: .5em;
+    padding-right: .5em;
+  }
+}
+@media only screen and (max-width: 49em) {
+  /* line 41, ../../../app/stylesheets/converge-ui/media.scss */
+  body > header h1 {
+    text-indent: 0em;
+  }
+}
+@media only screen and (max-width: 44em) {
+  /* line 44, ../../../app/stylesheets/converge-ui/media.scss */
+  header nav#appnav {
+    min-width: 38em !important;
+    white-space: nowrap;
+  }
+}
