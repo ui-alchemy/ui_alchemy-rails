@@ -1,0 +1,3 @@
+class ConvergeShellController < ApplicationController
+
+end

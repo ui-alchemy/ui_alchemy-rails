@@ -1,4 +1,9 @@
 ConvergeExample::Application.routes.draw do
+
+  root :to => 'converge_shell#index'
+
+  resources :converge_shell, :only => :index
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
