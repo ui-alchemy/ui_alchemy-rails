@@ -1,4 +1,6 @@
 = content_for(:stylesheets) do
   = stylesheet_link_tag "compiled/converge-example"
 
+= render :partial => "common/header"
+
 = render :file => 'layouts/converge-ui/shell_layout'

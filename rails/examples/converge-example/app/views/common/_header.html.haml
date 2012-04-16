@@ -1,0 +1,20 @@
+= content_for(:logo) do
+  = image_tag("logo.png", :alt => _('Example Logo'))
+
+= content_for(:tabs) do
+  %ul
+    %li
+      %a{ :href => "#", :class => 'selected' }
+        First Tab
+    %li
+      %a{ :href => "#" }
+        Second Tab
+    %li
+      %a{ :href => "#" }
+        Third Tab
+    %li
+      %a{ :href => "#" }
+        Fourth Tab
+    %li
+      %a{ :href => "#" }
+        Fifth Tab
