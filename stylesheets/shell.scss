@@ -1,7 +1,6 @@
 @import "compass";
 @import "mixins";
 @import "colors";
-@import "text";
 
 
 body {
@@ -9,7 +8,7 @@ body {
 }
 body, html {
   height:100%;
-  font-family: $screenfont;
+  //font-family: $screenfont;
   font-size: 12px;
   font-size-adjust: none;
   font-stretch: normal;
