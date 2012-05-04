@@ -9,13 +9,14 @@
     = yield :head
 
   %body
-    %header#header
-      = render :partial => "layouts/converge-ui/header_layout"
-    %article#maincontent
-      %section.maincontent
-        = yield :content
+    #wrapper
+      %header#header
+        = render :partial => "layouts/converge-ui/header_layout"
+      %article#maincontent
+        %section.maincontent
+          = yield :content
     %footer
       = yield :footer
-    
+
     = yield :javascript
     = yield :extra
