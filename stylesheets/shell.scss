@@ -2,10 +2,21 @@
 @import "mixins";
 @import "colors";
 
+$stickyfooterheight: 120;
+
+* {margin:0;padding:0;}
 
 body {
   background-color: $background_color;
+  &:before {
+    content:"";
+    height:100%;
+    float:left;
+    width:0;
+    margin-top:-32767px;
+  }
 }
+
 body, html {
   height:100%;
   //font-family: $screenfont;
@@ -17,15 +28,18 @@ body, html {
   font-weight: normal;
   line-height: 1.5;
 }
+
 html { 
   /*forcing scrl*/
   height:100%;  
   margin-bottom: 1px !important;   
   overflow-y: scroll;
 }
+#wrapper {min-height: 100%;}
 #maincontent {
   border-bottom: 1px solid #f2f2f2;
-  blockquote.important a{color:$white_color;}
+  overflow: auto;
+  padding-bottom: $stickyfooterheight + px;
   section.maincontent{
       background-color: $white_color;
       min-height:20em;
@@ -51,5 +65,12 @@ section:before, section:after, article:before, article:after {
 }
 
 article:after, section:after {
+  clear:both;
+}
+
+footer {
+  position: relative;
+  margin-top: 0 - $stickyfooterheight + px; /* negative value of footer height */
+  height: $stickyfooterheight + px;
   clear:both;
 }
