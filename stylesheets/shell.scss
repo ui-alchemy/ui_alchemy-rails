@@ -37,7 +37,6 @@ html {
 }
 #wrapper {min-height: 100%;}
 #maincontent {
-  border-bottom: 1px solid #f2f2f2;
   overflow: auto;
   padding-bottom: $stickyfooterheight + px;
   section.maincontent{
@@ -73,4 +72,5 @@ footer {
   margin-top: 0 - $stickyfooterheight + px; /* negative value of footer height */
   height: $stickyfooterheight + px;
   clear:both;
+  border-top: 1px solid #f2f2f2;
 }
