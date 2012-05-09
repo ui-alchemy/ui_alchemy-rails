@@ -1,7 +1,8 @@
-%h1
-  = yield :logo
-%nav#appnav
-  = yield :tabs
-#widget-container
-  = yield :widgets
-= yield :extra_header
+.centered
+  %h1
+    = yield :logo
+  %nav#appnav
+    = yield :tabs
+  #widget-container
+    = yield :widgets
+  = yield :extra_header
