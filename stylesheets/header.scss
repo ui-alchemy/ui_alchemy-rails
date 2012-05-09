@@ -32,19 +32,6 @@ header#header {
       display: inline-block;    
     }
   }
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: -219px;
-    border-radius: 0 0 3px 0;
-    width: 218px;
-    height: 1px;
-    z-index: 4;
-    border-bottom: 1px solid rgba(205, 206, 208, .40);
-    border-right: 1px solid rgba(11, 15, 16, .55);
-    background: rgba(11, 15, 16, .55);
-  }
   #appnav {
     border: 1px solid rgba(11, 15, 16, .55);
     border-bottom: none;
