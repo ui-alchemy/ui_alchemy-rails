@@ -1,0 +1,51 @@
+$spritePath: url("../../images/converge-ui/icons/action-icons.png");
+
+[class$="_icon-grey"],
+[class$="_icon-black"],
+[class*="_icon"] {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  vertical-align: text-top;
+  background-image: $spritePath;
+  background-position: 16px 16px;
+  background-repeat: no-repeat;
+}
+
+//Icons
+.search_icon-white        { background-position: 0 0; }
+.edit_icon-black          { background-position: -16px -16px; }
+.x_icon-grey              { background-position: -32px 0px; }
+.x_icon-black             { background-position: -32px -16px; }
+.add_icon-black           { background-position: -48px -16px; }
+.gears_icon-black         { background-position: -64px -16px; }
+.gears_icon-grey          { background-position: -64px 0px; }
+.lock_icon-grey           { background-position: -96px 0px; }
+.lock_icon-black          { background-position: -96px -16px; }
+.circle-x_icon-black      { background-position: -160px -16px; }
+.circle-x_icon-grey       { background-position: -160px 0px; }
+.play_icon-black          { background-position: -176px -16px; }
+.play_icon-grey           { background-position: -176px 0; }
+.details_icon-grey        { background-position: -256px 0px; }
+.details_icon-black       { background-position: -256px -16px; }
+.comp_icon-black          { background-position: -320px -16px; }
+.help-tip_icon-grey       { background-position: -336px 0px; }
+.help-tip_icon-black      { background-position: -336px -16px; }
+.warning_icon-triangle    { background-position: -384px -16px; }
+.error_icon-black         { background-position: -384px -16px; }
+.plus_icon-black          { background-position: -400px -16px; }
+.bug_icon-black           { background-position: -416px -16px; }
+.shield_icon-black        { background-position: -432px -16px; }
+.check_icon-black         { background-position: -448px -16px; }
+.clock_icon-black         { background-position: -464px -16px; }
+.gear_icon                { background-position: -480px 0px; }
+.gear_icon-dark           { background-position: -480px -16px; }
+.download_icon-black      { background-position: -513px 0px; }
+.download_icon-grey       { background-position: -513px -16px; }
+.package_icon-grey        { background-position: -560px 0px; }
+.package_icon-black       { background-position: -560px -16px; }
+.erratum_icon-grey        { background-position: -576px 0px; }
+.erratum_icon-black       { background-position: -576px -16px; }
+.system_group_icon-grey   { background-position: -590px 0px; }
+.system_group_icon-black  { background-position: -590px -16px; }
