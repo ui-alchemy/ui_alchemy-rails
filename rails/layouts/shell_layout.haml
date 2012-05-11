@@ -8,15 +8,18 @@
     = yield :stylesheets
     = yield :head
 
-  %body
-    #wrapper
-      %header#header
-        = render :partial => "layouts/converge-ui/header_layout"
-      %article#maincontent
-        %section.maincontent
-          = yield :content
-    %footer
-      = yield :footer
+  - if content_for?(:body_tag)
+    = yield :body_tag
+  - else
+    %body
+  #wrapper
+    %header#header
+      = render :partial => "layouts/converge-ui/header_layout"
+    %article#maincontent
+      %section.maincontent
+        = yield :content
+  %footer
+    = yield :footer
 
-    = yield :javascript
-    = yield :extra
+  = yield :javascript
+  = yield :extra
