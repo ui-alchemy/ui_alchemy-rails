@@ -23,15 +23,15 @@
               %fieldset.primary
                 = label_tag :password, "Password"
                 = password_field_tag :password, params[:password], :class => 'password', :id => 'password-input'
-              %fieldset.reveal_pass.left
+              %fieldset.reveal_pass.fl
                 %input{:type => 'checkbox', :id => 'reveal'}
                 %label{:for => 'reveal'}
                   = yield :show_password
-              %div.right
+              %div.fr
                 = yield :forgot_password_link
               %div.group.bottom
-                %a.left.help-tip_icon-grey#info-btn{:href => '#'}
-                %a.left.lock_icon-grey#security-btn{:href => '#'}
+                %a.fl.help-tip_icon-grey#info-btn{:href => '#'}
+                %a.fl.lock_icon-grey#security-btn{:href => '#'}
               %div.group.bottom.submit
                 = submit_tag "Login", :class => "button", :id => 'login-btn'
     = yield :javascript
