@@ -1,10 +1,10 @@
 module ConvergeUi::RailsTranslations
   @@translations = {
-    :show_password            => t("Show Password"),
-    :example_logo             => t("Logo"),
-    :forgot_username_password => t("Forgot username or password?"),
-    :username                 => t("Username"),
-    :password                 => t("Password"),
-    :login                    => t("Login")
+    :show_password            => t("user_sessions.new.show_password"),
+    :example_logo             => t("logo"),
+    :forgot_username_password => t("user_sessions.new.forgot_username_password"),
+    :username                 => t("user_sessions.new.username"),
+    :password                 => t("user_sessions.new.password"),
+    :login                    => t("user_sessions.new.login")
   }
 end
