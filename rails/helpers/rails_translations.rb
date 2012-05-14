@@ -1,4 +1,4 @@
-module ConvergeUi::GettextTranslations
+module ConvergeUi::RailsTranslations
   @@translations = {
     :show_password            => t("Show Password"),
     :example_logo             => t("Logo"),
