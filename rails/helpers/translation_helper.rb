@@ -7,7 +7,7 @@ module ConvergeUi::TranslationHelper
   end
 
   def get_string(text_key)
-    return @@translations[text_key]
+    return TRANSLATIONS[text_key]
   end
 
 end
