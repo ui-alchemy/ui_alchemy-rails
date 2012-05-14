@@ -1,38 +1,28 @@
-!!!
-%html
-  %head
-    %meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
-    = favicon_link_tag 'favicon.png'
-    %title
-      = yield :title
-    = yield :stylesheets
-    = yield :head
+= content_for(:body) do
+  %article#login
+    %div.container
+      %aside
+      %section
+        .content
+          %h1
+            = yield :project_name
+          = form_tag user_session_path, :id => 'new_user_session' do
+            %fieldset.primary
+              = label_tag :username, get_string(:username)
+              = text_field_tag :username, params[:username], :class => 'username', :id => "username"
+            %fieldset.primary
+              = label_tag :password, get_string(:password)
+              = password_field_tag :password, params[:password], :class => 'password', :id => 'password-input'
+            %fieldset.reveal_pass.fl
+              %input{:type => 'checkbox', :id => 'reveal'}
+              %label{:for => 'reveal'}
+                = yield :show_password
+            %div.fr
+              = yield :forgot_password_link
+            %div.group.bottom
+              %a.fl.help-tip_icon-grey#info-btn{:href => '#'}
+              %a.fl.lock_icon-grey#security-btn{:href => '#'}
+            %div.group.bottom.submit
+              = submit_tag get_string(:login), :class => "button", :id => 'login-btn'
 
-  %body
-    %article#login
-      %div.container
-        %aside
-        %section
-          .content
-            %h1
-              = yield :project_name
-            = form_tag user_session_path, :id => 'new_user_session' do
-              %fieldset.primary
-                = label_tag :username, "Username"
-                = text_field_tag :username, params[:username], :class => 'username', :id => "username"
-              %fieldset.primary
-                = label_tag :password, "Password"
-                = password_field_tag :password, params[:password], :class => 'password', :id => 'password-input'
-              %fieldset.reveal_pass.fl
-                %input{:type => 'checkbox', :id => 'reveal'}
-                %label{:for => 'reveal'}
-                  = yield :show_password
-              %div.fr
-                = yield :forgot_password_link
-              %div.group.bottom
-                %a.fl.help-tip_icon-grey#info-btn{:href => '#'}
-                %a.fl.lock_icon-grey#security-btn{:href => '#'}
-              %div.group.bottom.submit
-                = submit_tag "Login", :class => "button", :id => 'login-btn'
-    = yield :javascript
-    = yield :extra
+= render :file => "layouts/converge-ui/base"
