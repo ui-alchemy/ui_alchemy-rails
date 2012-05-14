@@ -11,14 +11,7 @@ $tab_background-color: rgba(25, 25, 30, .40);
 }
 
 header#header {
-  background: #009dcc; /* Old browsers */
-  background: -moz-linear-gradient(top,  #009dcc 0%, #009dcc 50%, #006f8f 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009dcc), color-stop(50%,#009dcc), color-stop(100%,#006f8f)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #009dcc 0%,#009dcc 50%,#006f8f 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #009dcc 0%,#009dcc 50%,#006f8f 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #009dcc 0%,#009dcc 50%,#006f8f 100%); /* IE10+ */
-  background: linear-gradient(top,  #009dcc 0%,#009dcc 50%,#006f8f 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009dcc', endColorstr='#006f8f',GradientType=0 ); /* IE6-9 */
+  @include header-background_color;
   height: $header_height - 8px;
   border-top: 4px solid $header_border_top-color;
   border-bottom: 4px solid $header_border_bottom-color;

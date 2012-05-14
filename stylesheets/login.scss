@@ -1,0 +1,149 @@
+@import "compass/reset";
+@import "text";
+@import "colors";
+@import "utils";
+@import "sprites";
+
+
+$container-width: 517px;
+$container-height: 280px;
+$container-waterline: 80px;
+$card-surround-width: 517px;
+$card-surround-height: 280px;
+$login-container_width: 540px;
+$login-container_height: 280px;
+$security-nubbin: 143px;
+
+
+html, body{ 
+  width: 100%; 
+  height: 100%; 
+  @include login-background_color;
+}
+
+#login{
+  position: absolute;
+  left: 50%;
+  bottom: 40%;
+  margin-left: -$container-width / 2;
+  width: $card-surround-width;
+  height: $card-surround-height;
+
+  .container {
+    position: relative;
+    width: $login-container_width;
+    height: $login-container_height;
+    background: transparent;
+    box-shadow: 0px 0px 30px #000;
+    border-radius: 7px;
+
+    aside {
+      float: left;
+      width: $login-container-width * 0.25;
+      height: $login-container-height;
+      background: $background-logo_color;
+      border-top-left-radius: 7px;
+      border-bottom-left-radius: 7px;
+    }
+
+    section {
+      float: left;
+      width: $login-container-width * 0.75;
+      height: $login-container-height;
+      background: $background_color;
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px;
+      @include login-container_color;
+
+      .content {
+        margin: 10px 18px;
+        //width: $login-container_width - 2*18;
+        left: $security-nubbin;
+
+        fieldset.primary {
+          margin-top: 10px;
+
+          label {
+            display: block;
+            margin-bottom: 2px;
+            margin-left: 6px;
+            font-size: 14px;
+            color: #666;
+          }
+
+          input {
+            width: $login-container_width*0.75 - 2*18 - 36;
+            padding: 8px 0px 8px 16px;
+            font-size: 18px;
+            color: #000;
+            border-radius: 8px;
+            outline: none;
+            border: 1px solid #CCC;
+
+            &:focus {
+              box-shadow: 0px 0px 10px orange;
+            }
+          }
+        }
+
+
+        div.group.left {
+          display: inline;
+          float: left;
+        }
+
+        div.group.right {
+          display: inline;
+          float: right;
+          text-align: right;
+        }
+
+        div.group.bottom {
+          position: absolute;
+          bottom: 18px;
+        }
+
+        div.group.submit {
+          position: absolute;
+          right: 18px;
+          width: 110px;
+        }
+
+        #progress-indicator {
+          margin: 4px;
+          display: none;
+        }
+
+        a {
+          display: inline-block;
+          outline: 0;
+          text-align: left;
+          margin: 0 10px 0 0;
+        
+          &:hover {
+            background-position-y: -16px;
+          }
+        }
+
+        #login-btn{
+          float: right;
+          padding-left: 20px;
+          padding-right: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .button {
+    height: 26px;
+    border: 1px solid #999;
+    font-size: 13px;
+    padding-left: 14px;
+    padding-right: 14px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+    @include button_color;
+  }
+}
