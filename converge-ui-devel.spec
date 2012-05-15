@@ -14,7 +14,7 @@
 
 %global homedir %{_datarootdir}/%{name}
 
-Name:          converge-ui
+Name:          converge-ui-devel
 Summary:       A collection of assets
 Group:         Applications/System
 License:       GPLv2
