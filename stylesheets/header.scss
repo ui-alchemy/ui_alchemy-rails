@@ -18,12 +18,12 @@ header#header {
   position: relative;
   font-family: "Overpass",Interstate,sans-serif;
   h1 {
-    a {
-      position: absolute;
-      bottom: 25px;
-      left: 15px;
-      display: inline-block;    
-    }
+    position: absolute;
+    bottom: 25px;
+    left: 15px;
+    display: inline-block;
+    margin: 0;
+    font-size: inherit;
   }
   #appnav {
     border: 1px solid rgba(11, 15, 16, .55);
