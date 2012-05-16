@@ -19,15 +19,11 @@ h5 { font-size: 140%; }
 h1,h2,h3,h4,h5 {
   color: $font_color;
   font-family: $headlinefont;
-  margin-top: 1em;
   font-weight: bold;
   word-wrap: break-word;
 }
 li {
   margin-left: 0;
-}
-h1,h2,h3,h4,h5, p {
-  margin: 0.5em 0;
 }
 fieldset {
   margin-bottom: 10px;
