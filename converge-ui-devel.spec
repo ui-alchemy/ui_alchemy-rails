@@ -19,7 +19,7 @@ Summary:       A collection of assets
 Group:         Applications/System
 License:       GPLv2
 URL:           http://www.katello.org
-Version:       0.2
+Version:       0.3
 Release:       1%{?dist}
 Source0:       %{name}-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc README LICENSE
 
 %changelog
+* Wed May 16 2012 Eric D Helms <ehelms@redhat.com> 0.3-1
+- First tag of converge-ui-devel.
+
 * Thu Mar 29 2012 Eric D Helms <ehelms@redhat.com> 0.2-1
 - new package built with tito
 
