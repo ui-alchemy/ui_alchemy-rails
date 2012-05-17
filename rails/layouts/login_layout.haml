@@ -1,4 +1,5 @@
 = content_for(:body) do
+  %div.floater
   %article#login
     %div.container
       %aside
@@ -22,7 +23,7 @@
             %div.group.bottom
               %a.fl.help-tip_icon-grey#info-btn{:href => '#'}
               %a.fl.lock_icon-grey#security-btn{:href => '#'}
-            %div.group.bottom.submit
+            %div.group.submit
               = submit_tag get_string(:login), :class => "button", :id => 'login-btn'
 
 = render :file => "layouts/converge-ui/base"
