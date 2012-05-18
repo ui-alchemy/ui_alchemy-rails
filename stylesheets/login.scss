@@ -21,18 +21,19 @@ html, body{
   @include login-background_color;
 }
 
-#login{
-  position: absolute;
-  left: 50%;
-  bottom: 40%;
-  margin-left: -$container-width / 2;
-  width: $card-surround-width;
-  height: $card-surround-height;
+.floater {
+  float: left;
+  height: 50%;
+  margin-bottom: -$login-container_height;
+}
 
+article {
   .container {
+    clear: left;
     position: relative;
     width: $login-container_width;
     min-height: $login-container_height;
+    margin: 0 auto;
     background: $background-logo_color;
     box-shadow: 0px 0px 30px #000;
     border-radius: 7px;
@@ -88,6 +89,10 @@ html, body{
         }
 
 
+        div.group {
+          margin-bottom: 10px;
+        }
+
         div.group.left {
           display: inline;
           float: left;
@@ -104,10 +109,11 @@ html, body{
           bottom: 18px;
         }
 
-        div.group.submit {
+        div.submit {
           position: absolute;
           right: 18px;
           width: 110px;
+          bottom: 10px;
         }
 
         #progress-indicator {
@@ -130,7 +136,6 @@ html, body{
           float: right;
           padding-left: 20px;
           padding-right: 20px;
-          cursor: pointer;
         }
       }
     }
@@ -146,5 +151,13 @@ html, body{
     -moz-border-radius: 13px;
     border-radius: 13px;
     @include button_color;
+    cursor: pointer;
   }
+}
+
+.divider {
+  margin: 15px 0;
+  height: 2px;
+  background: #CCC;
+  clear: both;
 }
