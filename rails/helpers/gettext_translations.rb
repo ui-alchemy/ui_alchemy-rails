@@ -16,6 +16,9 @@ module ConvergeUi::GettextTranslations
     :password_unknown_info    => _('If you do not know your password, enter your login and email address below and instructions on resetting your password will be sent to you.'),
     :reset_password           => _('Reset Password'),
     :login_unknown            => _('Login Unknown'),
-    :login_unknown_info       => _("If you do not know your login, please enter your email address below and your login will be sent to you.")
+    :login_unknown_info       => _("If you do not know your login, please enter your email address below and your login will be sent to you."),
+    :change_password          => _('Change Password'),
+    :confirm_password         => _("Confirm Password"),
+    :save                     => _("Save")
   }
 end
