@@ -34,7 +34,7 @@ article {
     width: $login-container_width;
     min-height: $login-container_height;
     margin: 0 auto;
-    background: $background-logo_color;
+    @include login-background_color;
     box-shadow: 0px 0px 30px #000;
     border-radius: 7px;
     overflow: auto;
@@ -43,7 +43,6 @@ article {
       float: left;
       width: $login-container-width * 0.28;
       min-height: $login-container-height;
-      @include login-background_color;
       border-top-left-radius: 7px;
       border-bottom-left-radius: 7px;
 
@@ -62,7 +61,7 @@ article {
       @include login-container_color;
 
       .content {
-        margin: 45px 18px 10px;
+        margin: 10px 18px 10px;
         //width: $login-container_width - 2*18;
         left: $security-nubbin;
 
@@ -92,6 +91,7 @@ article {
           }
         }
 
+        #new_user_session { margin-top: 45px; }
 
         div.group {
           margin-bottom: 10px;

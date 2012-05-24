@@ -1,28 +1,20 @@
-= content_for(:body) do
-  %div.floater
-  %article#login
-    %div.container
-      %aside
-        %img
-          = yield :login_logo
-      %section
-        .content
-          = form_tag user_session_path, :id => 'new_user_session' do
-            %fieldset.primary
-              = label_tag :username, get_string(:username)
-              = text_field_tag :username, params[:username], :class => 'username', :id => "username"
-            %fieldset.primary
-              = label_tag :password, get_string(:password)
-              = password_field_tag :password, params[:password], :class => 'password', :id => 'password-input'
-            %fieldset.reveal_pass.fl
-              %input{:type => 'checkbox', :id => 'reveal'}
-              %label{:for => 'reveal'}
-                = get_string(:show_password)
-            %div.fr
-              = link_to get_string(:forgot_username_password), new_password_reset_path
-            %div.group.bottom
-              %a.fl.lock_icon-grey#security-btn{:href => '#'}
-            %div.group.submit
-              = submit_tag get_string(:login), :class => "button", :id => 'login-btn'
+= content_for(:content) do
+  = form_tag user_session_path, :id => 'new_user_session' do
+    %fieldset.primary
+      = label_tag :username, get_string(:username)
+      = text_field_tag :username, params[:username], :class => 'username', :id => "username"
+    %fieldset.primary
+      = label_tag :password, get_string(:password)
+      = password_field_tag :password, params[:password], :class => 'password', :id => 'password-input'
+    %fieldset.reveal_pass.fl
+      %input{:type => 'checkbox', :id => 'reveal'}
+      %label{:for => 'reveal'}
+        = get_string(:show_password)
+    %div.fr
+      = link_to get_string(:forgot_username_password), new_password_reset_path
+    %div.group.bottom
+      %a.fl.lock_icon-grey#security-btn{:href => '#'}
+    %div.group.submit
+      = submit_tag get_string(:login), :class => "button", :id => 'login-btn'
 
-= render :file => "layouts/converge-ui/base"
+= render :file => "layouts/converge-ui/user_session_layout"
