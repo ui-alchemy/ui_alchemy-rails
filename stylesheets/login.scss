@@ -10,15 +10,15 @@ $container-height: 280px;
 $container-waterline: 80px;
 $card-surround-width: 517px;
 $card-surround-height: 280px;
-$login-container_width: 540px;
+$login-container_width: 560px;
 $login-container_height: 280px;
 $security-nubbin: 143px;
 
 
 html, body{ 
   width: 100%; 
-  height: 100%; 
-  @include login-background_color;
+  height: 100%;
+  background: $background-login_color;
 }
 
 .floater {
@@ -41,16 +41,20 @@ article {
 
     aside {
       float: left;
-      width: $login-container-width * 0.25;
+      width: $login-container-width * 0.28;
       min-height: $login-container-height;
-      background: $background-logo_color;
+      @include login-background_color;
       border-top-left-radius: 7px;
       border-bottom-left-radius: 7px;
+
+      img {
+        margin-top: 50px;
+      }
     }
 
     section {
       float: left;
-      width: $login-container-width * 0.75;
+      width: $login-container-width * 0.72 + 1;
       min-height: $login-container-height;
       background: $background_color;
       border-top-right-radius: 7px;
@@ -58,7 +62,7 @@ article {
       @include login-container_color;
 
       .content {
-        margin: 10px 18px;
+        margin: 45px 18px 10px;
         //width: $login-container_width - 2*18;
         left: $security-nubbin;
 
@@ -134,22 +138,21 @@ article {
 
         #login-btn{
           float: right;
-          padding-left: 20px;
-          padding-right: 20px;
         }
       }
     }
   }
 
   .button {
-    height: 26px;
+    height: 30px;
     border: 1px solid #999;
     font-size: 13px;
-    padding-left: 14px;
-    padding-right: 14px;
-    -webkit-border-radius: 13px;
-    -moz-border-radius: 13px;
-    border-radius: 13px;
+    font-weight: bold;
+    padding-left: 24px;
+    padding-right: 24px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
     @include button_color;
     cursor: pointer;
   }
