@@ -1,12 +1,15 @@
 = content_for(:body) do
   %div.floater
-  %article
-    %div.container
-      %aside
-        %img
-          = yield :login_logo
-      %section
-        .content
-          = yield :content
+  #wrapper
+    %article
+      %div.container
+        %aside
+          %img
+            = yield :login_logo
+        %section
+          .content
+            = yield :content
+  %footer
+    = yield :footer
 
 = render :file => "layouts/converge-ui/base"

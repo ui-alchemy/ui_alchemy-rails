@@ -1,5 +1,5 @@
 = content_for(:content) do
-  = form_tag user_session_path, :id => 'new_user_session' do
+  = form_tag user_session_path, :id => 'login_form', :method => "post" do
     %fieldset.primary
       = label_tag :username, get_string(:username)
       = text_field_tag :username, params[:username], :class => 'username', :id => "username"
