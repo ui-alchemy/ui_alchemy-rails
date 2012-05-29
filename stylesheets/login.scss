@@ -163,6 +163,7 @@ article {
     @include button_color;
     cursor: pointer;
   }
+
 }
 
 .divider {
@@ -170,4 +171,8 @@ article {
   height: 2px;
   background: #CCC;
   clear: both;
+}
+
+.invisible {
+  visibility: hidden;
 }

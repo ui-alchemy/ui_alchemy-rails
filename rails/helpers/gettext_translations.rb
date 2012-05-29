@@ -19,6 +19,8 @@ module ConvergeUi::GettextTranslations
     :login_unknown_info       => _("If you do not know your login, please enter your email address below and your login will be sent to you."),
     :change_password          => _('Change Password'),
     :confirm_password         => _("Confirm Password"),
-    :save                     => _("Save")
+    :save                     => _("Save"),
+    :passwords_match          => _("Passwords match."),
+    :passwords_do_not_match   => _("Passwords do not match.")
   }
 end
