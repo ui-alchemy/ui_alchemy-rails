@@ -1,6 +1,9 @@
 .centered
   %h1
-    = yield :logo
+    = AppConfig.app_name.upcase
+
+  = yield :logo
+  #loading
   %nav#appnav
     = yield :tabs
   #widget-container
