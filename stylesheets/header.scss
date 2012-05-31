@@ -26,6 +26,28 @@ header#header {
     display: inline-block;
     margin: 0;
     font-size: inherit;
+    text-indent: -5555px;
+  }
+  .logo {
+    background: $logo_img;
+    text-indent: -5555px;
+    width: 170px;
+    height: 30px;
+    bottom: 25px;
+    left: 15px;
+    position: absolute;
+    display: block;
+  }
+  #loading {
+    display: none;
+    bottom: 27px;
+    display: none;
+    height: 22px;
+    padding: 0;
+    position: absolute;
+    width: 22px;
+    z-index: 100;
+    background: $loading_img;
   }
   #appnav {
     border: 1px solid rgba(11, 15, 16, .55);
@@ -119,80 +141,5 @@ header#header {
     margin-right: 8px;
     padding: 2px 6px;
     text-decoration: none;
-  }
-}
-
-
-#notifications {
-  position:absolute;
-  right:0em;
-  min-width:20em;
-  max-width:30em;
-  line-height:1.5em;
-
-  section {
-    /*border-radius*/
-    -webkit-border-radius:.5em;
-    -moz-border-radius:.5em;
-    border-radius:.5em;
-    position:relative;
-    overflow:visible;
-    width:100%;
-    margin:0em;
-    right:0;
-    display:block !important;
-    margin-top:1em;
-    padding:1em;
-    top:0em;
-    background-color:#555;
-    color:#ddd;
-    text-shadow:none;
-    text-indent:0em;
-    /*box-shadow*/
-    -webkit-box-shadow:0px 0em 0em .1em #fff, 0px .2em .5em rgba(0,0,0,0.1);
-    -moz-box-shadow:0px 0em 0em .1em #fff, 0px .2em .5em rgba(0,0,0,0.1);
-    box-shadow:0px 0em 0em .1em #fff, 0px .2em .5em rgba(0,0,0,0.1);
-  
-    &:before {
-      position:absolute;
-      display:block;
-      content:"";
-      height:0;
-      width:0;
-      border-width:0em .75em .75em .75em;
-      border-style:none solid solid solid;
-      top:-.79em;
-      right:6.75em;
-      border-color:transparent transparent #fff transparent;
-    }
-
-    &:after {
-      position:absolute;
-      display:block;
-      content:"";
-      height:0;
-      width:0;
-      border-width:0em .75em .75em .75em;
-      border-style:none solid solid solid;
-      top:-.70em;
-      right:6.75em;
-      border-color:transparent transparent #555 transparent;
-    }
-
-    a { color:#fff; }
-
-    .alert {
-      background-color:#a00;
-      color:#fff;
-      text-shadow:0 -1px #900;
-      /*box-shadow*/
-      -webkit-box-shadow:0px 0em 0em .1em #fff, 0px .2em .5em .2em rgba(255,0,0,0.21);
-      -moz-box-shadow:0px 0em 0em .1em #fff, 0px .2em .5em .2em rgba(255,0,0,0.21);
-      box-shadow:0px 0em 0em .1em #fff, 0px .2em .5em .2em rgba(255,0,0,0.21);
-
-      &:after {
-        border-color:transparent transparent #a00 transparent;
-      }
-    }
   }
 }

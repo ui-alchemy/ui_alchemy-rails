@@ -1,6 +1,9 @@
 .centered
   %h1
-    = yield :logo
+    = yield :appname
+
+  = yield :logo
+  #loading
   %nav#appnav
     = yield :tabs
   #widget-container

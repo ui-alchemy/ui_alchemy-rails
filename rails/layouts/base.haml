@@ -8,10 +8,13 @@
     = yield :stylesheets
     = yield :head
 
-  - if content_for?(:body_tag)
-    = yield :body_tag
+  - if controller.respond_to?(:section_id)
+    - section_id = controller.section_id
+  - elsif @body_id
+    - section_id = @body_id
   - else
-    %body
-  = yield :body
-  = yield :javascript
-  = yield :extra
+    - section_id = "generic"
+  %body{:id => section_id}
+    = yield :body
+    = yield :javascript
+    = yield :extra
