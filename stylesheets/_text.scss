@@ -1,5 +1,9 @@
+@charset "UTF-8";
+@import "compass";
+@import "960/text";
 @import "colors";
-
+@import "overpass";
+@import "liberation";
 $screenfont: "Liberation Sans", sans-serif;
 $headlinefont: "Overpass", Interstate, sans-serif;
 
@@ -8,7 +12,7 @@ body {
   color: $text_color;
 }
 
-h1 { font-size: 180%; 
+h1 { font-size: 180%;
         text-transform: uppercase;
         font-weight: bold;
 }
