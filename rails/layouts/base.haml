@@ -5,7 +5,7 @@
     = favicon_link_tag 'favicon.png'
     %title
       = yield :title
-    = yield :stylesheets
+    = yield :stylesheets_block
     = yield :head
 
   - if controller.respond_to?(:section_id)
@@ -16,5 +16,5 @@
     - section_id = "generic"
   %body{:id => section_id}
     = yield :body
-    = yield :javascript
+    = yield :javascripts_block
     = yield :extra
