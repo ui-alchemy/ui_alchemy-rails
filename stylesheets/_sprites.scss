@@ -1,5 +1,3 @@
-
-
 //Images
 $body_background_img:         image-url("embed/outer-background.png") repeat-x 0 -7px #FFF;
 $logo_img:                    image-url("embed/logo.png") no-repeat 0 0 transparent;
@@ -72,6 +70,8 @@ $arrow_min_img:               image-url("embed/icons/expander-collapsed.png") no
 $arrow_max_img:               image-url("embed/icons/expander-expanded.png") no-repeat top center;
 $arrow_min_img_small:         image-url("embed/icons/action-icons.png")  -544px -16px no-repeat;
 $arrow_max_img_small:         image-url("embed/icons/action-icons.png")  -528px -16px no-repeat;
+$x_icon_grey:                 image-url("embed/icons/action-icons.png")  -32px 0px no-repeat;
+$x_icon_black:                image-url("embed/icons/action-icons.png")  -32px -16px no-repeat;
 $add_icon_black:              image-url("embed/icons/action-icons.png")  -48px -16px no-repeat;
 $info_icon:                   image-url("embed/icons/info.png") no-repeat scroll 98% 6px transparent;
 $info_hover_icon:             image-url("embed/icons/info.png") no-repeat scroll 98% 6px transparent;
@@ -126,4 +126,10 @@ $download_icon_black:         image-url("embed/icons/action-icons.png") -513px 0
 $download_icon_grey:          image-url("embed/icons/action-icons.png") -513px -16px no-repeat;
 $details_icon_grey:           image-url("embed/icons/action-icons.png") -256px 0px no-repeat;
 $details_icon_black:          image-url("embed/icons/action-icons.png") -256px -16px no-repeat;
+$package_icon_grey:           image-url("embed/icons/action-icons.png") -560px 0px no-repeat;
+$package_icon_black:          image-url("embed/icons/action-icons.png") -560px -16px no-repeat;
+$erratum_icon_grey:           image-url("embed/icons/action-icons.png") -576px 0px no-repeat;
+$erratum_icon_black:          image-url("embed/icons/action-icons.png") -576px -16px no-repeat;
+$system_group_icon_grey:      image-url("embed/icons/action-icons.png") -590px 0px no-repeat;
+$system_group_icon_black:     image-url("embed/icons/action-icons.png") -590px -16px no-repeat;
 $icon_menu_arrow:             image-url("embed/icons/icon_menu_arrow.gif") no-repeat 0 0;
