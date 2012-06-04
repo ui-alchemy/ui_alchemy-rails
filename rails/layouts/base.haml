@@ -5,15 +5,18 @@
     = favicon_link_tag 'favicon.png'
     %title
       = yield :title
-    = yield :stylesheets
+    = yield :stylesheets_block
     = yield :head
 
-  - if content_for?(:body_tag)
-    = yield :body_tag
+  - if controller.respond_to?(:section_id)
+    - section_id = controller.section_id
+  - elsif @body_id
+    - section_id = @body_id
   - else
-    %body
-  = yield :body
-  = yield :javascript
-  = yield :extra
-  %script{ :type => "text/javascript" }
-    = render :partial => "layouts/converge-ui/common_i18n"
+    - section_id = "generic"
+  %body{:id => section_id}
+    = yield :body
+    = yield :javascripts_block
+    = yield :extra
+    %script{ :type => "text/javascript" }
+      = render :partial => "layouts/converge-ui/common_i18n"
