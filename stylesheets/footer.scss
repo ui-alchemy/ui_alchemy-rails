@@ -1,7 +1,15 @@
+@import "base";
+
+
 footer {
   min-height: 55px;
   background: #EBEBEB;
   position: relative;
+  border-top: 1px solid #f2f2f2;
+  clear:both;
+  position: relative;
+  margin-top: (0 - $stickyfooter-height - 1) + px; /* negative value of footer height */
+  height: $stickyfooter-height + px;
  
   span {
     width: 74px;

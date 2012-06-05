@@ -73,6 +73,11 @@ $table-border_color:        #B5B5B5;
 $background-login_color:     #426999;
 $background-logo_color:      #DDD;
 
+$header_border_top-color: #01536d !default;
+$header_border_bottom-color: #D9D9D9 !default;
+$tab_background-color: rgba(25, 25, 30, .40);
+
+
 /* background for header */
 @mixin header-background_color {
   background: #009dcc; /* Old browsers */

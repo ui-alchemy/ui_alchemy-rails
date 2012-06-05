@@ -1,11 +1,9 @@
-@import "compass";
-@import "mixins";
-@import "colors";
+@import "base";
 @import "text";
-@import "sprites";
-@import "utils";
+@import "forms";
+@import "converge-ui/header";
+@import "converge-ui/footer";
 
-$stickyfooterheight: 55;
 
 * {margin:0;padding:0;}
 
@@ -40,17 +38,19 @@ html {
 }
 #wrapper {
   min-height: 100%;
-  padding-bottom: 10px;
+  //padding-bottom: 10px;
 }
 #maincontent {
   overflow: auto;
-  padding-bottom: $stickyfooterheight + px;
+  padding-bottom: $stickyfooter-height + 10 + px;
+
   section.maincontent{
       background-color: $white_color;
       min-height:20em;
-      margin: 0 auto;
+      margin: 0 auto 5px;
       width: 960px;
-      @include box-shadow(0 1px 5px rgba(0, 0, 0, 0.6));
+      @include box-shadow(0, 1px, 5px, rgba(0, 0, 0, 0.6));
+
       h1 {
         color:transparent;
         padding-top: 3em;
@@ -71,12 +71,4 @@ section:before, section:after, article:before, article:after {
 
 article:after, section:after {
   clear:both;
-}
-
-footer {
-  position: relative;
-  margin-top: 0 - $stickyfooterheight + px; /* negative value of footer height */
-  height: $stickyfooterheight + px;
-  clear:both;
-  border-top: 1px solid #f2f2f2;
 }

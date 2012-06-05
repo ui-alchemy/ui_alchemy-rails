@@ -110,3 +110,78 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 input[type="submit"].active{
   outline:none;
 }
+/* BUTTONS */
+input[type='submit'], button, .button {
+  font-family: $screenfont; /* for some reason ff3.6 won't inherit from body */
+  font-size: 10px;
+  display: inline-block;
+  background: -moz-linear-gradient(top, #f9f9f9, #f0f0f0, #e5e5e5, #e9e9e9);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), color-stop(0.9, #e5e5e5), to(#e9e9e9));
+  @include no-box-shadow;
+  border: 1px solid darken($stroke_color, 20%);
+  color: #221e1f;
+  cursor: pointer;
+  margin: 4px;
+  padding: 4px 12px;
+  @include border-radius(5px);
+  @include _text-shadow($white_color, 0, 1px, 0);
+  min-height: 14px;
+  
+  .nomargin {
+    margin: 0;
+  }
+  &:hover {
+    background: -moz-linear-gradient(top, $white_color, $white_color, #cfcfcf);
+    background: -webkit-gradient(linear, left top, left bottom, from($white_color), color-stop(0.6, $white_color), to(#cfcfcf));
+    @include box-shadow(0, 1px, 2px, rgba(0,0,0,0.5));
+    text-decoration: none;
+    color: black;
+  }
+  &:active {
+    background: -moz-linear-gradient(top, #c2c3c0, #e4e5e4);
+    background: -webkit-gradient(linear, left top, left bottom, from(#c2c3c0), to(#e4e5e4));
+    @include no-box-shadow;
+    padding: 5px 12px 3px;
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+    color: #000;
+    border-width: 2px;
+    padding: 3px 11px;
+  }
+  &.dialogbutton {
+    float: right;
+    margin-left: 3px;
+    margin: 40px 4px 4px;
+  }
+  &.formbutton {
+    display: inline-block;
+    margin-left: 3px;
+    margin: 40px 4px 4px;
+  }
+  &.actionlink {
+    margin: 40px 0 0;
+  }
+  &.disabled, &[disabled] {
+    cursor: default;
+    background: transparent;
+    opacity: 0.4;
+
+    &:hover {
+      background: transparent;
+      @include no-box-shadow;
+    }
+  }
+  &.iconbutton {
+    display: inline-block;
+  }
+  &.tiny {
+    padding: 4px;
+    margin: 0;
+    &:active, &:focus {
+      margin: 0;
+      padding: 3px;
+    }
+  }
+}
