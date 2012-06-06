@@ -1,11 +1,9 @@
 = content_for(:body) do
-  %div.floater
   #wrapper
     %article
       %div.container
         %aside
-          %img
-            = yield :login_logo
+          = yield :login_logo
         %section
           .content
             = yield :content

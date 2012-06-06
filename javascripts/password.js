@@ -17,8 +17,6 @@ $(document).ready(function() {
     var actions = CUI.Password.Actions($('#save_password'));
     CUI.Password.Events.register(actions);
 
-    console.log($('#save_password'));
-
    ratings =[
         {'minScore': 0,
         'className': 'meterFail',
