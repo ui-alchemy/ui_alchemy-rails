@@ -34,6 +34,7 @@
 .details-icon {
   background: $details_icon_grey;
   @extend .errata_icon;
+  float: right;
   &:hover { background: $details_icon_black; }
 }
 .details-icon-hover {
