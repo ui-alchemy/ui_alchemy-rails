@@ -166,6 +166,7 @@ $icon_menu_arrow:             image-url("embed/icons/icon_menu_arrow.gif") no-re
 .details-icon {
   background: $details_icon_grey;
   @extend .errata_icon;
+  float: right;
   &:hover { background: $details_icon_black; }
 }
 .details-icon-hover {
