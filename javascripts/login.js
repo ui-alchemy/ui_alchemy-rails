@@ -19,22 +19,6 @@ $(document).ready(function() {
     
 });
 
-CUI.Login.Events = (function($){
-    var register = function(){
-            $('#reveal').change(function(){
-                Actions.show_password($('#password-input'), $('#password-input-reveal'), $(this).is(':checked'));
-            });
-            $('#login_form').live('submit', function(e) {
-                Actions.add_hash_input(this);
-            });
-        };
-
-    return {
-        register    : register
-    }
-
-})(jQuery);
-
 CUI.Login.Actions = (function($){
     var show_password = function(input_field, input_reveal_field, show){
             var password;
@@ -66,3 +50,19 @@ CUI.Login.Actions = (function($){
     };
 
 })(jQuery);
+
+CUI.Login.Events = (function($, actions){
+    var register = function(){
+            $('#reveal').change(function(){
+                actions.show_password($('#password-input'), $('#password-input-reveal'), $(this).is(':checked'));
+            });
+            $('#login_form').live('submit', function(e) {
+                actions.add_hash_input(this);
+            });
+        };
+
+    return {
+        register    : register
+    }
+
+})(jQuery, CUI.Login.Actions);
