@@ -11,8 +11,9 @@
       -#%input{:type => 'checkbox', :id => 'reveal'}
       -#%label{:for => 'reveal'}
         -#= get_string(:show_password)
-    %div.group
-      = link_to get_string(:forgot_username_password), new_password_reset_path
+    - if !@disable_password_recovery
+      %div.group
+        = link_to get_string(:forgot_username_password), new_password_reset_path
     -# %div.group.bottom.hidden
       -# %a.fl.lock_icon-grey#security-btn{:href => '#'}
     = submit_tag get_string(:login), :class => "button fr", :id => 'login_btn'
