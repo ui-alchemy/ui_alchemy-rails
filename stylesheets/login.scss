@@ -4,10 +4,9 @@
 @import "header";
 @import "footer";
 
-$container-width: 500px;
-$container-height: 270px;
+
 $login_container-width: 500px;
-$login_container-height: 280px;
+$login_container-height: 275px;
 
 $logo_container-width: 140px;
 $form_container-width: 360px;
@@ -84,14 +83,24 @@ article {
       @include login-container_color;
 
       .content {
-        margin: 20px 30px 0;
+        margin: 0 30px 0;
 
         #login_form {
-          padding-top: $login_form_top-margin - 20;
+          position: absolute;
+          top: 75px - 23px;
         }
 
+        #password_recovery_form, #login_recovery_form {
+          position: absolute;
+          top: 75px;
+          
+          .secondary_actions { margin-bottom: 0px; }
+        }
+
+        p { margin-top: 10px; }
+
         fieldset.primary {
-          margin-bottom: 8px;
+          margin-bottom: 7px;
 
           label {
             display: block;
@@ -105,9 +114,9 @@ article {
 
           input {
             width: 290px;
-            padding: 7px 0px 7px 10px;
+            padding: 6px 0px 6px 10px;
             font-size: 14px;
-            color: #000;
+            color: $input_font-color;
             border-radius: 8px;
             outline: none;
             border: 1px solid #CCC;
@@ -120,15 +129,22 @@ article {
         }
 
         .group {
-          height: 17px;
           position: relative;
+          height: 50px;
+
+          &.secondary_actions { 
+            margin-bottom: 15px;
+            height: 18px; 
+          }
           
-          a {
+          span {
             position: absolute;
             bottom: 0;
             right: 0;
             font-size: 11px;
-            color: $login_link-color;
+            color: $input_font-color;
+
+            a { color: $login_link-color; }
           }
         }
 
@@ -148,10 +164,7 @@ article {
           }
         }
 
-        #login_btn { 
-          position: absolute;
-          bottom: 30px;
-          right: 30px;
+        .button { 
           margin-bottom: 0px;
         }
       }
@@ -168,6 +181,7 @@ article {
     cursor: pointer;
     @include button_color;
     padding: 0 21px;
+    margin: 0;
     margin-bottom: 8px;
   }
 

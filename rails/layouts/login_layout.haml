@@ -12,8 +12,10 @@
       -#%label{:for => 'reveal'}
         -#= get_string(:show_password)
     - if !@disable_password_recovery
-      %div.group
-        = link_to get_string(:forgot_username_password), new_password_reset_path
+      %div.group.secondary_actions
+        %span
+          = _("Forgot %{u} or %{p}?" % {:u => link_to(get_string(:username), new_password_reset_path({ :recovery => "login" })), 
+                                        :p => link_to(get_string(:password), new_password_reset_path({ :recovery => "password" }))})
     -# %div.group.bottom.hidden
       -# %a.fl.lock_icon-grey#security-btn{:href => '#'}
     = submit_tag get_string(:login), :class => "button fr", :id => 'login_btn'
