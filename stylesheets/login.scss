@@ -7,6 +7,7 @@
 
 $login_container-width: 500px;
 $login_container-height: 275px;
+$form_container-padding: 30px;
 
 $logo_container-width: 140px;
 $form_container-width: 360px;
@@ -50,23 +51,21 @@ article {
   }
 
   .container {
-    clear: left;
     position: relative;
     width: $login-container_width;
-    min-height: $login-container_height;
+    height: $login-container_height;
     margin: 0 auto;
     @include login-background_color;
     background-clip: content-box;
     border: 10px solid rgba(0,0,0, 0.2);
     border-radius: 7px;
-    overflow: auto;
 
     aside {
-      float: left;
       width: $logo_container-width;
       min-height: $login-container-height;
       border-top-left-radius: 7px;
       border-bottom-left-radius: 7px;
+      float: left;
 
       img {
         margin-top: $login_container-height / 3;
@@ -74,101 +73,110 @@ article {
     }
 
     section {
-      float: left;
       width: $form_container-width;
-      min-height: $login-container-height;
-      background: $background_color;
-      border-top-right-radius: 7px;
-      border-bottom-right-radius: 7px;
-      @include login-container_color;
+      position: relative;
+      overflow: hidden;
 
-      .content {
-        margin: 0 30px 0;
+      .card_container {
+        width: 2 * $form_container-width;
+        position: absolute;
+        top: 0;
+        left: -$form_container-width;
+        z-index: -1;
+      }
+        .card {
+          border-top-right-radius: 7px;
+          border-bottom-right-radius: 7px;
+          background: $background_color;
+          @include login-container_color;
+          width: $form_container-width - 2 * $form_container-padding;
+          padding: 0 $form_container-padding;
+          min-height: $login-container-height;
 
-        #login_form {
-          position: absolute;
-          top: 75px - 23px;
-        }
-
-        #password_recovery_form, #login_recovery_form {
-          position: absolute;
-          top: 75px;
-          
-          .secondary_actions { margin-bottom: 0px; }
-        }
-
-        p { margin-top: 10px; }
-
-        fieldset.primary {
-          margin-bottom: 7px;
-
-          label {
-            display: block;
-            margin-bottom: 5px;
-            margin-left: 10px;
-            font-size: 12px;
-            font-weight: bold;
-            color: $label_font-color;
-            text-align: left;
+          #login_form {
+            position: absolute;
+            top: 75px - 23px;
           }
 
-          input {
-            width: 290px;
-            padding: 6px 0px 6px 10px;
-            font-size: 14px;
-            color: $input_font-color;
-            border-radius: 8px;
-            outline: none;
-            border: 1px solid #CCC;
-            height: 21px;
+          #password_recovery_form, #login_recovery_form {
+            position: absolute;
+            top: 75px;
+            
+            .secondary_actions { margin-bottom: 0px; }
+          }
 
-            &:focus {
-              box-shadow: 0px 0px 10px orange;
+          p { margin-top: 10px; }
+
+          fieldset.primary {
+            margin-bottom: 7px;
+
+            label {
+              display: block;
+              margin-bottom: 5px;
+              margin-left: 10px;
+              font-size: 12px;
+              font-weight: bold;
+              color: $label_font-color;
+              text-align: left;
+            }
+
+            input {
+              width: 290px;
+              padding: 6px 0px 6px 10px;
+              font-size: 14px;
+              color: $input_font-color;
+              border-radius: 8px;
+              outline: none;
+              border: 1px solid #CCC;
+              height: 21px;
+
+              &:focus {
+                box-shadow: 0px 0px 10px orange;
+              }
             }
           }
-        }
 
-        .group {
-          position: relative;
-          height: 50px;
+          .group {
+            position: relative;
+            height: 50px;
 
-          &.secondary_actions { 
-            margin-bottom: 15px;
-            height: 18px; 
+            &.secondary_actions { 
+              margin-bottom: 15px;
+              height: 18px; 
+            }
+            
+            span {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              font-size: 11px;
+              color: $input_font-color;
+
+              a { color: $login_link-color; }
+            }
           }
+
+          #progress-indicator {
+            margin: 4px;
+            display: none;
+          }
+
+          a {
+            display: inline-block;
+            outline: 0;
+            text-align: left;
+            margin: 0;
           
-          span {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            font-size: 11px;
-            color: $input_font-color;
-
-            a { color: $login_link-color; }
+            &:hover {
+              background-position-y: -16px;
+            }
           }
-        }
 
-        #progress-indicator {
-          margin: 4px;
-          display: none;
-        }
-
-        a {
-          display: inline-block;
-          outline: 0;
-          text-align: left;
-          margin: 0;
-        
-          &:hover {
-            background-position-y: -16px;
+          .button { 
+            margin-bottom: 0px;
           }
-        }
-
-        .button { 
-          margin-bottom: 0px;
         }
       }
-    }
   }
 
   .button {
@@ -196,6 +204,10 @@ article {
 
 .invisible {
   visibility: hidden;
+}
+
+.hidden {
+  display: none;
 }
 
 input[type='submit'], button, .button {

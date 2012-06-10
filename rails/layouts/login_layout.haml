@@ -1,23 +1,48 @@
 = content_for(:content) do
-  = form_tag user_session_path, :id => 'login_form', :method => "post" do
-    %fieldset.primary
-      = label_tag :username, get_string(:username)
-      = text_field_tag :username, params[:username], :class => 'username', :id => "username"
-    %fieldset.primary
-      = label_tag :password, get_string(:password)
-      = password_field_tag :password, params[:password], :class => 'password', :id => 'password-input'
-      -#= text_field_tag :password_reveal, params[:password], :class => 'password hidden', :id => 'password-input-reveal'
-    -#%fieldset.reveal_pass.fl
-      -#%input{:type => 'checkbox', :id => 'reveal'}
-      -#%label{:for => 'reveal'}
-        -#= get_string(:show_password)
-    - if !@disable_password_recovery
-      %div.group.secondary_actions
-        %span
-          = _("Forgot %{u} or %{p}?" % {:u => link_to(get_string(:username), new_password_reset_path({ :recovery => "login" })), 
-                                        :p => link_to(get_string(:password), new_password_reset_path({ :recovery => "password" }))})
-    -# %div.group.bottom.hidden
-      -# %a.fl.lock_icon-grey#security-btn{:href => '#'}
-    = submit_tag get_string(:login), :class => "button fr", :id => 'login_btn'
+  .card
+    = form_tag user_session_path, :id => 'login_form', :method => "post" do
+      %fieldset.primary
+        = label_tag :username, get_string(:username)
+        = text_field_tag :username, params[:username], :class => 'username', :id => "username"
+      %fieldset.primary
+        = label_tag :password, get_string(:password)
+        = password_field_tag :password, params[:password], :class => 'password', :id => 'password-input'
+      - if !@disable_password_recovery
+        %div.group.secondary_actions
+          %span
+            = _("Forgot %{u} or %{p}?" % {:u => link_to(get_string(:username), '#', :id => "username_link"), 
+                                          :p => link_to(get_string(:password), '#', :id => "password_link")})
+      = submit_tag get_string(:login), :class => "button fr", :id => 'login_btn'
+  - if !@disable_password_recovery
+    .card_container#password_recovery_container
+      .card
+        %p 
+          = get_string(:password_unknown_info)
+          %a{ :id => "password_return_link", :href => "#" }
+            = get_string(:return_to_login)
+        = form_tag password_resets_path, :method => :post, :id => "password_recovery_form", :remote => true do
+          %fieldset.primary
+            = label_tag :username, get_string(:username)
+            = text_field_tag :username, params[:username]
+          %fieldset.primary
+            = label_tag :email, get_string(:email_address)
+            = text_field_tag :email, params[:email]
+          %div.group.secondary_actions
+            %span
+          = submit_tag get_string(:reset_password), :class => 'button fr'
+    .card_container#username_recovery_container
+      .card
+        %p 
+          = get_string(:login_unknown_info)
+          %a{ :id => "username_return_link", :href => "#" }
+            = get_string(:return_to_login)
+        = form_tag email_logins_password_resets_path, :method => :get, :id => "login_recovery_form", :remote => true do
+          %fieldset.primary
+            = label_tag :email, get_string(:email_address)
+            = text_field_tag :email, params[:email]
+          %fieldset.primary.hidden
+          %div.group.secondary_actions
+            %span
+          = submit_tag get_string(:send_login), :class => 'button fr'
 
 = render :file => "layouts/converge-ui/user_session_layout"
