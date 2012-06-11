@@ -133,3 +133,47 @@ $erratum_icon_black:          image-url("embed/icons/action-icons.png") -576px -
 $system_group_icon_grey:      image-url("embed/icons/action-icons.png") -590px 0px no-repeat;
 $system_group_icon_black:     image-url("embed/icons/action-icons.png") -590px -16px no-repeat;
 $icon_menu_arrow:             image-url("embed/icons/icon_menu_arrow.gif") no-repeat 0 0;
+
+@mixin action-icon($icon) {
+    background: $icon;
+    margin-left: 6px;
+    margin-top: -1px;
+    &:hover {
+
+    }
+
+}
+
+.errata_icon {
+  margin-left: 6px;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-top: 0px;
+}
+.security_icon {
+  background: $shield_icon_black;
+  @extend .errata_icon;
+}
+.enhancement_icon {
+  background: $plus_icon_black;
+  @extend .errata_icon;
+}
+.bugzilla_icon {
+  background: $bug_icon_black;
+  @extend .errata_icon;
+}
+.details-icon {
+  background: $details_icon_grey;
+  @extend .errata_icon;
+  float: right;
+  &:hover { background: $details_icon_black; }
+}
+.details-icon-hover {
+  background: $details_icon_black;
+  @extend .errata_icon;
+}
+.details-icon-nohover {
+  background: $details_icon_grey;
+  @extend .errata_icon;
+}

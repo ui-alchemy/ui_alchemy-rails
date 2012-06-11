@@ -1,163 +1,272 @@
+@import "base";
 @import "compass/reset";
 @import "text";
-@import "colors";
-@import "utils";
-@import "sprites";
+@import "header";
+@import "footer";
 
 
-$container-width: 517px;
-$container-height: 280px;
-$container-waterline: 80px;
-$card-surround-width: 517px;
-$card-surround-height: 280px;
-$login-container_width: 540px;
-$login-container_height: 280px;
-$security-nubbin: 143px;
+$login_container-width: 500px;
+$login_container-height: 275px;
+$form_container-padding: 30px;
 
+$logo_container-width: 140px;
+$form_container-width: 360px;
+
+$login_form_top-margin: 75px - 20px;
 
 html, body{ 
   width: 100%; 
-  height: 100%; 
-  @include login-background_color;
+  height: 100%;
+  @include login_background-color;
+  font-family: $headlinefont;
 }
 
-.floater {
-  float: left;
-  height: 50%;
-  margin-bottom: -$login-container_height;
+#wrapper {
+  min-height: 100%;
+  padding-bottom: 0 - ($stickyfooter-height + 1);
 }
 
 article {
+  position: relative;
+  top: (1024 / 2) - $login_container-height;
+
+  a, a:visited {
+    cursor: hand;
+    cursor: pointer;
+    color: $linkfg_color;
+    text-decoration: none;
+    
+    &:hover, &:focus {
+      color: lighten($linkfg_color, 10%);
+      text-decoration: underline;
+    }
+    &:active {
+      color: darken($linkfg_color, 20%);
+    }
+  }
+
   .container {
-    clear: left;
     position: relative;
     width: $login-container_width;
-    min-height: $login-container_height;
+    height: $login-container_height;
     margin: 0 auto;
-    background: $background-logo_color;
-    box-shadow: 0px 0px 30px #000;
-    border-radius: 7px;
-    overflow: auto;
+    padding: 10px;
+    @include background(linear-gradient(top, rgba(255, 255, 255, 0) 40%, $login_base-color 120%));
+    @include box-shadow($login_base-color 0px 12px 15px -8px);
+    @include border-radius(7px);
 
     aside {
-      float: left;
-      width: $login-container-width * 0.25;
+      width: $logo_container-width;
       min-height: $login-container-height;
-      background: $background-logo_color;
-      border-top-left-radius: 7px;
-      border-bottom-left-radius: 7px;
+      float: left;
+      @include login_logo_background-color;
+      @include border-radius(7px 0 0 7px);
+
+      img {
+        margin-top: $login_container-height / 3;
+      }
     }
 
     section {
-      float: left;
-      width: $login-container-width * 0.75;
-      min-height: $login-container-height;
-      background: $background_color;
-      border-top-right-radius: 7px;
-      border-bottom-right-radius: 7px;
-      @include login-container_color;
+      width: $form_container-width;
+      position: relative;
+      overflow: hidden;
 
-      .content {
-        margin: 10px 18px;
-        //width: $login-container_width - 2*18;
-        left: $security-nubbin;
+      .card_container {
+        width: 2 * $form_container-width;
+        position: absolute;
+        top: 0;
+        left: -$form_container-width;
+        z-index: -1;
+      }
+        .card {
+          min-height: $login-container-height;
+          width: $form_container-width - 2 * $form_container-padding;
+          background: #FFF;
+          padding: 0 $form_container-padding;
+          @include border-radius(0 7px 7px 0);
+          @include box-shadow(inset -15px -15px 30px -7px $login_card_shadow-color, inset 0px -15px 130px $login_card_shadow-color);
 
-        fieldset.primary {
-          margin-top: 10px;
-
-          label {
-            display: block;
-            margin-bottom: 2px;
-            margin-left: 6px;
-            font-size: 14px;
-            color: #666;
+          #login_form {
+            position: absolute;
+            top: 75px - 23px;
           }
 
-          input {
-            width: $login-container_width*0.75 - 2*18 - 36;
-            padding: 8px 0px 8px 16px;
-            font-size: 18px;
-            color: #000;
-            border-radius: 8px;
-            outline: none;
-            border: 1px solid #CCC;
+          #password_recovery_form, #login_recovery_form {
+            position: absolute;
+            top: 75px;
+            
+            .secondary_actions { margin-bottom: 0px; }
+          }
 
-            &:focus {
-              box-shadow: 0px 0px 10px orange;
+          p { text-align: justify; }
+
+          fieldset.primary {
+            margin-bottom: 7px;
+
+            label {
+              display: block;
+              margin-bottom: 5px;
+              margin-left: 10px;
+              font-size: 12px;
+              font-weight: bold;
+              color: $label_font-color;
+              text-align: left;
+            }
+
+            input {
+              width: 290px;
+              padding: 6px 0px 6px 10px;
+              font-size: 14px;
+              color: $input_font-color;
+              @include border-radius(8px);
+              outline: none;
+              border: 1px solid #CCC;
+              height: 21px;
+
+              &:focus {
+                @include box-shadow(0px 0px 10px orange);
+              }
+            }
+          
+          }
+
+          #password_conflict { color: red; }
+
+          .group {
+            position: relative;
+            height: 50px;
+
+            &.secondary_actions { 
+              margin-bottom: 15px;
+              height: 18px; 
+            }
+            
+            span {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              font-size: 11px;
+              color: $input_font-color;
+
+              a { color: $login_link-color; }
             }
           }
-        }
 
+          #progress-indicator {
+            margin: 4px;
+            display: none;
+          }
 
-        div.group {
-          margin-bottom: 10px;
-        }
+          a {
+            display: inline-block;
+            outline: 0;
+            text-align: left;
+            margin: 0;
+          
+            &:hover {
+              background-position-y: -16px;
+            }
+          }
 
-        div.group.left {
-          display: inline;
-          float: left;
-        }
-
-        div.group.right {
-          display: inline;
-          float: right;
-          text-align: right;
-        }
-
-        div.group.bottom {
-          position: absolute;
-          bottom: 18px;
-        }
-
-        div.submit {
-          position: absolute;
-          right: 18px;
-          width: 110px;
-          bottom: 10px;
-        }
-
-        #progress-indicator {
-          margin: 4px;
-          display: none;
-        }
-
-        a {
-          display: inline-block;
-          outline: 0;
-          text-align: left;
-          margin: 0 10px 0 0;
-        
-          &:hover {
-            background-position-y: -16px;
+          .button { 
+            margin-bottom: 0px;
           }
         }
-
-        #login-btn{
-          float: right;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
       }
-    }
   }
 
   .button {
-    height: 26px;
-    border: 1px solid #999;
-    font-size: 13px;
-    padding-left: 14px;
-    padding-right: 14px;
-    -webkit-border-radius: 13px;
-    -moz-border-radius: 13px;
-    border-radius: 13px;
-    @include button_color;
+    height: 30px;
+    border: 1px solid $label_font-color;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    @include border-radius(15px);
     cursor: pointer;
+    @include button_color;
+    padding: 0 21px;
+    margin: 0;
+    margin-bottom: 8px;
+    position: absolute;
+    right: 0;
   }
+
 }
 
-.divider {
-  margin: 15px 0;
-  height: 2px;
-  background: #CCC;
-  clear: both;
+.invisible {
+  visibility: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+input[type='submit'], button, .button {
+  font-family: $screenfont; /* for some reason ff3.6 won't inherit from body */
+  font-size: 12px;
+  display: inline-block;
+  background: -moz-linear-gradient(top, #f9f9f9, #f0f0f0, #e5e5e5, #e9e9e9);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), color-stop(0.9, #e5e5e5), to(#e9e9e9));
+  @include no-box-shadow;
+  cursor: pointer;
+  min-height: 14px;
+  color: $input_font-color;
+  
+  .nomargin {
+    margin: 0;
+  }
+  &:hover {
+    background: -moz-linear-gradient(top, $white_color, $white_color, #cfcfcf);
+    background: -webkit-gradient(linear, left top, left bottom, from($white_color), color-stop(0.6, $white_color), to(#cfcfcf));
+    @include box-shadow(0, 1px, 2px, rgba(0,0,0,0.5));
+    text-decoration: none;
+    color: black;
+  }
+  &:active {
+    background: -moz-linear-gradient(top, #c2c3c0, #e4e5e4);
+    background: -webkit-gradient(linear, left top, left bottom, from(#c2c3c0), to(#e4e5e4));
+    @include no-box-shadow;
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+    color: #000;
+    border-width: 2px;
+    padding: 3px 11px;
+  }
+  &.dialogbutton {
+    float: right;
+    margin-left: 3px;
+    margin: 40px 4px 4px;
+  }
+  &.formbutton {
+    display: inline-block;
+    margin-left: 3px;
+    margin: 40px 4px 4px;
+  }
+  &.actionlink {
+    margin: 40px 0 0;
+  }
+  &.disabled, &[disabled] {
+    cursor: default;
+    background: transparent;
+    opacity: 0.4;
+
+    &:hover {
+      background: transparent;
+      @include no-box-shadow;
+    }
+  }
+  &.iconbutton {
+    display: inline-block;
+  }
+  &.tiny {
+    padding: 4px;
+    margin: 0;
+    &:active, &:focus {
+      margin: 0;
+      padding: 3px;
+    }
+  }
 }

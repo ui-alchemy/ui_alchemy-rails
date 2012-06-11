@@ -1,9 +1,5 @@
-@import "mixins";
+@import "base";
 
-$header-height: 85px !default;
-$header_border_top-color: #01536d !default;
-$header_border_bottom-color: #D9D9D9 !default;
-$tab_background-color: rgba(25, 25, 30, .40);
 
 .centered {
   width: 960px;
