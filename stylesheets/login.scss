@@ -14,15 +14,10 @@ $form_container-width: 360px;
 
 $login_form_top-margin: 75px - 20px;
 
-$label_font-color: #CCC;
-$input_font-color: #50505A;
-$login_link-color: #0194E8;
-
-
 html, body{ 
   width: 100%; 
   height: 100%;
-  background: #FFF;
+  @include login_background-color;
   font-family: $headlinefont;
 }
 
@@ -55,21 +50,17 @@ article {
     width: $login-container_width;
     height: $login-container_height;
     margin: 0 auto;
-    //@include login-background_color;
-    background-clip: content-box;
     padding: 10px;
-    //background: -webkit-gradient(linear, 0% 100%, 0% 50%, from(#EBEBEB), to(#FFFFFF));
-    @include background(linear-gradient(top, #FFFFFF, #EBEBEB 90%));
-    box-shadow: 0px 12px 15px -8px #D9D9D9;
-    border-radius: 7px;
+    @include background(linear-gradient(top, rgba(255, 255, 255, 0) 40%, $login_base-color 120%));
+    @include box-shadow($login_base-color 0px 12px 15px -8px);
+    @include border-radius(7px);
 
     aside {
       width: $logo_container-width;
       min-height: $login-container-height;
-      border-top-left-radius: 7px;
-      border-bottom-left-radius: 7px;
       float: left;
-      @include login-background_color;
+      @include login_logo_background-color;
+      @include border-radius(7px 0 0 7px);
 
       img {
         margin-top: $login_container-height / 3;
@@ -89,15 +80,12 @@ article {
         z-index: -1;
       }
         .card {
-          border-top-right-radius: 7px;
-          border-bottom-right-radius: 7px;
-          background: $background_color;
-          //@include login-container_color;
-          background: #FFF;
-          box-shadow: inset -15px -15px 30px -7px #D9D9D9, inset 0px -15px 130px #D9D9D9;
-          width: $form_container-width - 2 * $form_container-padding;
-          padding: 0 $form_container-padding;
           min-height: $login-container-height;
+          width: $form_container-width - 2 * $form_container-padding;
+          background: #FFF;
+          padding: 0 $form_container-padding;
+          @include border-radius(0 7px 7px 0);
+          @include box-shadow(inset -15px -15px 30px -7px $login_card_shadow-color, inset 0px -15px 130px $login_card_shadow-color);
 
           #login_form {
             position: absolute;
@@ -111,7 +99,8 @@ article {
             .secondary_actions { margin-bottom: 0px; }
           }
 
-          p { margin-top: 10px; }
+          p { margin-top: 10px; text-align: justify; }
+          h2 { padding-top: 10px; }
 
           fieldset.primary {
             margin-bottom: 7px;
@@ -131,16 +120,19 @@ article {
               padding: 6px 0px 6px 10px;
               font-size: 14px;
               color: $input_font-color;
-              border-radius: 8px;
+              @include border-radius(8px);
               outline: none;
               border: 1px solid #CCC;
               height: 21px;
 
               &:focus {
-                box-shadow: 0px 0px 10px orange;
+                @include box-shadow(0px 0px 10px orange);
               }
             }
+          
           }
+
+          #password_conflict { color: red; }
 
           .group {
             position: relative;
@@ -197,15 +189,10 @@ article {
     padding: 0 21px;
     margin: 0;
     margin-bottom: 8px;
+    position: absolute;
+    right: 0;
   }
 
-}
-
-.divider {
-  margin: 15px 0;
-  height: 2px;
-  background: #CCC;
-  clear: both;
 }
 
 .invisible {

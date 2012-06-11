@@ -70,24 +70,25 @@ $font_color:                #939292;
 
 $table-border_color:        #B5B5B5;
 
-$background-login_color:     #426999;
-$background-logo_color:      #DDD;
 
 $header_border_top-color: #01536d !default;
 $header_border_bottom-color: #D9D9D9 !default;
+$header_background_top-color: #009DCC;
+$header_background_bottom-color: #006F8F !default;
 $tab_background-color: rgba(25, 25, 30, .40);
+
+$label_font-color: #CCC !default;
+$input_font-color: #50505A !default;
+$login_link-color: #0194E8 !default;
+$login_base-color: #D9D9D9 !default;
+$login_card_shadow-color: #D9D9D9 !default;
+$login_background_top-color: #FFF !default;
+$login_background_bottom-color: #FFF !default;
 
 
 /* background for header */
 @mixin header-background_color {
-  background: #009dcc; /* Old browsers */
-  background: -moz-linear-gradient(top,  #009dcc 0%, #009dcc 50%, #006f8f 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009dcc), color-stop(50%,#009dcc), color-stop(100%,#006f8f)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #009dcc 0%,#009dcc 50%,#006f8f 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #009dcc 0%,#009dcc 50%,#006f8f 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #009dcc 0%,#009dcc 50%,#006f8f 100%); /* IE10+ */
-  background: linear-gradient(top,  #009dcc 0%,#009dcc 50%,#006f8f 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009dcc', endColorstr='#006f8f',GradientType=0 ); /* IE6-9 */
+  @include background(linear-gradient(top, $header_background_top-color 0%, $header_background_top-color 50%, $header_background_bottom-color 100%));
 }
 /* background for tabs on header */
 @mixin tab-selected-bg {
@@ -104,19 +105,12 @@ $tab_background-color: rgba(25, 25, 30, .40);
   background-clip: padding-box;
 }
 
-@mixin login-background_color {
-  @include header-background_color;
+@mixin login_background-color {
+  @include background(linear-gradient(top, $login_background_top-color 0%, $login_background_top-color 50%, $login_background_bottom-color 100%));
 }
 
-@mixin login-container_color {
-  background: #ffffff; /* Old browsers */
-  background: -moz-linear-gradient(top,  #ffffff 0%, #ebebeb 50%, #d9d9d9 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%, #ebebeb), color-stop(100%, #d9d9d9)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #ffffff 0%,#ebebeb 50%,#d9d9d9 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #ffffff 0%,#ebebeb 50%,#d9d9d9 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #ffffff 0%,#ebebeb 50%,#d9d9d9 100%); /* IE10+ */
-  background: linear-gradient(top,  #ffffff 0%,#ebebeb 50%,#d9d9d9 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d9d9d9',GradientType=0 ); /* IE6-9 */
+@mixin login_logo_background-color {
+  @include header-background_color;
 }
 
 @mixin button_color {

@@ -7,8 +7,8 @@
 @import "sprites";
 
 
-$screenfont: "Liberation Sans", sans-serif;
-$headlinefont: "Overpass", Interstate, sans-serif;
-$stickyfooter-height: 55;
+$screenfont: "Liberation Sans", sans-serif !default;
+$headlinefont: "Overpass", Interstate, sans-serif !default;
+$stickyfooter-height: 55 !default;
 
 $header-height: 85px !default;
