@@ -16,25 +16,6 @@ CUI.Password = {};
 $(document).ready(function() {
     var actions = CUI.Password.Actions($('#save_password'));
     CUI.Password.Events.register(actions);
-
-   ratings =[
-        {'minScore': 0,
-        'className': 'meterFail',
-        'text': i18n.very_weak
-        },
-        {'minScore': 25,
-        'className': 'meterWarn',
-        'text': i18n.weak
-        },
-        {'minScore': 50,
-        'className': 'meterGood',
-        'text': i18n.good
-        },
-        {'minScore': 75,
-        'className': 'meterExcel',
-        'text': i18n.strong
-        }
-    ];
 });
 
 CUI.Password.Events = (function($){
