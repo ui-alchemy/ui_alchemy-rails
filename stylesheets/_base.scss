@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+@import "compass";
+@import "utils";
+@import "mixins";
+@import "colors";
+@import "sprites";
+
+
+$screenfont: "Liberation Sans", sans-serif !default;
+$headlinefont: "Overpass", Interstate, sans-serif !default;
+$stickyfooter-height: 55 !default;
+
+$header-height: 85px !default;
