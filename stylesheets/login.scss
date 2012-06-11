@@ -22,7 +22,7 @@ $login_link-color: #0194E8;
 html, body{ 
   width: 100%; 
   height: 100%;
-  @include login-background_color;
+  background: #FFF;
   font-family: $headlinefont;
 }
 
@@ -55,9 +55,12 @@ article {
     width: $login-container_width;
     height: $login-container_height;
     margin: 0 auto;
-    @include login-background_color;
+    //@include login-background_color;
     background-clip: content-box;
-    border: 10px solid rgba(0,0,0, 0.2);
+    padding: 10px;
+    //background: -webkit-gradient(linear, 0% 100%, 0% 50%, from(#EBEBEB), to(#FFFFFF));
+    @include background(linear-gradient(top, #FFFFFF, #EBEBEB 90%));
+    box-shadow: 0px 12px 15px -8px #D9D9D9;
     border-radius: 7px;
 
     aside {
@@ -66,6 +69,7 @@ article {
       border-top-left-radius: 7px;
       border-bottom-left-radius: 7px;
       float: left;
+      @include login-background_color;
 
       img {
         margin-top: $login_container-height / 3;
@@ -88,7 +92,9 @@ article {
           border-top-right-radius: 7px;
           border-bottom-right-radius: 7px;
           background: $background_color;
-          @include login-container_color;
+          //@include login-container_color;
+          background: #FFF;
+          box-shadow: inset -15px -15px 30px -7px #D9D9D9, inset 0px -15px 130px #D9D9D9;
           width: $form_container-width - 2 * $form_container-padding;
           padding: 0 $form_container-padding;
           min-height: $login-container-height;
