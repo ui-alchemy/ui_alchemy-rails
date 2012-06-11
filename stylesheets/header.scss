@@ -14,7 +14,7 @@ $tab_background-color: rgba(25, 25, 30, .40);
 
 header#header {
   @include header-background_color;
-  height: $header_height - 8px;
+  height: $header_height;
   border-top: 4px solid $header_border_top-color;
   border-bottom: 4px solid $header_border_bottom-color;
   position: relative;
@@ -57,7 +57,7 @@ header#header {
     position: absolute;
     bottom: 0px;
     left: 218px;
-    margin-right: 138px;
+    margin-right: 0px;
     z-index: 2;
 
     ul {
@@ -127,7 +127,38 @@ header#header {
   #widget-container {
     position: absolute;
     top: 22px;
-    right: 30px;
+    right: 15px;
+    a { color: $white_color;}
+    ul {
+      float: left;
+      li {
+        ul {
+          display: none;
+          position: absolute;
+          left: 0px;
+          background-color: #0A6684;
+          @include border-trbrbl-radius(5px);
+          @include box-shadow(2px, 2px, 2px, rgba(0,0,0,0.4));
+          min-width: 4.2em;
+          padding: 2px 12px;
+          position: absolute;
+          text-align: left;
+          top: 16px;
+          z-index: 99;
+        }
+        .arrow_icon_menu {
+          height: 11px;
+          width: 13px;
+          background: $arrow_icon;
+          float: right;
+          margin: 4px 0 0 0;
+          &:hover {
+            background: $arrow_icon;
+            background-position: 0 -13px;
+          }
+        }
+      }
+    }
   }
 
   .header-widget {
@@ -141,5 +172,6 @@ header#header {
     margin-right: 8px;
     padding: 2px 6px;
     text-decoration: none;
+    float: left;
   }
 }
