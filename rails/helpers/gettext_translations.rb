@@ -20,6 +20,7 @@ module ConvergeUi::GettextTranslations
     :confirm_password         => _("Confirm Password"),
     :save                     => _("Save"),
     :passwords_match          => _("Passwords match."),
-    :passwords_do_not_match   => _("Passwords do not match.")
+    :passwords_do_not_match   => _("Passwords do not match."),
+    :recovery_link            => _("Forgot %s or %s?")
   }
 end
