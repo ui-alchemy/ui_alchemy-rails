@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'ConvergeUI'
-copyright = u'2012, Eric D. Helms'
+copyright = u'2012, Red Hat'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -214,7 +214,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'convergeui', u'ConvergeUI Documentation',
-     [u'Eric D. Helms'], 1)
+     [u'Red Hat'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -228,7 +228,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'ConvergeUI', u'ConvergeUI Documentation',
-   u'Eric D. Helms', 'ConvergeUI', 'One line description of project.',
+   u'Red Hat', 'ConvergeUI', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -248,7 +248,7 @@ texinfo_documents = [
 epub_title = u'ConvergeUI'
 epub_author = u'Eric D. Helms'
 epub_publisher = u'Eric D. Helms'
-epub_copyright = u'2012, Eric D. Helms'
+epub_copyright = u'2012, Red Hat'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
