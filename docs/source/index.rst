@@ -6,19 +6,11 @@
 Welcome to ConvergeUI's documentation!
 ======================================
 
-Contents:
+ConvergeUI is an asset repository for web resources that also includes a number of HAML layouts and styling.  This layouts and styling are designed to be customizable and flexible depending on the project's needs.  The easiest way to use ConvergeUI is as a git submodule in your own project and an example of this can be seen within the ConvergeUI Example app.
 
-.. toctree::
-   :maxdepth: 2
+========================
+Supported Libraries
+========================
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
-::
-  This is a test.
+* jQuery - 1.6.2
+* underscorejs - 1.3.1
