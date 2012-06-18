@@ -19,7 +19,7 @@ Summary:       A collection of assets
 Group:         Applications/System
 License:       GPLv2
 URL:           http://www.katello.org
-Version:       0.5
+Version:       0.6
 Release:       1%{?dist}
 Source0:       %{name}-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.rst LICENSE
 
 %changelog
+* Mon Jun 18 2012 Mike McCune <mmccune@redhat.com> 0.6-1
+- update to fix the incorrect %%doc README filename (mmccune@gmail.com)
+
 * Mon Jun 18 2012 Mike McCune <mmccune@redhat.com> 0.5-1
 - rolling back to 0.3-1 so I can fix the forgotten tag (mmccune@redhat.com)
 - Adds short list of supported libraries to test documentation workflow.
