@@ -51,7 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 %files 
 %defattr(755, root, root)
 %{homedir}
-%doc README LICENSE
+%doc README.rst LICENSE
 
 %changelog
 * Mon Jun 18 2012 Mike McCune <mmccune@redhat.com> 0.5-1
