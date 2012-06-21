@@ -155,3 +155,11 @@ $system_group_icon_black:     image-url("converge-ui/icons/action-icons.png") -5
   background: $details_icon_grey;
   @extend .errata_icon;
 }
+
+.gears_icon {
+  background: $gears_icon_black;
+  @extend .errata_icon;
+  &:hover{
+    background: $gears_icon_grey;
+  }
+}

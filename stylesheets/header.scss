@@ -50,12 +50,9 @@ header#header {
     border-bottom: none;
     border-radius: 3px 3px 0 0; 
     white-space: nowrap;
-    position: absolute;
-    bottom: 0px;
-    left: 218px;
-    margin-right: 0px;
+    margin: 0 auto;
     z-index: 2;
-
+    float: left;
     ul {
       position: relative;
       overflow: auto;
@@ -119,11 +116,21 @@ header#header {
       }
     }
   }
-
-  #widget-container {
+  #nav-container {
+    bottom: 0;
+    display: block;
+    height: 2.5em;
+    left: 35%;
+    padding: 5px 6px 0 6px;
     position: absolute;
+    @include border-top-lr-radius(5px);
+  }
+  #widget-container {
+    float: right;
+    margin-right: 15px;
+    position: relative;
     top: 22px;
-    right: 15px;
+    min-width: 225px;
     a { color: $white_color;}
     ul {
       float: left;
@@ -134,7 +141,7 @@ header#header {
           left: 0px;
           background-color: #0A6684;
           @include border-trbrbl-radius(5px);
-          @include box-shadow(2px, 2px, 2px, rgba(0,0,0,0.4));
+          @include box-shadow(2px 2px 2px rgba(0,0,0,0.4));
           min-width: 4.2em;
           padding: 2px 12px;
           position: absolute;

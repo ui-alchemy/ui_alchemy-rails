@@ -123,3 +123,15 @@ $login_background_bottom-color: #FFF !default;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
   background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(204,204,204,1) 100%); /* W3C */
 }
+
+$switcher-top_color: $white_color;
+$switcher-bottom_color: rgba(204,204,204,1);
+@mixin switcher-button_color{
+  @include background(linear-gradient(top, $switcher-top_color 0%, $switcher-top_color 50%, $switcher-bottom_color 100%));
+}
+@mixin switcher-button-active_color {
+  @include background(linear-gradient(top, $switcher-bottom_color 0%, $switcher-top_color 50%, $switcher-top_color 100%));
+}
+@mixin switcher-form_color {
+  @include background(linear-gradient(top, $switcher-top_color 0%, $switcher-bottom_color 75%, $switcher-bottom_color 100%));
+}

@@ -4,8 +4,10 @@
 
   = yield :logo
   #loading
-  %nav#appnav
-    = yield :tabs
+  #nav-container
+    = yield :extra_header
+    %nav#appnav
+      = yield :tabs
   #widget-container
     = yield :widgets
-  = yield :extra_header
+
