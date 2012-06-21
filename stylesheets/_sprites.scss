@@ -49,6 +49,8 @@ $spritePath: image-url("converge-ui/icons/action-icons.png");
 .gear_icon-dark           { background-position: -480px -16px; }
 .download_icon_black      { background-position: -513px 0px; }
 .download_icon_grey       { background-position: -513px -16px; }
+.down_arrow-icon-grey     { background-position: -529px 0px; }
+.down_arrow-icon-black    { background-position: -529px -16px; }
 .right_arrow-icon-grey    { background-position: -544px 0px; }
 .right_arrow-icon-black   { background-position: -544px -16px; }
 .package_icon_grey        { background-position: -560px 0px; }
@@ -61,10 +63,12 @@ $spritePath: image-url("converge-ui/icons/action-icons.png");
 .collapse-icon-black      { background-position: -606px -16px; }
 .favorites-icon-white     { background-position: -622px 0px; }
 .favorites-icon-blue      { background-position: -622px -16px; }
-.dot-icon-grey            { background-position: -638px 0px; }
-.dot-icon-black           { background-position: -638px -16px; }
+.dot-icon-grey            { background-position: -639px 0px; }
+.dot-icon-black           { background-position: -639px -16px; }
 .left_arrow-icon-grey     { background-position: -654px 0px; }
 .left_arrow-icon-black    { background-position: -654px -16px; }
+.add_env-icon-grey        { background-position: -671px 0px; }
+.add_env-icon-black       { background-position: -671px -16px; }
 
 
 $arrow_min_img_small:         image-url("converge-ui/icons/action-icons.png")  -544px -16px no-repeat;
