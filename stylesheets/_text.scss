@@ -1,16 +1,18 @@
-@import "base";
+@charset "UTF-8";
+@import "compass";
+@import "vars";
+
 @import "overpass";
 @import "liberation";
-
 
 body {
   font: 12px/1.5 $screenfont;
   color: $text_color;
 }
 
-h1 { font-size: 180%;
-        text-transform: uppercase;
-        font-weight: bold;
+h1 {
+  font-size: 180%;
+  text-transform: uppercase;
 }
 h2 { font-size: 170%; }
 h3 { font-size: 160%; }
@@ -18,7 +20,7 @@ h4 { font-size: 150%; }
 h5 { font-size: 140%; }
 h1,h2,h3,h4,h5 {
   color: $font_color;
-  font-family: $headlinefont;
+  font-family: $headlinebold;
   font-weight: bold;
   word-wrap: break-word;
 }

@@ -1,3 +1,9 @@
+@charset "UTF-8";
+@import "compass";
+@import "vars";
+
+
+
 //Images
 $logo_img:                    image-url("embed/logo.png") no-repeat 0 0 transparent;
 $spinner_img:                 image-url("converge-ui/icons/spinner.gif") no-repeat 0 0 transparent;
@@ -154,4 +160,12 @@ $system_group_icon_black:     image-url("converge-ui/icons/action-icons.png") -5
 .details-icon-nohover {
   background: $details_icon_grey;
   @extend .errata_icon;
+}
+
+.gears_icon {
+  background: $gears_icon_black;
+  @extend .errata_icon;
+  &:hover{
+    background: $gears_icon_grey;
+  }
 }
