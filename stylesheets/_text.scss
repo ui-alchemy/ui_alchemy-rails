@@ -1,7 +1,9 @@
-@import "base";
+@charset "UTF-8";
+@import "compass";
+@import "vars";
+
 @import "overpass";
 @import "liberation";
-
 
 body {
   font: 12px/1.5 $screenfont;

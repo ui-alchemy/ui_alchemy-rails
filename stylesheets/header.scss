@@ -1,4 +1,7 @@
+@charset "UTF-8";
+@import "compass";
 @import "base";
+@import "colors";
 
 
 .centered {
@@ -59,12 +62,12 @@ header#header {
       border-radius: 3px 3px 0 0;
       border: 1px solid rgba(205, 206, 208, .40);
       border-bottom: none;
-
+      outline: 0 none;
       li {
         display: block;
         float: left;
         position: relative;
-
+        outline: 0 none;
         a {
           display: block;
           text-decoration: none;
@@ -84,10 +87,11 @@ header#header {
           -moz-background-clip: padding;   
           -webkit-background-clip: padding;
           background-clip: padding-box;           
-
+          outline: 0 none;
           &.selected {
             color: #50505a;
             position: relative;
+            outline: 0 none;
             @include tab-selected-bg;
             &:hover {
               @include tab-selected-bg;
@@ -96,12 +100,14 @@ header#header {
           }
 
           &:hover {
+            outline: 0 none;
             background: rgba(25, 25, 30, .15);
             color: #f1f1f1;
           }
         }
 
         &:first-child > a {
+          outline: 0 none;
           -webkit-border-radius: 3px 0 0 0;
           -moz-border-radius: 3px 0 0 0;
           border-radius: 3px 0 0 0;
