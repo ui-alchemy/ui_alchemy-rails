@@ -1,4 +1,6 @@
-@import "base";
+@charset "UTF-8";
+@import "compass";
+@import "vars";
 @import "text";
 @import "header";
 @import "footer";
@@ -48,7 +50,7 @@ html {
       min-height:20em;
       margin: 0 auto 5px;
       width: 960px;
-      @include box-shadow(0, 1px, 5px, rgba(0, 0, 0, 0.6));
+      @include box-shadow(0 1px 5px rgba(0, 0, 0, 0.6));
 
       h1 {
         color:transparent;
