@@ -40,10 +40,14 @@ install -m0755 -d %{buildroot}%{homedir}
 install -m0755 -d %{buildroot}%{homedir}/javascripts/
 install -m0755 -d %{buildroot}%{homedir}/rails/
 install -m0755 -d %{buildroot}%{homedir}/stylesheets/
+install -m0755 -d %{buildroot}%{homedir}/images/
+install -m0755 -d %{buildroot}%{homedir}/fonts/
 
 cp -R javascripts/* %{buildroot}%{homedir}/javascripts/
 cp -R rails/* %{buildroot}%{homedir}/rails
 cp -R stylesheets/* %{buildroot}%{homedir}/stylesheets/
+cp -R images/* %{buildroot}%{homedir}/images/
+cp -R fonts/* %{buildroot}%{homedir}/fonts/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
