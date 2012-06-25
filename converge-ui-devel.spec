@@ -19,7 +19,7 @@ Summary:       A collection of assets
 Group:         Applications/System
 License:       GPLv2
 URL:           http://www.katello.org
-Version:       0.6
+Version:       0.7
 Release:       1%{?dist}
 Source0:       %{name}-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -58,6 +58,18 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.rst LICENSE
 
 %changelog
+* Mon Jun 25 2012 Eric D Helms <ehelms@redhat.com> 0.7-1
+- Fix for images and fonts in converge-ui spec. (jrist@redhat.com)
+- More SCSS, CSS duplication reduction.  Faster loading, better fonts, a few
+  fixes. (jrist@redhat.com)
+- Updates for org switcher and header. (jrist@redhat.com)
+- Merge pull request #26 from ehelms/master (jtomasek@redhat.com)
+- Action icons updates. (ehelms@redhat.com)
+- removed image references not used by converge-ui from _sprites.scss, added
+  common images to converge-ui (jtomasek@redhat.com)
+- Updates action-icons and corresponding sprite declarations.
+  (ehelms@redhat.com)
+
 * Mon Jun 18 2012 Mike McCune <mmccune@redhat.com> 0.6-1
 - update to fix the incorrect %%doc README filename (mmccune@gmail.com)
 
