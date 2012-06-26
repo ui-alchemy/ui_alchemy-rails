@@ -33,7 +33,6 @@ $(document).ready(function() {
             $(this).css('z-index', -1);
         });
     });
-   
 });
 
 CUI.Login.Actions = (function($){
@@ -59,11 +58,15 @@ CUI.Login.Actions = (function($){
                     value: window.location.hash
                 }).appendTo(parent);
             }
+        },
+        org_switcher_animation = function(partial){
+          $('#org_switcher').trigger({type:'login', switcher:partial});
         };
 
     return {
         show_password   : show_password,
-        add_hash_input  : add_hash_input
+        add_hash_input  : add_hash_input,
+        org_switcher_animation : org_switcher_animation
     };
 
 })(jQuery);
@@ -76,6 +79,12 @@ CUI.Login.Events = (function($, actions){
             $('#login_form').live('submit', function(e) {
                 actions.add_hash_input(this);
             });
+//need to make better for working with converge-ui (if orgswitcher length == 0... )
+            $('#org_switcher').bind('login', function(event){
+              var switcher = $('#org_switcher');
+              switcher.animate({ 'left' : '0px' }, 'slow').css('z-index', 1);
+            })
+
         };
 
     return {
