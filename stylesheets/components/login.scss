@@ -1,12 +1,4 @@
-@charset "UTF-8";
-@import "compass";
-@import "vars";
-
-@import "compass/reset";
-@import "text";
-@import "header";
-@import "footer";
-@import "mixins";
+@import "../partials/base";
 
 
 $login_container-width: 500px;
@@ -17,6 +9,7 @@ $logo_container-width: 140px;
 $form_container-width: 360px;
 
 $login_form_top-margin: 75px - 20px;
+
 
 html, body{ 
   width: 100%; 

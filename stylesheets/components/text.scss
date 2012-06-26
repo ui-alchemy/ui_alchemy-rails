@@ -1,9 +1,6 @@
-@charset "UTF-8";
-@import "compass";
-@import "vars";
-
-@import "../fonts/overpass";
-@import "../fonts/liberation";
+@import "../partials/base";
+@import "fonts/overpass";
+@import "fonts/liberation";
 
 body {
   font: 12px/1.5 $screenfont;
