@@ -1,9 +1,3 @@
-@charset "UTF-8";
-@import "compass";
-@import "vars";
-
-
-
 @mixin border-bottom-lr-radius($radius) {
   -webkit-border-bottom-right-radius: $radius;
   -webkit-border-bottom-left-radius: $radius;
