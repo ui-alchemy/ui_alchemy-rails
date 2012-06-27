@@ -33,6 +33,9 @@ $(document).ready(function() {
             $(this).css('z-index', -1);
         });
     });
+    $('#login_btn').click(function(){
+      CUI.Login.Actions.toggleSpinner();
+    });
 });
 
 CUI.Login.Actions = (function($){
@@ -40,7 +43,7 @@ CUI.Login.Actions = (function($){
             var password;
 
             if( show ){
-                password = input_field.val()
+                password = input_field.val();
                 input_field.hide();
                 input_reveal_field.val(password).show();
             } else {
@@ -59,14 +62,19 @@ CUI.Login.Actions = (function($){
                 }).appendTo(parent);
             }
         },
-        org_switcher_animation = function(partial){
-          $('#org_switcher').trigger({type:'login', switcher:partial});
+        org_switcher_animation = function(){
+          $('#org_switcher').trigger({type:'login'});
+        },
+        toggleSpinner = function(){
+          $('#login_form .spinner').fadeToggle('fast');
         };
+
 
     return {
         show_password   : show_password,
         add_hash_input  : add_hash_input,
-        org_switcher_animation : org_switcher_animation
+        org_switcher_animation : org_switcher_animation,
+        toggleSpinner : toggleSpinner
     };
 
 })(jQuery);
@@ -79,14 +87,16 @@ CUI.Login.Events = (function($, actions){
             $('#login_form').live('submit', function(e) {
                 actions.add_hash_input(this);
             });
-//need to make better for working with converge-ui (if orgswitcher length == 0... )
-            $('#org_switcher').bind('login', function(event){
-              var switcher = $('#org_switcher');
-              switcher.animate({ 'left' : '0px' }, 'slow').css('z-index', 1);
-            })
-
+            //if you have an #org_switcher container for an interstitial, this will function. otherwise it won't.
+            // this is for converge-ui
+            var switcher = $('#org_switcher');
+            if (switcher.length){
+              $('#org_switcher').bind('login', function(event){
+                CUI.Login.Actions.toggleSpinner();
+                switcher.animate({ 'left' : '0px' }, 'slow').css('z-index', 1);
+              });
+            }
         };
-
     return {
         register    : register
     }

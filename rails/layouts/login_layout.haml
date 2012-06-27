@@ -13,6 +13,7 @@
             != get_string(:recovery_link) % [link_to(get_string(:username), '#', :id => "username_link"), 
                                             link_to(get_string(:password), '#', :id => "password_link")]
       = submit_tag get_string(:login), :class => "button fr", :id => 'login_btn', :remote=>true
+      .spinner
   - if !@disable_password_recovery
     .card_container#password_recovery_container
       .card
@@ -46,6 +47,8 @@
           = submit_tag get_string(:send_login), :class => 'button fr'
     .card_container#org_switcher
       .card
+        %h2 #{_("Choose an Organization")}
         = render :partial => "/layouts/org"
+
 
 = render :file => "layouts/converge-ui/user_session_layout"
