@@ -15,15 +15,17 @@ The stylesheets directory is laid out in the following way::
   stylesheets/
         composites/
             shell.scss
+            login.scss
         components/
             footer.scss
             header.scss
             content.scss
-            login.scss
+            normalize.scss
             fonts/
                 liberation.scss
                 overpass.scss
         partials/
+            _base.scss
             _mixins.scss
             _colors.scss
             _vars.scss
@@ -32,7 +34,7 @@ The stylesheets directory is laid out in the following way::
 Composite Stylsheets
 ^^^^^^^^^^^^^^^^^^^^^
 
-Composite stylesheets combine multiple *component stylsheets* to create a larger conceptual entity.  For example, a composite stylesheet may combine the header, content and footer components while also including the components used to define typographical and form entities.
+Composite stylesheets combine multiple *component stylsheets* to create a larger conceptual entity.  For example, a *composite stylesheet* may combine the header, content and footer components while also including the components used to define typographical and form entities.
 
 ^^^^^^^^^^^^^^^^^^^^^
 Component Stylesheets
@@ -50,3 +52,6 @@ Partials are denoted by SCSS files that begin with an underscore (e.g. _vars).  
 * Mixins
 * Function Directives
 
+----------------------
+SCSS Code Conventions
+----------------------

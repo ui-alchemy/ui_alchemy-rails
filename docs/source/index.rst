@@ -13,5 +13,5 @@ ConvergeUI is an asset repository for web resources that also includes a number 
 
    goals
    build
-   install
+   development
    resources/index
