@@ -63,8 +63,8 @@ CUI.Login.Actions = (function($){
                 }).appendTo(parent);
             }
         },
-        org_switcher_animation = function(){
-          $('#org_switcher').trigger({type:'login'});
+        interstitial_switcher_animation = function(){
+          $('#interstitial').trigger({type:'login'});
         },
         toggleSpinner = function(){
           $('#login_form .spinner').fadeToggle('fast');
@@ -74,7 +74,7 @@ CUI.Login.Actions = (function($){
     return {
         show_password   : show_password,
         add_hash_input  : add_hash_input,
-        org_switcher_animation : org_switcher_animation,
+        interstitial_switcher_animation : interstitial_switcher_animation,
         toggleSpinner : toggleSpinner
     };
 
@@ -88,13 +88,13 @@ CUI.Login.Events = (function($, actions){
             $('#login_form').live('submit', function(e) {
                 actions.add_hash_input(this);
             });
-            //if you have an #org_switcher container for an interstitial, this will function. otherwise it won't.
+            //if you have an #interstitial container for an interstitial, this will function. otherwise it won't.
             // this is for converge-ui
-            var switcher = $('#org_switcher');
-            if (switcher.length){
-              $('#org_switcher').bind('login', function(event){
+            var interstitial = $('#interstitial');
+            if (interstitial.length){
+              $('#interstitial').bind('login', function(event){
                 CUI.Login.Actions.toggleSpinner();
-                switcher.animate({ 'left' : '0px' }, 'slow').css('z-index', 1);
+                interstitial.animate({ 'left' : '0px' }, 'slow').css('z-index', 1);
               });
             }
         };
