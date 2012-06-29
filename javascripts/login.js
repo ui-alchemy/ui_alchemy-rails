@@ -36,6 +36,7 @@ $(document).ready(function() {
     $('#login_btn').click(function(){
       CUI.Login.Actions.toggleSpinner();
     });
+    $('#username').focus();
 });
 
 CUI.Login.Actions = (function($){

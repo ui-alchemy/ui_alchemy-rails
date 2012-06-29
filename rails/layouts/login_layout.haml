@@ -45,11 +45,11 @@
           %div.group.secondary_actions
             %span
           = submit_tag get_string(:send_login), :class => 'button fr'
-    - if @org_interstitial
+
+    - if content_for?(:interstitial)
       .card_container#org_switcher
         .card
-          %h2 #{_("Choose an Organization")}
-          = render :partial => "/layouts/org"
+          = yield :interstitial
 
 
 = render :file => "layouts/converge-ui/user_session_layout"
