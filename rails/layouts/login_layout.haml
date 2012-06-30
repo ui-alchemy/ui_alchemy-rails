@@ -1,6 +1,6 @@
 = content_for(:content) do
   .card
-    = form_tag user_session_path, :id => 'login_form', :method => "post" do
+    = form_tag user_session_path, :id => 'login_form', :method => "post", :remote=>true do
       %fieldset.primary
         = label_tag :username, get_string(:username)
         = text_field_tag :username, params[:username], :class => 'username', :id => "username"
@@ -13,6 +13,7 @@
             != get_string(:recovery_link) % [link_to(get_string(:username), '#', :id => "username_link"), 
                                             link_to(get_string(:password), '#', :id => "password_link")]
       = submit_tag get_string(:login), :class => "button fr", :id => 'login_btn'
+      .spinner
   - if !@disable_password_recovery
     .card_container#password_recovery_container
       .card
@@ -44,5 +45,11 @@
           %div.group.secondary_actions
             %span
           = submit_tag get_string(:send_login), :class => 'button fr'
+
+    - if content_for?(:interstitial)
+      .card_container#interstitial
+        .card
+          = yield :interstitial
+
 
 = render :file => "layouts/converge-ui/user_session_layout"

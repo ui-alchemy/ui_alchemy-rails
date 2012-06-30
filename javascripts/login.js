@@ -33,7 +33,10 @@ $(document).ready(function() {
             $(this).css('z-index', -1);
         });
     });
-   
+    $('#login_btn').click(function(){
+      CUI.Login.Actions.toggleSpinner();
+    });
+    $('#username').focus();
 });
 
 CUI.Login.Actions = (function($){
@@ -41,7 +44,7 @@ CUI.Login.Actions = (function($){
             var password;
 
             if( show ){
-                password = input_field.val()
+                password = input_field.val();
                 input_field.hide();
                 input_reveal_field.val(password).show();
             } else {
@@ -59,11 +62,20 @@ CUI.Login.Actions = (function($){
                     value: window.location.hash
                 }).appendTo(parent);
             }
+        },
+        interstitial_switcher_animation = function(){
+          $('#interstitial').trigger({type:'login'});
+        },
+        toggleSpinner = function(){
+          $('#login_form .spinner').fadeToggle('fast');
         };
+
 
     return {
         show_password   : show_password,
-        add_hash_input  : add_hash_input
+        add_hash_input  : add_hash_input,
+        interstitial_switcher_animation : interstitial_switcher_animation,
+        toggleSpinner : toggleSpinner
     };
 
 })(jQuery);
@@ -76,8 +88,16 @@ CUI.Login.Events = (function($, actions){
             $('#login_form').live('submit', function(e) {
                 actions.add_hash_input(this);
             });
+            //if you have an #interstitial container for an interstitial, this will function. otherwise it won't.
+            // this is for converge-ui
+            var interstitial = $('#interstitial');
+            if (interstitial.length){
+              $('#interstitial').bind('login', function(event){
+                CUI.Login.Actions.toggleSpinner();
+                interstitial.animate({ 'left' : '0px' }, 'slow').css('z-index', 1);
+              });
+            }
         };
-
     return {
         register    : register
     }
