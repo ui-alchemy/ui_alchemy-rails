@@ -16,11 +16,14 @@ The Javascript directory, and thus provided libraries, is laid out in the follow
 
   javascripts/
         login.js
+
         vendor/
             rails.js
             underscore-1.3.1.js
+
             jquery/
                 jquery-1.6.2.min.js
+
                 plugins/
                     flot-0.7/
                     jquery.ajaxfileupload.js        
