@@ -2,33 +2,52 @@
 Fonts
 ======
 
-------------
-Organization
-------------
-
 ConvergeUI provides a set of fonts in a variety of formats for cross-browser support.  These fonts are declared in corresponding SCSS files using the font-face directive.
 
-^^^^^^^^^^^^^^^^^
+--------------------
+Font-Face Directive
+--------------------
+
+For a given font, an SCSS file is provided that declares the various flavors of the font using the font-face directive.  The following is an example how the 'Liberation Sans Regular' font type would be declared within the 'fonts/liberation.scss' file.  Note this file would also include the declarations for other flavors of the font (e.g. bold, italic).
+
+.. code-block:: css
+
+    @font-face {
+            font-family: 'Liberation Sans';
+            src: local('Liberation Sans'), local('LiberationSans'), local('Liberation-Sans'),
+                 font-url('LiberationSans-Regular-webfont.eot?#iefix') format('eot'),
+                 font-url('LiberationSans-Regular-webfont.woff') format('woff'),
+                 font-url('LiberationSans-Regular-webfont.ttf') format('truetype'),
+                 font-url('LiberationSans-Regular-webfont.svg#webfontLfr8h6FA') format('svg');
+            font-weight: normal;
+            font-style: normal;
+    }
+
+-----------------
 Provided Formats
-^^^^^^^^^^^^^^^^^
+-----------------
 
-.. code-block:: bash
+Each font provided by ConvergeUI is provided in the following formats:
 
-   .eot
-   .svg
-   .tff
-   .woff
+* Embedded OpenType (\*.eot)
+* Scalable Vector Graphic (\*.svg)
+* TrueType (\*.tff)
+* Web Open Font Format (\*.woff)
 
-^^^^^^^^^^^^^^^
+---------------
 Provided Fonts
-^^^^^^^^^^^^^^^
+---------------
 
-.. code-block:: bash
+The fonts and flavors provided by ConvergeUI are:
 
-    LiberationSans Regular
-    LiberationSans Bold
-    LiberationSans Italic
-    LiberationSans Bold Italic
+**Liberation Sans**
 
-    Overpass Regular
-    Overpass Bold
+* Regular
+* Bold
+* Italic
+* Bold Italic
+
+**Overpass**
+
+* Regular
+* Overpass Bold
