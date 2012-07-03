@@ -90,7 +90,12 @@ article {
           padding: 0 $form_container-padding;
           @include border-radius(0 7px 7px 0);
           @include box-shadow(inset -15px -15px 30px -7px $login_card_shadow-color, inset 0px -15px 130px $login_card_shadow-color);
-
+          //spinner post-login
+          .spinner {
+              margin-top: 1.8em;
+              left: 4.5em;
+              display: none;
+          }
           #login_form {
             position: absolute;
             top: 75px - 23px;
