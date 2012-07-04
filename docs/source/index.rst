@@ -8,10 +8,34 @@ Welcome to ConvergeUI's documentation!
 
 ConvergeUI is an asset repository for web resources that also includes a number of HAML layouts and styling.  This layouts and styling are designed to be customizable and flexible depending on the project's needs.  The easiest way to use ConvergeUI is as a git submodule in your own project and an example of this can be seen within the ConvergeUI Example app.
 
+The ConvergeUI example rails application is hosted on OpenShift:
+
+http://convergeui-ehelms.rhcloud.com/
+
+--------------------
+Project Information
+--------------------
+
 .. toctree::
    :maxdepth: 3
 
    goals
+
+------------
+Usage Guide
+------------
+
+.. toctree::
+   :maxdepth: 3
+
    build
+
+--------------------
+Developer Resources
+--------------------
+
+.. toctree::
+   :maxdepth: 3
+
    development
    resources/index
