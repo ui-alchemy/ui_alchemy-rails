@@ -18,24 +18,7 @@ Project Information
 
 .. toctree::
    :maxdepth: 3
+   :numbered:
 
-   goals
-
-------------
-Usage Guide
-------------
-
-.. toctree::
-   :maxdepth: 3
-
-   build
-
---------------------
-Developer Resources
---------------------
-
-.. toctree::
-   :maxdepth: 3
-
-   development
+   user-guide/index
    resources/index
