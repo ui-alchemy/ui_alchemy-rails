@@ -16,6 +16,7 @@ The stylesheets directory is laid out in the following way::
         composites/
             shell.scss
             login.scss
+        
         components/
             _footer.scss
             _header.scss
@@ -31,6 +32,7 @@ The stylesheets directory is laid out in the following way::
             fonts/
                 _liberation.scss
                 _overpass.scss
+
         partials/
             _base.scss
             _mixins.scss

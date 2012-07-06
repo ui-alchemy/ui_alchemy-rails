@@ -12,13 +12,15 @@ The ConvergeUI example rails application is hosted on OpenShift:
 
 http://convergeui-ehelms.rhcloud.com/
 
---------------------
-Project Information
---------------------
-
 .. toctree::
    :maxdepth: 3
    :numbered:
 
-   user-guide/index
-   resources/index
+   user-guide/goals
+   user-guide/build
+   user-guide/development
+   resources/layouts
+   resources/stylesheets
+   resources/javascript
+   resources/fonts
+   resources/images
