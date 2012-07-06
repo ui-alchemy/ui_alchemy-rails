@@ -26,6 +26,7 @@ The stylesheets directory is laid out in the following way::
             _forms.scss
             _content.scss
             _normalize.scss
+            _sprites.scss
             
             fonts/
                 _liberation.scss

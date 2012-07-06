@@ -1,7 +1,5 @@
 @charset "UTF-8";
-@import "compass";
-@import "vars";
-
+@import "../partials/base";
 
 
 //Images
@@ -125,7 +123,6 @@ $system_group_icon_black:     image-url("converge-ui/icons/action-icons.png") -5
     &:hover {
 
     }
-
 }
 
 .errata_icon {
