@@ -1,0 +1,220 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>5. Stylesheets &mdash; ConvergeUI 0.4 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="ConvergeUI 0.4 documentation" href="../index.html" />
+    <link rel="next" title="6. Javascript" href="javascript.html" />
+    <link rel="prev" title="4. Layouts" href="layouts.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="javascript.html" title="6. Javascript"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="layouts.html" title="4. Layouts"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ConvergeUI 0.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="stylesheets">
+<h1>5. Stylesheets<a class="headerlink" href="#stylesheets" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="available-stylesheets">
+<h2>5.1. Available Stylesheets<a class="headerlink" href="#available-stylesheets" title="Permalink to this headline">¶</a></h2>
+<p>The stylesheets directory is laid out in the following way:</p>
+<div class="highlight-python"><pre>stylesheets/
+      composites/
+          shell.scss
+          login.scss
+
+      components/
+          _footer.scss
+          _header.scss
+          _helpers.scss
+          _media.scss
+          _login.scss
+          _text.scss
+          _forms.scss
+          _content.scss
+          _normalize.scss
+          _sprites.scss
+
+          fonts/
+              _liberation.scss
+              _overpass.scss
+
+      partials/
+          _base.scss
+          _mixins.scss
+          _colors.scss
+          _vars.scss</pre>
+</div>
+</div>
+<div class="section" id="stylesheet-types">
+<h2>5.2. Stylesheet Types<a class="headerlink" href="#stylesheet-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="composite-stylsheets">
+<h3>5.2.1. Composite Stylsheets<a class="headerlink" href="#composite-stylsheets" title="Permalink to this headline">¶</a></h3>
+<p>Composite stylesheets combine multiple <em>component stylsheets</em> to create a larger conceptual entity.  For example, a <em>composite stylesheet</em> may combine the header, content and footer components while also including the components used to define typographical and form entities.</p>
+</div>
+<div class="section" id="component-stylesheets">
+<h3>5.2.2. Component Stylesheets<a class="headerlink" href="#component-stylesheets" title="Permalink to this headline">¶</a></h3>
+<p>Component stylesheets represent a singular entity (e.g. header, footer, widget) that may be combined into a <em>composite stylsheet</em>.  These stylesheets should include a set of partials that define needed variables, colors, or mixins.  Component stylesheets also use the underscore notation to prevent Compass from compiling them directly.</p>
+</div>
+<div class="section" id="partial-stylesheets">
+<h3>5.2.3. Partial Stylesheets<a class="headerlink" href="#partial-stylesheets" title="Permalink to this headline">¶</a></h3>
+<p>Partials are denoted by SCSS files that begin with an underscore (e.g. _vars).  Partials are intended to be included on multiple <em>component stylesheets</em> and should therefore not include any direct CSS, but rather, should be limited to the following:</p>
+<ul class="simple">
+<li>Variables</li>
+<li>Mixins</li>
+<li>Function Directives</li>
+</ul>
+</div>
+</div>
+<div class="section" id="scss-code-conventions">
+<h2>5.3. SCSS Code Conventions<a class="headerlink" href="#scss-code-conventions" title="Permalink to this headline">¶</a></h2>
+<p>The SCSS code conventions adopted by ConvergeUI are an effort to increase readability, performance and re-usability.</p>
+<div class="section" id="classes-and-ids">
+<h3>5.3.1. Classes and IDs<a class="headerlink" href="#classes-and-ids" title="Permalink to this headline">¶</a></h3>
+<p>Use underscores to break apart logical elements of the name.  This helps to differentiate custom CSS from standard CSS provided by the browser.</p>
+<p>Examples:</p>
+<div class="highlight-python"><pre>.card_container
+#password_recovery_form</pre>
+</div>
+</div>
+<div class="section" id="variables-and-mixins">
+<h3>5.3.2. Variables and Mixins<a class="headerlink" href="#variables-and-mixins" title="Permalink to this headline">¶</a></h3>
+<p>The general format for the naming convention is to use underscores to separate the name and to use a dash to tack on a property of the variable, image or mixin:</p>
+<div class="highlight-python"><pre>&lt;the_name_separated_by_underscores&gt;-&lt;property&gt;</pre>
+</div>
+<dl class="docutils">
+<dt>Where:</dt>
+<dd><ul class="first last simple">
+<li>&lt;the_name_separated_by_underscores&gt;: Use of underscores to separate logical pieces of the name</li>
+<li>&lt;property&gt;: Denotes &#8220;what&#8221; a particular variable, or mixin is, typically the name of the CSS property it represents</li>
+</ul>
+</dd>
+</dl>
+<p>Examples:</p>
+<div class="highlight-python"><pre>$login_container-width: 280px;
+$login_container-height: 125px;
+$logo_link-left: 45px;
+
+mixin header-background {
+  background: red;
+}
+
+.lock_icon-grey
+.lock_icon-white</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">5. Stylesheets</a><ul>
+<li><a class="reference internal" href="#available-stylesheets">5.1. Available Stylesheets</a></li>
+<li><a class="reference internal" href="#stylesheet-types">5.2. Stylesheet Types</a><ul>
+<li><a class="reference internal" href="#composite-stylsheets">5.2.1. Composite Stylsheets</a></li>
+<li><a class="reference internal" href="#component-stylesheets">5.2.2. Component Stylesheets</a></li>
+<li><a class="reference internal" href="#partial-stylesheets">5.2.3. Partial Stylesheets</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scss-code-conventions">5.3. SCSS Code Conventions</a><ul>
+<li><a class="reference internal" href="#classes-and-ids">5.3.1. Classes and IDs</a></li>
+<li><a class="reference internal" href="#variables-and-mixins">5.3.2. Variables and Mixins</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="layouts.html"
+                        title="previous chapter">4. Layouts</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="javascript.html"
+                        title="next chapter">6. Javascript</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/resources/stylesheets.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="javascript.html" title="6. Javascript"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="layouts.html" title="4. Layouts"
+             >previous</a> |</li>
+        <li><a href="../index.html">ConvergeUI 0.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Red Hat.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

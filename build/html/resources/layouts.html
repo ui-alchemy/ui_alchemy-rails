@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>4. Layouts &mdash; ConvergeUI 0.4 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="ConvergeUI 0.4 documentation" href="../index.html" />
+    <link rel="next" title="5. Stylesheets" href="stylesheets.html" />
+    <link rel="prev" title="3. Development" href="../user-guide/development.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="stylesheets.html" title="5. Stylesheets"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../user-guide/development.html" title="3. Development"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ConvergeUI 0.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="layouts">
+<h1>4. Layouts<a class="headerlink" href="#layouts" title="Permalink to this headline">¶</a></h1>
+<p>ConvergeUI uses HAML to define a set of layouts that, when combined with their styling counterparts, provide components common to web applications.  The layouts are designed to provide a particular look and feel when combined with the appropriate styling; however, since the layouts and styling are seperate, a need look can be applied while maintaing the overall structure.  The layouts are designed to be have configurable content via the use of <em>content_for</em> blocks.  Example:</p>
+<p>Layout</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="o">%</span><span class="n">body</span><span class="p">{</span><span class="ss">:id</span> <span class="o">=&gt;</span> <span class="n">section_id</span><span class="p">}</span>
+  <span class="o">=</span> <span class="k">yield</span> <span class="ss">:body</span>
+  <span class="o">=</span> <span class="k">yield</span> <span class="ss">:javascripts_block</span>
+  <span class="o">=</span> <span class="k">yield</span> <span class="ss">:extra</span>
+</pre></div>
+</div>
+<p>Implemetation</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="o">=</span> <span class="n">content_for</span><span class="p">(</span><span class="ss">:body</span><span class="p">)</span> <span class="k">do</span>
+  <span class="c1">#wrapper</span>
+    <span class="o">=</span> <span class="n">render</span> <span class="ss">:partial</span> <span class="o">=&gt;</span> <span class="s2">&quot;layouts/converge-ui/header_layout&quot;</span>
+    <span class="o">%</span><span class="n">article</span><span class="c1">#maincontent</span>
+      <span class="o">%</span><span class="n">section</span><span class="o">.</span><span class="n">maincontent</span>
+        <span class="o">=</span> <span class="k">yield</span> <span class="ss">:content</span>
+  <span class="o">%</span><span class="n">footer</span>
+    <span class="o">=</span> <span class="k">yield</span> <span class="ss">:footer</span>
+</pre></div>
+</div>
+<div class="section" id="component-layouts">
+<h2>4.1. Component Layouts<a class="headerlink" href="#component-layouts" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="header">
+<h3>4.1.1. Header<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h3>
+<p>The header layout provides a thick header with area for a left aligned-logo, content tabs along the header baseline, and widgets in the upper right hand corner.  All header content is centered horizontally with the page.</p>
+</div>
+<div class="section" id="foooter">
+<h3>4.1.2. Foooter<a class="headerlink" href="#foooter" title="Permalink to this headline">¶</a></h3>
+<p>The footer layout provides a small ribbon that is &#8220;sticky&#8221; to the bottom of the page as content grows vertically.  Place is provided for copyright, footer links, logo and versioning information.</p>
+</div>
+</div>
+<div class="section" id="composite-layouts">
+<h2>4.2. Composite Layouts<a class="headerlink" href="#composite-layouts" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="shell">
+<h3>4.2.1. Shell<a class="headerlink" href="#shell" title="Permalink to this headline">¶</a></h3>
+<p>The shell layout combines the header, footer and adds a centered <em>application</em> area for all application content.</p>
+</div>
+<div class="section" id="user-session">
+<h3>4.2.2. User Session<a class="headerlink" href="#user-session" title="Permalink to this headline">¶</a></h3>
+<p>The user sessoin layout provides a centered modal-like container for user session interactions combined with the footer layout.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">4. Layouts</a><ul>
+<li><a class="reference internal" href="#component-layouts">4.1. Component Layouts</a><ul>
+<li><a class="reference internal" href="#header">4.1.1. Header</a></li>
+<li><a class="reference internal" href="#foooter">4.1.2. Foooter</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#composite-layouts">4.2. Composite Layouts</a><ul>
+<li><a class="reference internal" href="#shell">4.2.1. Shell</a></li>
+<li><a class="reference internal" href="#user-session">4.2.2. User Session</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../user-guide/development.html"
+                        title="previous chapter">3. Development</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="stylesheets.html"
+                        title="next chapter">5. Stylesheets</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/resources/layouts.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="stylesheets.html" title="5. Stylesheets"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../user-guide/development.html" title="3. Development"
+             >previous</a> |</li>
+        <li><a href="../index.html">ConvergeUI 0.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Red Hat.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

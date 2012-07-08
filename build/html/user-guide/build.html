@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2. Build &mdash; ConvergeUI 0.4 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="ConvergeUI 0.4 documentation" href="../index.html" />
+    <link rel="next" title="3. Development" href="development.html" />
+    <link rel="prev" title="1. Project Goals" href="goals.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="development.html" title="3. Development"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="goals.html" title="1. Project Goals"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ConvergeUI 0.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="build">
+<h1>2. Build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h1>
+<p>Provided are examples of how a project might choose to build and package ConvergeUI to be incorporated as part of a larger project.</p>
+<div class="section" id="requirements">
+<h2>2.1. Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>We recommend installing <em>tito</em> for use when building RPMs.</p>
+</div>
+<div class="section" id="stand-alone-rpm">
+<h2>2.2. Stand-alone RPM<a class="headerlink" href="#stand-alone-rpm" title="Permalink to this headline">¶</a></h2>
+<p>ConvergeUI can be built as a stand-alone RPM that can then be included within a repository for use as part of a larger project either at build or deployment time depending on the requirements and constraints of the project.</p>
+<p>First, clone ConvergeUI</p>
+<div class="highlight-bash"><div class="highlight"><pre>git clone http://github.com/Katello/converge-ui.git
+<span class="nb">cd </span>converge-ui
+</pre></div>
+</div>
+<p>In order to build the latest tagged version:</p>
+<div class="highlight-bash"><div class="highlight"><pre>tito build
+</pre></div>
+</div>
+<p>In order to build the current checked out hash:</p>
+<div class="highlight-bash"><div class="highlight"><pre>tito build --test --rpm
+</pre></div>
+</div>
+<p>Look at the end of the <em>tito</em> output to find the location of the newly created RPM.</p>
+</div>
+<div class="section" id="using-convergeui-as-a-git-submodule">
+<h2>2.3. Using ConvergeUI as a Git Submodule<a class="headerlink" href="#using-convergeui-as-a-git-submodule" title="Permalink to this headline">¶</a></h2>
+<p>Given that ConvergeUI is a set of assets, and that your project, in production mode, will want to combine stylesheets and javascript into concatenated files that are then minified and compressed, treating ConvergeUI as a development dependency naturally makes sense.  This can easily be accomplished by adding ConvergeUI as a git submodule into your repository and establishing symlinks where appropriate.  This allows you to configure and use the assets in ConvergeUI in a flexible way, tailored to your projects needs and layout.</p>
+<p>In your project root:</p>
+<div class="highlight-bash"><div class="highlight"><pre>git submodule add git@github.com:Katello/converge-ui.git vendor/converge-ui
+git submodule update --init
+</pre></div>
+</div>
+<p>Now that the submodule has been added as part of your git config, and been initialized, the various assets can be linked up via symlinks to the proper areas.  For example, a Rails 3.0 application might symlink in the following way:</p>
+<div class="highlight-bash"><div class="highlight"><pre>my-app/
+   src/
+     app/
+       stylesheets/
+         converge-ui/ --&gt; ../../vendor/converge-ui/stylesheets/
+       views/
+         layouts/
+           converge-ui/ --&gt; ../../../vendor/converge-ui/rails/layouts/
+     public/
+       javascripts/
+         converge-ui/ --&gt; ../../vendor/converge-ui/javascripts/
+       images/
+         converge-ui/ --&gt; ../../vendor/converge-ui/images/
+       fonts/
+         converge-ui/ --&gt; ../../vendor/converge-ui/fonts/
+     vendor/
+       converge-ui/ <span class="o">(</span>this is the submodule checkout<span class="o">)</span>
+</pre></div>
+</div>
+<div class="section" id="rpm-buildrequires-when-using-git-submodule">
+<h3>2.3.1. RPM BuildRequires when using Git Submodule<a class="headerlink" href="#rpm-buildrequires-when-using-git-submodule" title="Permalink to this headline">¶</a></h3>
+<p>When incorporating ConvergeUI via a git submodule, the base project will be set against a particular git hash of ConvergeUI.  In order to incorporate ConvergeUI as a build requires, a ConvergeUI RPM must be generated based off the hash set by the base project.  Assuming a setup similar to the previous section:</p>
+<div class="highlight-bash"><div class="highlight"><pre>git clone --recursive &lt;base_project_repository&gt;
+<span class="nb">cd</span> &lt;base_project&gt;/vendor/converge-ui
+tito build --test --rpm
+rpm -Uvh /tmp/tito/noarch/converge-ui-devel*.rpm
+</pre></div>
+</div>
+<p>Now the base project&#8217;s spec file can be built.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">2. Build</a><ul>
+<li><a class="reference internal" href="#requirements">2.1. Requirements</a></li>
+<li><a class="reference internal" href="#stand-alone-rpm">2.2. Stand-alone RPM</a></li>
+<li><a class="reference internal" href="#using-convergeui-as-a-git-submodule">2.3. Using ConvergeUI as a Git Submodule</a><ul>
+<li><a class="reference internal" href="#rpm-buildrequires-when-using-git-submodule">2.3.1. RPM BuildRequires when using Git Submodule</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="goals.html"
+                        title="previous chapter">1. Project Goals</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="development.html"
+                        title="next chapter">3. Development</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/user-guide/build.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="development.html" title="3. Development"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="goals.html" title="1. Project Goals"
+             >previous</a> |</li>
+        <li><a href="../index.html">ConvergeUI 0.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Red Hat.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>6. Javascript &mdash; ConvergeUI 0.4 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="ConvergeUI 0.4 documentation" href="../index.html" />
+    <link rel="next" title="7. Fonts" href="fonts.html" />
+    <link rel="prev" title="5. Stylesheets" href="stylesheets.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="fonts.html" title="7. Fonts"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="stylesheets.html" title="5. Stylesheets"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ConvergeUI 0.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="javascript">
+<h1>6. Javascript<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h1>
+<p>ConvergeUI provides Javacript in two forms.  First, a set of vendor libraries are supplied that a project can optionally pull into their project for use.  Second, ConvergeUI supplies some Javascript functionality along with the provided layouts.</p>
+<div class="section" id="available-libraries">
+<h2>6.1. Available Libraries<a class="headerlink" href="#available-libraries" title="Permalink to this headline">¶</a></h2>
+<p>The Javascript directory, and thus provided libraries, is laid out in the following way:</p>
+<div class="highlight-python"><pre>javascripts/
+      login.js
+
+      vendor/
+          rails.js
+          underscore-1.3.1.js
+
+          jquery/
+              jquery-1.6.2.min.js
+
+              plugins/
+                  flot-0.7/
+                  jquery.ajaxfileupload.js
+                  jquery.jscrollpane.js
+                  jquery.text-overflow.js
+                  jquery.ba-bbq.js
+                  jquery.ba-resize.js
+                  jquery.timepickr.js
+                  jquery.linkHover.js
+                  jquery.timers.js
+                  jquery.cookie.js
+                  jquery.loadmask.min.js
+                  jquery.tipsy.js
+                  jquery.easing.1.3.js
+                  jquery.mousewheel.js
+                  jquery.treeTable.js
+                  jquery.fancyqueries.js
+                  jquery.multiselect.js
+                  jquery.multiselect.filter.js
+                  jquery.ui.multiselect.js
+                  jquery.ui.spinner.js
+                  jquery.ui.totop.js
+                  jquery.flash.js
+                  jquery.uitablefilter.js
+                  jquery.form.js
+                  jquery.pack.js
+                  jquery.hoverIntent.js
+                  jquery.periodicalupdater.js
+                  jquery.jeditable.js
+                  jquery.jeditable.ajaxupload.js
+                  jquery.sortElements.js
+                  jquery.sparkline.min.js</pre>
+</div>
+</div>
+<div class="section" id="project-javascript-code-conventions">
+<h2>6.2. Project Javascript Code Conventions<a class="headerlink" href="#project-javascript-code-conventions" title="Permalink to this headline">¶</a></h2>
+<p>This document contains conventions for programming Javascript that should be followed in an effort to increase readability, performance and re-usability.  As builds are run against the [<a class="reference external" href="http://www.jslint.com/">http://www.jslint.com/</a> JSLint Code Quality Tool], an effort should be made to conform to the guidelines set forth by JSLint.</p>
+<div class="section" id="general">
+<h3>6.2.1. General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>Always use &#8216;&#8217;===&#8217;&#8217; for comparison</li>
+<li>Place semicolons wherever they are required.  While missing semicolons may not throw an error, they can cause unintended behaviors.</li>
+<li>Try to avoid or limit the usage of global objects. (Variables declared outside of a function)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="convergeui-global-namespace">
+<h3>6.2.2. ConvergeUI Global Namespace<a class="headerlink" href="#convergeui-global-namespace" title="Permalink to this headline">¶</a></h3>
+<p>Since ConvergeUI provides some JavaScript functionality with the provided layouts, a project wide global object exists that all custom code is attached to.  This is done in order to prevent global namespace collission and make debugging easier.  The project uses the top level global namespace (CUI).  The CUI object is declared in the top level of each ConvergeUI custom JavaScript file such that it is guaranteed to be loaded and exist on every page before any other custom scripts.  All modules should be attached to the CUI global object with appropriate namespacing.  For example, we can attach a module named &#8216;&#8217;login&#8217;&#8217; to the top level global CUI object and a sub-module to &#8216;&#8217;login&#8217;&#8217; for holding password specific functionality:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">CUI</span><span class="p">.</span><span class="nx">login</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">hello_world</span> <span class="o">=</span> <span class="s2">&quot;hello World&quot;</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">hello_world</span>   <span class="o">:</span>  <span class="nx">hello_world</span>
+    <span class="p">};</span>
+<span class="p">}(</span><span class="nx">jQuery</span><span class="p">));</span>
+
+<span class="nx">CUI</span><span class="p">.</span><span class="nx">login</span><span class="p">.</span><span class="nx">password</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">create</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){};</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">create</span>   <span class="o">:</span>  <span class="nx">create</span>
+    <span class="p">};</span>
+<span class="p">}(</span><span class="nx">jQuery</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="syntax-conventions">
+<h3>6.2.3. Syntax Conventions<a class="headerlink" href="#syntax-conventions" title="Permalink to this headline">¶</a></h3>
+<p>The following are coding conventions related to Javascript syntax in an effort to enhance readability and adhere to the semantics of the language itself.</p>
+</div>
+<div class="section" id="variable-declaration">
+<h3>6.2.4. Variable Declaration<a class="headerlink" href="#variable-declaration" title="Permalink to this headline">¶</a></h3>
+<p>All variable declarations should be placed at the top of a function and a single &#8216;&#8217;var&#8217;&#8217; statement with comma separated variables should follow.</p>
+<p>Correct</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">list</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nx">length</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+        <span class="nx">i</span><span class="p">;</span>
+
+    <span class="k">for</span><span class="p">(</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">){</span>
+        <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">list</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">sum</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Incorrect</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">list</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">length</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">){</span>
+        <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">list</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">sum</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="object-attribute-access">
+<h3>6.2.5. Object Attribute Access<a class="headerlink" href="#object-attribute-access" title="Permalink to this headline">¶</a></h3>
+<p>Javascript supports both the dot-operator (myobject.foo) and index-style (myobject[&#8220;foo&#8221;]) object attribute access.  While the former can be slightly cleaner or more traditional when calling object methods, the latter allows for dynamic properties and can avoid reserved keyword clashes.  For example, &#8216;&#8217;package&#8217;&#8217; is a reserved word such that myobject.package can cause errors while myobject[&#8216;package&#8217;] will not.  Methods may be called using index-style notation as well - &#8216;&#8217;myobject[&#8216;add_package&#8217;]()&#8217;&#8216;.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">6. Javascript</a><ul>
+<li><a class="reference internal" href="#available-libraries">6.1. Available Libraries</a></li>
+<li><a class="reference internal" href="#project-javascript-code-conventions">6.2. Project Javascript Code Conventions</a><ul>
+<li><a class="reference internal" href="#general">6.2.1. General</a></li>
+<li><a class="reference internal" href="#convergeui-global-namespace">6.2.2. ConvergeUI Global Namespace</a></li>
+<li><a class="reference internal" href="#syntax-conventions">6.2.3. Syntax Conventions</a></li>
+<li><a class="reference internal" href="#variable-declaration">6.2.4. Variable Declaration</a></li>
+<li><a class="reference internal" href="#object-attribute-access">6.2.5. Object Attribute Access</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="stylesheets.html"
+                        title="previous chapter">5. Stylesheets</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="fonts.html"
+                        title="next chapter">7. Fonts</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/resources/javascript.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="fonts.html" title="7. Fonts"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="stylesheets.html" title="5. Stylesheets"
+             >previous</a> |</li>
+        <li><a href="../index.html">ConvergeUI 0.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Red Hat.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

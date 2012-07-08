@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>7. Fonts &mdash; ConvergeUI 0.4 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="ConvergeUI 0.4 documentation" href="../index.html" />
+    <link rel="next" title="8. Images" href="images.html" />
+    <link rel="prev" title="6. Javascript" href="javascript.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="images.html" title="8. Images"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="javascript.html" title="6. Javascript"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ConvergeUI 0.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="fonts">
+<h1>7. Fonts<a class="headerlink" href="#fonts" title="Permalink to this headline">¶</a></h1>
+<p>ConvergeUI provides a set of fonts in a variety of formats for cross-browser support.  These fonts are declared in corresponding SCSS files using the font-face directive.</p>
+<div class="section" id="provided-fonts">
+<h2>7.1. Provided Fonts<a class="headerlink" href="#provided-fonts" title="Permalink to this headline">¶</a></h2>
+<p>The fonts and flavors provided by ConvergeUI are:</p>
+<p><strong>Liberation Sans</strong></p>
+<ul class="simple">
+<li>Regular</li>
+<li>Bold</li>
+<li>Italic</li>
+<li>Bold Italic</li>
+</ul>
+<p><strong>Overpass</strong></p>
+<ul class="simple">
+<li>Regular</li>
+<li>Overpass Bold</li>
+</ul>
+</div>
+<div class="section" id="provided-formats">
+<h2>7.2. Provided Formats<a class="headerlink" href="#provided-formats" title="Permalink to this headline">¶</a></h2>
+<p>Each font provided by ConvergeUI is provided in the following formats:</p>
+<ul class="simple">
+<li>Embedded OpenType (*.eot)</li>
+<li>Scalable Vector Graphic (*.svg)</li>
+<li>TrueType (*.tff)</li>
+<li>Web Open Font Format (*.woff)</li>
+</ul>
+</div>
+<div class="section" id="font-face-directive">
+<h2>7.3. Font-Face Directive<a class="headerlink" href="#font-face-directive" title="Permalink to this headline">¶</a></h2>
+<p>For a given font, an SCSS file is provided that declares the various flavors of the font using the font-face directive.  The following is an example how the &#8216;Liberation Sans Regular&#8217; font type would be declared within the &#8216;fonts/liberation.scss&#8217; file.  Note this file would also include the declarations for other flavors of the font (e.g. bold, italic).</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="k">@font-face</span> <span class="p">{</span>
+        <span class="nt">font-family</span><span class="o">:</span> <span class="s1">&#39;Liberation Sans&#39;</span><span class="o">;</span>
+        <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s1">&#39;Liberation Sans&#39;</span><span class="o">),</span> <span class="nt">local</span><span class="o">(</span><span class="s1">&#39;LiberationSans&#39;</span><span class="o">),</span> <span class="nt">local</span><span class="o">(</span><span class="s1">&#39;Liberation-Sans&#39;</span><span class="o">),</span>
+             <span class="nt">font-url</span><span class="o">(</span><span class="s1">&#39;LiberationSans-Regular-webfont.eot?#iefix&#39;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s1">&#39;eot&#39;</span><span class="o">),</span>
+             <span class="nt">font-url</span><span class="o">(</span><span class="s1">&#39;LiberationSans-Regular-webfont.woff&#39;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s1">&#39;woff&#39;</span><span class="o">),</span>
+             <span class="nt">font-url</span><span class="o">(</span><span class="s1">&#39;LiberationSans-Regular-webfont.ttf&#39;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s1">&#39;truetype&#39;</span><span class="o">),</span>
+             <span class="nt">font-url</span><span class="o">(</span><span class="s1">&#39;LiberationSans-Regular-webfont.svg#webfontLfr8h6FA&#39;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s1">&#39;svg&#39;</span><span class="o">);</span>
+        <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">normal</span><span class="o">;</span>
+        <span class="nt">font-style</span><span class="o">:</span> <span class="nt">normal</span><span class="o">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">7. Fonts</a><ul>
+<li><a class="reference internal" href="#provided-fonts">7.1. Provided Fonts</a></li>
+<li><a class="reference internal" href="#provided-formats">7.2. Provided Formats</a></li>
+<li><a class="reference internal" href="#font-face-directive">7.3. Font-Face Directive</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="javascript.html"
+                        title="previous chapter">6. Javascript</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="images.html"
+                        title="next chapter">8. Images</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/resources/fonts.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="images.html" title="8. Images"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="javascript.html" title="6. Javascript"
+             >previous</a> |</li>
+        <li><a href="../index.html">ConvergeUI 0.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Red Hat.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

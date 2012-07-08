@@ -25,7 +25,8 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="ConvergeUI 0.4 documentation" href="#" /> 
+    <link rel="top" title="ConvergeUI 0.4 documentation" href="#" />
+    <link rel="next" title="1. Project Goals" href="user-guide/goals.html" /> 
   </head>
   <body>
     <div class="related">
@@ -34,6 +35,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="user-guide/goals.html" title="1. Project Goals"
+             accesskey="N">next</a> |</li>
         <li><a href="#">ConvergeUI 0.4 documentation</a> &raquo;</li> 
       </ul>
     </div>  
@@ -46,11 +50,80 @@
   <div class="section" id="welcome-to-convergeui-s-documentation">
 <h1>Welcome to ConvergeUI&#8217;s documentation!<a class="headerlink" href="#welcome-to-convergeui-s-documentation" title="Permalink to this headline">¶</a></h1>
 <p>ConvergeUI is an asset repository for web resources that also includes a number of HAML layouts and styling.  This layouts and styling are designed to be customizable and flexible depending on the project&#8217;s needs.  The easiest way to use ConvergeUI is as a git submodule in your own project and an example of this can be seen within the ConvergeUI Example app.</p>
-<div class="section" id="supported-libraries">
-<h2>Supported Libraries<a class="headerlink" href="#supported-libraries" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>jQuery - 1.6.2</li>
-<li>underscorejs - 1.3.1</li>
+<p>The ConvergeUI example rails application is hosted on OpenShift:</p>
+<p><a class="reference external" href="http://convergeui-ehelms.rhcloud.com/">http://convergeui-ehelms.rhcloud.com/</a></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user-guide/goals.html">1. Project Goals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/goals.html#flexibility">1.1. Flexibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/goals.html#common-style">1.2. Common Style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/goals.html#configurability">1.3. Configurability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user-guide/build.html">2. Build</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/build.html#requirements">2.1. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/build.html#stand-alone-rpm">2.2. Stand-alone RPM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/build.html#using-convergeui-as-a-git-submodule">2.3. Using ConvergeUI as a Git Submodule</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/build.html#rpm-buildrequires-when-using-git-submodule">2.3.1. RPM BuildRequires when using Git Submodule</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user-guide/development.html">3. Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/development.html#repository">3.1. Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/development.html#process">3.2. Process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources/layouts.html">4. Layouts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources/layouts.html#component-layouts">4.1. Component Layouts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="resources/layouts.html#header">4.1.1. Header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="resources/layouts.html#foooter">4.1.2. Foooter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="resources/layouts.html#composite-layouts">4.2. Composite Layouts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="resources/layouts.html#shell">4.2.1. Shell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="resources/layouts.html#user-session">4.2.2. User Session</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources/stylesheets.html">5. Stylesheets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources/stylesheets.html#available-stylesheets">5.1. Available Stylesheets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources/stylesheets.html#stylesheet-types">5.2. Stylesheet Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="resources/stylesheets.html#composite-stylsheets">5.2.1. Composite Stylsheets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="resources/stylesheets.html#component-stylesheets">5.2.2. Component Stylesheets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="resources/stylesheets.html#partial-stylesheets">5.2.3. Partial Stylesheets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="resources/stylesheets.html#scss-code-conventions">5.3. SCSS Code Conventions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="resources/stylesheets.html#classes-and-ids">5.3.1. Classes and IDs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="resources/stylesheets.html#variables-and-mixins">5.3.2. Variables and Mixins</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources/javascript.html">6. Javascript</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources/javascript.html#available-libraries">6.1. Available Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources/javascript.html#project-javascript-code-conventions">6.2. Project Javascript Code Conventions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="resources/javascript.html#general">6.2.1. General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="resources/javascript.html#convergeui-global-namespace">6.2.2. ConvergeUI Global Namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="resources/javascript.html#syntax-conventions">6.2.3. Syntax Conventions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="resources/javascript.html#variable-declaration">6.2.4. Variable Declaration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="resources/javascript.html#object-attribute-access">6.2.5. Object Attribute Access</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources/fonts.html">7. Fonts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources/fonts.html#provided-fonts">7.1. Provided Fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources/fonts.html#provided-formats">7.2. Provided Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources/fonts.html#font-face-directive">7.3. Font-Face Directive</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources/images.html">8. Images</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources/images.html#available-icons">8.1. Available Icons</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -61,14 +134,9 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Welcome to ConvergeUI&#8217;s documentation!</a><ul>
-<li><a class="reference internal" href="#supported-libraries">Supported Libraries</a></li>
-</ul>
-</li>
-</ul>
-
+  <h4>Next topic</h4>
+  <p class="topless"><a href="user-guide/goals.html"
+                        title="next chapter">1. Project Goals</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/index.txt"
@@ -97,6 +165,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="user-guide/goals.html" title="1. Project Goals"
+             >next</a> |</li>
         <li><a href="#">ConvergeUI 0.4 documentation</a> &raquo;</li> 
       </ul>
     </div>
