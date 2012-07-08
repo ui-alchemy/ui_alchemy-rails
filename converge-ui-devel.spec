@@ -19,7 +19,7 @@ Summary:       A collection of assets
 Group:         Applications/System
 License:       GPLv2
 URL:           http://www.katello.org
-Version:       0.7
+Version:       0.8.1
 Release:       1%{?dist}
 Source0:       %{name}-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -58,6 +58,50 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.rst LICENSE
 
 %changelog
+* Sun Jul 08 2012 Eric D Helms <ericdhelms@gmail.com> 0.8.1-1
+- Updates to user guide documentation. (ericdhelms@gmail.com)
+- Updates to layouts and associated documentation. (ericdhelms@gmail.com)
+- Header updates to add proper bottom stroke. (ericdhelms@gmail.com)
+- Minor fixes. (ericdhelms@gmail.com)
+- Merge remote-tracking branch 'origin/master' into docs (ericdhelms@gmail.com)
+- Re-organization of docs and updates to Javascript documentation.
+  (ericdhelms@gmail.com)
+- Removes the minified version of jQuery. (ericdhelms@gmail.com)
+- Moves sprites into components section due to defining CSS.
+  (ericdhelms@gmail.com)
+- Updates to organization of docs and added numbering. (ericdhelms@gmail.com)
+- Moves components to use of underscore to prevent direct compilation by
+  compass. (ericdhelms@gmail.com)
+- Documentation updates. (ericdhelms@gmail.com)
+- Updates to build and development documentation. (ericdhelms@gmail.com)
+- Spinner on login. (jrist@redhat.com)
+- Spacing in javascript documentation. (ericdhelms@gmail.com)
+- Updates for fonts documentation. (ericdhelms@gmail.com)
+- Updates for fonts and images documentation. (ericdhelms@gmail.com)
+- Merge pull request #29 from knowncitizen/master (ericdhelms@gmail.com)
+- Abstracting org switcher to just be "interstitial". (jrist@redhat.com)
+- Body > Footer css duplication tweak. (jrist@redhat.com)
+- Two things - header-widget fix and org interstitial check 1.) Fixing header-
+  widget items to float right in the event some are missing due to perms. 2.)
+  Org interstitial check on login_layout so that it will not break other
+  projects. (jrist@redhat.com)
+- More documentation around process and Javascript. Moved Javascript libraries
+  form lib to vendor for third party. (ericdhelms@gmail.com)
+- Fix for submit remote true not being necessary. (jrist@redhat.com)
+- Making org interstitial a var to prevent usage where not needed.
+  (jrist@redhat.com)
+- Merges utils stylesheet into helpers. (ericdhelms@gmail.com)
+- Treats each partials as stand-alone to be collected in base.
+  (ericdhelms@gmail.com)
+- Adds normalize SCSS. (ericdhelms@gmail.com)
+- Org switcher interstitial changes to include a header. (jrist@redhat.com)
+- Changes to login to accomodate an org switcher interstitial.
+  (jrist@redhat.com)
+- Updates to component and compsite stylesheets. (ehelms@redhat.com)
+- Initial re-organization and documentation defining new organization and
+  terms. (ehelms@redhat.com)
+- Adds new docs structure. (ehelms@redhat.com)
+
 * Mon Jun 25 2012 Eric D Helms <ehelms@redhat.com> 0.7-1
 - Fix for images and fonts in converge-ui spec. (jrist@redhat.com)
 - More SCSS, CSS duplication reduction.  Faster loading, better fonts, a few
