@@ -2,15 +2,11 @@
  Javascript
 ************
 
-==============
- Organization
-==============
-
 ConvergeUI provides Javacript in two forms.  First, a set of vendor libraries are supplied that a project can optionally pull into their project for use.  Second, ConvergeUI supplies some Javascript functionality along with the provided layouts.
 
----------------------
+=====================
  Available Libraries
----------------------
+=====================
 
 The Javascript directory, and thus provided libraries, is laid out in the following way::
 
@@ -143,4 +139,4 @@ Incorrect
  Object Attribute Access
 -------------------------
 
-Javascript supports both the dot-operator (myobject.foo) and index-style (myobject{{{[}}}"foo"{{{]}}}) object attribute access.  While the former can be slightly cleaner or more traditional when calling object methods, the latter allows for dynamic properties and can avoid reserved keyword clashes.  For example, ''package'' is a reserved word such that myobject.package can cause errors while myobject{{{[}}}'package'{{{]}}} will not.  Methods may be called using index-style notation as well - ''myobject{{{[}}}'add_package'{{{]}}}()''.
+Javascript supports both the dot-operator (myobject.foo) and index-style (myobject["foo"]) object attribute access.  While the former can be slightly cleaner or more traditional when calling object methods, the latter allows for dynamic properties and can avoid reserved keyword clashes.  For example, ''package'' is a reserved word such that myobject.package can cause errors while myobject['package'] will not.  Methods may be called using index-style notation as well - ''myobject['add_package']()''.

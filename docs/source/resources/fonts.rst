@@ -1,12 +1,41 @@
-======
-Fonts
-======
+*******
+ Fonts
+*******
 
 ConvergeUI provides a set of fonts in a variety of formats for cross-browser support.  These fonts are declared in corresponding SCSS files using the font-face directive.
 
---------------------
-Font-Face Directive
---------------------
+================
+ Provided Fonts
+================
+
+The fonts and flavors provided by ConvergeUI are:
+
+**Liberation Sans**
+
+* Regular
+* Bold
+* Italic
+* Bold Italic
+
+**Overpass**
+
+* Regular
+* Overpass Bold
+
+==================
+ Provided Formats
+==================
+
+Each font provided by ConvergeUI is provided in the following formats:
+
+* Embedded OpenType (\*.eot)
+* Scalable Vector Graphic (\*.svg)
+* TrueType (\*.tff)
+* Web Open Font Format (\*.woff)
+
+=====================
+ Font-Face Directive
+=====================
 
 For a given font, an SCSS file is provided that declares the various flavors of the font using the font-face directive.  The following is an example how the 'Liberation Sans Regular' font type would be declared within the 'fonts/liberation.scss' file.  Note this file would also include the declarations for other flavors of the font (e.g. bold, italic).
 
@@ -22,32 +51,3 @@ For a given font, an SCSS file is provided that declares the various flavors of 
             font-weight: normal;
             font-style: normal;
     }
-
------------------
-Provided Formats
------------------
-
-Each font provided by ConvergeUI is provided in the following formats:
-
-* Embedded OpenType (\*.eot)
-* Scalable Vector Graphic (\*.svg)
-* TrueType (\*.tff)
-* Web Open Font Format (\*.woff)
-
----------------
-Provided Fonts
----------------
-
-The fonts and flavors provided by ConvergeUI are:
-
-**Liberation Sans**
-
-* Regular
-* Bold
-* Italic
-* Bold Italic
-
-**Overpass**
-
-* Regular
-* Overpass Bold

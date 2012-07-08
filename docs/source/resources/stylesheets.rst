@@ -1,14 +1,10 @@
-============
-Stylesheets
-============
+*************
+ Stylesheets
+*************
 
-------------
-Organization
-------------
-
-^^^^^^^^^^^^^^^
-File Structure
-^^^^^^^^^^^^^^^
+=======================
+ Available Stylesheets
+=======================
 
 The stylesheets directory is laid out in the following way::
 
@@ -39,21 +35,25 @@ The stylesheets directory is laid out in the following way::
             _colors.scss
             _vars.scss
 
-^^^^^^^^^^^^^^^^^^^^^
-Composite Stylsheets
-^^^^^^^^^^^^^^^^^^^^^
+==================
+ Stylesheet Types
+==================
+
+----------------------
+ Composite Stylsheets
+----------------------
 
 Composite stylesheets combine multiple *component stylsheets* to create a larger conceptual entity.  For example, a *composite stylesheet* may combine the header, content and footer components while also including the components used to define typographical and form entities.
 
-^^^^^^^^^^^^^^^^^^^^^
-Component Stylesheets
-^^^^^^^^^^^^^^^^^^^^^
+-----------------------
+ Component Stylesheets
+-----------------------
 
 Component stylesheets represent a singular entity (e.g. header, footer, widget) that may be combined into a *composite stylsheet*.  These stylesheets should include a set of partials that define needed variables, colors, or mixins.  Component stylesheets also use the underscore notation to prevent Compass from compiling them directly.
 
-^^^^^^^^^^^^^^^^^^^
-Partial Stylesheets
-^^^^^^^^^^^^^^^^^^^
+---------------------
+ Partial Stylesheets
+---------------------
 
 Partials are denoted by SCSS files that begin with an underscore (e.g. _vars).  Partials are intended to be included on multiple *component stylesheets* and should therefore not include any direct CSS, but rather, should be limited to the following:
 
@@ -61,15 +61,15 @@ Partials are denoted by SCSS files that begin with an underscore (e.g. _vars).  
 * Mixins
 * Function Directives
 
-----------------------
-SCSS Code Conventions
-----------------------
+=======================
+ SCSS Code Conventions
+=======================
 
 The SCSS code conventions adopted by ConvergeUI are an effort to increase readability, performance and re-usability.
 
-^^^^^^^^^^^^^^^^^^^^^^^^
-Classes and IDs
-^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------
+ Classes and IDs
+-----------------
 
 Use underscores to break apart logical elements of the name.  This helps to differentiate custom CSS from standard CSS provided by the browser.
 
@@ -78,9 +78,9 @@ Examples::
     .card_container
     #password_recovery_form
 
-^^^^^^^^^^^^^^^^^^^^^^^^^
-Variables and Mixins
-^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------
+ Variables and Mixins
+----------------------
 
 The general format for the naming convention is to use underscores to separate the name and to use a dash to tack on a property of the variable, image or mixin::
 
