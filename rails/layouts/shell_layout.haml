@@ -1,7 +1,6 @@
 = content_for(:body) do
   #wrapper
-    %header#header
-      = render :partial => "layouts/converge-ui/header_layout"
+    = render :partial => "layouts/converge-ui/header_layout"
     %article#maincontent
       %section.maincontent
         = yield :content
