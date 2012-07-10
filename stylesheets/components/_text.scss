@@ -4,7 +4,7 @@
 
 body {
   font: 12px/1.5 $screenfont;
-  color: $text_color;
+  color: $font-color;
 }
 
 h1 {
@@ -16,7 +16,7 @@ h3 { font-size: 160%; }
 h4 { font-size: 150%; }
 h5 { font-size: 140%; }
 h1,h2,h3,h4,h5 {
-  color: $font_color;
+  color: $headline_color;
   font-family: $headlinebold;
   font-weight: bold;
   word-wrap: break-word;

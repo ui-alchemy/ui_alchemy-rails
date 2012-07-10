@@ -106,15 +106,15 @@ input[type='submit'], button, .button {
   margin: 4px;
   padding: 4px 12px;
   @include border-radius(5px);
-  @include _text-shadow($white_color, 0, 1px, 0);
+  @include _text-shadow(#FFF, 0, 1px, 0);
   min-height: 14px;
   
   .nomargin {
     margin: 0;
   }
   &:hover {
-    background: -moz-linear-gradient(top, $white_color, $white_color, #cfcfcf);
-    background: -webkit-gradient(linear, left top, left bottom, from($white_color), color-stop(0.6, $white_color), to(#cfcfcf));
+    background: -moz-linear-gradient(top, #FFF, #FFF, #cfcfcf);
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), color-stop(0.6, #FFF), to(#cfcfcf));
     @include box-shadow(0, 1px, 2px, rgba(0,0,0,0.5));
     text-decoration: none;
     color: black;
