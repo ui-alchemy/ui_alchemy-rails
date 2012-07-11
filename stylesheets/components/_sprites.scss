@@ -3,9 +3,7 @@
 
 
 //Images
-$logo_img:                    image-url("embed/logo.png") no-repeat 0 0 transparent;
 $spinner_img:                 image-url("converge-ui/icons/spinner.gif") no-repeat 0 0 transparent;
-$loading_img:                 image-url("converge-ui/icons/spinner_head.gif") no-repeat 0 0 transparent;
 
 /* this needs to work for converge-ui */
 $spritePath: image-url("converge-ui/icons/action-icons.png");
@@ -90,7 +88,6 @@ $search_icon_white:           image-url("converge-ui/icons/action-icons.png") no
 $base_product_icon:           image-url("converge-ui/icons/objects.png") no-repeat 0 0;
 $custom_product_icon:         image-url("converge-ui/icons/objects.png") no-repeat -16px 0;
 $rh_product_icon:             image-url("converge-ui/icons/objects.png") no-repeat -48px 0;
-$arrow_icon:                  image-url("converge-ui/icons/arrow_icon.png") no-repeat 0 0;
 $arrow_icon_menu:             image-url("converge-ui/icons/arrow_icon.png") no-repeat -26px 0;
 $arrow_icon_menu_hover:       image-url("converge-ui/icons/arrow_icon.png") no-repeat -13px 0;
 $gears_icon_black:            image-url("converge-ui/icons/action-icons.png") -64px -16px no-repeat;

@@ -1,17 +1,17 @@
 /*************
 * Base Colors
 **************/
-$background-color:          #D9D9D9 !default;
-$primary-color:             #26B3E2 !default;
-$light_primary-color:       lighten($primary-color, 35%) !default;
-$selected-color:            darken($primary-color, 15%) !default;
-$link-color:                darken($primary-color, 05%) !default; /* default links */
-$tab_on-color:              darken($selected-color, 1%) !default;
-$tab_off-color:             #747474 !default; /* unfocused tabs */
-$list_hover-color:          lighten($selected_color, 10%) !default; /* list items prelight state */
-$font-color:                #A1A1A1 !default;
-$headline-color:            #939292 !default;
-$border-color:              #D7D7D7 !default;
+$application-background-color:  #D9D9D9 !default;
+$primary-color:                 #26B3E2 !default;
+$light_primary-color:           lighten($primary-color, 35%) !default;
+$selected-color:                darken($primary-color, 15%) !default;
+$link-color:                    darken($primary-color, 05%) !default; /* default links */
+$tab_on-color:                  darken($selected-color, 1%) !default;
+$tab_off-color:                 #747474 !default; /* unfocused tabs */
+$list_hover-color:              lighten($selected_color, 10%) !default; /* list items prelight state */
+$font-color:                    #A1A1A1 !default;
+$headline-color:                #939292 !default;
+$border-color:                  #D7D7D7 !default;
 
 
 /**************
@@ -26,10 +26,22 @@ $input_background-color:  #F0F0F0 !default;
 *****************/
 $header-color:                    #333333 !default;
 $header-border-top-color:         #01536d !default;
-$header_border_bottom-color:      #D9D9D9 !default;
+$header-border-bottom-color:      rgba(11, 15, 16, 0.55);
 $header_background_top-color:     #009DCC !default;
 $header_background_bottom-color:  #006F8F !default;
+$header_widget-background-color:  #0A6684;
 $tab_background-color:            rgba(25, 25, 30, 0.4) !default;
+$tab_hover-color:                 rgba(25, 25, 30, .15);
+$tab_font-color:                  #F1F1F1;
+$tab_selected-color:              #505050;
+$tab_container_outline-color:     rgba(205, 205, 208, 0.4);
+
+
+/****************
+*  Footer Colors
+*****************/
+$footer_background-color: #EBEBEB !default;
+$footer_border_top-color: #F2F2F2 !default;
 
 
 /****************

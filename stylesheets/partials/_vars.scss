@@ -20,3 +20,11 @@ $form_container-padding: 30px !default;
 $logo_container-width: 140px !default;
 $form_container-width: 360px !default;
 $login_form_top-margin: 75px - 20px !default;
+
+
+/********
+* Images
+*********/
+$logo_img:    image-url("embed/logo.png") no-repeat 0 0 transparent;
+$loading_img: image-url("converge-ui/icons/spinner_head.gif") no-repeat 0 0 transparent;
+$arrow_icon:  image-url("converge-ui/icons/arrow_icon.png") no-repeat 0 0;
