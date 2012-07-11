@@ -1,8 +1,5 @@
-@charset "UTF-8";
-@import "compass";
-@import "vars";
-@import "mixins";
-@import "colors";
+@import "../partial/base";
+
 
 input, textarea {
   margin: 0;
