@@ -130,7 +130,6 @@ article {
           display: inline-block;
           margin-top: 42px;
           font-size: 12px;
-          font-family: $headlinefont;
           color: $headline_font-color;
         }
 
@@ -150,9 +149,9 @@ article {
             margin-bottom: 0px;
             margin-left: 10px;
             font-size: 12px;
-            font-weight: bold;
             color: $label_font-color;
             text-align: left;
+            font-family: $headline-font-bold;
           }
 
           input {
