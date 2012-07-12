@@ -17,10 +17,13 @@
   - if !@disable_password_recovery
     .card_container#password_recovery_container
       .card
-        %p 
+        .return_link_container
+          %a{ :id => "password_return_link", :href => "#password_recovery" }
+            %i.left_arrow-icon-black
+        %h2
+          = get_string(:password_unknown)
+        %p
           = get_string(:password_unknown_info)
-          %a{ :id => "password_return_link", :href => "#" }
-            = get_string(:return_to_login)
         = form_tag password_resets_path, :method => :post, :id => "password_recovery_form", :remote => true do
           %fieldset.primary
             = label_tag :username, get_string(:username)
@@ -28,16 +31,17 @@
           %fieldset.primary
             = label_tag :email, get_string(:email_address)
             = text_field_tag :email, params[:email]
-          %div.group.secondary_actions
-            %span
           = submit_tag get_string(:reset_password), :class => 'button fr'
     .card_container#username_recovery_container
       .card
-        %p 
-          = get_string(:login_unknown_info)
-          %a{ :id => "username_return_link", :href => "#" }
-            = get_string(:return_to_login)
-        = form_tag email_logins_password_resets_path, :method => :get, :id => "login_recovery_form", :remote => true do
+        .return_link_container
+          %a{ :id => "username_return_link", :href => "#username_recovery" }
+            %i.left_arrow-icon-black
+        %h2
+          = get_string(:username_unknown)
+        %p
+          = get_string(:username_unknown_info)
+        = form_tag email_logins_password_resets_path, :method => :get, :id => "username_recovery_form", :remote => true do
           %fieldset.primary
             = label_tag :email, get_string(:email_address)
             = text_field_tag :email, params[:email]
