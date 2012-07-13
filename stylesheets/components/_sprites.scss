@@ -9,7 +9,8 @@ $spritePath: image-url("converge-ui/icons/action-icons.png");
 
 [class$="_icon_grey"],
 [class$="_icon_black"],
-[class*="-icon-"] {
+[class*="-icon-"],
+[class*="-icon"] {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -70,6 +71,7 @@ $spritePath: image-url("converge-ui/icons/action-icons.png");
 .left_arrow-icon-black    { background-position: -654px -16px; }
 .add_env-icon-grey        { background-position: -671px 0px; }
 .add_env-icon-black       { background-position: -671px -16px; }
+.validation_error-icon    { background-position: -687px -16px; }
 
 
 $arrow_min_img_small:         image-url("converge-ui/icons/action-icons.png")  -544px -16px no-repeat;
