@@ -19,7 +19,7 @@ Summary:       A collection of assets
 Group:         Applications/System
 License:       GPLv2
 URL:           http://www.katello.org
-Version:       0.8.1
+Version:       0.8.2
 Release:       1%{?dist}
 Source0:       %{name}-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -58,6 +58,24 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.rst LICENSE
 
 %changelog
+* Tue Jul 24 2012 Eric D Helms <ericdhelms@gmail.com> 0.8.2-1
+- Adds proper chosen styling and variablizes the chosen sprite url.
+  (ericdhelms@gmail.com)
+- Adds jQuery chosen. (ericdhelms@gmail.com)
+- Updates for adding new placement of back arrow and adding new icon for
+  validation error. (ericdhelms@gmail.com)
+- Fixes issue with imporper Overpass bold font-face declaration that led to
+  bold overpass fonts being bolded instead of using the font itself.
+  (ericdhelms@gmail.com)
+- Updates styling on change password screen. (ericdhelms@gmail.com)
+- Updates to the login pages related to password recovery and username
+  recovery. (ericdhelms@gmail.com)
+- Fixes typo with import of base partial. (ericdhelms@gmail.com)
+- Cleanup. (ericdhelms@gmail.com)
+- Updates to header and footer to pull out color variables.
+  (ericdhelms@gmail.com)
+- Cleanup of colors. (ericdhelms@gmail.com)
+
 * Sun Jul 08 2012 Eric D Helms <ericdhelms@gmail.com> 0.8.1-1
 - Updates to user guide documentation. (ericdhelms@gmail.com)
 - Updates to layouts and associated documentation. (ericdhelms@gmail.com)
