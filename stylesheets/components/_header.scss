@@ -127,7 +127,7 @@ header#header {
         }
 
         &:last-child > a {
-          @include border-radius(3px 0 0 0);
+          @include border-radius(0 3px 0 0);
           border-right: none;
         }
       }
