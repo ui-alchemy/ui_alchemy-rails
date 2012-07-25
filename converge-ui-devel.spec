@@ -19,7 +19,7 @@ Summary:       A collection of assets
 Group:         Applications/System
 License:       GPLv2
 URL:           http://www.katello.org
-Version:       0.8.2
+Version:       0.8.3
 Release:       1%{?dist}
 Source0:       %{name}-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -58,6 +58,15 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.rst LICENSE
 
 %changelog
+* Wed Jul 25 2012 Eric D Helms <ehelms@redhat.com> 0.8.3-1
+- Fix for the wrong corner of the last tab in the header being rounded.
+  (ehelms@redhat.com)
+- Fixes default font color to proper shade of black instead of washed out grey.
+  (ehelms@redhat.com)
+- Removes variables for images that don't currently exist from the sprites
+  file.  Sprites file is intended to be used to store icon class definitions
+  and should therefore only be included once per page. (ehelms@redhat.com)
+
 * Tue Jul 24 2012 Eric D Helms <ericdhelms@gmail.com> 0.8.2-1
 - Adds proper chosen styling and variablizes the chosen sprite url.
   (ericdhelms@gmail.com)
