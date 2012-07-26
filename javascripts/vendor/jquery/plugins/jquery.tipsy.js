@@ -18,13 +18,22 @@
     
     Tipsy.prototype = {
         show: function() {
-            var title = this.getTitle();
+            var title = this.getTitle(),
+                to_render = title;
             if (title && this.enabled) {
                 var $tip = this.tip();
-                
-                $tip.find('.tipsy-inner')[this.options.html ? 'html' : 'text'](title);
+
+                if(this.cached_title){
+                    title = this.cached_title;
+                }
+                else {
+                    this.fetchData();
+                }
+
+                $tip.find('.tipsy-inner')[this.options.html ? 'html' : 'text'](title); 
                 $tip[0].className = 'tipsy'; // reset classname in case of dynamic gravity
                 $tip.remove().css({top: 0, left: 0, visibility: 'hidden', display: 'block'}).prependTo(document.body);
+               
 
                 if (this.options.className) {
                     $tip.addClass(maybeCall(this.options.className, this.$element[0]));
@@ -92,7 +101,6 @@
                 if( $.isFunction(this.options.afterShow) ) this.options.afterShow.apply(self);
             }
         },
-        
         hide: function() {
             if (this.options.fade) {
                 this.tip().stop().fadeOut(function() { $(this).remove(); });
@@ -107,12 +115,29 @@
                 $e.attr('original-title', $e.attr('title') || '').removeAttr('title');
             }
         },
-        
+        fetchData: function(){
+            var o = this.options, 
+                tipsy = this,
+                url = o.url;
+
+            if(o.url && !this.fetching){
+                if (typeof o.url === 'function') {
+                    url = url(this.$element);
+                }
+                $.get(url, {}, function(data){
+                    tipsy.cached_title = data;
+                    tipsy.fetching = true;
+                    if(tipsy.$tip.is(':visible')){
+                        tipsy.show();
+                    }
+                });
+            }
+        },
         getTitle: function() {
             var title, $e = this.$element, o = this.options;
             this.fixTitle();
             var title, o = this.options;
-            if (typeof o.title == 'string') {
+            if (typeof o.title === 'string') {
                 title = $e.attr(o.title == 'title' ? 'original-title' : o.title);
             } else if (typeof o.title == 'function') {
                 title = o.title.call($e[0]);
@@ -194,7 +219,6 @@
             var tipsy = get(this),
                 activeTip,
                 show = (tipsy.clickState === 'on') ? false : true;
-            
             handleClose();
 
             if( show ){
@@ -211,10 +235,13 @@
 
             if( !(target.parents().hasClass('tipsy-inner')) ){
                 if( options.activeTip ){
-                    options.activeTip.clickState = 'off';
-                    options.stickyClick(options.activeTip, 'off');
-                    get(options.activeTip).hide();
-                    options.activeTip = undefined;
+                    if(options.closeOnScroll){
+                        handleClose();
+                    }
+                    else {
+                        get(options.activeTip).show();
+                    }
+
                 }
             }
         }
