@@ -4,8 +4,8 @@
 /* this needs to work for converge-ui */
 $spritePath: image-url("converge-ui/icons/action-icons.png");
 
-[class$="_icon_grey"],
-[class$="_icon_black"],
+[class*="_icon_grey"],
+[class*="_icon_black"],
 [class*="-icon-"],
 [class*="-icon"] {
   display: inline-block;
@@ -18,50 +18,50 @@ $spritePath: image-url("converge-ui/icons/action-icons.png");
   background-repeat: no-repeat;
 }
 
-[class$="-icon-grey"], [class$="_icon_grey"]    { background-position-y: 0px; }
-[class$="-icon-black"], [class$="_icon_black"]  { background-position-y: -16px; }
+[class*="-icon-grey"], [class*="_icon_grey"]    { background-position-y: 0px; }
+[class*="-icon-black"], [class*="_icon_black"]  { background-position-y: -16px; }
 
 //Icons
-[class^="search_icon"]          { background-position-x: 0 }
-[class^="edit_icon"]            { background-position-x: -16px; }
-[class^="x_icon"]               { background-position-x: -32px; }
-[class^="add_icon"]             { background-position-x: -48px; }
-[class^="gears_icon"]           { background-position-x: -64px; }
-[class^="unknown_icon"]         { background-position-x: -80px; }
-[class^="lock_icon"]            { background-position-x: -96px; }
-[class^="unlock_icon"]          { background-position-x: -112px; }
-[class^="progress_gear_icon"]   { background-position-x: -128px; }
-[class^="discs_icon"]           { background-position-x: -144px; }
-[class^="circle_x_icon"]        { background-position-x: -160px; }
-[class^="play_icon"]            { background-position-x: -176px; }
-[class^="stop_icon"]            { background-position-x: -192px; }
-[class^="camera_icon"]          { background-position-x: -208px; }
-[class^="key_icon"]             { background-position-x: -224px; }
-[class^="circle_plus_icon"]     { background-position-x: -240px; }
-[class^="details_icon"]         { background-position-x: -256px; }
-[class^="refresh_icon"]         { background-position-x: -272px; }
-[class^="power_icon"]           { background-position-x: -288px; }
-[class^="terminal_icon"]        { background-position-x: -304px; }
-[class^="computer_icon"]        { background-position-x: -320px; }
-[class^="help_tip_icon"]        { background-position-x: -336px; }
-[class^="machine_icon"]         { background-position-x: -352px; }
-[class^="machine_outline_icon"] { background-position-x: -368px; }
-[class^="warning_icon"]         { background-position-x: -384px; }
-[class^="plus_box_icon"]        { background-position-x: -400px; }
-[class^="bug_icon"]             { background-position-x: -416px; }
-[class^="shield_icon"]          { background-position-x: -432px; }
-[class^="check_icon"]           { background-position-x: -448px; }
-[class^="clock_icon"]           { background-position-x: -464px; }
-[class^="gear_menu_icon"]       { background-position-x: -480px; }
-[class^="download_icon"]        { background-position-x: -512px; }
-[class^="down_arrow_icon"]      { background-position-x: -528px; }
-[class^="right_arrow_icon"]     { background-position-x: -544px; }
-[class^="package_icon"]         { background-position-x: -560px; }
-[class^="errata_icon"]          { background-position-x: -576px; }
-[class^="system_group_icon"]    { background-position-x: -592px; }
-[class^="collapse_icon"]        { background-position-x: -608px; }
-[class^="favorites_icon"]       { background-position-x: -624px; }
-[class^="dot_icon"]             { background-position-x: -640px; }
-[class^="left_arrow_icon"]      { background-position-x: -656px; }
-[class^="selector_icon"]        { background-position-x: -672px; }
-[class^="validation_icon"]      { background-position-x: -688px; }
+[class*="search_icon"]          { background-position-x: 0 }
+[class*="edit_icon"]            { background-position-x: -16px; }
+[class*="x_icon"]               { background-position-x: -32px; }
+[class*="add_icon"]             { background-position-x: -48px; }
+[class*="gears_icon"]           { background-position-x: -64px; }
+[class*="unknown_icon"]         { background-position-x: -80px; }
+[class*="lock_icon"]            { background-position-x: -96px; }
+[class*="unlock_icon"]          { background-position-x: -112px; }
+[class*="progress_gear_icon"]   { background-position-x: -128px; }
+[class*="discs_icon"]           { background-position-x: -144px; }
+[class*="circle_x_icon"]        { background-position-x: -160px; }
+[class*="play_icon"]            { background-position-x: -176px; }
+[class*="stop_icon"]            { background-position-x: -192px; }
+[class*="camera_icon"]          { background-position-x: -208px; }
+[class*="key_icon"]             { background-position-x: -224px; }
+[class*="circle_plus_icon"]     { background-position-x: -240px; }
+[class*="details_icon"]         { background-position-x: -256px; }
+[class*="refresh_icon"]         { background-position-x: -272px; }
+[class*="power_icon"]           { background-position-x: -288px; }
+[class*="terminal_icon"]        { background-position-x: -304px; }
+[class*="computer_icon"]        { background-position-x: -320px; }
+[class*="help_tip_icon"]        { background-position-x: -336px; }
+[class*="machine_icon"]         { background-position-x: -352px; }
+[class*="machine_outline_icon"] { background-position-x: -368px; }
+[class*="warning_icon"]         { background-position-x: -384px; }
+[class*="plus_box_icon"]        { background-position-x: -400px; }
+[class*="bug_icon"]             { background-position-x: -416px; }
+[class*="shield_icon"]          { background-position-x: -432px; }
+[class*="check_icon"]           { background-position-x: -448px; }
+[class*="clock_icon"]           { background-position-x: -464px; }
+[class*="gear_menu_icon"]       { background-position-x: -480px; }
+[class*="download_icon"]        { background-position-x: -512px; }
+[class*="down_arrow_icon"]      { background-position-x: -528px; }
+[class*="right_arrow_icon"]     { background-position-x: -544px; }
+[class*="package_icon"]         { background-position-x: -560px; }
+[class*="errata_icon"]          { background-position-x: -576px; }
+[class*="system_group_icon"]    { background-position-x: -592px; }
+[class*="collapse_icon"]        { background-position-x: -608px; }
+[class*="favorites_icon"]       { background-position-x: -624px; }
+[class*="dot_icon"]             { background-position-x: -640px; }
+[class*="left_arrow_icon"]      { background-position-x: -656px; }
+[class*="selector_icon"]        { background-position-x: -672px; }
+[class*="validation_icon"]      { background-position-x: -688px; }
