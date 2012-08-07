@@ -1,5 +1,7 @@
 @import "../partials/base";
 
+$input-height: 21px;
+
 
 /*radio and checkboxes are special*/
 input[type="checkbox"],  input[type="radio"]{
@@ -95,7 +97,7 @@ fieldset {
     font-weight: bold;
   }
 
-  input {
+  input, textarea {
     width: 290px;
     padding: 6px 0px 6px 10px;
     font-size: 14px;
@@ -103,12 +105,17 @@ fieldset {
     @include border-radius(4px);
     outline: none;
     border: 1px solid #CCC;
-    height: 21px;
+    height: $input-height;
     @include inset-box-shadow(0,1px,1px,rgba(0, 0, 0, 0.2));
+
     &:focus {
       @include box-shadow(0px 0px 4px $login_link-color);
       border: 1px solid $login_link-color;
     }
+  }
+
+  textarea {
+    height: $input-height * 3;
   }
 
 }
