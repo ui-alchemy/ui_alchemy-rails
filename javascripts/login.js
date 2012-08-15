@@ -36,6 +36,13 @@ $(document).ready(function() {
     $('#login_btn').click(function(){
       CUI.Login.Actions.toggleSpinner();
     });
+    $(document).bind("ajax:complete",
+          function(evt, data, status, xhr){
+            if(status == "success") {
+              $('form .spinner').fadeOut('fast');
+            }
+          }
+    );
     $('#username').focus();
 });
 
