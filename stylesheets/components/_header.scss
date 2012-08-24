@@ -101,7 +101,7 @@ header#header {
           border-right: 3px solid $tab_container_outline-color;
           @include background-clip(padding);
           outline: 0 none;
-
+          &:focus{background-color: darken($tab_background-color, 15%)}
           &.selected {
             color: $tab_selected-color;
             position: relative;
