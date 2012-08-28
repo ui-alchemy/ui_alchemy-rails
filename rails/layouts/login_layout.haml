@@ -50,10 +50,10 @@
             %span
           = submit_tag get_string(:send_login), :class => 'button fr'
 
-    - if content_for?(:interstitial)
-      .card_container#interstitial
-        .card
-          = yield :interstitial
+  - if content_for?(:interstitial)
+    .card_container#interstitial
+      .card
+        = yield :interstitial
 
 
 = render :partial => "layouts/converge-ui/user_session_layout"
