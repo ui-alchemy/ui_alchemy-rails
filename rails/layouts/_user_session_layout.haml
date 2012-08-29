@@ -1,4 +1,7 @@
 = content_for(:body) do
+  %noscript
+    .noscript-warning
+      = get_string(:noscript)
   #wrapper
     %article
       %div.container
