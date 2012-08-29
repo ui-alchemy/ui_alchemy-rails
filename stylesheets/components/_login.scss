@@ -1,5 +1,5 @@
 @import "../partials/base";
-
+@import "../components/shared";
 
 html, body{ 
   width: 100%; 
@@ -15,7 +15,7 @@ html, body{
 
 article {
   position: relative;
-  top: (1024 / 2) - $login_container-height;
+  top: (900 / 2) - $login_container-height;
 
   a, a:visited {
     cursor: hand;
@@ -37,7 +37,7 @@ article {
     width: $login-container_width;
     height: $login-container_height;
     margin: 0 auto;
-    padding: 10px;
+    padding: $login-container_top-padding;
     @include background(linear-gradient(top, rgba(255, 255, 255, 0) 40%, $login_base-color 120%));
     @include box-shadow($login_base-color 0px 12px 15px -8px);
     @include border-radius(7px);
@@ -69,13 +69,14 @@ article {
 
       .card {
         position: relative;
-        min-height: $login-container-height;
+        min-height: $login_container-height - 10;
+        height: $login_container-height - 10;
         width: $form_container-width - 2 * $form_container-padding;
         background: #FFF;
         padding: 0 $form_container-padding;
+        padding-top: 10px;
         @include border-radius(0 7px 7px 0);
         @include box-shadow(inset -15px -15px 30px -7px $login_card_shadow-color, inset 0px -15px 130px $login_card_shadow-color);
-
         //spinner post-login
         .spinner {
             margin-top: 1.8em;

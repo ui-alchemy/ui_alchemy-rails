@@ -3,7 +3,6 @@
 */
 $screenfont:          "Liberation Sans", sans-serif !default;
 $headlinefont:        "Overpass", Interstate, sans-serif !default;
-$headline-font-bold:  "Overpass-bold", Interstate-bold, sans-serif !default;
 
 /*
 * Component Size Variables
@@ -15,7 +14,8 @@ $header-height: 85px !default;
 * Sign-On Screen
 *****************/
 $login_container-width: 500px !default;
-$login_container-height: 275px !default;
+$login-container_top-padding: 10px !default;
+$login_container-height: 275px - $login-container_top-padding !default;
 $form_container-padding: 30px !default;
 $logo_container-width: 140px !default;
 $form_container-width: 360px !default;

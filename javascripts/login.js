@@ -70,8 +70,13 @@ CUI.Login.Actions = (function($){
                 }).appendTo(parent);
             }
         },
-        interstitial_switcher_animation = function(){
-          $('#interstitial').trigger({type:'login'});
+        interstitial_switcher_animation = function(num_orgs, redir_path){
+          if(parseInt(num_orgs, 10) > 1){
+            $('#interstitial').trigger({type:'login'});
+          } else {
+            CUI.Login.Actions.toggleSpinner();
+            window.location.href = redir_path;
+          }
         },
         toggleSpinner = function(){
           $('#login_form .spinner').fadeToggle('fast');
