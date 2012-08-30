@@ -15,11 +15,11 @@
 %global homedir %{_datarootdir}/%{name}
 
 Name:          converge-ui-devel
-Summary:       A collection of assets
+Summary:       Converging UI's since 2012.
 Group:         Applications/System
 License:       GPLv2
-URL:           http://www.katello.org
-Version:       0.8.3
+URL:           http://www.convergeui.org
+Version:       1.0
 Release:       1%{?dist}
 Source0:       %{name}-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -58,6 +58,56 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.rst LICENSE
 
 %changelog
+* Thu Aug 30 2012 Eric D Helms <ericdhelms@gmail.com> 1.0-1
+- Changes to accomodate fixes to the login/interstitial. (jrist@redhat.com)
+- Merge pull request #60 from jsomara/841857 (jsomara@gmail.com)
+- 841857 - fixing interestitial scope to display properly in LDAP mode
+  (jomara@redhat.com)
+- Adds link to convergeui demo and reference site. (ericdhelms@gmail.com)
+- Removes github pages reference from readme. (ericdhelms@gmail.com)
+- focus outline states for header navigation and anchors - also added the
+  clickable helper class (andyfitz@redhat.com)
+- Adds a set of color palette definitions. (ericdhelms@gmail.com)
+- Added fadeOut of spinner if ajax returns 200. (jrist@redhat.com)
+- Merge pull request #35 from ehelms/master (jrist@redhat.com)
+- Replaces use of background-position-x and background-position-y with a
+  definition set for sprites for grey and black.  This is due to the fact that
+  Firefox does not support the above CSS directives. (ericdhelms@gmail.com)
+- Switches sprite definitions to the anywhere as opposed to starts with class
+  attribute selector. (ericdhelms@gmail.com)
+- Updates and cleans-up sprites. (ericdhelms@gmail.com)
+- Updates forms to let inputs, labels and fieldsets mimic the login page
+  inputs. (ericdhelms@gmail.com)
+- setup to allow easy build in koji (msuchy@redhat.com)
+- alphabatizing javascript list in docs and adding trunk8 (jsherril@redhat.com)
+- Adding trunk8 for easier text ellipsis (jsherril@redhat.com)
+- adding newer version of tipsy featuring ajax loading (jsherril@redhat.com)
+
+* Thu Aug 30 2012 Eric D Helms <ericdhelms@gmail.com>
+- Changes to accomodate fixes to the login/interstitial. (jrist@redhat.com)
+- Merge pull request #60 from jsomara/841857 (jsomara@gmail.com)
+- 841857 - fixing interestitial scope to display properly in LDAP mode
+  (jomara@redhat.com)
+- Adds link to convergeui demo and reference site. (ericdhelms@gmail.com)
+- Removes github pages reference from readme. (ericdhelms@gmail.com)
+- focus outline states for header navigation and anchors - also added the
+  clickable helper class (andyfitz@redhat.com)
+- Adds a set of color palette definitions. (ericdhelms@gmail.com)
+- Added fadeOut of spinner if ajax returns 200. (jrist@redhat.com)
+- Merge pull request #35 from ehelms/master (jrist@redhat.com)
+- Replaces use of background-position-x and background-position-y with a
+  definition set for sprites for grey and black.  This is due to the fact that
+  Firefox does not support the above CSS directives. (ericdhelms@gmail.com)
+- Switches sprite definitions to the anywhere as opposed to starts with class
+  attribute selector. (ericdhelms@gmail.com)
+- Updates and cleans-up sprites. (ericdhelms@gmail.com)
+- Updates forms to let inputs, labels and fieldsets mimic the login page
+  inputs. (ericdhelms@gmail.com)
+- setup to allow easy build in koji (msuchy@redhat.com)
+- alphabatizing javascript list in docs and adding trunk8 (jsherril@redhat.com)
+- Adding trunk8 for easier text ellipsis (jsherril@redhat.com)
+- adding newer version of tipsy featuring ajax loading (jsherril@redhat.com)
+
 * Wed Jul 25 2012 Eric D Helms <ehelms@redhat.com> 0.8.3-1
 - Fix for the wrong corner of the last tab in the header being rounded.
   (ehelms@redhat.com)
