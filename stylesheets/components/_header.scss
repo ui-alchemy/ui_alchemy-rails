@@ -199,3 +199,10 @@ header#header {
     float: right;
   }
 }
+
+//* ugly IE8 specific hacks for the header to look decent/*/
+@media \0screen {
+  header#header {
+    background-color: #009DCC;
+  }
+}

@@ -6,6 +6,8 @@ html, body{
   height: 100%;
   @include login_background-color;
   font-family: $headlinefont;
+  //* ugly IE8 specific color hack for the background to show*/
+  background-color/*\**/: darken(rgba(0, 157, 204, 1), 4%)\9;
 }
 
 #wrapper {
@@ -38,10 +40,9 @@ article {
     height: $login-container_height;
     margin: 0 auto;
     padding: $login-container_top-padding;
-    @include background(linear-gradient(top, rgba(255, 255, 255, 0) 40%, $login_base-color 120%));
+    @include background-image(linear-gradient(top, rgba(255, 255, 255, 0) 40%, $login_base-color 120%));
     @include box-shadow($login_base-color 0px 12px 15px -8px);
     @include border-radius(7px);
-
     aside {
       width: $logo_container-width;
       min-height: $login-container-height;
@@ -305,4 +306,12 @@ article {
 
 .hidden {
   display: none;
+}
+
+
+//* ugly IE8 specific color hack for the border to show*/
+@media \0screen {
+  	.container {
+        border: 8px solid darken(rgba(0, 157, 204, 1), 10%);
+	}
 }

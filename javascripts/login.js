@@ -73,20 +73,29 @@ CUI.Login.Actions = (function($){
         interstitial_switcher_animation = function(num_orgs, redir_path){
           if(parseInt(num_orgs, 10) > 1){
             $('#interstitial').trigger({type:'login'});
-          } else {
+          } else if(redir_path){
             CUI.Login.Actions.toggleSpinner();
             window.location.href = redir_path;
+          } else {
+            window.location.reload();
           }
         },
         toggleSpinner = function(){
           $('#login_form .spinner').fadeToggle('fast');
+        },
+        redirecter = function(url){
+          if ($.browser.msie){
+            window.location = url;
+          } else {
+            window.location.href = url;
+          }
         };
-
 
     return {
         show_password   : show_password,
         add_hash_input  : add_hash_input,
         interstitial_switcher_animation : interstitial_switcher_animation,
+        redirecter : redirecter,
         toggleSpinner : toggleSpinner
     };
 
