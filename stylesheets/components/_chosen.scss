@@ -1,3 +1,5 @@
+@import "../partials/colors";
+@import "../partials/vars";
 /* @group Base */
 
 .chzn-container {
@@ -50,7 +52,7 @@
     height: 19px;
     line-height: 19px;
     padding: 0 0 0 8px;
-    color: $text_color;
+    color: $text-color;
     text-decoration: none;
     span {
       margin-right: 26px;
