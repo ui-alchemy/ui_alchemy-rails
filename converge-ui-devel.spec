@@ -19,7 +19,7 @@ Summary:       Converging UI's since 2012.
 Group:         Applications/System
 License:       GPLv2
 URL:           http://www.convergeui.org
-Version:       1.0
+Version:       1.0.1
 Release:       1%{?dist}
 Source0:       %{name}-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -58,6 +58,11 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.rst LICENSE
 
 %changelog
+* Wed Sep 05 2012 Eric D Helms <ericdhelms@gmail.com> 1.0.1-1
+- Numerous Fixes:   * Fix for some IE8, IE9+ issues,   * Component
+  compilations,   * Rescue for missing redir_path,   * Action-icons favorite
+  white background. (jrist@redhat.com)
+
 * Thu Aug 30 2012 Eric D Helms <ericdhelms@gmail.com> 1.0-1
 - Changes to accomodate fixes to the login/interstitial. (jrist@redhat.com)
 - Merge pull request #60 from jsomara/841857 (jsomara@gmail.com)
