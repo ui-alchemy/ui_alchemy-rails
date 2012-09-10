@@ -43,7 +43,7 @@ $tab_container_outline-color:     rgba(205, 205, 208, 0.4) !default;
 *  Footer Colors
 *****************/
 $footer_background-color: #EBEBEB !default;
-$footer_border_top-color: #F2F2F2 !default;
+$footer_border_top-color: #d9d9d9 !default;
 
 
 /****************
@@ -54,8 +54,9 @@ $input_font-color:              #50505A !default;
 $login_link-color:              #0194E8 !default;
 $login_base-color:              #D9D9D9 !default;
 $login_card_shadow-color:       #D9D9D9 !default;
-$login_background_top-color:    #FFF !default;
-$login_background_bottom-color: #FFF !default;
+$login_background_top-color:    #efefef !default;
+$login_background_bottom-color: #efefef !default;
+$login_card_outer_shadow-color: #ACACAC !default;
 
 
 /*********************************
