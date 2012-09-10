@@ -54,7 +54,8 @@ $input_font-color:              #50505A !default;
 $login_link-color:              #0194E8 !default;
 $login_base-color:              #D9D9D9 !default;
 $login_card_shadow-color:       #D9D9D9 !default;
-$login_background-color:        #efefef !default;
+$login_background_top-color:    #efefef !default;
+$login_background_bottom-color: #efefef !default;
 $login_card_outer_shadow-color: #ACACAC !default;
 
 
@@ -145,6 +146,10 @@ $error_lighter-color: lighten($error-color, 60%);
   -moz-background-clip: padding;
   -webkit-background-clip: padding;
   background-clip: padding-box;
+}
+
+@mixin login_background-color {
+  @include background(linear-gradient(top, $login_background_top-color 0%, $login_background_top-color 50%, $login_background_bottom-color 100%));
 }
 
 @mixin login_logo_background-color {

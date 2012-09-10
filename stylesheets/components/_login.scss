@@ -4,7 +4,7 @@
 html, body{ 
   width: 100%; 
   height: 100%;
-  background: $login_background-color;
+  @include login_background-color;
   font-family: $headlinefont;
   //* ugly IE8 specific color hack for the background to show*/
   background-color/*\**/: darken(rgba(0, 157, 204, 1), 4%)\9;
