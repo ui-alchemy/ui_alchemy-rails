@@ -10,7 +10,7 @@
       - if !@disable_password_recovery
         %div.group.secondary_actions
           %span
-            != get_string(:recovery_link) % [link_to(get_string(:username), '#', :id => "username_link"), 
+            != get_string(:recovery_link) % [link_to(get_string(:username), '#', :id => "username_link"),
                                             link_to(get_string(:password), '#', :id => "password_link")]
       = submit_tag get_string(:login), :class => "button fr", :id => 'login_btn'
       .spinner
