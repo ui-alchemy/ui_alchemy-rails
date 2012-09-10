@@ -19,7 +19,7 @@ Summary:       Converging UI's since 2012.
 Group:         Applications/System
 License:       GPLv2
 URL:           http://www.convergeui.org
-Version:       1.0.1
+Version:       1.0.2
 Release:       1%{?dist}
 Source0:       %{name}-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -58,6 +58,12 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.rst LICENSE
 
 %changelog
+* Mon Sep 10 2012 Eric D Helms <ericdhelms@gmail.com> 1.0.2-1
+- Merge pull request #68 from n1zyy/login_page_tweaks_2 (jrist@redhat.com)
+- Switch back to using a gradient on the login page (matt.wagner@redhat.com)
+- Login tweaks from brand (matt.wagner@redhat.com)
+- Added notifications placeholder to user_session_layout (jtomasek@redhat.com)
+
 * Wed Sep 05 2012 Eric D Helms <ericdhelms@gmail.com> 1.0.1-1
 - Numerous Fixes:   * Fix for some IE8, IE9+ issues,   * Component
   compilations,   * Rescue for missing redir_path,   * Action-icons favorite
