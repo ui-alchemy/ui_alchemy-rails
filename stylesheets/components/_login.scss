@@ -4,7 +4,7 @@
 html, body{ 
   width: 100%; 
   height: 100%;
-  @include login_background-color;
+  background: $login_background-color;
   font-family: $headlinefont;
   //* ugly IE8 specific color hack for the background to show*/
   background-color/*\**/: darken(rgba(0, 157, 204, 1), 4%)\9;
@@ -41,7 +41,7 @@ article {
     margin: 0 auto;
     padding: $login-container_top-padding;
     @include background-image(linear-gradient(top, rgba(255, 255, 255, 0) 40%, $login_base-color 120%));
-    @include box-shadow($login_base-color 0px 12px 15px -8px);
+    @include box-shadow($login_card_outer_shadow-color 0px 12px 15px -8px);
     @include border-radius(7px);
     aside {
       width: $logo_container-width;
