@@ -1,0 +1,274 @@
+@import "../partials/base";
+
+$screenfont: $screenfont;
+
+$border_radius: $border_radius;
+
+$white: white;
+$black: black;
+$theme_color: $theme_color;
+$danger_color: darken($rh-red1, 8%);
+$bg_color: lighten($rh-base, 47%);
+
+$border_color: darken($bg_color, 8%);
+$btn_text_color: lighten($text_color, 10%);
+$btn_white_text_color: lighten($rh-cream, 15%);
+
+$shadow_reflection_dark: 0 1px 6px rgba($white, 0.25) inset;
+$shadow_reflection_light: 0 1px 3px rgba($white, 1) inset;
+
+/*
+   ====================================
+   BUTTONS
+   ====================================
+*/
+
+.btn,
+.button,
+button {
+  @include inline-block();
+  vertical-align: top;
+  text-decoration: none;
+  font-family: $screenfont;
+  font-size: 100%;
+  padding: 0.5em 1em;
+  margin: 10px 8px 0 0;
+  cursor: pointer;
+  border: 1px solid $border_color;
+  line-height: normal; /* must be normal because of firefox bug: http://cbjdigital.com/blog/2010/08/bulletproof_css_input_button_heights*/
+  @include border-radius($border_radius);
+
+  color: $btn_text_color;
+  text-shadow: 0 1px 0 rgba($white, 0.7);
+  background: lighten($bg_color, 10%); /* fallback */
+  @include background(linear-gradient(lighten($bg_color, 15%), $bg_color)); /* general */
+  @include filter-gradient(lighten($bg_color, 15%), $bg_color); /* IE */
+  @include box-shadow($shadow_reflection_light); /* inside reflection */
+
+  &:hover {
+    border-color: darken($border_color, 5%);
+    background: lighten($bg_color, 13%);
+    @include background(linear-gradient($white, lighten($bg_color, 6%)));
+    @include filter-gradient($white, lighten($bg_color, 6%));
+  }
+
+  &:active {
+    color: rgba($btn_text_color, 0.9);
+    @include text-shadow(0 -1px 0 rgba($black, 0.05));
+    background: lighten($bg_color, 3%);
+    @include background(linear-gradient(darken($bg_color, 9%), lighten($bg_color, 3%) 10%));
+    @include filter-gradient(lighten($bg_color, 3%), lighten($bg_color, 3%));
+    @include box-shadow(none);
+  }
+
+  /* ----------------------- */
+  /* color */
+
+  &.primary,
+  &.warning:hover { /* set white text on dark backgrounds */
+    color: $btn_white_text_color;
+    @include text-shadow(0 -1px 0 rgba($black, 0.25));
+    @include box-shadow($shadow_reflection_dark);
+
+    &:active {
+      color: rgba($btn_white_text_color, 0.95);
+      @include text-shadow(0 -1px 0 rgba($black, 0.45));
+      @include box-shadow(none);
+    }
+  }
+
+  &.primary { /* primary button */
+    border-color: lighten($theme_color, 13%);
+    background: lighten($theme_color, 7%);
+    @include background(linear-gradient(lighten($theme_color, 18%), $theme_color));
+    @include filter-gradient(lighten($theme_color, 18%), $theme_color);
+
+    &:hover {
+      border-color: lighten($theme_color, 15%);
+      background: lighten($theme_color, 11%);
+      @include background(linear-gradient(lighten($theme_color, 22%), lighten($theme_color, 5%)));
+      @include filter-gradient(lighten($theme_color, 22%), lighten($theme_color, 5%));
+    }
+
+    &:active {
+      border-color: $theme_color;
+      background: lighten($theme_color, 4%);
+      @include background(linear-gradient(darken($theme_color, 3%), lighten($theme_color, 3%) 10%));
+      @include filter-gradient(lighten($theme_color, 3%), lighten($theme_color, 3%));
+    }
+  }
+
+  &.warning { /* warning */
+    color: lighten($danger_color, 7%);
+
+    &:hover {
+      border-color: lighten($danger_color, 5%);
+      background: lighten($danger_color, 5%);
+      @include background(linear-gradient(lighten($danger_color, 13%), $danger_color));
+      @include filter-gradient(lighten($danger_color, 13%), $danger_color);
+    }
+
+    &:active {
+      background: darken($danger_color, 1%);
+      @include background(linear-gradient(darken($danger_color, 7%), lighten($danger_color, 3%) 10%));
+      @include filter-gradient(lighten($danger_color, 3%), lighten($danger_color, 3%));
+    }
+  }
+
+  /* ----------------------- */
+  /* size */
+
+  &.mini {
+    font-size: 75%;
+  }
+
+  &.small {
+    font-size: 85%;
+  }
+
+  &.large {
+    font-size: 125%;
+  }
+
+  &.huge {
+    font-size: 155%;
+  }
+
+  /* ----------------------- */  
+  /* disabled */
+
+  &[disabled] { /* common for light buttons */
+    &,
+    &:hover,
+    &:active {
+      color: rgba($btn_text_color, 0.5);
+      text-shadow: 0 -1px 0 rgba($white, 0.9);
+      cursor: default;
+      border-color: lighten($border_color, 7%);
+      background: lighten($bg_color, 14%);
+      @include background(linear-gradient(lighten($bg_color, 17%), lighten($bg_color, 6%)));
+      @include filter-gradient(lighten($bg_color, 17%), lighten($bg_color, 6%));
+
+      &.warning {
+        color: rgba($danger_color, 0.47);
+      }
+    }
+  }
+
+  &.processing {
+    &,
+    &:hover,
+    &:active {
+      @include background(
+        url("http://convergeui-jcoufal.rhcloud.com/images/converge-ui/icons/spinner.gif") no-repeat 50% 50%,
+        linear-gradient(lighten($bg_color, 17%), lighten($bg_color, 6%)));
+    }
+  }
+
+  /* ----------------------- */
+  /* buttons with icons */
+
+  &.icon {
+    padding-left: 28px;
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+    }
+
+    i,
+    &:before {
+      position: absolute;
+      top: 4px;
+      left: 8px;
+    }
+
+    & > .btn,
+    & > .button { /* for inputs - submit (need to be in special div) */
+      margin: 0;
+      border: 0;
+      padding-left: 28px;
+      display: inline-block;
+      background: none;
+      @include filter-gradient($invisible_white, $invisible_white);
+      @include box-shadow(none);
+    }
+
+    &.download_example:before {
+      @include background(url('http://convergeui-jcoufal.rhcloud.com/images/converge-ui/icons/action-icons.png'));
+      background-position: -512px -16px;
+    }
+  }
+}
+
+// reset padding for outer button div
+div.btn.icon {
+  padding: 0;
+  display: inline-block;
+}
+
+// quite useful reset feature
+button::-moz-focus-inner,
+input::-moz-focus-inner { 
+  border: 0;
+  padding: 0;
+}
+
+/* ----------------------- */  
+/* groups */
+
+.btn_group {
+  .btn,
+  .button,
+  button {
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+    float: left;
+    border-left-width: 0;
+    @include border-radius(0);
+
+    &:first-child {
+      border-left-width: 1px;
+      @include border-radius($border_radius 0 0 $border-radius);
+    }
+
+    &:last-child {
+      @include border-radius(0 $border_radius $border-radius 0);
+    }
+  }
+
+  &:after { /* clear after itself */
+    content: ""; 
+    display: block; 
+    height: 0; 
+    clear: both;
+  }
+
+  form { /* for rails button_to helper (creates form > div > input) */
+    div {
+      display: block;
+      float: left;
+    }
+
+    &:first-child {
+      .btn,
+      .button,
+      button {
+        border-left-width: 1px;
+        @include border-radius($border_radius 0 0 $border-radius);
+      }
+    }
+
+    &:last-child {
+      .btn,
+      .button,
+      button {
+        @include border-radius(0 $border_radius $border-radius 0);
+      }
+    }
+  }
+}

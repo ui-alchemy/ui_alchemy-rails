@@ -11,6 +11,19 @@ $stickyfooter-height: 55 !default;
 $header-height: 85px !default;
 
 /*****************
+* Responsive
+*****************/
+$phone_width: 480px;
+$tablet_width: 768px;
+$classic_width: 1024px;
+$wide_width: 1200px;
+
+/*****************
+* Elements - Global
+*****************/
+$border_radius: 3px;
+
+/*****************
 * Sign-On Screen
 *****************/
 $login_container-width: 500px !default;

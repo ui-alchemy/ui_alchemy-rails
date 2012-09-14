@@ -14,6 +14,9 @@ $headline-color:                #939292 !default;
 $border-color:                  #D7D7D7 !default;
 $headline_font-color:           #50505A !default;
 $text-color:                    #999999 !default;
+$text_color:                    rgb(60, 60, 60); // darker color (should stay)
+//$theme_color:                 darken($rh-blue, 15%);
+$theme_color:                   darken(#4e9fdd, 15%);
 $white-color:                   #FFF !default;
 
 /**************

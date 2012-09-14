@@ -1,123 +1,748 @@
 @import "../partials/base";
 
-$input-height: 21px;
+// responsive
+$phone_width: $phone_width;
+$tablet_width: $tablet_width;
+$classic_width: $classic_width;
+$wide_width: $wide_width;
+
+// layout
+$left_column_width: 200px;
+$input_width: 280px;
+$input_padding: 10px;
+
+// other
+$screenfont: $screenfont;
+$border_radius: $border_radius;
+
+// colors
+$white: white;
+$black: black;
+$invisible_white: rgba(white, 0);
+
+$text_color: $text_color;
+$theme_color: $theme_color;
+$success_color: $green2;
+$warning_color: lighten($o4, 6%);
+$error_color: lighten($rh-red1, 5%);
+
+$border_color: lighten($rh-base, 40%);
+$light_border_color: lighten($border_color, 10%);
+
+$aside_text_color: lighten($text_color, 40%);
+$placeholder_color: lighten($text_color, 55%);
+
+$disabled_color: lighten($rh-base, 60%);
+$disabled_text_color: lighten($text_color, 40%);
+$readonly_text_color: darken($disabled_text_color, 10%);
+
+$light_box_color: lighten($rh-base, 60%);
+$light_box_gradient: lighten($light_box_color, 40%);
+$dark_box_color: darken($rh-base, 3%);
+$dark_box_gradient: lighten($dark_box_color, 8%);
+
+$shadow_color: lighten($rh-base, 58%);
 
 
-/*radio and checkboxes are special*/
-input[type="checkbox"],  input[type="radio"]{
-  display:inline;
-  display:inline-block;
-  width:1em;
-  height:1em;
-}
-/* BUTTONS */
-input[type='submit'], button, .button {
-  font-family: $screenfont; /* for some reason ff3.6 won't inherit from body */
-  font-size: 10px;
-  display: inline-block;
-  background: -moz-linear-gradient(top, #f9f9f9, #f0f0f0, #e5e5e5, #e9e9e9);
-  background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), color-stop(0.9, #e5e5e5), to(#e9e9e9));
-  @include no-box-shadow;
-  color: #221e1f;
-  cursor: pointer;
-  margin: 4px;
-  padding: 4px 12px;
-  @include border-radius(5px);
-  @include _text-shadow(#FFF, 0, 1px, 0);
-  min-height: 14px;
+@mixin input_field($color) {
+  .label {
+    color: $color;
+  }
 
-  .nomargin {
-    margin: 0;
-  }
-  &:hover {
-    background: -moz-linear-gradient(top, #FFF, #FFF, #cfcfcf);
-    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), color-stop(0.6, #FFF), to(#cfcfcf));
-    @include box-shadow(0, 1px, 2px, rgba(0,0,0,0.5));
-    text-decoration: none;
-    color: black;
-  }
-  &:active {
-    background: -moz-linear-gradient(top, #c2c3c0, #e4e5e4);
-    background: -webkit-gradient(linear, left top, left bottom, from(#c2c3c0), to(#e4e5e4));
-    @include no-box-shadow;
-    padding: 5px 12px 3px;
-    text-decoration: none;
-  }
-  &:focus {
-    text-decoration: none;
-    color: #000;
-    border-width: 2px;
-    padding: 3px 11px;
-  }
-  &.dialogbutton {
-    float: right;
-    margin-left: 3px;
-    margin: 40px 4px 4px;
-  }
-  &.formbutton {
-    display: inline-block;
-    margin-left: 3px;
-    margin: 40px 4px 4px;
-  }
-  &.actionlink {
-    margin: 40px 0 0;
-  }
-  &.disabled, &[disabled] {
-    cursor: default;
-    background: transparent;
-    opacity: 0.4;
+  input {
+    border-color: $color;
+
+    &:focus,
+    &:hover {
+      border-color: $color;
+      @include box-shadow(0 0 3px $color);
+    }
 
     &:hover {
-      background: transparent;
-      @include no-box-shadow;
+      @include box-shadow(0 0 6px $color);
     }
   }
-  &.iconbutton {
-    display: inline-block;
-  }
-  &.tiny {
-    padding: 4px;
-    margin: 0;
-    &:active, &:focus {
-      margin: 0;
-      padding: 3px;
-    }
-  }
+}
+
+/*
+  =======================================
+  FORMS
+  =======================================
+*/
+
+.form {
+  width: 100%;
+  display: block;
+  line-height: 1;
+  color: $text_color;
 }
 
 fieldset {
+  border: 0 none;
+  padding: 0;
+  margin: 0;
+}
 
-  label {
-    display: block;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    font-size: 12px;
-    color: $label_font-color;
-    text-align: left;
-    font-weight: bold;
+.control_group {
+  padding: 5px 8px;
+  position: relative;
+  white-space: nowrap;
+
+  .label {
+    width: $left_column_width;
+    float: left;
+    text-align: right;
+    position: relative;
+    padding: 0;
   }
 
-  input, textarea {
-    width: 290px;
-    padding: 6px 0px 6px 10px;
-    font-size: 14px;
-    color: $input_font-color;
-    @include border-radius(4px);
+  .input {
+    margin-left: $left_column_width;
+    position: relative;
+    min-height: 2.5em;
+  }
+}
+
+/*
+  =======================================
+  INPUTS
+  =======================================
+*/
+
+
+/* general */
+.form {
+  .label {
+    label {
+      line-height: 2.5;
+      display: inline-block;
+      padding: 0 20px 0 3px;
+    }
+  }
+
+  // font for inputs (is not inherited)
+  input,
+  select,
+  textarea {
+    font-family: $screenfont;
+  }
+
+  /* general styling of fields */
+  input {
+    line-height: 1.3;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="date"],
+  input[type="number"],
+  textarea {
+    width: $input_width;
+    padding: 6px $input_padding;
+    color: inherit;
     outline: none;
-    border: 1px solid #CCC;
-    height: $input-height;
-    @include inset-box-shadow(0,1px,1px,rgba(0, 0, 0, 0.2));
+    border: 1px solid $border_color;
+    margin-bottom: 7px;
+    @include box-shadow(0 1px 2px 0 darken($shadow_color, 15%) inset);
+    @include border-radius($border_radius);
+
+    &:hover {
+      border-color: lighten($theme_color, 10%);
+      @include box-shadow(0 0 6px lighten($theme_color, 10%));
+      @include transition(all 0.17s linear);
+    }
 
     &:focus {
-      @include box-shadow(0px 0px 4px $login_link-color);
-      border: 1px solid $login_link-color;
+      border-color: $theme_color;
+      @include box-shadow(0 0 3px $theme_color);
+      @include transition(all 0.17s linear);
+    }
+  }
+
+  input[type="file"],
+  input[type="range"] {
+    width: auto;
+    max-width: $input_width + $input_padding;
+    padding: 6px 0;
+    margin-bottom: 7px;
+  }
+
+  input[type="range"] {
+    width: $input_width + $input_padding;
+    padding-top: 4px;
+  }
+
+  input[type="number"] {
+    width: 50px;
+    text-align: left;
+  }
+
+  select {
+    min-width: $input_width/1.5;
+    width: auto;
+    max-width: $input_width - $input_padding; //has one more for right padding
+    padding: 4px 0 4px $input_padding;
+    position: relative;
+    top: 2px;
+    font-size: 100%;
+    color: $text_color;
+
+    &[multiple="multiple"] {
+      background: $white;
+      height: auto;
+      line-height: 1.5;
+      border: 1px solid $border_color;
     }
   }
 
   textarea {
-    height: $input-height * 3;
+    height: auto;
+    resize: none;
+    overflow: auto;
   }
 
+  /* placeholder for various browsers
+     (needs to be separate) */
+  input::-webkit-input-placeholder {
+    color: $placeholder_color;
+    font-style: italic;
+  }
+
+  input:-moz-placeholder {
+    color: $placeholder_color;
+    font-style: italic;
+  }
+
+  input:focus::-webkit-input-placeholder {
+    color: $invisible_white;
+  }
+
+  input:focus:-moz-placeholder {
+    color: $invisible_white;
+  }
+
+  /* required field */
+  .required {
+    .label {
+      position: relative;
+
+      &:after {
+        display: inline-block;
+        position: absolute;
+        right: 11px;
+        top: 4px;
+        font-size: 125%;
+        font-weight: bold;
+        content: '*';
+        color: $theme_color;
+      }
+    }
+
+    &.warning .label:after {
+      color: $warning_color;
+    }
+
+    &.error .label:after {
+      color: $error_color;
+    }
+  }
+
+  /* informative values */
+  .value {
+    display: inline-block;
+    width: $input_width;
+    padding: 8px 0;
+    margin-bottom: 7px;
+    line-height: 1.3;
+    font-size: 100%;
+    color: $readonly_text_color;
+  }
+
+  /* disabled field */
+  .readonly,
+  .disabled {
+    input,
+    textarea,
+    select {
+      color: $disabled_text_color;
+      background: $disabled_color;
+
+      &:hover,
+      &:focus {
+        border: 1px solid $border_color;
+        @include box-shadow(0 1px 2px 0 darken($shadow_color, 15%) inset);
+      }
+    }
+
+    select {
+      &
+      &:hover,
+      &:focus {
+        @include box-shadow(none);
+      }
+    }
+  }
+
+  .disabled label {
+    color: $disabled_text_color;
+  }
+
+  /* warning field */
+  .warning {
+    @include input_field($warning_color);
+  }
+
+  /* error field */
+  .error {
+    @include input_field($error_color);
+  }
+
+  /* checking items */
+  .checkbox,
+  .radio {
+    .control {
+      display: block;
+      padding: 1px 0 5px 0;
+
+      label {
+        padding-right: 15px;
+      }
+    }
+
+    & > label + .control {
+      display: inline-block;
+    }
+
+    &.horizontal .control {
+      display: inline-block;
+      margin: 0 5px 0 0;
+
+    }
+
+    label {
+      line-height: 2;
+    }
+
+    input {
+      margin: 0 2px 0 0;
+      position: relative;
+      top: 1px;
+    }
+  }
+}
+
+/*
+  =======================================
+  MESSAGES
+  =======================================
+*/
+
+.form {
+
+  // GENERAL SPAN
+  // ============
+  span {
+    display: inline-block;
+    max-width: $input_width;
+    line-height: 1.1;
+    vertical-align: middle;
+    font-size: 90%;
+    white-space: normal;
+  }
+
+  // LABEL HELP
+  // ==========
+
+  .help {
+    i {
+      display: inline-block;
+      position: relative;
+      height: 13px;
+      width: 13px;
+      padding-top: 1px;
+      text-align: center;
+      color: $aside_text_color;
+      @include text-shadow(0 1px 0 rgba($white, 0.8));
+      @include border-radius(50%);
+      border: 1px solid $light_border_color;
+      background: $light_box_color;
+      @include background(linear-gradient($light_box_gradient, darken($light_box_color, 4%)));
+      cursor: default;
+
+      &:hover {
+        color: white;
+        @include text-shadow(0 1px 1px rgba($black, 0.3));
+        border-color: $dark_box_color;
+        background: $dark_box_color;
+        @include background(linear-gradient($dark_box_gradient, lighten($dark_box_color, 3%)));
+      }
+
+      // triangle for box
+      &:after {
+        display: none;
+        @include opacity(0.97);
+        content: "";
+        height: 0;
+        width: 0;
+        border-style: solid;
+        border-width: 0 9px 8px 9px;
+        border-color: $invisible_white $invisible_white $dark_box_gradient;
+        position: absolute;
+        bottom: -11px;
+        left: -2px;
+        z-index: 2;
+      }
+    }
+
+    span {
+      display: none;
+      @include opacity(0.97);
+      position: absolute;
+      left: 5px;
+      top: 33px;
+      z-index: 1;
+      width: $left_column_width - 40px;
+      padding: 7px 10px 9px 10px;
+      margin: 0;
+      @include border-radius($border_radius);
+      background: $dark_box_color;
+      @include background(linear-gradient($dark_box_gradient, $dark_box_color 20%));
+      @include filter-gradient($dark_box_gradient, $dark_box_color);
+      color: lighten($rh-cream, 30%);
+      border-color: $dark_box_color;
+      text-align: left;
+      line-height: 1.2;
+      @include text-shadow(0 1px 1px rgba($black, 0.2));
+      @include box-shadow(0 1px 3px $shadow_color);
+      pointer-events: none; // click through
+    }
+
+    i:hover {
+      &:after {
+        display: block;
+      }
+
+      & ~ span {
+        display: block;
+      }
+    }
+  }
+
+  // ALWAYS VISIBLE INFORMATION
+  // ==========================
+  .note {
+    display: block;
+    font-size: 85%;
+    color: $aside_text_color;
+    margin: 0 0 5px 10px;
+
+    &:before {
+      content: "Note:";
+      font-weight: bold;
+      margin-right: 5px;
+    }
+  }
+
+  // HINT AND VALIDATION MESSAGES
+  // ============================
+  .hint,
+  .message {
+    position: relative;
+    color: $aside_text_color;
+    padding: 9px $input_padding 7px $input_padding;
+    margin-left: 10px;
+    @include opacity(0);
+    background: $light_box_color;
+    @include background(linear-gradient($light_box_gradient, $light_box_color 30%));
+    @include filter-gradient($light_box_gradient, $light_box_color);
+    @include border-radius($border_radius);
+    border: 1px solid $light_border_color;
+    @include box-shadow($shadow_color 0 1px 3px);
+    vertical-align: top;
+
+    &:before, // triangle left
+    &:after { // border of left triangle
+      content: "";
+      display: block;
+      height: 0;
+      width: 0;
+      border-style: solid;
+      border-width: 8px 8px 8px 0;
+      border-color: $invisible_white $light_box_color $invisible_white;
+      position: absolute;
+      top: 14px;
+      left: -8px;
+      margin-top: -8px; // half size of triangle
+      z-index: 2;
+    }
+
+    &:after {
+      border-right-color: $light_border_color;
+      left: -9px; // 1 more pixel than arrow width
+      z-index: 1;
+    }
+  }
+
+  .hint {
+    position: absolute;
+    top: 0;
+    left: $input_width + $input_padding + 30px;
+  }
+
+  .message ~ .hint {
+    display: none;
+  }
+
+  .control_group input:focus ~ .hint {
+    @include transition(all 0.29s ease);
+    @include opacity(1);
+    left: $input_width + $input_padding + 15px;
+  }
+
+  /* field validations */
+  .success,
+  .warning,
+  .error {
+    .message {
+      @include opacity(1);
+      left: 0;
+      padding-left: 27px;
+      max-width: $input_width - 17px; // bigger padding
+    }
+  }
+
+  /* success message */
+  .success .message {
+    color: $green2;
+    background: $light_box_color url("http://converge-ui.jaromircoufal.cz/icon_success.png") no-repeat 7px 7px; // for IE6-9
+    @include background(
+      url("http://converge-ui.jaromircoufal.cz/icon_success.png") no-repeat 7px 7px,
+      linear-gradient($light_box_gradient, $light_box_color 30%));
+  }
+
+  /* warning message */
+  .warning .message {
+    color: $o4;
+    background: $light_box_color url("http://converge-ui.jaromircoufal.cz/icon_warning.png") no-repeat 7px 7px; // for IE6-9
+    @include background(
+      url("http://converge-ui.jaromircoufal.cz/icon_warning.png") no-repeat 7px 7px,
+      linear-gradient($light_box_gradient, $light_box_color 30%));
+  }
+
+  /* error message */
+  .error .message {
+    color: $rh-red1;
+    background: $light_box_color url("http://converge-ui.jaromircoufal.cz/icon_error.png") no-repeat 7px 7px; // for IE6-9
+    @include background(
+      url("http://converge-ui.jaromircoufal.cz/icon_error.png") no-repeat 7px 7px,
+      linear-gradient($light_box_gradient, $light_box_color 30%));
+  }
+}
+
+/*
+  =======================================
+  RESPONSIVE
+  =======================================
+*/
+
+@mixin labels_top {
+  & {
+    .label {
+      float: none;
+      text-align: left;
+      display: inline-block;
+      width: auto;
+
+      label {
+        padding: 0 8px 0 0;
+        line-height: 1.8;
+      }
+
+      &.help {
+        i {
+          position: absolute;
+          right: -13px;
+          top: 2px;
+        }
+
+        span {
+          display: none;
+          left: 60%;;
+          top: 27px;
+        }
+      }
+    }
+
+    .value {
+      padding-top: 2px;
+    }
+
+    .required {
+      .label {
+        &:after {
+          right: 0;
+          top: 0;
+        }
+
+        &.help {
+          i {
+            right: -19px;
+          }
+        }
+      }
+    }
+
+    .input {
+      margin: 0 0 5px 0;
+    }
+  }
+}
+
+@mixin messages_bottom {
+  & {
+    span:not(.help),
+    .hint {
+      display: block;
+    }
+
+    .note {
+      padding: 10px $input_padding 6px $input_padding;
+      margin: 0;
+      border: 1px solid $light_border_color;
+      border-top-width: 0;
+      @include border-radius(0 0 $border_radius $border_radius);
+      position: relative;
+      top: -10px;
+    }
+
+    .hint ~ .note,
+    .message ~ .note {
+      background: white;
+      top: -4px;
+      padding-top: 7px;
+      border-top-width: 1px;
+    }
+
+    .hint,
+    .message {
+      left: 0;
+      position: relative;
+      opacity: 1;
+      margin: 3px 0 0 0;
+
+      &:before,
+      &:after {
+        border-width: 0 8px 8px 8px;
+        border-color: $invisible_white $invisible_white $light_box_gradient;
+        top: 0;
+        left: auto;
+        right: 20px;
+      }
+
+      &:after {
+        top: -1px;
+        left: auto;
+        border-color: $invisible_white $invisible_white $light_border_color;
+      }
+
+      &:hover {
+        left: 0;
+      }
+    }
+
+    .control_group input:focus ~ .hint {
+      left: 0;
+    }
+
+    .success,
+    .warning,
+    .error {
+      .message {
+        display: block;
+        margin: 3px 0 0 0;
+
+        & ~ .hint {
+          margin: 0;
+          position: relative;
+          top: -2px;
+          @include border-radius(0 0 $border_radius $border_radius);
+
+          &:before,
+          &:after {
+            display: none;
+          }
+        }
+      }
+
+      input:focus ~ .message {
+        display: block;
+      }
+    }
+  }
+}
+
+.form.labels_top {
+  @include labels_top;
+}
+
+.form.messages_bottom {
+  @include messages_bottom;
+}
+
+@media screen and (max-width: 1024px) {
+  .form {
+    @include labels_top;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    @include labels_top;
+    @include messages_bottom;
+  }
+}
+
+/*
+  =======================================
+  IE tweaks
+  =======================================
+*/
+
+.ie8 {
+  .form {
+    .help {
+      i:hover:after {
+        display: none;
+      }
+
+      span {
+        top: 25px;
+      }
+    }
+
+    .hint,
+    .message {
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+
+    .hint {
+      display: none;
+    }
+
+    .control_group input:focus ~ .hint {
+      display: block;
+    }
+
+    .control_group input:focus ~ .message ~ .hint {
+      display: none;
+    }
+  }
 }
 
 
