@@ -259,9 +259,9 @@ article {
     }
     &:focus {
       text-decoration: none;
-      color: #000;
-      border-width: 2px;
-      padding: 3px 11px;
+      @include box-shadow(0px 0px 4px $login_link-color);
+      border: 1px solid $login_link-color;
+      outline: none;
     }
     &.dialogbutton {
       float: right;
