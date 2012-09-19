@@ -14,7 +14,7 @@ Issues, Bugs or Feature Requests can be posted here: http://github.com/Katello/c
  Process
 =========
 
-The ConvergeUI project supports the pull request method for supplying updates and new features.  A developer wishing to fix a bug or offer a new feature should follow the steps below: 
+The ConvergeUI project supports the pull request method for supplying updates and new features.  A developer wishing to fix a bug or offer a new feature should follow the steps below:
 
 1. Fork the upstream repository
 2. Create a branch related to the bug or feature in your fork
