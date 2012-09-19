@@ -14,7 +14,7 @@ We recommend installing *tito* for use when building RPMs.
  Stand-alone RPM
 =================
 
-ConvergeUI can be built as a stand-alone RPM that can then be included within a repository for use as part of a larger project either at build or deployment time depending on the requirements and constraints of the project.  
+ConvergeUI can be built as a stand-alone RPM that can then be included within a repository for use as part of a larger project either at build or deployment time depending on the requirements and constraints of the project.
 
 First, clone ConvergeUI
 

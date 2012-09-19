@@ -16,7 +16,7 @@ CUI.Login = {};
 $(document).ready(function() {
 
     CUI.Login.Events.register();
- 
+
     $('#password_link').click(function(){
         $('#password_recovery_container').animate({ 'left' : '0px' }, 'slow').css('z-index', 1);
     });

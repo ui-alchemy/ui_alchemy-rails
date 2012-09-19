@@ -22,25 +22,25 @@ The Javascript directory, and thus provided libraries, is laid out in the follow
 
                 plugins/
                     flot-0.7/
-                    jquery.ajaxfileupload.js        
-                    jquery.ba-bbq.js                
-                    jquery.ba-resize.js             
-                    jquery.cookie.js                
-                    jquery.easing.1.3.js            
-                    jquery.fancyqueries.js          
-                    jquery.flash.js                 
-                    jquery.form.js                  
-                    jquery.hoverIntent.js           
-                    jquery.jeditable.ajaxupload.js  
-                    jquery.jeditable.js             
-                    jquery.jscrollpane.js         
-                    jquery.linkHover.js           
-                    jquery.loadmask.min.js        
-                    jquery.mousewheel.js          
-                    jquery.multiselect.filter.js  
-                    jquery.multiselect.js         
-                    jquery.pack.js                
-                    jquery.periodicalupdater.js   
+                    jquery.ajaxfileupload.js
+                    jquery.ba-bbq.js
+                    jquery.ba-resize.js
+                    jquery.cookie.js
+                    jquery.easing.1.3.js
+                    jquery.fancyqueries.js
+                    jquery.flash.js
+                    jquery.form.js
+                    jquery.hoverIntent.js
+                    jquery.jeditable.ajaxupload.js
+                    jquery.jeditable.js
+                    jquery.jscrollpane.js
+                    jquery.linkHover.js
+                    jquery.loadmask.min.js
+                    jquery.mousewheel.js
+                    jquery.multiselect.filter.js
+                    jquery.multiselect.js
+                    jquery.pack.js
+                    jquery.periodicalupdater.js
                     jquery.sortElements.js
                     jquery.sparkline.min.js
                     jquery.text-overflow.js
@@ -79,7 +79,7 @@ Since ConvergeUI provides some JavaScript functionality with the provided layout
 
     CUI.login = (function($){
         var hello_world = "hello World";
-      
+
         return {
             hello_world   :  hello_world
         };
@@ -113,7 +113,7 @@ Correct
         var sum = 0,
             length = list.length,
             i;
-           
+
         for( i=0; i < length; i += 1){
             sum += list[i];
         }
@@ -127,7 +127,7 @@ Incorrect
 
     var add = function(list){
         var sum = 0;
-           
+
         var length = list.length;
         for(var i=0; i < length; i += 1){
             sum += list[i];

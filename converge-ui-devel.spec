@@ -30,7 +30,7 @@ BuildArch:     noarch
 A common set of web assets.
 
 %prep
-%setup -q 
+%setup -q
 
 %build
 
@@ -52,7 +52,7 @@ cp -R fonts/* %{buildroot}%{homedir}/fonts/
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files 
+%files
 %defattr(755, root, root)
 %{homedir}
 %doc README.rst LICENSE
