@@ -1,27 +1,12 @@
 @import "../partials/base";
 
-// responsive
-$phone_width: $phone_width;
-$tablet_width: $tablet_width;
-$classic_width: $classic_width;
-$wide_width: $wide_width;
-
 // layout
 $left_column_width: 200px;
 $input_width: 280px;
 $input_padding: 10px;
 
-// other
-$screenfont: $screenfont;
-$border_radius: $border_radius;
 
 // colors
-$white: white;
-$black: black;
-$invisible_white: rgba(white, 0);
-
-$text_color: $text_color;
-$theme_color: $theme_color;
 $success_color: $green2;
 $warning_color: lighten($o4, 6%);
 $error_color: lighten($rh-red1, 5%);
@@ -52,14 +37,13 @@ $shadow_color: lighten($rh-base, 58%);
   input {
     border-color: $color;
 
-    &:focus,
     &:hover {
-      border-color: $color;
-      @include box-shadow(0 0 3px $color);
+      border-color: darken($color, 12%);
     }
 
-    &:hover {
-      @include box-shadow(0 0 6px $color);
+    &:focus {
+      border-color: $color;
+      @include box-shadow(0 0 2px $color);
     }
   }
 }
@@ -150,14 +134,12 @@ fieldset {
     @include border-radius($border_radius);
 
     &:hover {
-      border-color: lighten($theme_color, 10%);
-      @include box-shadow(0 0 6px lighten($theme_color, 10%));
-      @include transition(all 0.17s linear);
+      border-color: darken($border_color, 18%);
     }
 
     &:focus {
-      border-color: $theme_color;
-      @include box-shadow(0 0 3px $theme_color);
+      border-color: lighten($theme_color, 10%);
+      @include box-shadow(0 0 2px lighten($theme_color, 10%));
       @include transition(all 0.17s linear);
     }
   }
@@ -191,7 +173,7 @@ fieldset {
     color: $text_color;
 
     &[multiple="multiple"] {
-      background: $white;
+      background: $white_color;
       height: auto;
       line-height: 1.5;
       border: 1px solid $border_color;
@@ -216,12 +198,14 @@ fieldset {
     font-style: italic;
   }
 
+  /* remove placeholder on focus
+     (needs to be separate) */
   input:focus::-webkit-input-placeholder {
-    color: $invisible_white;
+    color: $invisible_white_color;
   }
 
   input:focus:-moz-placeholder {
-    color: $invisible_white;
+    color: $invisible_white_color;
   }
 
   /* required field */
@@ -365,19 +349,21 @@ fieldset {
       padding-top: 1px;
       text-align: center;
       color: $aside_text_color;
-      @include text-shadow(0 1px 0 rgba($white, 0.8));
+      @include text-shadow(0 1px 0 rgba($white_color, 0.8));
       @include border-radius(50%);
       border: 1px solid $light_border_color;
-      background: $light_box_color;
-      @include background(linear-gradient($light_box_gradient, darken($light_box_color, 4%)));
+      @include background(
+        $light_box_color
+        linear-gradient($light_box_gradient, darken($light_box_color, 4%)));
       cursor: default;
 
       &:hover {
-        color: white;
-        @include text-shadow(0 1px 1px rgba($black, 0.3));
+        color: $white_color;
+        @include text-shadow(0 1px 1px rgba($black_color, 0.3));
         border-color: $dark_box_color;
-        background: $dark_box_color;
-        @include background(linear-gradient($dark_box_gradient, lighten($dark_box_color, 3%)));
+        @include background(
+          $dark_box_color
+          linear-gradient($dark_box_gradient, lighten($dark_box_color, 3%)));
       }
 
       // triangle for box
@@ -389,7 +375,7 @@ fieldset {
         width: 0;
         border-style: solid;
         border-width: 0 9px 8px 9px;
-        border-color: $invisible_white $invisible_white $dark_box_gradient;
+        border-color: $invisible_white_color $invisible_white_color $dark_box_gradient;
         position: absolute;
         bottom: -11px;
         left: -2px;
@@ -408,16 +394,14 @@ fieldset {
       padding: 7px 10px 9px 10px;
       margin: 0;
       @include border-radius($border_radius);
-      background: $dark_box_color;
-      @include background(linear-gradient($dark_box_gradient, $dark_box_color 20%));
+      @include linear_gradient($dark_box_color, $dark_box_gradient, $dark_box_color, 20%);
       @include filter-gradient($dark_box_gradient, $dark_box_color);
       color: lighten($rh-cream, 30%);
       border-color: $dark_box_color;
       text-align: left;
       line-height: 1.2;
-      @include text-shadow(0 1px 1px rgba($black, 0.2));
+      @include text-shadow(0 1px 1px rgba($black_color, 0.2));
       @include box-shadow(0 1px 3px $shadow_color);
-      pointer-events: none; // click through
     }
 
     i:hover {
@@ -455,8 +439,7 @@ fieldset {
     padding: 9px $input_padding 7px $input_padding;
     margin-left: 10px;
     @include opacity(0);
-    background: $light_box_color;
-    @include background(linear-gradient($light_box_gradient, $light_box_color 30%));
+    @include linear_gradient($light_box_color, $light_box_gradient, $light_box_color, 30%);
     @include filter-gradient($light_box_gradient, $light_box_color);
     @include border-radius($border_radius);
     border: 1px solid $light_border_color;
@@ -471,7 +454,7 @@ fieldset {
       width: 0;
       border-style: solid;
       border-width: 8px 8px 8px 0;
-      border-color: $invisible_white $light_box_color $invisible_white;
+      border-color: $invisible_white_color $light_box_color $invisible_white_color;
       position: absolute;
       top: 14px;
       left: -8px;
@@ -509,35 +492,35 @@ fieldset {
     .message {
       @include opacity(1);
       left: 0;
-      padding-left: 27px;
-      max-width: $input_width - 17px; // bigger padding
+      padding-left: 28px;
+      max-width: $input_width - 18px; // bigger padding
     }
   }
 
   /* success message */
   .success .message {
     color: $green2;
-    background: $light_box_color url("http://converge-ui.jaromircoufal.cz/icon_success.png") no-repeat 7px 7px; // for IE6-9
+    background: $light_box_color image-url("converge-ui/icons/success_icon.png") no-repeat 7px 6px; // for IE6-9
     @include background(
-      url("http://converge-ui.jaromircoufal.cz/icon_success.png") no-repeat 7px 7px,
+      image-url("converge-ui/icons/success_icon.png") no-repeat 7px 6px,
       linear-gradient($light_box_gradient, $light_box_color 30%));
   }
 
   /* warning message */
   .warning .message {
     color: $o4;
-    background: $light_box_color url("http://converge-ui.jaromircoufal.cz/icon_warning.png") no-repeat 7px 7px; // for IE6-9
+    background: $light_box_color image-url("converge-ui/icons/warning_icon.png") no-repeat 7px 6px; // for IE6-9
     @include background(
-      url("http://converge-ui.jaromircoufal.cz/icon_warning.png") no-repeat 7px 7px,
+      image-url("converge-ui/icons/warning_icon.png") no-repeat 7px 6px,
       linear-gradient($light_box_gradient, $light_box_color 30%));
   }
 
   /* error message */
   .error .message {
     color: $rh-red1;
-    background: $light_box_color url("http://converge-ui.jaromircoufal.cz/icon_error.png") no-repeat 7px 7px; // for IE6-9
+    background: $light_box_color image-url("converge-ui/icons/error_icon.png") no-repeat 7px 6px; // for IE6-9
     @include background(
-      url("http://converge-ui.jaromircoufal.cz/icon_error.png") no-repeat 7px 7px,
+      image-url("converge-ui/icons/error_icon.png") no-repeat 7px 6px,
       linear-gradient($light_box_gradient, $light_box_color 30%));
   }
 }
@@ -620,7 +603,7 @@ fieldset {
 
     .hint ~ .note,
     .message ~ .note {
-      background: white;
+      background: $white_color;
       top: -4px;
       padding-top: 7px;
       border-top-width: 1px;
@@ -636,7 +619,7 @@ fieldset {
       &:before,
       &:after {
         border-width: 0 8px 8px 8px;
-        border-color: $invisible_white $invisible_white $light_box_gradient;
+        border-color: $invisible_white_color $invisible_white_color $light_box_gradient;
         top: 0;
         left: auto;
         right: 20px;
@@ -645,7 +628,7 @@ fieldset {
       &:after {
         top: -1px;
         left: auto;
-        border-color: $invisible_white $invisible_white $light_border_color;
+        border-color: $invisible_white_color $invisible_white_color $light_border_color;
       }
 
       &:hover {
