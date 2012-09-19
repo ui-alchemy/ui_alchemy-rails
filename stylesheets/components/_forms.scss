@@ -14,11 +14,11 @@ $error_color: lighten($rh-red1, 5%);
 $border_color: lighten($rh-base, 40%);
 $light_border_color: lighten($border_color, 10%);
 
-$aside_text_color: lighten($text_color, 40%);
-$placeholder_color: lighten($text_color, 55%);
+$aside_text_color: lighten($text_color_2, 40%);
+$placeholder_color: lighten($text_color_2, 55%);
 
 $disabled_color: lighten($rh-base, 60%);
-$disabled_text_color: lighten($text_color, 40%);
+$disabled_text_color: lighten($text_color_2, 40%);
 $readonly_text_color: darken($disabled_text_color, 10%);
 
 $light_box_color: lighten($rh-base, 60%);
@@ -58,7 +58,7 @@ $shadow_color: lighten($rh-base, 58%);
   width: 100%;
   display: block;
   line-height: 1;
-  color: $text_color;
+  color: $text_color_2;
 }
 
 fieldset {
@@ -170,7 +170,7 @@ fieldset {
     position: relative;
     top: 2px;
     font-size: 100%;
-    color: $text_color;
+    color: $text_color_2;
 
     &[multiple="multiple"] {
       background: $white_color;

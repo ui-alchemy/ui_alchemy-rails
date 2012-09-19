@@ -14,12 +14,12 @@ $headline-color:                #939292 !default;
 $border-color:                  #D7D7D7 !default;
 $headline_font-color:           #50505A !default;
 $text-color:                    #999999 !default;
-$text_color:                    rgb(60, 60, 60); // darker color (should stay)
-$theme_color:                   darken(#4e9fdd, 15%); // = darken($rh-blue, 15%);
+$text_color_2:                  rgb(60, 60, 60) !default; // darker color (should stay)
+$theme_color:                   darken(#4e9fdd, 15%) !default; // = darken($rh-blue, 15%);
 $white-color:                   #FFF !default;
-$white_color:                   white;
-$black_color:                   black;
-$invisible_white_color:         rgba(white, 0);
+$white_color:                   white !default;
+$black_color:                   black !default;
+$invisible_white_color:         rgba(white, 0) !default;
 
 /**************
 * Form Colors
