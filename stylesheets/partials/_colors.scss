@@ -19,7 +19,7 @@ $theme_color:                   darken(#4e9fdd, 15%) !default; // = darken($rh-b
 $white-color:                   #FFF !default;
 $white_color:                   white !default;
 $black_color:                   black !default;
-$invisible_white_color:         rgba(white, 0) !default;
+$transparent_white_color:         rgba(white, 0) !default;
 
 /**************
 * Form Colors

@@ -1,13 +1,13 @@
 @mixin linear_gradient($fallback_color, $start_color, $end_color, $end_color_position: false) {
   @if $end_color_position {
-    background-color: $fallback_color; /* fallback */
     @include background(linear-gradient($start_color, $end_color $end_color_position)); /* general */
     @include filter-gradient($fallback_color, $fallback_color); /* IE */
+    background-color: $fallback_color; /* fallback */
   }
   @else {
-    background-color: $fallback_color; /* fallback */
     @include background(linear-gradient($start_color, $end_color)); /* general */
     @include filter-gradient($start_color, $end_color); /* IE */
+    background-color: $fallback_color; /* fallback */
   }
 }
 

@@ -169,7 +169,7 @@ button {
       padding-left: 28px;
       display: inline-block;
       background: none;
-      @include filter-gradient($invisible_white_color, $invisible_white_color);
+      @include filter-gradient($transparent_white_color, $transparent_white_color);
       @include box-shadow(none);
     }
 
