@@ -1,0 +1,9 @@
+$danger_color: darken($rh-red1, 8%);
+$bg_color: lighten($rh-base, 47%);
+
+$border_color: darken($bg_color, 8%);
+$btn_text_color: lighten($text_color_2, 10%);
+$btn_white_text_color: lighten($rh-cream, 15%);
+
+$shadow_reflection_dark: 0 1px 6px rgba($white_color, 0.25) inset;
+$shadow_reflection_light: 0 1px 3px rgba($white_color, 1) inset;

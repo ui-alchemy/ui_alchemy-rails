@@ -1,5 +1,7 @@
-@import "../partials/base";
-@import "../components/shared";
+@import "../../partials/base";
+@import "login_vars";
+@import "login_mixins";
+@import "../footer/footer_vars";
 
 html, body{
   width: 100%;
@@ -47,7 +49,7 @@ article {
       width: $logo_container-width;
       min-height: $login-container-height;
       float: left;
-      @include login_logo_background-color;
+      @include theme_background_gradient;
       @include border-radius(7px 0 0 7px);
 
       img {

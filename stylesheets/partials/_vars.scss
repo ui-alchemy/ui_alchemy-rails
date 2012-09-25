@@ -1,14 +1,8 @@
-/*
-* Font Type Variables
-*/
+/*****************
+* Font Types
+*****************/
 $screenfont:          "Liberation Sans", sans-serif !default;
 $headlinefont:        "Overpass", Interstate, sans-serif !default;
-
-/*
-* Component Size Variables
-*/
-$stickyfooter-height: 55 !default;
-$header-height: 85px !default;
 
 /*****************
 * Responsive
@@ -22,18 +16,6 @@ $responsive_wide_width: 1200px !default;
 * Elements - Global
 *****************/
 $border_radius: 3px !default;
-
-/*****************
-* Sign-On Screen
-*****************/
-$login_container-width: 500px !default;
-$login-container_top-padding: 10px !default;
-$login_container-height: 275px - $login-container_top-padding !default;
-$form_container-padding: 30px !default;
-$logo_container-width: 140px !default;
-$form_container-width: 360px !default;
-$login_form_top-margin: 75px - 20px !default;
-
 
 /********
 * Images

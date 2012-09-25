@@ -1,4 +1,6 @@
-@import "../partials/base";
+@import "../../partials/base";
+@import "header_vars";
+@import "header_mixins";
 
 
 .centered {
@@ -9,7 +11,7 @@
 }
 
 header#header {
-  @include header-background_color;
+  @include theme_background_gradient;
   height: $header_height;
   border-top: 4px solid $header-border-top-color;
   border-bottom: 1px solid $header-border-bottom-color;
@@ -75,7 +77,7 @@ header#header {
       border: 1px solid $tab_container_outline-color;
       border-bottom: none;
       outline: 0 none;
-      @include header-background_color;
+      @include theme_background_gradient;
 
       li {
         display: block;
