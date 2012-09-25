@@ -9,14 +9,14 @@ body > footer {
   position: relative;
   margin-top: (0 - $stickyfooter-height - 1) + px; /* negative value of footer height */
   height: $stickyfooter-height + px;
- 
+
   span {
     width: 74px;
     position: absolute;
     left: 30px;
     bottom: 16px;
   }
- 
+
   p.copyright {
     position: relative;
     bottom: -16px;
@@ -38,7 +38,7 @@ body > footer {
         color: #50505a;
       }
     }
-    
+
     &:last-child {
       margin-right: 30px;
     }

@@ -19,7 +19,7 @@ Summary:       Converging UI's since 2012.
 Group:         Applications/System
 License:       GPLv2
 URL:           http://www.convergeui.org
-Version:       1.0.1
+Version:       1.1
 Release:       1%{?dist}
 Source0:       %{name}-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -30,7 +30,7 @@ BuildArch:     noarch
 A common set of web assets.
 
 %prep
-%setup -q 
+%setup -q
 
 %build
 
@@ -52,12 +52,34 @@ cp -R fonts/* %{buildroot}%{homedir}/fonts/
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files 
+%files
 %defattr(755, root, root)
 %{homedir}
 %doc README.rst LICENSE
 
 %changelog
+* Mon Sep 24 2012 Eric D Helms <ericdhelms@gmail.com> 1.1-1
+- Merge pull request #73 from jcoufal/devel (jrist@redhat.com)
+- Unified color for messages, .always_visible class for hint, IE corrections
+  (jcoufal@redhat.com)
+- Added "!default" to shared variables and fixed $text_color variable
+  (jcoufal@redhat.com)
+- Fixed forms and buttons regarding feedback (jcoufal@redhat.com)
+- Added new components - forms + buttons With this changes there were added
+  variables into _vars and _colors (jcoufal@redhat.com)
+- Fixed login button focus behavior (jtomasek@redhat.com)
+- Removed trailing whitespace from converge-ui (jtomasek@redhat.com)
+- Adds html5shiv.js to avoid CDN requirement (matt.wagner@redhat.com)
+
+* Wed Sep 12 2012 Eric D Helms <ericdhelms@gmail.com> 1.0.3-1
+- IE8 Fixes for header-widget (jrist@redhat.com)
+
+* Mon Sep 10 2012 Eric D Helms <ericdhelms@gmail.com> 1.0.2-1
+- Merge pull request #68 from n1zyy/login_page_tweaks_2 (jrist@redhat.com)
+- Switch back to using a gradient on the login page (matt.wagner@redhat.com)
+- Login tweaks from brand (matt.wagner@redhat.com)
+- Added notifications placeholder to user_session_layout (jtomasek@redhat.com)
+
 * Wed Sep 05 2012 Eric D Helms <ericdhelms@gmail.com> 1.0.1-1
 - Numerous Fixes:   * Fix for some IE8, IE9+ issues,   * Component
   compilations,   * Rescue for missing redir_path,   * Action-icons favorite

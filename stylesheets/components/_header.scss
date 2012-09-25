@@ -41,9 +41,9 @@ header#header {
     background: $logo_img;
     text-indent: -5555px;
     width: 170px;
-    height: 30px;
-    bottom: 25px;
-    left: 15px;
+    bottom: 16px;
+    height: 46px;
+    left: 30px;
     position: absolute;
     display: block;
   }
@@ -194,9 +194,11 @@ header#header {
     color: #FFF;
     text-align: center;
     margin-right: 8px;
-    padding: 2px 6px;
+    padding: 2px 6px 0 6px;
     text-decoration: none;
     float: right;
+    height: 20px;
+    line-height: 18px;
   }
 }
 
@@ -204,5 +206,12 @@ header#header {
 @media \0screen {
   header#header {
     background-color: #009DCC;
+    .header-widget {
+      background-color: #19191E;
+      @include opacity(0.4);
+    }
+    #appnav {
+      margin-left: 10px;
+    }
   }
 }

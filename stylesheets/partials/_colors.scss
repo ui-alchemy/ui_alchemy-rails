@@ -14,7 +14,12 @@ $headline-color:                #939292 !default;
 $border-color:                  #D7D7D7 !default;
 $headline_font-color:           #50505A !default;
 $text-color:                    #999999 !default;
+$text_color_2:                  rgb(60, 60, 60) !default; // darker color (should stay)
+$theme_color:                   darken(#4e9fdd, 15%) !default; // = darken($rh-blue, 15%);
 $white-color:                   #FFF !default;
+$white_color:                   white !default;
+$black_color:                   black !default;
+$transparent_white_color:         rgba(white, 0) !default;
 
 /**************
 * Form Colors
@@ -43,7 +48,7 @@ $tab_container_outline-color:     rgba(205, 205, 208, 0.4) !default;
 *  Footer Colors
 *****************/
 $footer_background-color: #EBEBEB !default;
-$footer_border_top-color: #F2F2F2 !default;
+$footer_border_top-color: #d9d9d9 !default;
 
 
 /****************
@@ -54,8 +59,9 @@ $input_font-color:              #50505A !default;
 $login_link-color:              #0194E8 !default;
 $login_base-color:              #D9D9D9 !default;
 $login_card_shadow-color:       #D9D9D9 !default;
-$login_background_top-color:    #FFF !default;
-$login_background_bottom-color: #FFF !default;
+$login_background_top-color:    #efefef !default;
+$login_background_bottom-color: #efefef !default;
+$login_card_outer_shadow-color: #ACACAC !default;
 
 
 /*********************************
@@ -67,55 +73,55 @@ $login_background_bottom-color: #FFF !default;
 $tone:  #a7b0b2 !default;
 
 /*favorite greys for warm interactive elements*/
-$g0:  #ffffff !default;     
-$g1:  #f6f6f6 !default;     
-$g2:  #d7d5cf !default;     
-$g3:  #bdbab6 !default;     
-$g4:  #9f9d99 !default;     
-$g5:  #565753 !default;     
-$g6:  #333333 !default;     
-$g7:  #222222 !default;     
-$g8:  #111111 !default;     
-$g9:  #000000 !default;     
+$g0:  #ffffff !default;
+$g1:  #f6f6f6 !default;
+$g2:  #d7d5cf !default;
+$g3:  #bdbab6 !default;
+$g4:  #9f9d99 !default;
+$g5:  #565753 !default;
+$g6:  #333333 !default;
+$g7:  #222222 !default;
+$g8:  #111111 !default;
+$g9:  #000000 !default;
 
 /* Red Hat toners */
-$rh-base: #60605b !default;   
-$rh-cream: #dedcc1 !default;   
+$rh-base: #60605b !default;
+$rh-cream: #dedcc1 !default;
 
 /*Red Hat Official*/
-$rh-red1:      #cc0000 !default;     
-$rh-red2:      #9e292b !default;  
+$rh-red1:      #cc0000 !default;
+$rh-red2:      #9e292b !default;
 $rh-red3:      #781f1c !default;
 
-$rh-blue:      #4e9fdd !default;     
-$rh-lightblue: #bfdce8 !default;     
-$rh-teal:      #2c8596 !default;     
-$rh-dark-blue: #003d6e !default;     
-$rh-lime:      #e3e936 !default;     
-$rh-green:     #afbf27 !default;     
-$rh-purple:    #564979 !default;     
+$rh-blue:      #4e9fdd !default;
+$rh-lightblue: #bfdce8 !default;
+$rh-teal:      #2c8596 !default;
+$rh-dark-blue: #003d6e !default;
+$rh-lime:      #e3e936 !default;
+$rh-green:     #afbf27 !default;
+$rh-purple:    #564979 !default;
 $rh-orange:    #dc9f2e !default;
 
 /* Red Hat Apps  - Web Extended */
 
 /*orange (the letter o)*/
 
-$o7:    #400 !default;     
-$o6:    #b30 !default;     
-$o5:    #c40 !default;     
-$o4:    #e70 !default;     
-$o3:    #fa0 !default;     
-$o2:    #fc3 !default;     
+$o7:    #400 !default;
+$o6:    #b30 !default;
+$o5:    #c40 !default;
+$o4:    #e70 !default;
+$o3:    #fa0 !default;
+$o2:    #fc3 !default;
 $o1:    #fea !default;
 
 /*green*/
 
-$link-light:  #39f !default;  
-$link:        #05f !default;         
-$link-dark:   #039 !default;   
+$link-light:  #39f !default;
+$link:        #05f !default;
+$link-dark:   #039 !default;
 
-$green1: #a3d541 !default; 
-$green2: #57a81c !default; 
+$green1: #a3d541 !default;
+$green2: #57a81c !default;
 $green3: #286200 !default;
 
 /* red */
