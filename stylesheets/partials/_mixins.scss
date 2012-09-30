@@ -118,19 +118,6 @@
   column-gap: $g;
 }
 
-@mixin opacity($opacity) {
-  /* IE 8 */
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity * 100)";
-  /* IE 5-7 */
-  filter: alpha(opacity=$opacity * 100);
-  /* Netscape */
-  -moz-opacity: $opacity;
-  /* Safari 1.x */
-  -khtml-opacity: $opacity;
-  /* Good browsers */
-  opacity: $opacity;
-}
-
 @mixin background-size($size) {
   -webkit-background-size: $size;
   -o-background-size: $size;

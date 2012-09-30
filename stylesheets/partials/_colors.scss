@@ -5,10 +5,10 @@ $application-background-color:  #D9D9D9 !default;
 $primary-color:                 #26B3E2 !default;
 $light_primary-color:           lighten($primary-color, 35%) !default;
 $selected-color:                darken($primary-color, 15%) !default;
-$link-color:                    darken($primary-color, 05%) !default; /* default links */
+$link-color:                    darken($primary-color, 05%) !default; // default links
 $tab_on-color:                  darken($selected-color, 1%) !default;
-$tab_off-color:                 #747474 !default; /* unfocused tabs */
-$list_hover-color:              lighten($selected_color, 10%) !default; /* list items prelight state */
+$tab_off-color:                 #747474 !default; // unfocused tabs
+$list_hover-color:              lighten($selected_color, 10%) !default; // list items prelight state
 $font-color:                    #1A1A1A !default;
 $headline-color:                #939292 !default;
 $border-color:                  #D7D7D7 !default;
@@ -21,58 +21,21 @@ $white_color:                   white !default;
 $black_color:                   black !default;
 $transparent_white_color:         rgba(white, 0) !default;
 
-/**************
-* Form Colors
-***************/
-$label-color:             #888 !default;
-$input_background-color:  #F0F0F0 !default;
+$theme_background_top_color:     #009DCC !default;
+$theme_background_bottom_color:  #006F8F !default;
 
 
 /****************
-*  Header Colors
-*****************/
-$header-color:                    #333333 !default;
-$header-border-top-color:         #01536d !default;
-$header-border-bottom-color:      rgba(11, 15, 16, 0.55) !default;
-$header_background_top-color:     #009DCC !default;
-$header_background_bottom-color:  #006F8F !default;
-$header_widget-background-color:  #0A6684 !default;
-$tab_background-color:            rgba(25, 25, 30, 0.4) !default;
-$tab_hover-color:                 rgba(25, 25, 30, .15) !default;
-$tab_font-color:                  #F1F1F1 !default;
-$tab_selected-color:              #505050 !default;
-$tab_container_outline-color:     rgba(205, 205, 208, 0.4) !default;
-
-
-/****************
-*  Footer Colors
-*****************/
-$footer_background-color: #EBEBEB !default;
-$footer_border_top-color: #d9d9d9 !default;
-
-
-/****************
-*  Login Colors
-*****************/
-$label_font-color:              #CCC !default;
-$input_font-color:              #50505A !default;
-$login_link-color:              #0194E8 !default;
-$login_base-color:              #D9D9D9 !default;
-$login_card_shadow-color:       #D9D9D9 !default;
-$login_background_top-color:    #efefef !default;
-$login_background_bottom-color: #efefef !default;
-$login_card_outer_shadow-color: #ACACAC !default;
-
-
-/*********************************
 *  Palette Colors
-**********************************/
-/*proposed colour palette*/
+*****************/
 
-/*generic default tone for non interactive elements*/
+/* Proposed colour palette
+===========================*/
+
+/* Generic default tone for non interactive elements */
 $tone:  #a7b0b2 !default;
 
-/*favorite greys for warm interactive elements*/
+/* Favorite greys for warm interactive elements */
 $g0:  #ffffff !default;
 $g1:  #f6f6f6 !default;
 $g2:  #d7d5cf !default;
@@ -88,7 +51,7 @@ $g9:  #000000 !default;
 $rh-base: #60605b !default;
 $rh-cream: #dedcc1 !default;
 
-/*Red Hat Official*/
+/* Red Hat Official */
 $rh-red1:      #cc0000 !default;
 $rh-red2:      #9e292b !default;
 $rh-red3:      #781f1c !default;
@@ -102,10 +65,10 @@ $rh-green:     #afbf27 !default;
 $rh-purple:    #564979 !default;
 $rh-orange:    #dc9f2e !default;
 
-/* Red Hat Apps  - Web Extended */
+/* Red Hat Apps  - Web Extended
+================================*/
 
-/*orange (the letter o)*/
-
+/* Orange (the letter o) */
 $o7:    #400 !default;
 $o6:    #b30 !default;
 $o5:    #c40 !default;
@@ -114,8 +77,7 @@ $o3:    #fa0 !default;
 $o2:    #fc3 !default;
 $o1:    #fea !default;
 
-/*green*/
-
+/* Green */
 $link-light:  #39f !default;
 $link:        #05f !default;
 $link-dark:   #039 !default;
@@ -124,59 +86,41 @@ $green1: #a3d541 !default;
 $green2: #57a81c !default;
 $green3: #286200 !default;
 
-/* red */
+/* Red */
 $error-color: #990000 !default;
 $error_lighter-color: lighten($error-color, 60%);
 
 
-/****************************
-*  Complex Color Definitions
-*****************************/
-
-/* background for header */
-@mixin header-background_color {
-  @include background(linear-gradient(top, $header_background_top-color 0%, $header_background_top-color 50%, $header_background_bottom-color 100%));
-}
-
-/* background for tabs on header */
-@mixin tab-selected-bg {
-  background: #ffffff; /* Old browsers */
-  background: -moz-linear-gradient(top,  #ffffff 0%, #ebebeb 50%, #d9d9d9 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#ebebeb), color-stop(100%,#d9d9d9)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #ffffff 0%,#ebebeb 50%,#d9d9d9 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #ffffff 0%,#ebebeb 50%,#d9d9d9 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #ffffff 0%,#ebebeb 50%,#d9d9d9 100%); /* IE10+ */
-  background: linear-gradient(top,  #ffffff 0%,#ebebeb 50%,#d9d9d9 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d9d9d9',GradientType=0 ); /* IE6-9 */
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding;
-  background-clip: padding-box;
-}
-
-@mixin login_background-color {
-  @include background(linear-gradient(top, $login_background_top-color 0%, $login_background_top-color 50%, $login_background_bottom-color 100%));
-}
-
-@mixin login_logo_background-color {
-  @include header-background_color;
-}
-
-@mixin button_color {
-  @include background-image(linear-gradient(top, #F9F9F9, #F0F0F0, #E5E5E5, #E9E9E9));
-}
-
-
-/*****************
-* Switcher Colors
-******************/
+/************************
+* Company Switcher Colors
+*************************/
 $switcher-top_color: #FFF;
 $switcher-bottom_color: rgba(204,204,204,1);
+
 @mixin switcher-button_color{
   @include background(linear-gradient(top, $switcher-top_color 0%, $switcher-top_color 50%, $switcher-bottom_color 100%));
 }
+
 @mixin switcher-button-active_color {
   @include background(linear-gradient(top, $switcher-bottom_color 0%, $switcher-top_color 50%, $switcher-top_color 100%));
 }
+
 @mixin switcher-form_color {
   @include background(linear-gradient(top, $switcher-top_color 0%, $switcher-bottom_color 75%, $switcher-bottom_color 100%));
 }
+
+/************
+* Theme color
+************/
+/* background for header */
+@mixin theme_background_gradient {
+  @include background(
+    linear-gradient(
+      top,
+      $theme_background_top_color 0%,
+      $theme_background_top_color 50%,
+      $theme_background_bottom_color 100%
+    )
+  );
+}
+
