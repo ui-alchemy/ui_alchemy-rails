@@ -424,10 +424,9 @@ fieldset {
     color: $note_text_color;
     margin: 0 0 5px 10px;
 
-    &:before {
-      content: "Note:";
+    strong {
       font-weight: bold;
-      margin-right: 5px;
+      font-size: 110%;
     }
   }
 
