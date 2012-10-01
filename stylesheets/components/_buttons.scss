@@ -174,7 +174,7 @@ button {
     }
 
     &.download_example:before {
-      @include background(url('http://convergeui-jcoufal.rhcloud.com/images/converge-ui/icons/action-icons.png'));
+      @include background(image-url('converge-ui/icons/action-icons.png'));
       background-position: -512px -16px;
     }
   }
