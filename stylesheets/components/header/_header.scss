@@ -13,15 +13,15 @@
 header#header {
   @include theme_background_gradient;
   height: $header_height;
-  border-top: 4px solid $header-border-top-color;
-  border-bottom: 1px solid $header-border-bottom-color;
+  border-top: 4px solid $header_border_top_color;
+  border-bottom: 1px solid $header_border_bottom_color;
   position: relative;
   font-family: $headlinefont;
 
   &:after {
     content: "";
-    background: $application-background-color;
-    border-top: 1px solid $tab_container_outline-color;
+    background: $application_background_color;
+    border-top: 1px solid $tab_container_outline_color;
     height: 4px;
     width: 100%;
     position: absolute;
@@ -62,7 +62,7 @@ header#header {
   }
 
   #appnav {
-    border: 1px solid $header-border-bottom-color;
+    border: 1px solid $header_border_bottom_color;
     border-bottom: none;
     @include border-radius(3px 3px 0 0);
     white-space: nowrap;
@@ -74,7 +74,7 @@ header#header {
       position: relative;
       overflow: auto;
       @include border-radius(3px 3px 0 0);
-      border: 1px solid $tab_container_outline-color;
+      border: 1px solid $tab_container_outline_color;
       border-bottom: none;
       outline: 0 none;
       @include theme_background_gradient;
@@ -94,18 +94,18 @@ header#header {
           text-overflow: ellipsis;
           vertical-align: middle;
           font-weight: bold;
-          color: $tab_font-color;
+          color: $tab_font_color;
           padding: 0 13px;
           font-size: 13px;
-          background-color: $tab_background-color;
+          background-color: $tab_background_color;
           height: 28px;
           line-height: 28px;
-          border-right: 3px solid $tab_container_outline-color;
+          border-right: 3px solid $tab_container_outline_color;
           @include background-clip(padding);
           outline: 0 none;
-          &:focus{background-color: darken($tab_background-color, 15%)}
+          &:focus{background-color: darken($tab_background_color, 15%)}
           &.selected {
-            color: $tab_selected-color;
+            color: $tab_selected_color;
             position: relative;
             outline: 0 none;
             @include tab-selected-bg;
@@ -118,8 +118,8 @@ header#header {
 
           &:hover {
             outline: 0 none;
-            background: $tab_hover-color;
-            color: $tab_font-color;
+            background: $tab_hover_color;
+            color: $tab_font_color;
           }
         }
 
@@ -144,7 +144,7 @@ header#header {
     z-index: 1;
     height: 2.5em;
     padding: 5px 6px 0 6px;
-    @include border-top-lr-radius(5px);
+    @include border-radius(5px 5px 0 0);
   }
 
   #widget-container {
@@ -166,8 +166,7 @@ header#header {
           top: 16px;
           z-index: 99;
           left: 0px;
-          background-color: $header_widget-background-color;
-          @include border-trbrbl-radius(5px);
+          @include border-radius(5px);
           @include box-shadow(2px 2px 2px rgba(0,0,0,0.4));
           min-width: 4.2em;
           padding: 2px 12px;
@@ -190,7 +189,7 @@ header#header {
   }
 
   .header-widget {
-    background-color: $tab_background-color;
+    background-color: $tab_background_color;
     @include border-radius(5px);
     font-size: 11px;
     color: #FFF;

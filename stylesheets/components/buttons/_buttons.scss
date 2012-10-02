@@ -18,24 +18,24 @@ button {
   padding: 0.5em 1em;
   margin: 10px 8px 0 0;
   cursor: pointer;
-  border: 1px solid $border_color;
+  border: 1px solid $btn_border_color;
   line-height: normal; /* must be normal because of firefox bug: http://cbjdigital.com/blog/2010/08/bulletproof_css_input_button_heights*/
   @include border-radius($border_radius);
 
   color: $btn_text_color;
   text-shadow: 0 1px 0 rgba($white_color, 0.7);
-  @include linear_gradient(lighten($bg_color, 10%), lighten($bg_color, 15%), $bg_color);
-  @include box-shadow($shadow_reflection_light); /* inside reflection */
+  @include linear_gradient(lighten($btn_neutral_color, 10%), lighten($btn_neutral_color, 15%), $btn_neutral_color);
+  @include box-shadow($btn_shadow_reflection_light); /* inside reflection */
 
   &:hover {
-    border-color: darken($border_color, 5%);
-    @include linear_gradient(lighten($bg_color, 13%), $white_color, lighten($bg_color, 6%));
+    border-color: darken($btn_border_color, 5%);
+    @include linear_gradient(lighten($btn_neutral_color, 13%), $white_color, lighten($btn_neutral_color, 6%));
   }
 
   &:active {
     color: rgba($btn_text_color, 0.9);
     @include text-shadow(0 -1px 0 rgba($black_color, 0.05));
-    @include linear_gradient(lighten($bg_color, 3%), lighten($bg_color, 3%), lighten($bg_color, 3%));
+    @include linear_gradient(lighten($btn_neutral_color, 3%), lighten($btn_neutral_color, 3%), lighten($btn_neutral_color, 3%));
     @include box-shadow(none);
   }
 
@@ -46,7 +46,7 @@ button {
   &.warning:hover { /* set white text on dark backgrounds */
     color: $btn_white_text_color;
     @include text-shadow(0 -1px 0 rgba($black_color, 0.25));
-    @include box-shadow($shadow_reflection_dark);
+    @include box-shadow($btn_shadow_reflection_dark);
 
     &:active {
       color: rgba($btn_white_text_color, 0.95);
@@ -56,30 +56,30 @@ button {
   }
 
   &.primary { /* primary button */
-    border-color: lighten($theme_color, 13%);
-    @include linear_gradient(($theme_color, 7%), lighten($theme_color, 18%), $theme_color);
+    border-color: lighten($btn_primary_color, 13%);
+    @include linear_gradient(($btn_primary_color, 7%), lighten($btn_primary_color, 18%), $btn_primary_color);
 
     &:hover {
-      border-color: lighten($theme_color, 15%);
-      @include linear_gradient(($theme_color, 11%), lighten($theme_color, 22%), lighten($theme_color, 5%));
+      border-color: lighten($btn_primary_color, 15%);
+      @include linear_gradient(($btn_primary_color, 11%), lighten($btn_primary_color, 22%), lighten($btn_primary_color, 5%));
     }
 
     &:active {
-      border-color: $theme_color;
-      @include linear_gradient(lighten($theme_color, 4%), darken($theme_color, 3%), lighten($theme_color, 3%), 10%);
+      border-color: $primary_color;
+      @include linear_gradient(lighten($btn_primary_color, 4%), darken($btn_primary_color, 3%), lighten($btn_primary_color, 3%), 10%);
     }
   }
 
   &.warning { /* warning */
-    color: lighten($danger_color, 7%);
+    color: lighten($btn_danger_color, 7%);
 
     &:hover {
-      border-color: lighten($danger_color, 5%);
-      @include linear_gradient(lighten($danger_color, 5%), lighten($danger_color, 13%), $danger_color);
+      border-color: lighten($btn_danger_color, 5%);
+      @include linear_gradient(lighten($btn_danger_color, 5%), lighten($btn_danger_color, 13%), $btn_danger_color);
     }
 
     &:active {
-      @include linear_gradient(darken($danger_color, 1%), darken($danger_color, 7%), lighten($danger_color, 3%), 10%);
+      @include linear_gradient(darken($btn_danger_color, 1%), darken($btn_danger_color, 7%), lighten($btn_danger_color, 3%), 10%);
     }
   }
 
@@ -113,11 +113,11 @@ button {
       color: rgba($btn_text_color, 0.5);
       text-shadow: 0 -1px 0 rgba($white_color, 0.9);
       cursor: default;
-      border-color: lighten($border_color, 7%);
-      @include linear_gradient(lighten($bg_color, 14%), lighten($bg_color, 17%), lighten($bg_color, 6%));
+      border-color: lighten($btn_border_color, 7%);
+      @include linear_gradient(lighten($btn_neutral_color, 14%), lighten($btn_neutral_color, 17%), lighten($btn_neutral_color, 6%));
 
       &.warning {
-        color: rgba($danger_color, 0.47);
+        color: rgba($btn_danger_color, 0.47);
       }
     }
   }
@@ -128,7 +128,7 @@ button {
     &:active {
       @include background(
         image-url("converge-ui/icons/spinner.gif") no-repeat 50% 50%,
-        linear-gradient(lighten($bg_color, 17%), lighten($bg_color, 6%)));
+        linear-gradient(lighten($btn_neutral_color, 17%), lighten($btn_neutral_color, 6%)));
     }
   }
 

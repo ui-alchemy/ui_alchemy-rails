@@ -1,5 +1,5 @@
-@mixin login_background-color {
-  @include background(linear-gradient(top, $login_background_top-color 0%, $login_background_top-color 50%, $login_background_bottom-color 100%));
+@mixin login_background_color {
+  @include background(linear-gradient(top, $login_background_top_color 0%, $login_background_top_color 50%, $login_background_bottom_color 100%));
 }
 
 @mixin button_color {

@@ -1,11 +1,9 @@
-$header-color:                    #333333 !default;
-$header-border-top-color:         #01536d !default;
-$header-border-bottom-color:      rgba(11, 15, 16, 0.55) !default;
-$header_widget-background-color:  #0A6684 !default;
-$tab_background-color:            rgba(25, 25, 30, 0.4) !default;
-$tab_hover-color:                 rgba(25, 25, 30, .15) !default;
-$tab_font-color:                  #F1F1F1 !default;
-$tab_selected-color:              #505050 !default;
-$tab_container_outline-color:     rgba(205, 205, 208, 0.4) !default;
+$header_border_top_color:         lighten($primary_color, 6%) !default;
+$header_border_bottom_color:      darken($primary_color, 10%) !default;
+$tab_background_color:            rgba(black, 0.3) !default;
+$tab_hover_color:                 rgba(black, 0.2) !default;
+$tab_font_color:                  #F1F1F1 !default;
+$tab_selected_color:              #505050 !default;
+$tab_container_outline_color:     rgba(white, 0.3) !default;
 
-$header-height: 85px !default;
+$header_height: 85px !default;

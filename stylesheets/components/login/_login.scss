@@ -6,7 +6,7 @@
 html, body{
   width: 100%;
   height: 100%;
-  @include login_background-color;
+  @include login_background_color;
   font-family: $headlinefont;
   //* ugly IE8 specific color hack for the background to show*/
   background-color/*\**/: darken(rgba(0, 157, 204, 1), 4%)\9;
@@ -14,25 +14,25 @@ html, body{
 
 #wrapper {
   min-height: 100%;
-  padding-bottom: 0 - ($stickyfooter-height + 1);
+  padding-bottom: 0 - ($stickyfooter_height + 1);
 }
 
 article {
   position: relative;
-  top: (900 / 2) - $login_container-height;
+  top: (900 / 2) - $login_container_height;
 
   a, a:visited {
     cursor: hand;
     cursor: pointer;
-    color: $link-color;
+    color: $link_color;
     text-decoration: none;
 
     &:hover, &:focus {
-      color: lighten($link-color, 10%);
+      color: lighten($link_color, 10%);
       text-decoration: underline;
     }
     &:active {
-      color: darken($link-color, 20%);
+      color: darken($link_color, 20%);
     }
   }
 
@@ -41,45 +41,45 @@ article {
     width: $login-container_width;
     height: $login-container_height;
     margin: 0 auto;
-    padding: $login-container_top-padding;
-    @include background-image(linear-gradient(top, rgba(255, 255, 255, 0) 40%, $login_base-color 120%));
-    @include box-shadow($login_card_outer_shadow-color 0px 12px 15px -8px);
+    padding: $login_container_top_padding;
+    @include background-image(linear-gradient(top, rgba(255, 255, 255, 0) 40%, $login_base_color 120%));
+    @include box-shadow($login_card_outer_shadow_color 0px 12px 15px -8px);
     @include border-radius(7px);
     aside {
-      width: $logo_container-width;
+      width: $logo_container_width;
       min-height: $login-container-height;
       float: left;
       @include theme_background_gradient;
       @include border-radius(7px 0 0 7px);
 
       img {
-        margin-top: $login_container-height / 3;
+        margin-top: $login_container_height / 3;
       }
     }
 
     section {
-      width: $form_container-width;
+      width: $form_container_width;
       position: relative;
       overflow: hidden;
 
       .card_container {
-        width: 2 * $form_container-width;
+        width: 2 * $form_container_width;
         position: absolute;
         top: 0;
-        left: -$form_container-width;
+        left: -$form_container_width;
         z-index: -1;
       }
 
       .card {
         position: relative;
-        min-height: $login_container-height - 10;
-        height: $login_container-height - 10;
-        width: $form_container-width - 2 * $form_container-padding;
+        min-height: $login_container_height - 10;
+        height: $login_container_height - 10;
+        width: $form_container_width - 2 * $form_container_padding;
         background: #FFF;
-        padding: 0 $form_container-padding;
+        padding: 0 $form_container_padding;
         padding-top: 10px;
         @include border-radius(0 7px 7px 0);
-        @include box-shadow(inset -15px -15px 30px -7px $login_card_shadow-color, inset 0px -15px 130px $login_card_shadow-color);
+        @include box-shadow(inset -15px -15px 30px -7px $login_card_shadow_color, inset 0px -15px 130px $login_card_shadow_color);
         //spinner post-login
         .spinner {
             margin-top: 1.8em;
@@ -101,12 +101,12 @@ article {
             background: #DEDEDE;
 
             &:hover {
-              border: 2px solid $login_link-color;
-              @include box-shadow(0px 0px 4px $login_link-color);
+              border: 2px solid $link_color;
+              @include box-shadow(0px 0px 4px $link_color);
             }
           }
 
-          .left_arrow-icon-black { background-position: -654px -15px; }
+          .left_arrow_icon_black { background-position: -654px -15px; }
         }
         #login_form {
           position: absolute;
@@ -133,14 +133,14 @@ article {
           display: inline-block;
           margin-top: 27px;
           font-size: 12px;
-          color: $headline_font-color;
+          color: $heading_text_color;
         }
 
         p {
           text-align: justify;
           height: 30px;
           font-family: $headlinefont;
-          color: $text-color;
+          color: lighten($text_color, 35%);
           font-size: 10px;
           margin-left: 10px;
         }
@@ -152,7 +152,7 @@ article {
             margin-bottom: 0px;
             margin-left: 10px;
             font-size: 12px;
-            color: $label_font-color;
+            color: $label_font_color;
             text-align: left;
             font-weight: bold;
           }
@@ -161,15 +161,15 @@ article {
             width: 290px;
             padding: 6px 0px 6px 10px;
             font-size: 14px;
-            color: $input_font-color;
+            color: $input_font_color;
             @include border-radius(4px);
             outline: none;
             border: 1px solid #CCC;
             height: 21px;
-            @include inset-box-shadow(0,1px,1px,rgba(0, 0, 0, 0.2));
+            @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.2) inset);
             &:focus {
-              @include box-shadow(0px 0px 4px $login_link-color);
-              border: 1px solid $login_link-color;
+              @include box-shadow(0px 0px 4px $link_color);
+              border: 1px solid $link_color;
             }
           }
 
@@ -193,9 +193,9 @@ article {
             bottom: 0;
             right: 0;
             font-size: 11px;
-            color: $input_font-color;
+            color: $input_font_color;
 
-            a { color: $login_link-color; }
+            a { color: $link_color; }
           }
         }
 
@@ -230,7 +230,7 @@ article {
     font-weight: bold;
     text-align: center;
     display: inline-block;
-    @include no-box-shadow;
+    @include box-shadow(none);
     cursor: pointer;
     height: 30px;
     padding: 0 21px;
@@ -238,8 +238,8 @@ article {
     margin-bottom: 8px;
     position: absolute;
     right: 0;
-    color: $input_font-color;
-    border: 1px solid $label_font-color;
+    color: $input_font_color;
+    border: 1px solid $label_font_color;
     @include border-radius(10px);
     @include button_color;
 
@@ -256,13 +256,13 @@ article {
     &:active {
       background: -moz-linear-gradient(top, #c2c3c0, #e4e5e4);
       background: -webkit-gradient(linear, left top, left bottom, from(#c2c3c0), to(#e4e5e4));
-      @include no-box-shadow;
+      @include box-shadow(none);
       text-decoration: none;
     }
     &:focus {
       text-decoration: none;
-      @include box-shadow(0px 0px 4px $login_link-color);
-      border: 1px solid $login_link-color;
+      @include box-shadow(0px 0px 4px $link_color);
+      border: 1px solid $link_color;
       outline: none;
     }
     &.dialogbutton {
@@ -285,7 +285,7 @@ article {
 
       &:hover {
         background: transparent;
-        @include no-box-shadow;
+        @include box-shadow(none);
       }
     }
     &.iconbutton {

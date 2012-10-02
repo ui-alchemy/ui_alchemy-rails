@@ -12,7 +12,7 @@
   width: 100%;
   display: block;
   line-height: 1;
-  color: $text_color_2;
+  color: $text_color;
 }
 
 fieldset {
@@ -92,8 +92,8 @@ fieldset {
     }
 
     &:focus {
-      border-color: lighten($theme_color, 10%);
-      @include box-shadow(0 0 2px lighten($theme_color, 10%));
+      border-color: lighten($primary_color, 10%);
+      @include box-shadow(0 0 2px lighten($primary_color, 10%));
       @include transition(all 0.17s linear);
     }
   }
@@ -124,7 +124,7 @@ fieldset {
     position: relative;
     top: 2px;
     font-size: 100%;
-    color: $text_color_2;
+    color: $text_color;
 
     &[multiple="multiple"] {
       background: $white_color;
@@ -175,7 +175,7 @@ fieldset {
         font-size: 125%;
         font-weight: bold;
         content: '*';
-        color: $theme_color;
+        color: $primary_color;
       }
     }
 
@@ -350,7 +350,7 @@ fieldset {
       @include border-radius($border_radius);
       @include linear_gradient($dark_box_color, $dark_box_gradient, $dark_box_color, 20%);
       @include filter-gradient($dark_box_gradient, $dark_box_color);
-      color: lighten($rh-cream, 30%);
+      color: lighten($rh_cream, 30%);
       border-color: $dark_box_color;
       text-align: left;
       line-height: 1.2;

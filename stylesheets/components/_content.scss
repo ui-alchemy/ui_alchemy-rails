@@ -5,7 +5,7 @@
 * {margin:0;padding:0;}
 
 body {
-  background-color: $application-background-color;
+  background-color: $application_background_color;
   &:before {
     content:"";
     height:100%;
@@ -39,7 +39,7 @@ html {
 }
 #maincontent {
   overflow: auto;
-  padding-bottom: $stickyfooter-height + 10 + px;
+  padding-bottom: $stickyfooter_height + 10 + px;
 
   section.maincontent{
       background-color: #FFF;

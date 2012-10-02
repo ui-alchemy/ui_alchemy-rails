@@ -4,12 +4,12 @@
 
 body > footer {
   min-height: 55px;
-  background: $footer_background-color;
-  border-top: 1px solid $footer_border_top-color;
+  background: $footer_background_color;
+  border-top: 1px solid $footer_border_top_color;
   clear:both;
   position: relative;
-  margin-top: (0 - $stickyfooter-height - 1) + px; /* negative value of footer height */
-  height: $stickyfooter-height + px;
+  margin-top: (0 - $stickyfooter_height - 1) + px; /* negative value of footer height */
+  height: $stickyfooter_height + px;
 
   span {
     width: 74px;
