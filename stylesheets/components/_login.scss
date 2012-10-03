@@ -11,13 +11,16 @@ html, body{
 }
 
 #wrapper {
-  min-height: 100%;
-  padding-bottom: 0 - ($stickyfooter-height + 1);
+  padding-bottom: 0 - ($stickyfooter-height + 1) + px;
+  display: table;
+  width: 100%;
+  height: 100%;
 }
 
 article {
   position: relative;
-  top: (900 / 2) - $login_container-height;
+  display: table-cell;
+  vertical-align: middle;
 
   a, a:visited {
     cursor: hand;
