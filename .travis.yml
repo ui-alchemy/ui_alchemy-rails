@@ -1,8 +1,12 @@
 language:
   - ruby
 
+before_install:
+
 install:
   - gem install compass
+
+before_script:
 
 script:
   - for f in $(find stylesheets/ -name '*.scss'); do scss $f $f.css --compass; done
