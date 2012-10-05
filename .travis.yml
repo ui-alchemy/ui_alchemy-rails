@@ -1,0 +1,12 @@
+language:
+  - ruby
+
+install:
+  - gem install compass
+
+script:
+  - for f in $(find stylesheets/ -name '*.scss'); do scss $f $f.css --compass; done
+
+rvm:
+ - "1.8.7"
+ - "1.9.3"
