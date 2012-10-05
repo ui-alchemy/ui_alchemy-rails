@@ -9,7 +9,7 @@ install:
 before_script:
 
 script:
-  - for f in $(find stylesheets/ -name '*.scss'); do scss $f $f.css --compass; done
+  - ./scripts/test-scss-compile
 
 rvm:
  - "1.8.7"

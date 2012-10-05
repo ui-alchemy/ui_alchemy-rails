@@ -1,0 +1,17 @@
+count=0
+status=()
+
+for f in $(find stylesheets/ -name '*.scss'); 
+do 
+  count=`expr $count + 1`;
+  `scss $f $f.css --compass`;
+  status[$count]=$?
+done
+
+for i in "${status[@]}";
+do
+  if [ $i == 1 ]
+  then
+    exit 1
+  fi
+done
