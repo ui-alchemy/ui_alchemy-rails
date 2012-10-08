@@ -52,8 +52,8 @@ cp -R fonts/* %{buildroot}%{homedir}/fonts/
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files 
-%defattr(755, root, root)
+%files
+%defattr(644, root, root, 755)
 %{homedir}
 %doc README.rst LICENSE
 
