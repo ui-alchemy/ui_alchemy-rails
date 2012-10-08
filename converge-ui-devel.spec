@@ -19,7 +19,7 @@ Summary:       Converging UI's since 2012.
 Group:         Applications/System
 License:       GPLv2
 URL:           http://www.convergeui.org
-Version:       1.0.3
+Version:       1.0.4
 Release:       1%{?dist}
 Source0:       %{name}-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -58,6 +58,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.rst LICENSE
 
 %changelog
+* Mon Oct 08 2012 Eric D Helms <ericdhelms@gmail.com> 1.0.4-1
+- Fix file permissions in RPM spec (jeckersb@redhat.com)
+
 * Wed Sep 12 2012 Eric D Helms <ericdhelms@gmail.com> 1.0.3-1
 - IE8 Fixes for header-widget (jrist@redhat.com)
 
