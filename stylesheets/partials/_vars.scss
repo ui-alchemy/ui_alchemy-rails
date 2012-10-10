@@ -1,14 +1,8 @@
-/*
-* Font Type Variables
-*/
+/*****************
+* Font Types
+*****************/
 $screenfont:          "Liberation Sans", sans-serif !default;
 $headlinefont:        "Overpass", Interstate, sans-serif !default;
-
-/*
-* Component Size Variables
-*/
-$stickyfooter-height: 55 !default;
-$header-height: 85px !default;
 
 /*****************
 * Responsive
@@ -23,22 +17,10 @@ $responsive_wide_width: 1200px !default;
 *****************/
 $border_radius: 3px !default;
 
-/*****************
-* Sign-On Screen
-*****************/
-$login_container-width: 500px !default;
-$login-container_top-padding: 10px !default;
-$login_container-height: 275px - $login-container_top-padding !default;
-$form_container-padding: 30px !default;
-$logo_container-width: 140px !default;
-$form_container-width: 360px !default;
-$login_form_top-margin: 75px - 20px !default;
-
-
 /********
 * Images
 *********/
 $logo_img:    image-url("embed/logo.png") no-repeat 0 0 transparent;
 $loading_img: image-url("converge-ui/icons/spinner_head.gif") no-repeat 0 0 transparent;
 $arrow_icon:  image-url("converge-ui/icons/arrow_icon.png") no-repeat 0 0;
-$chosen-sprite-url: "../../images/converge-ui/icons/chosen-sprite.png";
+$chosen_sprite_url: "../../images/converge-ui/icons/chosen-sprite.png";
