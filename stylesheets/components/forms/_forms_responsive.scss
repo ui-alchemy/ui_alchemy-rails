@@ -1,27 +1,39 @@
 @mixin labels_top {
   & {
-    .label {
-      float: none;
-      text-align: left;
-      display: inline-block;
-      width: auto;
-
-      label {
-        padding: 0 8px 0 0;
-        line-height: 1.8;
+    .control_group {
+      .input {
+        margin: 0 0 5px 0;
       }
 
-      &.help {
-        i {
-          position: absolute;
-          right: -13px;
-          top: 2px;
+      .label {
+        float: none;
+        text-align: left;
+        display: inline-block;
+        width: auto;
+
+        label {
+          padding: 0 8px 0 0;
+          line-height: 1.8;
         }
 
-        span {
-          left: 60%;;
-          top: 27px;
+        &.help {
+          i {
+            position: absolute;
+            right: -13px;
+            top: 2px;
+          }
+
+          span {
+            left: 60%;;
+            top: 27px;
+          }
         }
+      }
+    }
+
+    fieldset {
+      legend {
+        margin-left: 3px;
       }
     }
 
@@ -44,9 +56,6 @@
       }
     }
 
-    .input {
-      margin: 0 0 5px 0;
-    }
   }
 }
 

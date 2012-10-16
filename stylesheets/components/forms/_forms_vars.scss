@@ -9,7 +9,9 @@ $success_color: $green2;
 $warning_color: lighten($o4, 4%);
 $error_color: lighten($rh_red1, 2%);
 $light_border_color: lighten($border_color, 10%);
+$fieldset_border_color: lighten($border_color, 10%);
 
+$fieldset_text_color: lighten($text_color, 46%);
 $placeholder_color: lighten($text_color, 55%);
 $note_text_color: lighten($text_color, 40%);
 $message_text_color: lighten($text_color, 20%);
@@ -22,5 +24,6 @@ $light_box_color: lighten($rh_base, 60%);
 $light_box_gradient: lighten($light_box_color, 40%);
 $dark_box_color: darken($rh_base, 3%);
 $dark_box_gradient: lighten($dark_box_color, 8%);
+$fieldset_background_color: rgb(253, 253, 253);
 
 $shadow_color: lighten($border_color, 20%);
