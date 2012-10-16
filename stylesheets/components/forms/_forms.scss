@@ -200,32 +200,43 @@ fieldset {
   }
 
   /* disabled field */
-  .readonly,
-  .disabled {
-    input,
-    textarea,
-    select {
-      color: $disabled_text_color;
-      background: $disabled_color;
+  .readonly input,
+  input[readonly="readonly"],
+  textarea[readonly="readonly"] {
+    color: $readonly_text_color;
 
-      &:hover,
-      &:focus {
-        border: 1px solid $border_color;
-        @include box-shadow(0 1px 2px 0 darken($shadow_color, 15%) inset);
-      }
-    }
-
-    select {
-      &
-      &:hover,
-      &:focus {
-        @include box-shadow(none);
-      }
+    &:hover,
+    &:focus {
+      border: 1px solid $border_color;
+      @include box-shadow(0 1px 2px 0 darken($shadow_color, 15%) inset);
     }
   }
 
-  .disabled label {
+  .disabled {
+    label {
+      color: $disabled_text_color;
+    }
+  }
+
+  input[disabled="disabled"],
+  textarea[disabled="disabled"],
+  select[disabled="disabled"] {
     color: $disabled_text_color;
+    background: $disabled_color;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $border_color;
+      @include box-shadow(0 1px 2px 0 darken($shadow_color, 15%) inset);
+    }
+  }
+
+  select[disabled="disabled"] {
+    &
+    &:hover,
+    &:focus {
+      @include box-shadow(none);
+    }
   }
 
   /* warning field */
