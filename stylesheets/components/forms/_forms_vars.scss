@@ -16,7 +16,7 @@ $message_text_color: lighten($text_color, 20%);
 
 $disabled_color: lighten($rh_base, 60%);
 $disabled_text_color: lighten($text_color, 40%);
-$readonly_text_color: darken($disabled_text_color, 10%);
+$readonly_text_color: lighten($disabled_text_color, 2%);
 
 $light_box_color: lighten($rh_base, 60%);
 $light_box_gradient: lighten($light_box_color, 40%);
