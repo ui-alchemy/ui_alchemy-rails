@@ -130,6 +130,7 @@
     width: auto;
     max-width: $input_width - $input_padding; //has one more for right padding
     padding: 4px 0 4px $input_padding;
+    margin-bottom: 7px;
     position: relative;
     top: 2px;
     font-size: 100%;
@@ -208,7 +209,7 @@
     color: $readonly_text_color;
   }
 
-  /* disabled field */
+  /* readonly field */
   .readonly input,
   input[readonly="readonly"],
   textarea[readonly="readonly"] {
@@ -221,6 +222,7 @@
     }
   }
 
+  /* disabled field */
   .disabled {
     label {
       color: $disabled_text_color;
@@ -228,10 +230,10 @@
   }
 
   input[disabled="disabled"],
-  textarea[disabled="disabled"],
-  select[disabled="disabled"] {
+  textarea[disabled="disabled"] {
     color: $disabled_text_color;
     background: $disabled_color;
+    border: 1px solid $border_color;
 
     &:hover,
     &:focus {
@@ -241,11 +243,13 @@
   }
 
   select[disabled="disabled"] {
-    &
-    &:hover,
-    &:focus {
-      @include box-shadow(none);
-    }
+    color: $disabled_text_color;
+  }
+
+  input[type="file"][disabled="disabled"] {
+    color: $disabled_text_color;
+    border: 0 none;
+    @include box-shadow(none);
   }
 
   /* warning field */
