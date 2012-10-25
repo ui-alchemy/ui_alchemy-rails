@@ -17,19 +17,23 @@ $(document).ready(function() {
 
     CUI.Login.Events.register();
 
-    $('#password_link').click(function(){
-        $('#password_recovery_container').animate({ 'left' : '0px' }, 'slow').css('z-index', 1);
+    $('#password_link').click(function(e){
+        e.preventDefault();
+        $('.card#password_reset').animate({ 'left' : '0px' }, 'slow').css('z-index', 1);
     });
-    $('#username_link').click(function(){
-        $('#username_recovery_container').animate({ 'left' : '0px' }, 'slow').css('z-index', 1);
+    $('#username_link').click(function(e){
+        e.preventDefault();
+        $('.card#username_recovery').animate({ 'left' : '0px' }, 'slow').css('z-index', 1);
     });
-    $('#password_return_link').click(function(){
-        $('#password_recovery_container').animate({ 'left' : '-360px' }, 'slow', function(){
+    $('#password_reset_return_link').click(function(e){
+        e.preventDefault();
+        $('.card#password_reset').animate({ 'left' : '-360px' }, 'slow', function(){
             $(this).css('z-index', -1);
         });
     });
-    $('#username_return_link').click(function(){
-        $('#username_recovery_container').animate({ 'left' : '-360px' }, 'slow', function(){
+    $('#username_recovery_return_link').click(function(e){
+        e.preventDefault();
+        $('.card#username_recovery').animate({ 'left' : '-360px' }, 'slow', function(){
             $(this).css('z-index', -1);
         });
     });
