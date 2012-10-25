@@ -65,22 +65,13 @@ article {
       position: relative;
       overflow: hidden;
 
-      .card_container {
-        width: 2 * $form_container_width;
-        position: absolute;
-        top: 0;
-        left: -$form_container_width;
-        z-index: -1;
-      }
-
       .card {
         position: relative;
-        min-height: $login_container_height - 10;
-        height: $login_container_height - 10;
+        min-height: $login_container_height;
+        height: $login_container_height;
         width: $form_container_width - 2 * $form_container_padding;
         background: #FFF;
         padding: 0 $form_container_padding;
-        padding-top: 10px;
         @include border-radius(0 7px 7px 0);
         @include box-shadow(inset -15px -15px 30px -7px $login_card_shadow_color, inset 0px -15px 130px $login_card_shadow_color);
         //spinner post-login
@@ -111,6 +102,19 @@ article {
 
           .left_arrow_icon_black { background-position: -654px -15px; }
         }
+
+        &.slidable{
+          position: absolute;
+          top: 0;
+          left: -$form_container-width;
+          z-index: -1;
+
+          &.slid{
+            left: 0;
+            z-index: 1;
+          }
+        }
+
         #login_form {
           position: absolute;
           top: 75px - 23px;
@@ -124,7 +128,14 @@ article {
           .button { margin-top: 20px; }
         }
 
-        #password_recovery_form {
+        #password_reset_form {
+          position: absolute;
+          top: 85px;
+
+          .secondary_actions { margin-bottom: 0px; }
+        }
+
+        #change_password_form{
           position: absolute;
           top: 85px;
 
