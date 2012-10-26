@@ -44,5 +44,4 @@
     = submit_tag get_string(:reset_password), :class => 'button fr'
 
 - if content_for?(:interstitial)
-  .card.slidable#interstitial{:class => ("slid" if params[:card] == "interstitial")}
-    = yield :interstitial
+  = yield :interstitial
