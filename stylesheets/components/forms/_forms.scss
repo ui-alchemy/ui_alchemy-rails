@@ -13,31 +13,40 @@
   display: block;
   line-height: 1;
   color: $text_color;
-}
 
-fieldset {
-  border: 0 none;
-  padding: 0;
-  margin: 0;
-}
-
-.control_group {
-  padding: 5px 8px;
-  position: relative;
-  white-space: nowrap;
-
-  .label {
-    width: $left_column_width;
-    float: left;
-    text-align: right;
+  .control_group {
+    padding: 5px 8px;
     position: relative;
-    padding: 0;
+    white-space: nowrap;
+
+    .label {
+      width: $left_column_width;
+      float: left;
+      text-align: right;
+      position: relative;
+      padding: 0;
+    }
+
+    .input {
+      margin-left: $left_column_width;
+      position: relative;
+      min-height: 2.5em;
+    }
   }
 
-  .input {
-    margin-left: $left_column_width;
-    position: relative;
-    min-height: 2.5em;
+  fieldset {
+    border: 1px solid $fieldset_border_color;
+    @include border-radius(5px);
+    padding: 0;
+    margin: 0 0 10px;
+    background: $fieldset_background_color;
+
+    legend {
+      margin-left: 10px;
+      padding: 3px 5px;
+      color: $fieldset_text_color;
+      @include background(linear-gradient(rgba(white, 1), rgba(white, 0) 90%));
+    }
   }
 }
 
@@ -121,6 +130,7 @@ fieldset {
     width: auto;
     max-width: $input_width - $input_padding; //has one more for right padding
     padding: 4px 0 4px $input_padding;
+    margin-bottom: 7px;
     position: relative;
     top: 2px;
     font-size: 100%;
@@ -199,33 +209,47 @@ fieldset {
     color: $readonly_text_color;
   }
 
-  /* disabled field */
-  .readonly,
-  .disabled {
-    input,
-    textarea,
-    select {
-      color: $disabled_text_color;
-      background: $disabled_color;
+  /* readonly field */
+  .readonly input,
+  input[readonly="readonly"],
+  textarea[readonly="readonly"] {
+    color: $readonly_text_color;
 
-      &:hover,
-      &:focus {
-        border: 1px solid $border_color;
-        @include box-shadow(0 1px 2px 0 darken($shadow_color, 15%) inset);
-      }
-    }
-
-    select {
-      &
-      &:hover,
-      &:focus {
-        @include box-shadow(none);
-      }
+    &:hover,
+    &:focus {
+      border: 1px solid $border_color;
+      @include box-shadow(0 1px 2px 0 darken($shadow_color, 15%) inset);
     }
   }
 
-  .disabled label {
+  /* disabled field */
+  .disabled {
+    label {
+      color: $disabled_text_color;
+    }
+  }
+
+  input[disabled="disabled"],
+  textarea[disabled="disabled"] {
     color: $disabled_text_color;
+    background: $disabled_color;
+    border: 1px solid $border_color;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $border_color;
+      @include box-shadow(0 1px 2px 0 darken($shadow_color, 15%) inset);
+    }
+  }
+
+  select[disabled="disabled"] {
+    color: $disabled_text_color;
+  }
+
+  input[type="file"][disabled="disabled"] {
+    color: $disabled_text_color;
+    border: 0 none;
+    @include box-shadow(none);
   }
 
   /* warning field */
@@ -257,17 +281,26 @@ fieldset {
     &.horizontal .control {
       display: inline-block;
       margin: 0 5px 0 0;
-
     }
 
-    label {
-      line-height: 2;
+    &:not(.inline) {
+      label {
+        line-height: 2;
+      }
     }
 
-    input {
+    input[type="radio"],
+    input[type="checkbox"] {
       margin: 0 2px 0 0;
       position: relative;
       top: 1px;
+    }
+
+    &.inline {
+      .control {
+        display: inline-block;
+        margin-left: 15px;
+      }
     }
   }
 }
