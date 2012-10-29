@@ -3,7 +3,6 @@
 **************/
 $application_background_color:  rgb(242, 242, 242) !default;
 $primary_color:                 rgb(19, 158, 221) !default;
-//$primary_color:                 rgb(0, 147, 217) !default;
 $primary_gradient_top_color:    lighten($primary_color, 16%);
 $primary_gradient_bottom_color: darken($primary_color, 0%);
 $link_color:                    darken($primary_color, 0%); // default links
@@ -12,6 +11,10 @@ $border_color:                  rgb(200, 200, 200) !default;
 $white_color:                   white !default;
 $black_color:                   black !default;
 $transparent_white_color:       rgba(white, 0) !default;
+
+$success_color:                 rgb(87, 168, 27) !default;
+$warning_color:                 rgb(255, 134, 14) !default;
+$error_color:                   rgb(230, 0, 0) !default;
 
 /****************
 *  Palette Colors
