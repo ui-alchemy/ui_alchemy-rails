@@ -11,3 +11,14 @@
     background-color: $fallback_color; /* fallback */
   }
 }
+
+//mixin for making text unselectable in some useful and important cases
+@mixin unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
