@@ -17,9 +17,9 @@
 Name:          converge-ui-devel
 Summary:       Converging UI's since 2012.
 Group:         Applications/System
-License:       GPLv2
+License:       MIT
 URL:           http://www.convergeui.org
-Version:       1.1
+Version:       1.2
 Release:       1%{?dist}
 Source0:       %{name}-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -58,6 +58,52 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.rst LICENSE
 
 %changelog
+* Fri Nov 02 2012 Eric D Helms <ericdhelms@gmail.com> 1.2-1
+- Added back unselectable. (jrist@redhat.com)
+- Merge with flash_messages with master (jcoufal@redhat.com)
+- Interstitial yield fix (jtomasek@redhat.com)
+- Merge pull request #92 from jtomasek/login_changes (jrist@redhat.com)
+- Merge pull request #99 from ehelms/license-update (jrist@redhat.com)
+- Merge pull request #96 from jcoufal/remove_scrollbar (ericdhelms@gmail.com)
+- Changes to accomodate non-js version of login (jtomasek@redhat.com)
+- Fixed primary color based on its appearance on different monitors.
+  (jcoufal@redhat.com)
+- Fixes for select and file type (jcoufal@redhat.com)
+- Remove scrollbar from html element if there is no-scroll (jcoufal@redhat.com)
+- Merge pull request #93 from jcoufal/dev_fieldset (farkas.imre@gmail.com)
+- Merge pull request #94 from jcoufal/dev_inline_checkbox
+  (ericdhelms@gmail.com)
+- Added .inline support for checkbox next to input (jcoufal@redhat.com)
+- Added fieldset formatting (jcoufal@redhat.com)
+- Forms - fixed readonly field and disabled states (jcoufal@redhat.com)
+- New feature: Flash messages (jcoufal@redhat.com)
+- Upgraded forms icons (jcoufal@redhat.com)
+- Merge pull request #81 from Katello/rails3.2 (email@jaromircoufal.cz)
+- Merge pull request #88 from jcoufal/variables_refactoring (jrist@redhat.com)
+- Fixed radius for header Admin menu (jcoufal@redhat.com)
+- Fix file permissions in RPM spec (jeckersb@redhat.com)
+- Merged New hierarchy & Rebased_login_box_vertical_centering
+  (jcoufal@redhat.com)
+- Updates license to MIT. (ericdhelms@gmail.com)
+- Merge pull request #79 from jtomasek/rebased_login_box_vertical_centering
+  (jrist@redhat.com)
+- Renamed variables + cleaned variables and mixins + set primary color
+  (jcoufal@redhat.com)
+- Restructured file hierarchy for components and composites
+  (jcoufal@redhat.com)
+- Merge pull request #87 from jcoufal/forms_note_translation
+  (farkas.imre@gmail.com)
+- Removed :before from note in order to use translation for the label
+  (jcoufal@redhat.com)
+- Removed reference to jcoufal's openshift from buttons (jcoufal@redhat.com)
+- Adds contribution file that will be presented to users by Github anytime an
+  issue or pull request is opened. (ericdhelms@gmail.com)
+- Merge branch 'master' into rails3.2 (ericdhelms@gmail.com)
+- This patch ensures that the login box will be vertically centered regardless
+  of browser window size. (jtomasek@redhat.com)
+- Updates needed for consistency with Rails 3.2 example applicaiton by
+  namespacing font declarations. (ericdhelms@gmail.com)
+
 * Mon Sep 24 2012 Eric D Helms <ericdhelms@gmail.com> 1.1-1
 - Merge pull request #73 from jcoufal/devel (jrist@redhat.com)
 - Unified color for messages, .always_visible class for hint, IE corrections
