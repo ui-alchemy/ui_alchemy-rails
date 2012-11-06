@@ -1,6 +1,5 @@
 @import "../../partials/base";
 @import "header_vars";
-@import "header_mixins";
 
 
 .centered {
@@ -20,7 +19,7 @@ header#header {
 
   &:after {
     content: "";
-    background: $application_background_color;
+    background: $tab_selected_color;
     border-top: 1px solid $tab_container_outline_color;
     height: 4px;
     width: 100%;
@@ -105,13 +104,13 @@ header#header {
           outline: 0 none;
           &:focus{background-color: darken($tab_background_color, 15%)}
           &.selected {
-            color: $tab_selected_color;
+            color: $tab_selected_text_color;
             position: relative;
             outline: 0 none;
-            @include tab-selected-bg;
+            @include linear_gradient($tab_selected_color, $white_color, $tab_selected_color);
 
             &:hover {
-              @include tab-selected-bg;
+              @include linear_gradient($tab_selected_color, $white_color, $tab_selected_color);
               color: #37373E;
             }
           }
