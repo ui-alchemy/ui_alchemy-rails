@@ -2,7 +2,6 @@
 @import "header_vars";
 @import "header_mixins";
 
-
 .centered {
   width: 960px;
   margin: 0 auto;
@@ -153,9 +152,7 @@ header#header {
     top: 22px;
     float: right;
     margin-right: 15px;
-
     a { color: #FFF; }
-
     ul {
       float: left;
 
@@ -171,6 +168,7 @@ header#header {
           min-width: 4.2em;
           padding: 2px 12px;
           text-align: left;
+          background: $tab_background_color;
         }
         .arrow_icon_menu {
           height: 11px;
