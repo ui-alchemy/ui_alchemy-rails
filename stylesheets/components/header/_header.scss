@@ -2,7 +2,6 @@
 @import "header_vars";
 @import "header_mixins";
 
-
 .centered {
   width: 960px;
   margin: 0 auto;
@@ -105,14 +104,14 @@ header#header {
           outline: 0 none;
           &:focus{background-color: darken($tab_background_color, 15%)}
           &.selected {
-            color: $tab_selected_color;
+            color: $text_color;
             position: relative;
             outline: 0 none;
             @include tab-selected-bg;
 
             &:hover {
               @include tab-selected-bg;
-              color: #37373E;
+              color: $text_color;
             }
           }
 
@@ -153,9 +152,7 @@ header#header {
     top: 22px;
     float: right;
     margin-right: 15px;
-
     a { color: #FFF; }
-
     ul {
       float: left;
 
@@ -171,6 +168,7 @@ header#header {
           min-width: 4.2em;
           padding: 2px 12px;
           text-align: left;
+          background: $tab_background_color;
         }
         .arrow_icon_menu {
           height: 11px;
