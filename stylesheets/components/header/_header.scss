@@ -104,14 +104,14 @@ header#header {
           outline: 0 none;
           &:focus{background-color: darken($tab_background_color, 15%)}
           &.selected {
-            color: $tab_selected_color;
+            color: $text_color;
             position: relative;
             outline: 0 none;
             @include tab-selected-bg;
 
             &:hover {
               @include tab-selected-bg;
-              color: #37373E;
+              color: $text_color;
             }
           }
 
