@@ -14,3 +14,6 @@ $form_container_padding: 30px !default;
 $logo_container_width: 140px !default;
 $form_container_width: 360px !default;
 $login_form_top_margin: 75px - 20px !default;
+
+// forms override
+$input_width: $form_container_width - 2 * $form_container_padding - 2px - 20px;
