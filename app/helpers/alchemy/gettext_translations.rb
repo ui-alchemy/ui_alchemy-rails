@@ -1,4 +1,4 @@
-module ConvergeUi::GettextTranslations
+module Alchemy::GettextTranslations
   TRANSLATIONS = {
     :noscript                 => _("Javascript must be enabled for this application to work properly."),
     :show_password            => _("Show My Password"),

@@ -494,27 +494,27 @@
 
   /* success message */
   .success .message {
-    background: $light_box_color image-url("converge-ui/icons/success_icon.png") no-repeat 8px 6px; // for IE6-9
+    background: $light_box_color image-url("alchemy/icons/success_icon.png") no-repeat 8px 6px; // for IE6-9
     @include background(
-      image-url("converge-ui/icons/success_icon.png") no-repeat 8px 6px,
+      image-url("alchemy/icons/success_icon.png") no-repeat 8px 6px,
       linear-gradient($light_box_gradient, $light_box_color 30%));
     @include filter-gradient($transparent_white_color, $transparent_white_color);
   }
 
   /* warning message */
   .warning .message {
-    background: $light_box_color image-url("converge-ui/icons/warning_icon.png") no-repeat 7px 6px; // for IE6-9
+    background: $light_box_color image-url("alchemy/icons/warning_icon.png") no-repeat 7px 6px; // for IE6-9
     @include background(
-      image-url("converge-ui/icons/warning_icon.png") no-repeat 7px 6px,
+      image-url("alchemy/icons/warning_icon.png") no-repeat 7px 6px,
       linear-gradient($light_box_gradient, $light_box_color 30%));
     @include filter-gradient($transparent_white_color, $transparent_white_color);
   }
 
   /* error message */
   .error .message {
-    background: $light_box_color image-url("converge-ui/icons/error_icon.png") no-repeat 7px 6px; // for IE6-9
+    background: $light_box_color image-url("alchemy/icons/error_icon.png") no-repeat 7px 6px; // for IE6-9
     @include background(
-      image-url("converge-ui/icons/error_icon.png") no-repeat 7px 6px,
+      image-url("alchemy/icons/error_icon.png") no-repeat 7px 6px,
       linear-gradient($light_box_gradient, $light_box_color 30%));
     @include filter-gradient($transparent_white_color, $transparent_white_color);
   }

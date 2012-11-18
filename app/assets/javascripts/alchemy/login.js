@@ -114,7 +114,7 @@ CUI.Login.Events = (function($, actions){
                 actions.add_hash_input(this);
             });
             //if you have an #interstitial container for an interstitial, this will function. otherwise it won't.
-            // this is for converge-ui
+            // this is for alchemy
             var interstitial = $('#interstitial');
             if (interstitial.length){
               $('#interstitial').bind('login', function(event){

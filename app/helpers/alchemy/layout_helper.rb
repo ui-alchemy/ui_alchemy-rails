@@ -10,8 +10,10 @@
 # have received a copy of GPLv2 along with this software; if not, see
 # http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.
 
-module LayoutHelper
-  def no_template
-    _("No Template")
+module Alchemy
+  module LayoutHelper
+    def no_template
+      _("No Template")
+    end
   end
 end

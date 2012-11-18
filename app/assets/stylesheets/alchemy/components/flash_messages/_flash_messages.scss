@@ -21,7 +21,7 @@
     position: absolute;
     right: 13px;
     top: 12px;
-    @include background(image-url('converge-ui/icons/action-icons.png') no-repeat -33px 0);
+    @include background(image-url('alchemy/icons/action-icons.png') no-repeat -33px 0);
 
     &:hover {
       background-position: -33px -16px;
@@ -70,7 +70,7 @@
       border-left: 5px solid $success_color;
 
       & > li:before {
-        @include background(image-url("converge-ui/icons/success_icon.png") no-repeat 50% 50%);
+        @include background(image-url("alchemy/icons/success_icon.png") no-repeat 50% 50%);
       }
     }
 
@@ -78,7 +78,7 @@
       border-left: 5px solid $warning_color;
 
       & > li:before {
-        @include background(image-url("converge-ui/icons/warning_icon.png") no-repeat 50% 50%);
+        @include background(image-url("alchemy/icons/warning_icon.png") no-repeat 50% 50%);
       }
     }
 
@@ -86,7 +86,7 @@
       border-left: 5px solid $error_color;
 
       & > li:before {
-        @include background(image-url("converge-ui/icons/error_icon.png") no-repeat 50% 50%);
+        @include background(image-url("alchemy/icons/error_icon.png") no-repeat 50% 50%);
       }
     }
   }

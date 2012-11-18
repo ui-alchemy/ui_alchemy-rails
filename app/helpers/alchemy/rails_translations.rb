@@ -1,4 +1,4 @@
-module ConvergeUi::RailsTranslations
+module Alchemy::RailsTranslations
   TRANSLATIONS = {
     :show_password            => t("user_sessions.new.show_password"),
     :example_logo             => t("logo"),

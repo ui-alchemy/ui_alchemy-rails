@@ -127,7 +127,7 @@ button {
     &:hover,
     &:active {
       @include background(
-        image-url("converge-ui/icons/spinner.gif") no-repeat 50% 50%,
+        image-url("alchemy/icons/spinner.gif") no-repeat 50% 50%,
         linear-gradient(lighten($btn_neutral_color, 17%), lighten($btn_neutral_color, 6%)));
     }
   }
@@ -165,7 +165,7 @@ button {
     }
 
     &.download_example:before {
-      @include background(image-url('converge-ui/icons/action-icons.png'));
+      @include background(image-url('alchemy/icons/action-icons.png'));
       background-position: -512px -16px;
     }
   }
