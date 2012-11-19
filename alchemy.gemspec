@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = [""]
   s.email       = [""]
   s.homepage    = ""
-  s.summary     = "TODO: Summary of Alchemy."
-  s.description = "TODO: Description of Alchemy."
+  s.summary     = ""
+  s.description = ""
 
   s.files = Dir["{app,vendor,lib}/**/*"] + ["LICENSE", "Rakefile", "README.rst"]
   s.test_files = Dir["test/**/*"]
