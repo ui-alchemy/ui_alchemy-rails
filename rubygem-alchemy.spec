@@ -39,6 +39,10 @@
 %global gem_instdir %{gem_dir}/gems/%{gem_name}-%{version}
 %endif
 
+%if 0%{?fedora}
+BuildRequires:  rubygems-devel
+%endif
+
 Name:          rubygem-%{gem_name}
 Summary:       Slogan Needed
 Group:         Applications/System
@@ -74,6 +78,8 @@ gem install \
     --install-dir %{buildroot}%{gem_dir} \
     --force \
     %{gem_name}-%{version}.gem
+
+rm -rf %{buildroot}%{gem_instdir}/.yardoc
 
 %files
 %dir %{gem_instdir}
