@@ -90,7 +90,8 @@ rm -rf %{buildroot}%{gem_instdir}/.yardoc
 %exclude %{gem_cache}
 %exclude %{gem_instdir}/test
 %{gem_spec}
-%doc LICENSE
+%doc %{gem_instdir}/LICENSE
+%doc %{gem_instdir}/README.md
 
 
 %package doc
