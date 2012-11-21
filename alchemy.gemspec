@@ -13,8 +13,8 @@ Gem::Specification.new do |s|
   s.summary     = ""
   s.description = ""
 
-  s.files = Dir["{app,vendor,lib}/**/*"] + ["LICENSE", "Rakefile", "README.rst"]
+  s.files = Dir["{app,vendor,lib}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails"
+  s.add_dependency "rails", '>= 3.0.0'
 end
