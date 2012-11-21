@@ -83,9 +83,12 @@ rm -rf %{buildroot}%{gem_instdir}/.yardoc
 
 %files
 %dir %{gem_instdir}
+%{gem_instdir}/Rakefile
 %{gem_instdir}/lib
 %{gem_instdir}/app
+%{gem_instdir}/vendor
 %exclude %{gem_cache}
+%exclude %{gem_instdir}/test
 %{gem_spec}
 %doc LICENSE
 
