@@ -59,8 +59,8 @@
                                 'z-index: 10; ' +
                                 'background: ' + currentBg + '; ' +
                                 'border: ' + opts.borderColor + ' 1px solid; ' +
-                                'width: 445px; ' +
-                                'padding: 1px 1px 1px 2px; ' +
+                                'width: 100%; ' +
+                                'padding: 1px 0px 1px 0px; ' +
                                 'height: ' + (2*h) + ';'
                     });
                     var origText = $('<div/>', {
