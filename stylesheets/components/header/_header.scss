@@ -1,9 +1,8 @@
 @import "../../partials/base";
 @import "header_vars";
 
-
 .centered {
-  width: 960px;
+  width: $static_width;
   margin: 0 auto;
   height: 100%;
   position: relative;
@@ -52,7 +51,7 @@ header#header {
   #loading {
     display: none;
     position: absolute;
-    bottom: 27px;
+    bottom: 34px;
     z-index: 100;
     height: 22px;
     width: 22px;
@@ -152,12 +151,9 @@ header#header {
     top: 22px;
     float: right;
     margin-right: 15px;
-
     a { color: #FFF; }
-
     ul {
       float: left;
-
       li {
         ul {
           display: none;
@@ -170,13 +166,14 @@ header#header {
           min-width: 4.2em;
           padding: 2px 12px;
           text-align: left;
+          background-color: $header_widget_color;
         }
         .arrow_icon_menu {
           height: 11px;
           width: 13px;
           background: $arrow_icon;
           float: right;
-          margin: 4px 0 0 0;
+          margin: 5px 0 0 0;
 
           &:hover {
             background: $arrow_icon;
@@ -188,7 +185,7 @@ header#header {
   }
 
   .header-widget {
-    background-color: $tab_background_color;
+    background-color: $header_widget_color;
     @include border-radius(5px);
     font-size: 11px;
     color: #FFF;
@@ -198,7 +195,7 @@ header#header {
     text-decoration: none;
     float: right;
     height: 20px;
-    line-height: 18px;
+    line-height: 19px;
   }
 }
 

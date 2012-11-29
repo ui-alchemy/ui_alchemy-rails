@@ -29,10 +29,10 @@ body, html {
   padding-bottom: $stickyfooter_height + 10 + px;
 
   section.maincontent{
-      background-color: #FFF;
+      background-color: $white_color;
       min-height:20em;
       margin: 0 auto 5px;
-      width: 960px;
+      width: $static_width;
       @include box-shadow(0 1px 5px rgba(0, 0, 0, 0.6));
 
       h1 {
