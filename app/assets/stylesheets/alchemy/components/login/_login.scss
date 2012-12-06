@@ -1,0 +1,169 @@
+@import "../../partials/base";
+@import "login_vars";
+@import "login_mixins";
+@import "../footer/footer_vars";
+@import "../../components/buttons/buttons";
+@import "../../components/forms/forms";
+
+html, body{
+  width: 100%;
+  height: 100%;
+  @include login_background_color;
+  //* ugly IE8 specific color hack for the background to show*/
+  background-color/*\**/: darken(rgba(0, 157, 204, 1), 4%)\9;
+}
+
+#wrapper {
+  padding-bottom: 0 - ($stickyfooter-height + 1) + px;
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+article {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+
+  a, a:visited {
+    cursor: hand;
+    cursor: pointer;
+    color: $link_color;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      color: lighten($link_color, 10%);
+      text-decoration: underline;
+    }
+    &:active {
+      color: darken($link_color, 20%);
+    }
+  }
+
+  .container {
+    position: relative;
+    width: $login_container_width;
+    height: $login_container_height;
+    margin: 0 auto;
+    padding: $login_container_top_padding;
+    @include background-image(linear-gradient(top, rgba(255, 255, 255, 0) 40%, $login_base_color 120%));
+    @include box-shadow($login_card_outer_shadow_color 0px 12px 15px -8px);
+    @include border-radius(7px);
+    aside {
+      width: $logo_container_width;
+      min-height: $login_container_height;
+      float: left;
+      @include theme_background_gradient;
+      @include border-radius(7px 0 0 7px);
+
+      img {
+        margin-top: $login_container_height / 3;
+      }
+    }
+
+    section {
+      width: $form_container_width;
+      position: relative;
+      overflow: hidden;
+
+      .card {
+        position: relative;
+        @include box-sizing(border-box);
+        min-height: $login_container_height;
+        height: $login_container_height;
+        width: $form_container_width;
+        background: #FFF;
+        padding: 0 $form_container_padding;
+        @include border-radius(0 7px 7px 0);
+        @include box-shadow(inset -15px -15px 30px -7px $login_card_shadow_color, inset 0px -15px 130px $login_card_shadow_color);
+
+        &#login{ padding-top: 35px; }
+        &#username_recovery{ padding-top: 30px; }
+        &#password_reset{ padding-top: 15px; }
+        &#change_password{ padding-top: 30px; }
+        &.slidable{
+          position: absolute;
+          top: 0;
+          left: -$form_container_width;
+          z-index: -1;
+
+          &.slid{
+            left: 0;
+            z-index: 1;
+          }
+        }
+
+        //forms and buttons styling override
+        .form{
+          @include box-sizing(border-box);
+
+          .control_group{
+            padding: 5px 0px;
+            @include clearfix;
+            .right_aligned{float: right;}
+            .left_aligned{float: left;}
+            .button, .btn, button{margin: 5px 0 0 0;}
+            .input{
+              margin-bottom: 0;
+              #username, #password_field{ margin-bottom: 0; }
+            }
+
+          }
+        }
+
+        //spinner post-login
+        .spinner {
+          background: transparent image-url("alchemy/icons/spinner.gif") no-repeat center center;
+          margin-top: 5px;
+          height: 29px;
+          width: 40px;
+          display: none;
+        }
+
+        a.return_link {
+          display: inline-block;
+          margin: 7px 2px 2px 2px;
+          height: 20px;
+          width: 20px;
+          border: 2px solid #B5B5B5;
+          border-radius: 30px;
+          background: #DEDEDE;
+
+          &:hover {
+            border: 2px solid $link_color;
+            @include box-shadow(0px 0px 4px $link_color);
+          }
+
+          .left_arrow_icon_black { background-position: -654px -15px; }
+        }
+
+        h2 {
+          font-size: 12px;
+          color: $heading_text_color;
+        }
+
+        p {
+          color: lighten($text_color, 35%);
+          font-size: 10px;
+          padding: 5px 0px;
+        }
+      }
+    }
+  }
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+
+//* ugly IE8 specific color hack for the border to show*/
+@media \0screen {
+  	.container {
+        border: 8px solid darken(rgba(0, 157, 204, 1), 10%);
+	}
+}
