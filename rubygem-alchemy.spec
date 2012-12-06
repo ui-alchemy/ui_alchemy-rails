@@ -106,3 +106,6 @@ This package contains documentation for rubygem-%{gem_name}
 %doc %{gem_docdir}
 
 %changelog
+* Thu Dec 06 2012 Eric D Helms <ehelms@redhat.com> 1.0.0-1
+- new package built with tito
+
