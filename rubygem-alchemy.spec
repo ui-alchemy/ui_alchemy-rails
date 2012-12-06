@@ -54,8 +54,8 @@ Source0:       %{name}-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires:       ruby(abi) = %{rubyabi}
 Requires:       ruby(rubygems) 
-Requires:       ruby(compass) >= 0.11.5
-Requires:       ruby(compass) < 0.12.0
+Requires:       rubygem(compass) >= 0.11.5
+Requires:       rubygem(compass) < 0.12.0
 BuildRequires:  ruby(abi) = %{rubyabi}
 BuildRequires:  ruby(rubygems) 
 BuildArch:      noarch
