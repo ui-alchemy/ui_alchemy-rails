@@ -8,7 +8,11 @@ module Alchemy
     end
 
     def get_string(text_key)
-      return TRANSLATIONS[text_key]
+      if respond_to?(:_)
+        return TRANSLATIONS[text_key]
+      else
+        return I18n.t TRANSLATIONS[text_key]
+      end
     end
 
   end
