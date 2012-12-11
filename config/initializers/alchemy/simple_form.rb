@@ -160,6 +160,7 @@ SimpleForm.setup do |config|
     b.use :maxlength
     b.use :min_max
     b.use :pattern
+    b.use :placeholder
 
     b.wrapper :label_wrapper, :tag => 'div', :class => 'label' do |label|
       label.use :label_with_help
