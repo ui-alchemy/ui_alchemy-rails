@@ -10,11 +10,10 @@ require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 
 # Input overrides
 require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'collection_check_boxes_input')
 require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'boolean_input')
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'text_input')
 
 # Default buttons
 require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'form_buttons')
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'collection_check_boxes_input')
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'boolean_input')
 
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
