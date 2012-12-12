@@ -4,7 +4,6 @@ module Alchemy::GettextTranslations
       :noscript                 => _("Javascript must be enabled for this application to work properly."),
       :show_password            => _("Show My Password"),
       :example_logo             => _("Logo"),
-      :forgot_username_password => _("Forgot Username or Password?"),
       :username                 => _("Username"),
       :password                 => _("Password"),
       :login                    => _("Login"),
