@@ -1,9 +1,9 @@
-@import "../../partials/base";
-@import "login_vars";
-@import "login_mixins";
-@import "../footer/footer_vars";
-@import "../../components/buttons/buttons";
-@import "../../components/forms/forms";
+@import "alchemy/partials/base";
+@import "alchemy/components/login/login_vars";
+@import "alchemy/components/login/login_mixins";
+@import "alchemy/components/footer/footer_vars";
+@import "alchemy/components/buttons/buttons";
+@import "alchemy/components/forms/forms";
 
 html, body{
   width: 100%;
