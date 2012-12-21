@@ -8,7 +8,11 @@ class InformativeInput < SimpleForm::Inputs::Base
     end
 
     template.content_tag :span, :class => "value" do
-      options[:text]
+      if options[:text]
+        options[:text]
+      else
+        object.send(attribute_name)
+      end
     end
   end
 

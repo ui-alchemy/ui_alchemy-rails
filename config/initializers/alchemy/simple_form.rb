@@ -1,21 +1,3 @@
-#custom components
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'label_with_help')
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'note')
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'validation_message_sentence')
-
-# Custom inputs
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'numeric_input_with_unlimited_check_box_input')
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'informative_input')
-
-# Input overrides
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'collection_check_boxes_input')
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'boolean_input')
-
-# Default buttons
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'form_buttons')
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'collection_check_boxes_input')
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'boolean_input')
-
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
   # Wrappers are used by the form builder to generate a
