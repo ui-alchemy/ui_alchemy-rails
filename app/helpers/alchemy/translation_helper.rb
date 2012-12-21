@@ -9,7 +9,7 @@ module Alchemy
 
     def get_string(text_key)
       if respond_to?(:_)
-        return TRANSLATIONS[text_key]
+        return _(TRANSLATIONS[text_key])
       else
         return I18n.t TRANSLATIONS[text_key]
       end
