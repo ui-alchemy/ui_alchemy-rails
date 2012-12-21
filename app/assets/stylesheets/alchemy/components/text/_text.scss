@@ -1,7 +1,7 @@
-@import "../../partials/base";
-@import "../fonts/overpass";
-@import "../fonts/liberation";
-@import "text_vars";
+@import "alchemy/partials/base";
+@import "alchemy/components/fonts/overpass";
+@import "alchemy/components/fonts/liberation";
+@import "alchemy/components/text/text_vars";
 
 body {
   font: 12px/1.5 $screenfont;
