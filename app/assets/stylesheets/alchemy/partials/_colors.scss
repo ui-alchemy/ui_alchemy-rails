@@ -3,7 +3,7 @@
 **************/
 $application_background_color:  rgb(217, 217, 217) !default;
 $primary_color:                 rgb(19, 158, 221) !default;
-$primary_gradient_top_color:    lighten($primary_color, 16%);
+$primary_gradient_top_color:    lighten($primary_color, 11%);
 $primary_gradient_bottom_color: darken($primary_color, 0%);
 $link_color:                    darken($primary_color, 0%); // default links
 $text_color:                    rgb(60, 60, 60) !default;
