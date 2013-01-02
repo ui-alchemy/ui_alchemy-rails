@@ -65,7 +65,7 @@ button {
     }
 
     &:active {
-      border-color: $primary_color;
+      border-color: $btn_primary_color;
       @include linear_gradient(lighten($btn_primary_color, 4%), darken($btn_primary_color, 3%), lighten($btn_primary_color, 3%), 10%);
     }
   }
