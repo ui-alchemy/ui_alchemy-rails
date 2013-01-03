@@ -9,7 +9,7 @@ module SimpleForm
           args << options
 
           if cancel = options.delete(:cancel)
-            submit(*args, &block) + template.link_to(I18n.t('simple_form.buttons.cancel'), cancel, :class => 'btn')
+            submit(*args, &block) + template.link_to(get_string(:cancel), cancel, :class => 'btn')
           else
             submit(*args, &block)
           end

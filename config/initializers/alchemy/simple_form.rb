@@ -4,7 +4,7 @@ require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 
 require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'validation_message_sentence')
 
 # Custom inputs
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'numeric_input_with_unlimited_check_box_input')
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'numeric_input')
 require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'informative_input')
 
 # Input overrides
