@@ -1,6 +1,6 @@
-@import "../../partials/base";
-@import "forms_vars";
-@import "forms_mixins";
+@import "alchemy/partials/base";
+@import "alchemy/components/forms/forms_vars";
+@import "alchemy/components/forms/forms_mixins";
 
 /*
   =======================================
@@ -535,7 +535,7 @@
   RESPONSIVE
   =======================================
 */
-@import "forms_responsive";
+@import "alchemy/components/forms/forms_responsive";
 
 
 /*
@@ -543,4 +543,4 @@
   IE tweaks
   =======================================
 */
-@import "forms_ie";
+@import "alchemy/components/forms/forms_ie";

@@ -1,21 +1,25 @@
 #custom components
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'label_with_help')
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'note')
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'validation_message_sentence')
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension/components', 'label_with_help')
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension/components', 'note')
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension/components', 'validation_message_sentence')
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension/components', 'editable')
 
 # Custom inputs
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'numeric_input')
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'informative_input')
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension/inputs', 'numeric_input')
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension/inputs', 'informative_input')
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension/inputs', 'editable_base')
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension/inputs', 'editable_input')
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension/inputs', 'editable_textarea_input')
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension/inputs', 'editable_numeric_input')
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension/inputs', 'editable_select_input')
 
 # Input overrides
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'collection_check_boxes_input')
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'boolean_input')
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'text_input')
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension/inputs', 'collection_check_boxes_input')
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension/inputs', 'boolean_input')
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension/inputs', 'text_input')
 
 # Default buttons
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'form_buttons')
-
-require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'editable')
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension/components', 'form_buttons')
 
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
@@ -161,6 +165,7 @@ SimpleForm.setup do |config|
     b.use :maxlength
     b.use :min_max
     b.use :pattern
+    b.use :placeholder
 
     b.wrapper :label_wrapper, :tag => 'div', :class => 'label' do |label|
       label.use :label_with_help
