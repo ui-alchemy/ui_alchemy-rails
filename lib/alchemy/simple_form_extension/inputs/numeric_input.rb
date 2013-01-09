@@ -7,7 +7,7 @@ class NumericInput < SimpleForm::Inputs::NumericInput
     
       input_html_options[:min] ||= 1
       input_html_options[:disabled] = !numeric_value.present? || numeric_value == -1
-      input_html_options[:placeholder] = "\u221E"
+      input_html_options[:placeholder] = ""
       input_html = super
 
       if options[:wrapper_html].present?

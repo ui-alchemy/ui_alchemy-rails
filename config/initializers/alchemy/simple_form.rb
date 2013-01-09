@@ -15,6 +15,8 @@ require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 
 # Default buttons
 require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'form_buttons')
 
+require File.join(Alchemy::Engine.root, 'lib/alchemy', 'simple_form_extension', 'editable')
+
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
   # Wrappers are used by the form builder to generate a

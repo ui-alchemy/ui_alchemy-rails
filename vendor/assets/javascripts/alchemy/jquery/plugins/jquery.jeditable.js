@@ -181,7 +181,7 @@
                 $(self).html('');
 
                 /* create the form object */
-                var form = $('<form />');
+                var form = $('<form/>');
                 
                 /* apply css or style or both */
                 if (settings.cssclass) {
@@ -427,8 +427,14 @@
                 buttons : function(settings, original) {
                     var form = this;
                     if (settings.submit) {
+                        if (settings.submit instanceof jQuery){
+                            var submit = settings.submit.click(function(){
+                                if (submit.attr("type") != "submit") {
+                                    form.submit();
+                                }
+                            });
                         /* if given html string use that */
-                        if (settings.submit.match(/>$/)) {
+                        } else if (settings.submit.match(/>$/)) {
                             var submit = $(settings.submit).click(function() {
                                 if (submit.attr("type") != "submit") {
                                     form.submit();
@@ -442,8 +448,10 @@
                         $(this).append(submit);
                     }
                     if (settings.cancel) {
+                        if (settings.cancel instanceof jQuery){
                         /* if given html string use that */
-                        if (settings.cancel.match(/>$/)) {
+                            var cancel = settings.cancel;
+                        } else if (settings.cancel.match(/>$/)) {
                             var cancel = $(settings.cancel);
                         /* otherwise use button with given string as text */
                         } else {
@@ -467,7 +475,7 @@
             },
             text: {
                 element : function(settings, original) {
-                    var input = $('<input />');
+                    var input = $('<input />', { type : 'text' });
                     if (settings.width  != 'none') { input.width(settings.width);  }
                     if (settings.height != 'none') { input.height(settings.height); }
                     /* https://bugzilla.mozilla.org/show_bug.cgi?id=236791 */
