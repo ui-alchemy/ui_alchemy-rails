@@ -44,18 +44,17 @@ BuildRequires:  rubygems-devel
 %endif
 
 Name:          rubygem-%{gem_name}
-Summary:       Slogan Needed
+Summary:       Mixing up the best that web technologies have to offer.
 Group:         Applications/System
 License:       MIT
-Version:       1.0.0
+Version:       1.0.1
 Release:       1%{?dist}
 URL:           http://www.ui-alchemy.org
 Source0:       %{name}-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires:       ruby(abi) = %{rubyabi}
 Requires:       ruby(rubygems) 
-Requires:       rubygem(compass) >= 0.11.5
-Requires:       rubygem(compass) < 0.12.0
+Requires:       rubygem(compass)
 BuildRequires:  ruby(abi) = %{rubyabi}
 BuildRequires:  ruby(rubygems) 
 BuildArch:      noarch
@@ -68,16 +67,16 @@ A Rails engine providing a set of web assets.
 %setup -q
 
 %build
-gem build %{gem_name}.gemspec
+LANG=en_US.utf-8 gem build %{gem_name}.gemspec
 
 %install
-mkdir -p %{buildroot}%{gem_dir}
-
 gem install \
-    --local \
-    --install-dir %{buildroot}%{gem_dir} \
-    --force \
-    %{gem_name}-%{version}.gem
+     --local \
+     --install-dir %{buildroot}%{gem_dir} \
+     --force \
+     %{gem_name}-%{version}.gem
+
+mkdir -p %{buildroot}%{gem_dir}
 
 rm -rf %{buildroot}%{gem_instdir}/.yardoc
 

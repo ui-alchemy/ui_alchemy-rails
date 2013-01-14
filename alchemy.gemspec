@@ -7,11 +7,11 @@ require "alchemy/version"
 Gem::Specification.new do |s|
   s.name        = "alchemy"
   s.version     = Alchemy::VERSION
-  s.authors     = [""]
-  s.email       = [""]
-  s.homepage    = ""
-  s.summary     = ""
-  s.description = ""
+  s.authors     = ["UI Alchemy Team"]
+  s.email       = ["N/A"]
+  s.homepage    = "http://www.ui-alchemy.org"
+  s.summary     = "A set of tools and web assets designed to enhance a web applications user interactions by providing functionality, layout and styling that is also customizable and flexible depending on the project’s needs."
+  s.description = "Independent, componentized, highly customizable, expandable javascript, css, font and image assets to simplify initial design of web elements such as buttons, forms, notifications, etc. Alchemy includes a set of Ruby on Rails specific functionality:  Forms (with SimpleForm support), Predefined layout elements (header, navigation, footer) and layout structure."
 
   s.files = Dir["{app,vendor,lib}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
