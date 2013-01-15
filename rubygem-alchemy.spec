@@ -105,6 +105,22 @@ This package contains documentation for rubygem-%{gem_name}
 %doc %{gem_docdir}
 
 %changelog
+* Tue Jan 15 2013 Eric D Helms <ehelms@redhat.com> 1.0.1-1
+- Spec - Updates to use any version of compass available. (ehelms@redhat.com)
+- Added default to component variables + fixed btn primary color at hover
+  (jcoufal@redhat.com)
+- Templates - Updates to make templates more usuable outside alchemy.
+  (ehelms@redhat.com)
+- Version bump. (ehelms@redhat.com)
+- Removes the jquery ui development bundle. (ehelms@redhat.com)
+- Encoding - A character exists in the comments that causes Rails asset
+  pipeline to explode. (ehelms@redhat.com)
+- SCSS - Moves from relative pathing in SCSS imports to be based off the
+  alchemy namespacing for proper imports by parent applications using the
+  engine. (ehelms@redhat.com)
+- Removing redundant string. (jrist@redhat.com)
+- Fix for get_string to translate for gettext properly (jrist@redhat.com)
+
 * Thu Dec 06 2012 Eric D Helms <ehelms@redhat.com> 1.0.0-1
 - new package built with tito
 
