@@ -15,3 +15,7 @@ blacklist =
 [katello-thirdparty-fedora17]
 disttag = .fc17
 blacklist =
+
+[katello-thirdparty-fedora18]
+disttag = .fc18
+blacklist =
