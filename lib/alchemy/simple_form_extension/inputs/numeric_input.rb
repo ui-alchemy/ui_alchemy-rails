@@ -6,8 +6,8 @@ class NumericInput < SimpleForm::Inputs::NumericInput
       check_box_name = input_html_options[:id] || 'unlimited_quantity'
     
       input_html_options[:min] ||= 1
-      input_html_options[:disabled] = !numeric_value.present? || numeric_value == -1
-      input_html_options[:placeholder] = ""
+      input_html_options[:disabled] = !numeric_value.present?
+      input_html_options[:placeholder] ||= "\u211E"
       input_html = super
 
       if options[:wrapper_html].present?
@@ -17,7 +17,7 @@ class NumericInput < SimpleForm::Inputs::NumericInput
       end
 
       input_html += template.content_tag(:div, :class => 'control') do
-        template.check_box_tag(check_box_name, 1, !numeric_value.present? || numeric_value == -1) +
+        template.check_box_tag(check_box_name, 1, !numeric_value.present?) +
           template.label_tag(check_box_name, _("Unlimited"), :class => 'control_label')
       end
     else

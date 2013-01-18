@@ -22,7 +22,8 @@ module Alchemy::GettextTranslations
       :save                     => _("Save"),
       :passwords_match          => _("Passwords match."),
       :passwords_do_not_match   => _("Passwords do not match."),
-      :recovery_link            => _("Forgot %{username} or %{password}?")
+      :recovery_link            => _("Forgot %{username} or %{password}?"),
+      :cancel                   => _("Cancel")
     }
   end
 end

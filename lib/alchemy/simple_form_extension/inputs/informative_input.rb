@@ -7,6 +7,8 @@ class InformativeInput < SimpleForm::Inputs::Base
       options[:wrapper_html] = {:class => 'informative'}
     end
 
+    options[:text] ||= object.send(attribute_name)
+
     template.content_tag :span, :class => "value" do
       options[:text]
     end
