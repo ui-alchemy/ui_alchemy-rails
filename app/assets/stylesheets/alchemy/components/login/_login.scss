@@ -24,6 +24,7 @@ article {
   position: relative;
   display: table-cell;
   vertical-align: middle;
+  padding-bottom: $stickyfooter_height + 10 + px;
 
   a, a:visited {
     cursor: hand;
