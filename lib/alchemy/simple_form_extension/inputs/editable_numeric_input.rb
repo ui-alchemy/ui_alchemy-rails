@@ -9,8 +9,7 @@ class EditableNumericInput < EditableBase
     if options[:unlimited]
       options['data-min'] ||= 1
       options[:disabled] = (object.send(attribute_name) == -1)
-      options['data-unlimited'] = '-1'
-      options[:value] ||= 'Unlimited'
+      options['data-unlimited'] = options['data-unlimited'] || '-1'
       options.delete(:unlimited)
     end
     

@@ -5,7 +5,7 @@ class EditableInput < EditableBase
     options = self.options
 
     options[:class] ||= []
-    options[:class].concat(["edit_panel_element"])
+    options[:class].concat(["edit_field"])
     
     super
   end
