@@ -472,6 +472,10 @@
     display: none;
   }
 
+  .hint, .message {
+    &.hidden { display: none; }
+  }
+
   .control_group input:focus ~ .hint {
     @include transition(all 0.29s ease);
     @include opacity(1);
@@ -517,6 +521,12 @@
       image-url("alchemy/icons/error_icon.png") no-repeat 7px 6px,
       linear-gradient($light_box_gradient, $light_box_color 30%));
     @include filter-gradient($transparent_white_color, $transparent_white_color);
+  }
+}
+
+.editable_input {
+  .button, button, btn {
+    margin: -1px 0 0 10px;
   }
 }
 
