@@ -43,6 +43,8 @@ button {
   /* color */
 
   &.primary,
+  &.btn-primary,
+  &.btn-warning:hover,
   &.warning:hover { /* set white text on dark backgrounds */
     color: $btn_white_text_color;
     @include text-shadow(0 -1px 0 rgba($black_color, 0.25));
@@ -55,7 +57,8 @@ button {
     }
   }
 
-  &.primary { /* primary button */
+  &.primary,
+  &.btn-primary { /* primary button */
     border-color: lighten($btn_primary_color, 13%);
     @include linear_gradient(($btn_primary_color, 7%), lighten($btn_primary_color, 18%), $btn_primary_color);
 
@@ -70,7 +73,8 @@ button {
     }
   }
 
-  &.warning { /* warning */
+  &.warning,
+  &.btn-warning { /* warning */
     color: lighten($btn_danger_color, 7%);
 
     &:hover {
@@ -116,7 +120,8 @@ button {
       border-color: lighten($btn_border_color, 7%);
       @include linear_gradient(lighten($btn_neutral_color, 14%), lighten($btn_neutral_color, 17%), lighten($btn_neutral_color, 6%));
 
-      &.warning {
+      &.warning,
+      &.btn-warning  {
         color: rgba($btn_danger_color, 0.47);
       }
     }
@@ -187,6 +192,7 @@ input::-moz-focus-inner {
 /* ----------------------- */  
 /* groups */
 
+.btn-group,
 .btn_group {
   .btn,
   .button,

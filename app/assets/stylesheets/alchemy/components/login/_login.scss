@@ -97,7 +97,8 @@ article {
         .form{
           @include box-sizing(border-box);
 
-          .control_group{
+          .control_group,
+          .control-group {
             padding: 5px 0px;
             @include clearfix;
             .right_aligned{float: right;}
