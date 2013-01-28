@@ -212,6 +212,9 @@ input::-moz-focus-inner {
     &:last-child {
       @include border-radius(0 $border_radius $border-radius 0);
     }
+    &:first-child:last-child {
+      @include border-radius($border_radius $border_radius $border-radius $border_radius);
+    }
   }
 
   &:after { /* clear after itself */
