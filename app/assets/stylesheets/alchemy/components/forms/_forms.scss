@@ -14,12 +14,13 @@
   line-height: 1;
   color: $text_color;
 
-  .control_group {
+  .control-group,
+  .control_group  {
     padding: 5px 8px;
     position: relative;
     white-space: nowrap;
 
-    .label {
+    .control-label {
       width: $left_column_width;
       float: left;
       text-align: right;
@@ -59,7 +60,7 @@
 
 /* general */
 .form {
-  .label {
+  .control-label {
     label {
       line-height: 2.5;
       display: inline-block;
@@ -174,7 +175,7 @@
 
   /* required field */
   .required {
-    .label {
+    .control-label {
       position: relative;
 
       &:after {
@@ -189,11 +190,11 @@
       }
     }
 
-    &.warning .label:after {
+    &.warning .control-label:after {
       color: $warning_color;
     }
 
-    &.error .label:after {
+    &.error .control-label:after {
       color: $error_color;
     }
   }
@@ -472,7 +473,8 @@
     display: none;
   }
 
-  .control_group input:focus ~ .hint {
+  .control_group input:focus ~ .hint,
+  .control-group input:focus ~ .hint {
     @include transition(all 0.29s ease);
     @include opacity(1);
     left: $input_width + $input_padding + 15px;
