@@ -1,11 +1,12 @@
 @mixin labels_top {
   & {
-    .control_group {
+    .control_group,
+    .control-group {
       .input {
         margin: 0 0 5px 0;
       }
 
-      .label {
+      .control-label {
         float: none;
         text-align: left;
         display: inline-block;
@@ -42,7 +43,7 @@
     }
 
     .required {
-      .label {
+      .control-label {
         &:after {
           right: 0;
           top: 0;
@@ -112,7 +113,8 @@
       }
     }
 
-    .control_group input:focus ~ .hint {
+    .control_group input:focus ~ .hint,
+    .control-group input:focus ~ .hint {
       left: 0;
     }
 
