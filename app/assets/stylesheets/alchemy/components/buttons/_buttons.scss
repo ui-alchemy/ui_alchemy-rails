@@ -45,6 +45,7 @@ button {
   &.primary,
   &.btn-primary,
   &.btn-warning:hover,
+  &.btn-success:hover,
   &.warning:hover { /* set white text on dark backgrounds */
     color: $btn_white_text_color;
     @include text-shadow(0 -1px 0 rgba($black_color, 0.25));
@@ -86,6 +87,19 @@ button {
       @include linear_gradient(darken($btn_danger_color, 1%), darken($btn_danger_color, 7%), lighten($btn_danger_color, 3%), 10%);
     }
   }
+  &.success,
+  &.btn-success { /* success */
+      color: lighten($btn_success_color, 7%);
+
+      &:hover {
+        border-color: lighten($btn_success_color, 5%);
+        @include linear_gradient(lighten($btn_success_color, 5%), lighten($btn_success_color, 13%), $btn_success_color);
+      }
+
+      &:active {
+        @include linear_gradient(darken($btn_success_color, 1%), darken($btn_success_color, 7%), lighten($btn_success_color, 3%), 10%);
+      }
+    }
 
   /* ----------------------- */
   /* size */
