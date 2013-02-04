@@ -213,8 +213,8 @@ input::-moz-focus-inner {
   button {
     margin-left: 0;
     margin-right: 0;
-    display: block;
     float: left;
+    display: inline-block;
     border-left-width: 0;
     @include border-radius(0);
 
@@ -229,13 +229,6 @@ input::-moz-focus-inner {
     &:first-child:last-child {
       @include border-radius($border_radius);
     }
-  }
-
-  &:after { /* clear after itself */
-    content: ""; 
-    display: block; 
-    height: 0; 
-    clear: both;
   }
 
   form { /* for rails button_to helper (creates form > div > input) */
