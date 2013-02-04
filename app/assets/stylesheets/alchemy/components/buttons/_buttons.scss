@@ -87,7 +87,7 @@ button {
       @include linear_gradient(darken($btn_danger_color, 1%), darken($btn_danger_color, 7%), lighten($btn_danger_color, 3%), 10%);
     }
   }
-
+  &.success,
   &.btn-success { /* success */
       color: lighten($btn_success_color, 7%);
 
