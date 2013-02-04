@@ -124,6 +124,7 @@
   input[type="number"] {
     width: 50px;
     text-align: left;
+    padding: 4px $input_padding;
   }
 
   select {
