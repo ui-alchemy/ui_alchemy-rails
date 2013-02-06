@@ -20,6 +20,7 @@
     position: relative;
     white-space: nowrap;
 
+    .label,
     .control-label {
       width: $left_column_width;
       float: left;
@@ -60,6 +61,7 @@
 
 /* general */
 .form {
+  .label,
   .control-label {
     label {
       line-height: 2.5;
@@ -176,6 +178,7 @@
 
   /* required field */
   .required {
+    .label,
     .control-label {
       position: relative;
 
@@ -191,12 +194,18 @@
       }
     }
 
-    &.warning .control-label:after {
-      color: $warning_color;
+    &.warning {
+      .label:after,
+      .control-label:after {
+        color: $warning_color;
+      }
     }
 
-    &.error .control-label:after {
-      color: $error_color;
+    &.error {
+      .label:after,
+      .control-label:after {
+        color: $error_color;
+      }
     }
   }
 
