@@ -58,6 +58,8 @@ article {
 
       img {
         margin-top: $login_container_height / 3;
+        width: $logo_container_width - 10;
+        margin-left: 5px;
       }
     }
 
@@ -97,7 +99,8 @@ article {
         .form{
           @include box-sizing(border-box);
 
-          .control_group{
+          .control_group,
+          .control-group {
             padding: 5px 0px;
             @include clearfix;
             .right_aligned{float: right;}
