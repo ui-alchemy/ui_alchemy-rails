@@ -43,7 +43,11 @@ button {
   /* color */
 
   &.primary,
-  &.warning:hover { /* set white text on dark backgrounds */
+  &.btn-primary,
+  &.warning:hover,
+  &.btn-warning:hover,
+  &.success:hover,
+  &.btn-success:hover { /* set white text on dark backgrounds */
     color: $btn_white_text_color;
     @include text-shadow(0 -1px 0 rgba($black_color, 0.25));
     @include box-shadow($btn_shadow_reflection_dark);
@@ -55,7 +59,8 @@ button {
     }
   }
 
-  &.primary { /* primary button */
+  &.primary,
+  &.btn-primary { /* primary button */
     border-color: lighten($btn_primary_color, 13%);
     @include linear_gradient(($btn_primary_color, 7%), lighten($btn_primary_color, 18%), $btn_primary_color);
 
@@ -70,7 +75,8 @@ button {
     }
   }
 
-  &.warning { /* warning */
+  &.warning,
+  &.btn-warning { /* warning */
     color: lighten($btn_danger_color, 7%);
 
     &:hover {
@@ -82,6 +88,19 @@ button {
       @include linear_gradient(darken($btn_danger_color, 1%), darken($btn_danger_color, 7%), lighten($btn_danger_color, 3%), 10%);
     }
   }
+  &.success,
+  &.btn-success { /* success */
+      color: lighten($btn_success_color, 7%);
+
+      &:hover {
+        border-color: lighten($btn_success_color, 5%);
+        @include linear_gradient(lighten($btn_success_color, 5%), lighten($btn_success_color, 13%), $btn_success_color);
+      }
+
+      &:active {
+        @include linear_gradient(darken($btn_success_color, 1%), darken($btn_success_color, 7%), lighten($btn_success_color, 3%), 10%);
+      }
+    }
 
   /* ----------------------- */
   /* size */
@@ -116,7 +135,8 @@ button {
       border-color: lighten($btn_border_color, 7%);
       @include linear_gradient(lighten($btn_neutral_color, 14%), lighten($btn_neutral_color, 17%), lighten($btn_neutral_color, 6%));
 
-      &.warning {
+      &.warning,
+      &.btn-warning  {
         color: rgba($btn_danger_color, 0.47);
       }
     }
@@ -187,14 +207,15 @@ input::-moz-focus-inner {
 /* ----------------------- */  
 /* groups */
 
+.btn-group,
 .btn_group {
   .btn,
   .button,
   button {
     margin-left: 0;
     margin-right: 0;
-    display: block;
     float: left;
+    display: inline-block;
     border-left-width: 0;
     @include border-radius(0);
 
@@ -206,13 +227,9 @@ input::-moz-focus-inner {
     &:last-child {
       @include border-radius(0 $border_radius $border-radius 0);
     }
-  }
-
-  &:after { /* clear after itself */
-    content: ""; 
-    display: block; 
-    height: 0; 
-    clear: both;
+    &:first-child:last-child {
+      @include border-radius($border_radius);
+    }
   }
 
   form { /* for rails button_to helper (creates form > div > input) */

@@ -225,7 +225,7 @@
     width: 12px;
     height: 13px;
     font-size: 1px;
-    background: url(chosen-sprite.png) right top no-repeat;
+    background: url($chosen_sprite_url) right top no-repeat;
     &:hover {
       background-position: right -11px;
     }

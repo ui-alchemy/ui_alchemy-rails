@@ -39,6 +39,7 @@ header#header {
 
   .logo {
     background: $logo_img;
+    background-size: contain;
     text-indent: -5555px;
     width: 170px;
     bottom: 16px;
@@ -161,6 +162,7 @@ header#header {
           top: 16px;
           z-index: 99;
           left: 0px;
+          right: auto;
           @include border-radius(0 5px 5px 5px);
           @include box-shadow(2px 2px 2px rgba(0,0,0,0.4));
           min-width: 4.2em;
