@@ -46,6 +46,10 @@ button {
   &.btn-primary,
   &.warning:hover,
   &.btn-warning:hover,
+  &.danger,
+  &.btn-danger,
+  &.danger:hover,
+  &.btn-danger:hover,
   &.success:hover,
   &.btn-success:hover { /* set white text on dark backgrounds */
     color: $btn_white_text_color;
@@ -88,6 +92,22 @@ button {
       @include linear_gradient(darken($btn_danger_color, 1%), darken($btn_danger_color, 7%), lighten($btn_danger_color, 3%), 10%);
     }
   }
+
+  &.danger,
+  &.btn-danger {
+    border-color: lighten($btn_danger_color, 5%);
+    @include linear_gradient(lighten($btn_danger_color, 5%), lighten($btn_danger_color, 13%), $btn_danger_color);
+
+    &:hover {
+      @include linear_gradient(lighten($btn_danger_color, 8%), lighten($btn_danger_color, 22%), lighten($btn_danger_color, 2%));
+    }
+
+    &:active {
+      @include linear_gradient(darken($btn_danger_color, 1%), darken($btn_danger_color, 7%), lighten($btn_danger_color, 3%), 10%);
+    }
+  }
+
+
   &.success,
   &.btn-success { /* success */
       color: lighten($btn_success_color, 7%);
