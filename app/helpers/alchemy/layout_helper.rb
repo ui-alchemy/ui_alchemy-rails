@@ -15,5 +15,21 @@ module Alchemy
     def no_template
       _("No Template")
     end
+
+    def stylesheet(*args)
+      args.map { |arg| content_for(:stylesheets) { stylesheet_link_tag(arg) } }
+      return ""
+    end
+
+    def javascript(*args, &block)
+      if block
+        content_for(:inline_javascript) { block.call() }
+      end
+      if args
+        args.map { |arg| content_for(:javascripts) { javascript_include_tag(arg) } }
+      end
+      return ""
+    end
+
   end
 end
