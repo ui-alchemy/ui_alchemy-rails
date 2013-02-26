@@ -90,10 +90,13 @@
   input[type="search"],
   input[type="date"],
   input[type="number"],
+  select,
   textarea {
     width: $input_width;
     padding: 6px $input_padding;
     color: inherit;
+    font-size: 100%;
+    height: 16px;
     outline: none;
     border: 1px solid $border_color;
     margin-bottom: 7px;
@@ -135,11 +138,9 @@
     width: auto;
     max-width: $input_width - $input_padding; //has one more for right padding
     padding: 4px 0 4px $input_padding;
-    margin-bottom: 7px;
-    position: relative;
-    top: 2px;
-    font-size: 100%;
-    color: $text_color;
+    height: 30px;
+    line-height: 30px;
+    background-color: white;
 
     &[multiple="multiple"] {
       background: $white_color;
