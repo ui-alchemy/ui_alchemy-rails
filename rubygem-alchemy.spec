@@ -47,7 +47,7 @@ Name:          rubygem-%{gem_name}
 Summary:       Mixing up the best that web technologies have to offer.
 Group:         Applications/System
 License:       MIT
-Version:       1.0.2
+Version:       1.0.3
 Release:       1%{?dist}
 URL:           http://www.ui-alchemy.org
 Source0:       %{name}-%{version}.tar.gz
@@ -105,6 +105,9 @@ This package contains documentation for rubygem-%{gem_name}
 %doc %{gem_docdir}
 
 %changelog
+* Thu Mar 28 2013 Eric D Helms <ehelms@redhat.com> 1.0.3-1
+- Bumping to meet gem version.
+
 * Thu Mar 28 2013 Eric D Helms <ehelms@redhat.com> 1.0.2-1
 - Version bump. (ehelms@redhat.com)
 - Merge pull request #151 from ehelms/flot-cleanup (ericdhelms@gmail.com)
