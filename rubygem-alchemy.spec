@@ -47,7 +47,7 @@ Name:          rubygem-%{gem_name}
 Summary:       Mixing up the best that web technologies have to offer.
 Group:         Applications/System
 License:       MIT
-Version:       1.0.1
+Version:       1.0.2
 Release:       1%{?dist}
 URL:           http://www.ui-alchemy.org
 Source0:       %{name}-%{version}.tar.gz
@@ -105,6 +105,44 @@ This package contains documentation for rubygem-%{gem_name}
 %doc %{gem_docdir}
 
 %changelog
+* Thu Mar 28 2013 Eric D Helms <ehelms@redhat.com> 1.0.2-1
+- Version bump. (ehelms@redhat.com)
+- Merge pull request #151 from ehelms/flot-cleanup (ericdhelms@gmail.com)
+- Removes Flot development cruft. (ehelms@redhat.com)
+- Fix chosen-sprite relative path (hbrock@redhat.com)
+- Merge pull request #147 from abenari/select (ericdhelms@gmail.com)
+- Updates Normalize to the most recent version. (ehelms@redhat.com)
+- Adds HandlebarsJS templating library (ehelms@redhat.com)
+- make select box the same size and same border and background color as the
+  edit box. (abenari@redhat.com)
+- fixed latest comments. (abenari@redhat.com)
+- Moves engine declaration into explicit file. Adds helper functions for
+  stylesheets and javascript to ensure child views declaring a stylesheet or
+  javascript requirement are appended. (ehelms@redhat.com)
+- added danger button (jcoufal@redhat.com)
+- Merge pull request #145 from abenari/minor-fixes (email@jaromircoufal.cz)
+- Merge pull request #142 from mbacovsky/login_screen_padding
+  (email@jaromircoufal.cz)
+- fixed fieldset lable width. (abenari@redhat.com)
+- removed clear after btn-group, because it brakes multiple btn-group in a
+  single toolbar (abenari@redhat.com)
+- seting the login logo size (abenari@redhat.com)
+- fix image re-size for the logo. This fix enables using a large image for the
+  logo that looks good in close-up. (abenari@redhat.com)
+- Added btn-success (abenari@redhat.com)
+- added support for single button in a button group (abenari@redhat.com)
+- fixed var usage in url (abenari@redhat.com)
+- added aliases for bootstrap compatibility: primary, btn-primary warning, btn-
+  warning btn_group, btn-group lable, control-lable (abenari@redhat.com)
+- Update alchemy.gemspec (jtomasek@redhat.com)
+- make colors default in order to be easily overwritten (jcoufal@redhat.com)
+- Avoid footer overlaping over login form on narrow screen
+  (mbacovsk@redhat.com)
+- Merge pull request #141 from xsuchy/pull-req-f18 (jrist@redhat.com)
+- Version bump. (ehelms@redhat.com)
+- allow to build under F18 (msuchy@redhat.com)
+- Adds Media object as a component. (ehelms@redhat.com)
+
 * Tue Jan 15 2013 Eric D Helms <ehelms@redhat.com> 1.0.1-1
 - Spec - Updates to use any version of compass available. (ehelms@redhat.com)
 - Added default to component variables + fixed btn primary color at hover
