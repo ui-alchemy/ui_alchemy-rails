@@ -1,10 +1,10 @@
-module Alchemy
+module UIAlchemyRails
   module TranslationHelper
     # Test for Gettext presence, punt to rails translations otherwise
     if respond_to?(:_)
-      include Alchemy::GettextTranslations
+      include UIAlchemyRails::GettextTranslations
     else
-      include Alchemy::RailsTranslations
+      include UIAlchemyRails::RailsTranslations
     end
 
     def get_string(text_key)

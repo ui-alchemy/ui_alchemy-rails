@@ -2,3 +2,4 @@
 *.swo
 docs/build
 *~
+*.gem

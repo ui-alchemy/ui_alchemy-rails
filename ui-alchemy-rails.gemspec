@@ -1,12 +1,12 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "alchemy/version"
+require "ui-alchemy-rails/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "alchemy"
-  s.version     = Alchemy::VERSION
+  s.name        = "ui-alchemy-rails"
+  s.version     = UIAlchemyRails::VERSION
   s.authors     = ["UI Alchemy Team"]
   s.email       = ["N/A"]
   s.homepage    = "http://www.ui-alchemy.org"
