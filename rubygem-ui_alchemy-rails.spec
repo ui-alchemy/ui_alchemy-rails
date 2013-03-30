@@ -104,6 +104,9 @@ This package contains documentation for rubygem-%{gem_name}
 %doc %{gem_docdir}
 
 %changelog
+* Fri Mar 29 2013 Eric D Helms <ehelms@redhat.com> 1.0.4-1
+- new package built with tito
+
 * Thu Mar 28 2013 Eric D Helms <ehelms@redhat.com> 1.0.3-1
 - Bumping to meet gem version.
 
