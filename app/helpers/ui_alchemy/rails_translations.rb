@@ -1,4 +1,4 @@
-module UIAlchemyRails::RailsTranslations
+module UIAlchemy::RailsTranslations
   TRANSLATIONS = {
     :noscript                 => "user_sessions.noscript",
     :username                 => "user_sessions.username",

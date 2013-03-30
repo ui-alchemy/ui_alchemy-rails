@@ -1,4 +1,4 @@
-module UIAlchemyRails::GettextTranslations
+module UIAlchemy::GettextTranslations
   if respond_to?(:_)
     TRANSLATIONS = {
       :noscript                 => _("Javascript must be enabled for this application to work properly."),

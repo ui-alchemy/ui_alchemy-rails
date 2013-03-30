@@ -1,12 +1,12 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "ui-alchemy-rails/version"
+require "ui_alchemy/rails/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "ui-alchemy-rails"
-  s.version     = UIAlchemyRails::VERSION
+  s.name        = "ui_alchemy-rails"
+  s.version     = UIAlchemy::Rails::VERSION
   s.authors     = ["UI Alchemy Team"]
   s.email       = ["N/A"]
   s.homepage    = "http://www.ui-alchemy.org"
@@ -14,7 +14,6 @@ Gem::Specification.new do |s|
   s.description = "Independent, componentized, highly customizable, expandable javascript, css, font and image assets to simplify initial design of web elements such as buttons, forms, notifications, etc. Alchemy includes a set of Ruby on Rails specific functionality:  Forms (with SimpleForm support), Predefined layout elements (header, navigation, footer) and layout structure."
 
   s.files = Dir["{app,vendor,lib}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
-  s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", '>= 3.0.0'
 end
