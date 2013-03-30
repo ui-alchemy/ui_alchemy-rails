@@ -23,7 +23,7 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-%global gem_name alchemy
+%global gem_name ui_alchemy-rails
 
 %if 0%{?rhel} == 6 || 0%{?fedora} < 17
 %define rubyabi 1.8
@@ -47,7 +47,7 @@ Name:          rubygem-%{gem_name}
 Summary:       Mixing up the best that web technologies have to offer.
 Group:         Applications/System
 License:       MIT
-Version:       1.0.3
+Version:       1.0.4
 Release:       1%{?dist}
 URL:           http://www.ui-alchemy.org
 Source0:       %{name}-%{version}.tar.gz
@@ -87,7 +87,6 @@ rm -rf %{buildroot}%{gem_instdir}/.yardoc
 %{gem_instdir}/app
 %{gem_instdir}/vendor
 %exclude %{gem_cache}
-%exclude %{gem_instdir}/test
 %{gem_spec}
 %doc %{gem_instdir}/LICENSE
 %doc %{gem_instdir}/README.md
