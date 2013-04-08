@@ -1,0 +1,836 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+/*****************
+* Font Types
+*****************/
+/*****************
+* Static
+*****************/
+/*****************
+* Responsive
+*****************/
+/*****************
+* Elements - Global
+*****************/
+/********
+* Images
+*********/
+/*************
+* Base Colors
+**************/
+/****************
+*  Palette Colors
+*****************/
+/* Proposed colour palette
+===========================*/
+/* Generic default tone for non interactive elements */
+/* Favorite greys for warm interactive elements */
+/* Red Hat toners */
+/* Red Hat Official */
+/* Red Hat Apps  - Web Extended
+================================*/
+/* Orange (the letter o) */
+/* Green */
+/* Red */
+/************
+* Theme color
+************/
+/* background for header */
+/* ie9 support */
+/*
+   ====================================
+   BUTTONS
+   ====================================
+*/
+<<<<<<< HEAD
+/* line 12, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 12, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn,
+.button,
+button {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  text-decoration: none;
+  font-family: "Liberation Sans", sans-serif;
+  font-size: 100%;
+  padding: 0.5em 1em;
+  margin: 10px 8px 0 0;
+  cursor: pointer;
+  border: 1px solid #c3c3bf;
+  line-height: normal;
+  /* must be normal because of firefox bug: http://cbjdigital.com/blog/2010/08/bulletproof_css_input_button_heights*/
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  color: #565656;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjZmNmYyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q2ZDZkNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fcfcfc), color-stop(100%, #d6d6d4));
+  background: -webkit-linear-gradient(#fcfcfc, #d6d6d4);
+  background: -moz-linear-gradient(#fcfcfc, #d6d6d4);
+  background: -o-linear-gradient(#fcfcfc, #d6d6d4);
+  background: linear-gradient(#fcfcfc, #d6d6d4);
+  /* general */
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFCFCFC', endColorstr='#FFD6D6D4');
+  /* IE */
+  background-color: #efefee;
+  /* fallback */
+  -webkit-box-shadow: 0 1px 3px white inset;
+  -moz-box-shadow: 0 1px 3px white inset;
+  box-shadow: 0 1px 3px white inset;
+  /* inside reflection */
+  /* ----------------------- */
+  /* color */
+  /* ----------------------- */
+  /* size */
+  /* ----------------------- */
+  /* disabled */
+  /* ----------------------- */
+  /* buttons with icons */
+}
+<<<<<<< HEAD
+/* line 30, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 30, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn:hover,
+.button:hover,
+button:hover {
+  border-color: #b6b6b2;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U1ZTVlNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #e5e5e4));
+  background: -webkit-linear-gradient(#ffffff, #e5e5e4);
+  background: -moz-linear-gradient(#ffffff, #e5e5e4);
+  background: -o-linear-gradient(#ffffff, #e5e5e4);
+  background: linear-gradient(#ffffff, #e5e5e4);
+  /* general */
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFE5E5E4');
+  /* IE */
+  background-color: #f7f7f6;
+  /* fallback */
+}
+<<<<<<< HEAD
+/* line 35, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 35, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn:active,
+.button:active,
+button:active {
+  color: rgba(86, 86, 86, 0.9);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RlZGVkYyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RlZGVkYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dededc), color-stop(100%, #dededc));
+  background: -webkit-linear-gradient(#dededc, #dededc);
+  background: -moz-linear-gradient(#dededc, #dededc);
+  background: -o-linear-gradient(#dededc, #dededc);
+  background: linear-gradient(#dededc, #dededc);
+  /* general */
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFDEDEDC', endColorstr='#FFDEDEDC');
+  /* IE */
+  background-color: #dededc;
+  /* fallback */
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+<<<<<<< HEAD
+/* line 54, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 54, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.primary, .btn.btn-primary, .btn.warning:hover, .btn.btn-warning:hover, .btn.danger, .btn.btn-danger, .btn.danger:hover, .btn.btn-danger:hover, .btn.success:hover, .btn.btn-success:hover,
+.button.primary,
+.button.btn-primary,
+.button.warning:hover,
+.button.btn-warning:hover,
+.button.danger,
+.button.btn-danger,
+.button.danger:hover,
+.button.btn-danger:hover,
+.button.success:hover,
+.button.btn-success:hover,
+button.primary,
+button.btn-primary,
+button.warning:hover,
+button.btn-warning:hover,
+button.danger,
+button.btn-danger,
+button.danger:hover,
+button.btn-danger:hover,
+button.success:hover,
+button.btn-success:hover {
+  /* set white text on dark backgrounds */
+  color: #f9f8f3;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 1px 6px rgba(255, 255, 255, 0.25) inset;
+  -moz-box-shadow: 0 1px 6px rgba(255, 255, 255, 0.25) inset;
+  box-shadow: 0 1px 6px rgba(255, 255, 255, 0.25) inset;
+}
+<<<<<<< HEAD
+/* line 59, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 59, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.primary:active, .btn.btn-primary:active, .btn.warning:hover:active, .btn.btn-warning:hover:active, .btn.danger:active, .btn.btn-danger:active, .btn.danger:hover:active, .btn.btn-danger:hover:active, .btn.success:hover:active, .btn.btn-success:hover:active,
+.button.primary:active,
+.button.btn-primary:active,
+.button.warning:hover:active,
+.button.btn-warning:hover:active,
+.button.danger:active,
+.button.btn-danger:active,
+.button.danger:hover:active,
+.button.btn-danger:hover:active,
+.button.success:hover:active,
+.button.btn-success:hover:active,
+button.primary:active,
+button.btn-primary:active,
+button.warning:hover:active,
+button.btn-warning:hover:active,
+button.danger:active,
+button.btn-danger:active,
+button.danger:hover:active,
+button.btn-danger:hover:active,
+button.success:hover:active,
+button.btn-success:hover:active {
+  color: rgba(249, 248, 243, 0.95);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+<<<<<<< HEAD
+/* line 67, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 67, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.primary, .btn.btn-primary,
+.button.primary,
+.button.btn-primary,
+button.primary,
+button.btn-primary {
+  /* primary button */
+  border-color: #23adec;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNhYjZlZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzEwODZiYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3ab6ee), color-stop(100%, #1086bc));
+  background: -webkit-linear-gradient(#3ab6ee, #1086bc);
+  background: -moz-linear-gradient(#3ab6ee, #1086bc);
+  background: -o-linear-gradient(#3ab6ee, #1086bc);
+  background: linear-gradient(#3ab6ee, #1086bc);
+  /* general */
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF3AB6EE', endColorstr='#FF1086BC');
+  /* IE */
+  background-color: #1086bc, 7%;
+  /* fallback */
+}
+<<<<<<< HEAD
+/* line 71, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 71, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.primary:hover, .btn.btn-primary:hover,
+.button.primary:hover,
+.button.btn-primary:hover,
+button.primary:hover,
+button.btn-primary:hover {
+  border-color: #2cb1ed;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRkYmRmMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzEyOTdkNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4dbdf0), color-stop(100%, #1297d4));
+  background: -webkit-linear-gradient(#4dbdf0, #1297d4);
+  background: -moz-linear-gradient(#4dbdf0, #1297d4);
+  background: -o-linear-gradient(#4dbdf0, #1297d4);
+  background: linear-gradient(#4dbdf0, #1297d4);
+  /* general */
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF4DBDF0', endColorstr='#FF1297D4');
+  /* IE */
+  background-color: #1086bc, 11%;
+  /* fallback */
+}
+<<<<<<< HEAD
+/* line 76, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 76, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.primary:active, .btn.btn-primary:active,
+.button.primary:active,
+.button.btn-primary:active,
+button.primary:active,
+button.btn-primary:active {
+  border-color: #1086bc;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBmN2NhZSIvPjxzdG9wIG9mZnNldD0iMTAlIiBzdG9wLWNvbG9yPSIjMTE5MWNhIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0f7cae), color-stop(10%, #1191ca));
+  background: -webkit-linear-gradient(#0f7cae, #1191ca 10%);
+  background: -moz-linear-gradient(#0f7cae, #1191ca 10%);
+  background: -o-linear-gradient(#0f7cae, #1191ca 10%);
+  background: linear-gradient(#0f7cae, #1191ca 10%);
+  /* general */
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF1294CF', endColorstr='#FF1294CF');
+  /* IE */
+  background-color: #1294cf;
+  /* fallback */
+}
+<<<<<<< HEAD
+/* line 83, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 83, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.warning, .btn.btn-warning,
+.button.warning,
+.button.btn-warning,
+button.warning,
+button.btn-warning {
+  /* warning */
+  color: #c41d27;
+}
+<<<<<<< HEAD
+/* line 86, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 86, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.warning:hover, .btn.btn-warning:hover,
+.button.warning:hover,
+.button.btn-warning:hover,
+button.warning:hover,
+button.btn-warning:hover {
+  border-color: #bb1c25;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RlMjIyZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2E1MTkyMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #de222d), color-stop(100%, #a51921));
+  background: -webkit-linear-gradient(#de222d, #a51921);
+  background: -moz-linear-gradient(#de222d, #a51921);
+  background: -o-linear-gradient(#de222d, #a51921);
+  background: linear-gradient(#de222d, #a51921);
+  /* general */
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFDE222D', endColorstr='#FFA51921');
+  /* IE */
+  background-color: #bb1c25;
+  /* fallback */
+}
+<<<<<<< HEAD
+/* line 91, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 91, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.warning:active, .btn.btn-warning:active,
+.button.warning:active,
+.button.btn-warning:active,
+button.warning:active,
+button.btn-warning:active {
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg1MTQxYiIvPjxzdG9wIG9mZnNldD0iMTAlIiBzdG9wLWNvbG9yPSIjYjIxYjI0Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #85141b), color-stop(10%, #b21b24));
+  background: -webkit-linear-gradient(#85141b, #b21b24 10%);
+  background: -moz-linear-gradient(#85141b, #b21b24 10%);
+  background: -o-linear-gradient(#85141b, #b21b24 10%);
+  background: linear-gradient(#85141b, #b21b24 10%);
+  /* general */
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFA01820', endColorstr='#FFA01820');
+  /* IE */
+  background-color: #a01820;
+  /* fallback */
+}
+<<<<<<< HEAD
+/* line 97, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 97, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.danger, .btn.btn-danger,
+.button.danger,
+.button.btn-danger,
+button.danger,
+button.btn-danger {
+  border-color: #bb1c25;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RlMjIyZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2E1MTkyMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #de222d), color-stop(100%, #a51921));
+  background: -webkit-linear-gradient(#de222d, #a51921);
+  background: -moz-linear-gradient(#de222d, #a51921);
+  background: -o-linear-gradient(#de222d, #a51921);
+  background: linear-gradient(#de222d, #a51921);
+  /* general */
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFDE222D', endColorstr='#FFA51921');
+  /* IE */
+  background-color: #bb1c25;
+  /* fallback */
+}
+<<<<<<< HEAD
+/* line 101, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 101, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.danger:hover, .btn.btn-danger:hover,
+.button.danger:hover,
+.button.btn-danger:hover,
+button.danger:hover,
+button.btn-danger:hover {
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U0NGE1MyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2FkMWEyMyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e44a53), color-stop(100%, #ad1a23));
+  background: -webkit-linear-gradient(#e44a53, #ad1a23);
+  background: -moz-linear-gradient(#e44a53, #ad1a23);
+  background: -o-linear-gradient(#e44a53, #ad1a23);
+  background: linear-gradient(#e44a53, #ad1a23);
+  /* general */
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE44A53', endColorstr='#FFAD1A23');
+  /* IE */
+  background-color: #c81e28;
+  /* fallback */
+}
+<<<<<<< HEAD
+/* line 105, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 105, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.danger:active, .btn.btn-danger:active,
+.button.danger:active,
+.button.btn-danger:active,
+button.danger:active,
+button.btn-danger:active {
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg1MTQxYiIvPjxzdG9wIG9mZnNldD0iMTAlIiBzdG9wLWNvbG9yPSIjYjIxYjI0Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #85141b), color-stop(10%, #b21b24));
+  background: -webkit-linear-gradient(#85141b, #b21b24 10%);
+  background: -moz-linear-gradient(#85141b, #b21b24 10%);
+  background: -o-linear-gradient(#85141b, #b21b24 10%);
+  background: linear-gradient(#85141b, #b21b24 10%);
+  /* general */
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFA01820', endColorstr='#FFA01820');
+  /* IE */
+  background-color: #a01820;
+  /* fallback */
+}
+<<<<<<< HEAD
+/* line 112, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 112, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.success, .btn.btn-success,
+.button.success,
+.button.btn-success,
+button.success,
+button.btn-success {
+  /* success */
+  color: #4a8e16;
+}
+<<<<<<< HEAD
+/* line 115, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 115, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.success:hover, .btn.btn-success:hover,
+.button.success:hover,
+.button.btn-success:hover,
+button.success:hover,
+button.btn-success:hover {
+  border-color: #458515;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU3YTgxYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNhNmYxMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #57a81a), color-stop(100%, #3a6f11));
+  background: -webkit-linear-gradient(#57a81a, #3a6f11);
+  background: -moz-linear-gradient(#57a81a, #3a6f11);
+  background: -o-linear-gradient(#57a81a, #3a6f11);
+  background: linear-gradient(#57a81a, #3a6f11);
+  /* general */
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF57A81A', endColorstr='#FF3A6F11');
+  /* IE */
+  background-color: #458515;
+  /* fallback */
+}
+<<<<<<< HEAD
+/* line 120, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 120, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.success:active, .btn.btn-success:active,
+.button.success:active,
+.button.btn-success:active,
+button.success:active,
+button.btn-success:active {
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJhNTAwZCIvPjxzdG9wIG9mZnNldD0iMTAlIiBzdG9wLWNvbG9yPSIjNDE3YzE0Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2a500d), color-stop(10%, #417c14));
+  background: -webkit-linear-gradient(#2a500d, #417c14 10%);
+  background: -moz-linear-gradient(#2a500d, #417c14 10%);
+  background: -o-linear-gradient(#2a500d, #417c14 10%);
+  background: linear-gradient(#2a500d, #417c14 10%);
+  /* general */
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF376A11', endColorstr='#FF376A11');
+  /* IE */
+  background-color: #376a11;
+  /* fallback */
+}
+<<<<<<< HEAD
+/* line 128, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 128, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.mini,
+.button.mini,
+button.mini {
+  font-size: 75%;
+}
+<<<<<<< HEAD
+/* line 132, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 132, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.small,
+.button.small,
+button.small {
+  font-size: 85%;
+}
+<<<<<<< HEAD
+/* line 136, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 136, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.large,
+.button.large,
+button.large {
+  font-size: 125%;
+}
+<<<<<<< HEAD
+/* line 140, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 140, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.huge,
+.button.huge,
+button.huge {
+  font-size: 155%;
+}
+<<<<<<< HEAD
+/* line 148, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 148, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.disabled, .btn[disabled],
+.button.disabled,
+.button[disabled],
+button.disabled,
+button[disabled] {
+  /* common for light buttons */
+}
+<<<<<<< HEAD
+/* line 151, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 151, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.disabled, .btn.disabled:hover, .btn.disabled:active, .btn[disabled], .btn[disabled]:hover, .btn[disabled]:active,
+.button.disabled,
+.button.disabled:hover,
+.button.disabled:active,
+.button[disabled],
+.button[disabled]:hover,
+.button[disabled]:active,
+button.disabled,
+button.disabled:hover,
+button.disabled:active,
+button[disabled],
+button[disabled]:hover,
+button[disabled]:active {
+  color: rgba(86, 86, 86, 0.5);
+  text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.9);
+  cursor: default;
+  border-color: #d4d4d2;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U1ZTVlNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #e5e5e4));
+  background: -webkit-linear-gradient(#ffffff, #e5e5e4);
+  background: -moz-linear-gradient(#ffffff, #e5e5e4);
+  background: -o-linear-gradient(#ffffff, #e5e5e4);
+  background: linear-gradient(#ffffff, #e5e5e4);
+  /* general */
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFE5E5E4');
+  /* IE */
+  background-color: #f9f9f9;
+  /* fallback */
+}
+<<<<<<< HEAD
+/* line 159, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 159, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.disabled.warning, .btn.disabled.btn-warning, .btn.disabled:hover.warning, .btn.disabled:hover.btn-warning, .btn.disabled:active.warning, .btn.disabled:active.btn-warning, .btn[disabled].warning, .btn[disabled].btn-warning, .btn[disabled]:hover.warning, .btn[disabled]:hover.btn-warning, .btn[disabled]:active.warning, .btn[disabled]:active.btn-warning,
+.button.disabled.warning,
+.button.disabled.btn-warning,
+.button.disabled:hover.warning,
+.button.disabled:hover.btn-warning,
+.button.disabled:active.warning,
+.button.disabled:active.btn-warning,
+.button[disabled].warning,
+.button[disabled].btn-warning,
+.button[disabled]:hover.warning,
+.button[disabled]:hover.btn-warning,
+.button[disabled]:active.warning,
+.button[disabled]:active.btn-warning,
+button.disabled.warning,
+button.disabled.btn-warning,
+button.disabled:hover.warning,
+button.disabled:hover.btn-warning,
+button.disabled:active.warning,
+button.disabled:active.btn-warning,
+button[disabled].warning,
+button[disabled].btn-warning,
+button[disabled]:hover.warning,
+button[disabled]:hover.btn-warning,
+button[disabled]:active.warning,
+button[disabled]:active.btn-warning {
+  color: rgba(165, 25, 33, 0.47);
+}
+<<<<<<< HEAD
+/* line 168, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 168, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.processing, .btn.processing:hover, .btn.processing:active,
+.button.processing,
+.button.processing:hover,
+.button.processing:active,
+button.processing,
+button.processing:hover,
+button.processing:active {
+  background: url("images/spinner.gif") no-repeat 50% 50%, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U1ZTVlNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: url("images/spinner.gif") no-repeat 50% 50%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #e5e5e4));
+  background: url("images/spinner.gif") no-repeat 50% 50%, -webkit-linear-gradient(#ffffff, #e5e5e4);
+  background: url("images/spinner.gif") no-repeat 50% 50%, -moz-linear-gradient(#ffffff, #e5e5e4);
+  background: url("images/spinner.gif") no-repeat 50% 50%, -o-linear-gradient(#ffffff, #e5e5e4);
+  background: url("images/spinner.gif") no-repeat 50% 50%, linear-gradient(#ffffff, #e5e5e4);
+}
+<<<<<<< HEAD
+/* line 178, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 178, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.icon,
+.button.icon,
+button.icon {
+  padding-left: 28px;
+  position: relative;
+}
+<<<<<<< HEAD
+/* line 182, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 182, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.icon:before,
+.button.icon:before,
+button.icon:before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+<<<<<<< HEAD
+/* line 190, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 190, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.icon i, .btn.icon:before,
+.button.icon i,
+.button.icon:before,
+button.icon i,
+button.icon:before {
+  position: absolute;
+  top: 4px;
+  left: 8px;
+}
+<<<<<<< HEAD
+/* line 197, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 197, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.icon > .btn, .btn.icon > .button,
+.button.icon > .btn,
+.button.icon > .button,
+button.icon > .btn,
+button.icon > .button {
+  /* for inputs - submit (need to be in special div) */
+  margin: 0;
+  border: 0;
+  padding-left: 28px;
+  display: inline-block;
+  background: none;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#00FFFFFF', endColorstr='#00FFFFFF');
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+<<<<<<< HEAD
+/* line 207, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 207, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn.icon.download_example:before,
+.button.icon.download_example:before,
+button.icon.download_example:before {
+  background: url('../../component/images/alchemy/icons/action-icons.png');
+  background-position: -512px -16px;
+}
+
+<<<<<<< HEAD
+/* line 215, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 215, ../../component/styles/buttons.scss */
+>>>>>>> master
+div.btn.icon {
+  padding: 0;
+  display: inline-block;
+}
+
+<<<<<<< HEAD
+/* line 222, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 222, ../../component/styles/buttons.scss */
+>>>>>>> master
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* ----------------------- */
+/* groups */
+<<<<<<< HEAD
+/* line 234, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 234, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn-group .btn,
+.btn-group .button,
+.btn-group button,
+.btn_group .btn,
+.btn_group .button,
+.btn_group button {
+  margin-left: 0;
+  margin-right: 0;
+  float: left;
+  display: inline-block;
+  border-left-width: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+<<<<<<< HEAD
+/* line 242, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 242, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn-group .btn:first-child,
+.btn-group .button:first-child,
+.btn-group button:first-child,
+.btn_group .btn:first-child,
+.btn_group .button:first-child,
+.btn_group button:first-child {
+  border-left-width: 1px;
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+<<<<<<< HEAD
+/* line 247, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 247, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn-group .btn:last-child,
+.btn-group .button:last-child,
+.btn-group button:last-child,
+.btn_group .btn:last-child,
+.btn_group .button:last-child,
+.btn_group button:last-child {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+<<<<<<< HEAD
+/* line 250, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 250, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn-group .btn:first-child:last-child,
+.btn-group .button:first-child:last-child,
+.btn-group button:first-child:last-child,
+.btn_group .btn:first-child:last-child,
+.btn_group .button:first-child:last-child,
+.btn_group button:first-child:last-child {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+<<<<<<< HEAD
+/* line 255, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 255, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn-group form,
+.btn_group form {
+  /* for rails button_to helper (creates form > div > input) */
+}
+<<<<<<< HEAD
+/* line 256, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 256, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn-group form div,
+.btn_group form div {
+  display: block;
+  float: left;
+}
+<<<<<<< HEAD
+/* line 264, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 264, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn-group form:first-child .btn,
+.btn-group form:first-child .button,
+.btn-group form:first-child button,
+.btn_group form:first-child .btn,
+.btn_group form:first-child .button,
+.btn_group form:first-child button {
+  border-left-width: 1px;
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+<<<<<<< HEAD
+/* line 273, ../../component/styles/alchemy-buttons.scss */
+=======
+/* line 273, ../../component/styles/buttons.scss */
+>>>>>>> master
+.btn-group form:last-child .btn,
+.btn-group form:last-child .button,
+.btn-group form:last-child button,
+.btn_group form:last-child .btn,
+.btn_group form:last-child .button,
+.btn_group form:last-child button {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}

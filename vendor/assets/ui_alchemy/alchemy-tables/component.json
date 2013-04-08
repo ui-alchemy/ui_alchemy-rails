@@ -1,0 +1,27 @@
+{
+  "name": "alchemy-tables",
+  "version": "0.0.13",
+  "main": [
+    "./*.js",
+    "./*.scss",
+    "./*.css"
+  ],
+  "dependencies": {
+    "angular": "~1.0.5",
+    "jquery": "~1.9.1",
+    "alchemy": ">=0.0.1",
+    "alchemy-forms": ">=0.0.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.0.5",
+    "angular-scenario": "~1.0.5"
+  },
+  "gitHead": "aaac01b6007bf4183d71fc2ec7a99231779dd0e0",
+  "_id": "alchemy-tables@0.0.13",
+  "readme": "ERROR: No README.md file found!",
+  "description": "ERROR: No README.md file found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ui-alchemy/alchemy-tables.git"
+  }
+}

@@ -1,0 +1,11 @@
+$btn_neutral_color: lighten($rh_base, 47%) !default;
+$btn_primary_color: darken($primary_color, 7%) !default;
+$btn_danger_color: darken($error_color, 8%) !default;
+$btn_success_color: darken($success_color, 8%) !default;
+
+$btn_border_color: darken($btn_neutral_color, 8%) !default;
+$btn_text_color: lighten($text_color, 10%) !default;
+$btn_white_text_color: lighten($rh_cream, 15%) !default;
+
+$btn_shadow_reflection_dark: 0 1px 6px rgba($white_color, 0.25) inset;
+$btn_shadow_reflection_light: 0 1px 3px rgba($white_color, 1) inset;
