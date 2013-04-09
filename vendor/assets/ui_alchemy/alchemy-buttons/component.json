@@ -1,0 +1,26 @@
+{
+  "name": "alchemy-buttons",
+  "version": "0.0.3",
+  "main": [
+    "./*.js",
+    "./*.scss",
+    "./*.css"
+  ],
+  "dependencies": {
+    "angular": "~1.0.5",
+    "jquery": "~1.9.1",
+    "alchemy": ">=0.0.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.0.5",
+    "angular-scenario": "~1.0.5"
+  },
+  "gitHead": "dd570ddb3bc4567c9975c7c24696c88e487eb1f6",
+  "_id": "alchemy-buttons@0.0.3",
+  "readme": "ERROR: No README.md file found!",
+  "description": "ERROR: No README.md file found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ui-alchemy/alchemy-buttons.git"
+  }
+}

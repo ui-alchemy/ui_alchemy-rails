@@ -1,0 +1,25 @@
+{
+  "name": "alchemy",
+  "version": "0.0.4",
+  "main": [
+    "./*.js",
+    "./*.scss",
+    "./*.css"
+  ],
+  "dependencies": {
+    "angular": "~1.0.5",
+    "jquery": "~1.9.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.0.5",
+    "angular-scenario": "~1.0.5"
+  },
+  "gitHead": "3c626536ac0b23e44446aeb5d3eb6e3290418d97",
+  "_id": "alchemy@0.0.4",
+  "readme": "ERROR: No README.md file found!",
+  "description": "ERROR: No README.md file found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ui-alchemy/alchemy.git"
+  }
+}

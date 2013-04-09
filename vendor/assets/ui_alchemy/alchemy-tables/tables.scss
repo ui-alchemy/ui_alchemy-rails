@@ -1,0 +1,220 @@
+$bg:  #a7b0b2;
+$fg:  #555;
+$highlight: $primary_color;
+
+.table {
+
+  width: 100%;
+  border: 1px solid #CCC !important;
+
+  td, th {
+    text-align: center !important;
+  }
+
+  .active-column {
+    background: rgb(175, 175, 175) !important;
+  }
+
+  tr.active {
+    background: $highlight !important;
+    color: #FFF !important;
+  }
+}
+
+.table-selection-row {
+  background: rgb(255, 207, 105);
+  text-align: center !important;
+}
+
+.table-toolbar {
+  background: rgb(238, 238, 238);
+  overflow: auto;
+  padding: 10px 12px 4px 12px;
+  box-sizing: border-box;
+  border: 1px solid #CCC;
+  border-radius: 5px 5px 0 0;
+}
+
+.deselect {
+  line-height: 2 !important;
+}
+
+.stable {
+
+  tr:last-child {
+    border-collapse: separate !important;
+    border-bottom: 1px solid #CCC;
+
+    td {
+      border-collapse: separate !important;
+      border-bottom: 1px solid #CCC;
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .stable{ 
+      -webkit-transform: translate3d(0, 0, 0);
+
+    color:#555; color:rgba(0,0,0,0.75); 
+    background-color: transparent;
+    border-collapse:collapse; 
+    border-spacing:0;
+    border-style:  none;
+    width: 100%; line-height: 1.333em;
+    transition: all 1s ease;
+    td,th{
+      text-align:left;
+      border-bottom: 1px solid #eee; 
+      border-bottom-color: rgba(0,0,0,0.033);
+      padding:.66666em; 
+      transition: padding .1s ease;
+      
+    }
+    th{ 
+     color:#555;color:rgba(0,0,0,0.75); transition: all .5s ease;
+    }
+  }
+}
+
+.stable.focus{
+
+  th{ 
+   color:#555;color:rgba(0,0,0,0.75); transition: all .5s ease;
+  }
+  tr:hover td,
+  tr.focus td{
+    background-color: $highlight;
+    color:#FFF;
+  }
+  &.focus:hover{
+    transition:all 1s ease 2s;
+
+    color:rgba(lighten( $fg, 2% ),0.5);
+    //background-color: $highlight;
+    
+    td, th{transition: none;
+    }
+    th{ transition: all .5s ease .5s;
+      color:#555;color:rgba(0,0,0,0.75); 
+      //background-color: $highlight;
+    }
+  }
+}
+
+@media (max-width: 512px) {  
+  
+.stable,
+.stable tr, 
+.stable td, 
+.stable th, 
+.stable thead{
+  display:block; 
+  width: 100%; padding:.333em; 
+   
+ }
+ .stable {
+  th{display:none;}
+  tr th:first-child, td:first-child{ 
+    font-size:2em; 
+    padding:.3333em; 
+    margin-top:1em; 
+    width: 100%;
+    } 
+  }
+}
+
+.stable {
+&.condensed{
+    td, th{padding:.3333em}}} /*manually classed as condensed*/
+
+@media (max-height: 640px) {     
+  .stable {td, th{padding-top:.3333em;padding-bottom:.3333em}}}
+
+@media (max-width: 740px) {  
+  /*when things are horizontally narrow we add in divider lines so numerical fields are still seen as separate*/
+  .stable {
+  td, th{padding-left:.3333em;padding-right:.3333em; border-left: 1px solid rgba(0,0,0,0.05) !important}
+    td:first-child, th:first-child{border-left: none !important}
+  }}
+
+.stable{
+
+  &.stripe-row tr:nth-child(2n+2),
+  &.stripe-row-even tr:nth-child(2n+2) {
+    background-color: rgba(lighten( $bg, 10% ), 0.15);
+  }
+  
+    &.stripe-row-odd tr:nth-child(2n+1) {
+    background-color: rgba(lighten( $bg, 10% ), 0.15);
+  }
+  
+  
+  
+  &.stripe-col,
+    &.stripe-col-even{
+    tr th:nth-child(even) ,
+    tr td:nth-child(even)
+       {background-color:rgba(lighten( $bg, 10% ), 0.15); border-color: rgba(lighten( $bg, 10% ), 0.15);}
+  }
+  
+
+    &.stripe-col-odd{
+    tr th:nth-child(odd) ,
+    tr td:nth-child(odd)
+       {background-color:rgba(lighten( $bg, 10% ), 0.15); border-color: rgba(lighten( $bg, 10% ), 0.15)}
+  }
+  
+  
+  
+  &.highlight-col1{
+    tr th:nth-child(1),
+    tr td:nth-child(1)
+      {background-color: rgba(lighten( $bg, 50% ), 0.5); border-color: lighten( $bg, 20% );box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+z-index: 2;
+position: relative}
+  }
+
+    &.highlight-col2{
+    tr th:nth-child(2),
+    tr td:nth-child(2)
+      {background-color: rgba(lighten( $bg, 50% ), 0.5); border-color: lighten( $bg, 20% );box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+z-index: 2;
+position: relative}
+  }
+  
+    &.highlight-col3{
+    tr th:nth-child(3),
+    tr td:nth-child(3)
+      {background-color: rgba(lighten( $bg, 50% ), 0.5); border-color: lighten( $bg, 20% );box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+z-index: 2;
+position: relative}
+  }
+  
+    &.highlight-col4{
+    tr th:nth-child(4),
+    tr td:nth-child(4)
+      {background-color: rgba(lighten( $bg, 50% ), 0.5); border-color: lighten( $bg, 20% );box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+z-index: 2;
+position: relative}
+  }
+  
+      &.highlight-col5{
+    tr th:nth-child(5),
+    tr td:nth-child(5)
+      {background-color: rgba(lighten( $bg, 50% ), 0.5); border-color: lighten( $bg, 20% );box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+z-index: 2;
+position: relative}
+  }
+  
+    
+      &.highlight-col6{
+    tr th:nth-child(6),
+    tr td:nth-child(6)
+      {background-color: rgba(lighten( $bg, 50% ), 0.5); border-color: lighten( $bg, 20% );box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+z-index: 2;
+position: relative}
+  }
+  
+
+}
