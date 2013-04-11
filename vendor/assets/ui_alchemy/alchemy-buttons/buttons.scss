@@ -1,5 +1,5 @@
-@import "alchemy/partials/base";
-@import "alchemy/components/buttons/buttons_vars";
+@import "alchemy/alchemy";
+@import "buttons_vars";
 
 /*
    ====================================
@@ -167,7 +167,7 @@ button {
     &:hover,
     &:active {
       @include background(
-        image-url("alchemy/icons/spinner.gif") no-repeat 50% 50%,
+        url("images/spinner.gif") no-repeat 50% 50%,
         linear-gradient(lighten($btn_neutral_color, 17%), lighten($btn_neutral_color, 6%)));
     }
   }

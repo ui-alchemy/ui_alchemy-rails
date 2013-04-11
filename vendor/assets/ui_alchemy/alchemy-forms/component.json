@@ -1,0 +1,27 @@
+{
+  "name": "alchemy-forms",
+  "version": "0.0.3",
+  "main": [
+    "./*.js",
+    "./*.scss",
+    "./*.css"
+  ],
+  "dependencies": {
+    "angular": "~1.0.5",
+    "jquery": "~1.9.1",
+    "alchemy": ">=0.0.1",
+    "alchemy-buttons": ">=0.0.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.0.5",
+    "angular-scenario": "~1.0.5"
+  },
+  "gitHead": "002e562a48e8d14642ba34f1f5380335a91d4b28",
+  "_id": "alchemy-forms@0.0.3",
+  "readme": "ERROR: No README.md file found!",
+  "description": "ERROR: No README.md file found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ui-alchemy/alchemy-forms.git"
+  }
+}
