@@ -1,6 +1,6 @@
 {
   "name": "alchemy",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": [
     "./*.js",
     "./*.scss",
@@ -14,8 +14,8 @@
     "angular-mocks": "~1.0.5",
     "angular-scenario": "~1.0.5"
   },
-  "gitHead": "3c626536ac0b23e44446aeb5d3eb6e3290418d97",
-  "_id": "alchemy@0.0.4",
+  "gitHead": "dd973fe035106ec2312e8b13b2cd478bfe909d72",
+  "_id": "alchemy@0.0.5",
   "readme": "ERROR: No README.md file found!",
   "description": "ERROR: No README.md file found!",
   "repository": {

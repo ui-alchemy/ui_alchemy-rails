@@ -2,7 +2,7 @@ module UIAlchemy
   class Engine < ::Rails::Engine
     isolate_namespace UIAlchemy
 
-    initializer "ui_alchemy.assets.paths" do |app|
+    initializer "ui_alchemy.assets.paths", :group => :all do |app|
       app.config.assets.paths << "#{self.root}/vendor/assets"
       app.config.assets.paths << "#{self.root}/vendor/assets/ui_alchemy"
     end

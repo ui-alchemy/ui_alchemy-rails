@@ -2,28 +2,47 @@ angular.module("alch-templates").run(function($templateCache) {
   $templateCache.put("component/templates/table.html",
     "<thead>" +
     "  <tr>" +
-    "    <th class=\"table-selection-row\" colspan=\"{{ table.data.columns.length +1 }}\" ng-show=\"table.more_results()\">" +
-    "      All {{ table.offset }} results shown are currently selected.  " +
-    "      <a href=\"\">Select all {{ table.total }} results.</a>" +
+    "    <th class=\"table-selection-row\" " +
+    "        colspan=\"{{ table.data.columns.length +1 }}\" " +
+    "        ng-show=\"table.more_results()\">" +
+    "" +
+    "        All {{ table.offset }} results shown are currently selected.  " +
+    "        <a href=\"\">Select all {{ table.total }} results.</a>" +
     "    </th>" +
     "  </tr>" +
     "  <tr>" +
     "    <th ng-show=\"rowSelect\">" +
-    "      <input class=\"select_all\" type=\"checkbox\" name=\"select_all\" ng-model=\"table.all_selected\" ng-change=\"table.select_all()\">" +
+    "      <input class=\"select_all\" " +
+    "             type=\"checkbox\" " +
+    "             name=\"select_all\" " +
+    "             ng-model=\"table.all_selected\" " +
+    "             ng-change=\"table.select_all()\">" +
     "    </th>" +
-    "    <th ng-click=\"table.sort(header)\" ng-show=\"header.show\" ng-repeat=\"header in table.data.columns\" ng-class=\"{ 'active-column' : header.active }\">" +
-    "      {{ header.display }}" +
+    "    <th ng-click=\"table.sort(header)\" " +
+    "        ng-show=\"header.show\" " +
+    "        ng-repeat=\"header in table.data.columns\" " +
+    "        ng-class=\"{ 'active-column' : header.active }\">" +
+    "" +
+    "        {{ header.display }}" +
     "    </th>" +
     "  </tr>" +
     "</thead>" +
-    "" +
-    "<tbody>" +
-    "  <tr ng-class=\"{active : row.selected }\" ng-repeat=\"row in table.data.rows\" ng-show=\"show_row(row)\">" +
+    "<tbody infinite-scroll=\"table.next_page()\" " +
+    "       infinite-scroll-disable=\"table.loading_more\" " +
+    "       infinite-scroll-distance=\"table.scroll_distance\">" +
+    "  <tr ng-class=\"{active : row.selected }\" " +
+    "      ng-repeat=\"row in table.data.rows\" " +
+    "      ng-show=\"show_row(row)\">" +
     "    <td ng-show=\"rowSelect\">" +
-    "      <input ng-model=\"row.selected\" type=\"checkbox\" name=\"{{ row.id }}\" value=\"{{ row.id }}\" ng-change=\"adjust_num_selected(row.selected)\">" +
+    "      <input ng-model=\"row.selected\" " +
+    "             type=\"checkbox\" name=\"{{ row.id }}\" " +
+    "             value=\"{{ row.id }}\" " +
+    "             ng-change=\"adjust_num_selected(row.selected)\">" +
     "    </td>" +
-    "    <td ng-show=\"show_cell(cell)\" ng-repeat=\"cell in row.cells\">" +
-    "      {{ cell.display }}" +
+    "    <td ng-show=\"show_cell(cell)\" " +
+    "        ng-repeat=\"cell in row.cells\">" +
+    "      " +
+    "        {{ cell.display }}" +
     "    </td>" +
     "  </tr>" +
     "</tbody>" +
@@ -34,7 +53,12 @@ angular.module("alch-templates").run(function($templateCache) {
   $templateCache.put("component/templates/tool_bar.html",
     "<div ng-model=\"table.data.columns\" class=\"form table-toolbar\">" +
     "  <div class=\"fl\">" +
-    "    <input type=\"text\" class=\"input\" placeholder=\"Search...\" ng-model=\"table.search_string\" on-enter=\"table.search(table.search_string)\">" +
+    "    <input type=\"text\" " +
+    "           class=\"input\" " +
+    "           placeholder=\"Search...\" " +
+    "           ng-model=\"table.search_string\" " +
+    "           on-enter=\"table.search(table.search_string)\"" +
+    "    />" +
     "    Showing {{ table.start }}-{{ table.offset }} of {{ table.total }} {{ table.model }}" +
     "  </div>" +
     "  <div class=\"fr deselect\" ng-show=\"table.num_selected\">" +
@@ -57,6 +81,9 @@ angular.module('alchemy').directive('alchTable', function(){
         templateUrl: 'component/templates/table.html',
 
         controller: function($scope){
+            if (!$scope.table.scroll_distance) {
+                $scope.table.scroll_distance = 0;
+            }
 
             $scope.show_cell = function(cell){
                 var to_show;
@@ -115,20 +142,6 @@ angular.module('alchemy').directive('alchTableToolbar', function(){
             $scope.deselect_all = function(){
                 $scope.table.select_all(false);
             };
-        }
-    };
-});
-
-angular.module('alchemy').directive('onEnter', function() {
-    return {
-        scope: true,
-
-        link: function(scope, element, attrs) {
-            element.bind('keydown keypress', function(event) {
-                if(event.which === 13) {
-                    scope.$apply(attrs.onEnter);
-                }
-            });
         }
     };
 });
