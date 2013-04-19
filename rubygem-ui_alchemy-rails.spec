@@ -1,3 +1,6 @@
+%{?scl:%scl_package rubygem-%{gem_name}}
+%{!?scl:%global pkg_name %{name}}
+
 # vim: sw=4:ts=4:et
 #
 # Copyright 2011 Red Hat, Inc.
@@ -25,11 +28,7 @@
 
 %global gem_name ui_alchemy-rails
 
-%if 0%{?rhel} == 6 || 0%{?fedora} < 17
-%define rubyabi 1.8
-%else
 %define rubyabi 1.9.1
-%endif
 
 %if 0%{?rhel} == 6
 %global gem_dir %(ruby -rubygems -e 'puts Gem::dir' 2>/dev/null)
@@ -39,42 +38,43 @@
 %global gem_instdir %{gem_dir}/gems/%{gem_name}-%{version}
 %endif
 
-%if 0%{?fedora}
-BuildRequires:  rubygems-devel
-%endif
-
-Name:          rubygem-%{gem_name}
+Name:          %{?scl_prefix}rubygem-%{gem_name}
 Summary:       Mixing up the best that web technologies have to offer.
 Group:         Applications/System
 License:       MIT
 Version:       1.0.7
 Release:       1%{?dist}
 URL:           http://www.ui-alchemy.org
-Source0:       %{name}-%{version}.tar.gz
-BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-Requires:       ruby(abi) = %{rubyabi}
-Requires:       ruby(rubygems) 
-Requires:       rubygem(compass)
-BuildRequires:  ruby(abi) = %{rubyabi}
-BuildRequires:  ruby(rubygems) 
+Source0:       %{pkg_name}-%{version}.tar.gz
+BuildRoot:     %{_tmppath}/%{pkg_name}-%{version}-%{release}-root-%(%{__id_u} -n)
+Requires:       %{?scl_prefix}ruby(abi) = %{rubyabi}
+Requires:       %{?scl_prefix}ruby(rubygems) 
+Requires:       %{?scl_prefix}rubygem(compass)
+BuildRequires:  %{?scl_prefix}ruby(abi) = %{rubyabi}
+BuildRequires:  %{?scl_prefix}ruby(rubygems) 
+BuildRequires:  %{?scl_prefix}rubygems-devel
 BuildArch:      noarch
-Provides:       rubygem(%{gem_name}) = %{version}
+Provides:       %{?scl_prefix}rubygem(%{gem_name}) = %{version}
 
 %description
 A Rails engine providing a set of web assets.
 
 %prep
-%setup -q
+%setup -n %{pkg_name}-%{version} -q
 
 %build
+%{?scl:scl enable %{scl} - << \EOF}
 LANG=en_US.utf-8 gem build %{gem_name}.gemspec
+%{?scl:EOF}
 
 %install
+%{?scl:scl enable %{scl} "}
 gem install \
      --local \
      --install-dir %{buildroot}%{gem_dir} \
      --force \
      %{gem_name}-%{version}.gem
+%{?scl:"}
 
 mkdir -p %{buildroot}%{gem_dir}
 
@@ -94,7 +94,7 @@ rm -rf %{buildroot}%{gem_instdir}/.yardoc
 
 %package doc
 BuildArch:  noarch
-Requires:   %{name} = %{version}-%{release}
+Requires:   %{?scl_prefix}%{pkg_name} = %{version}-%{release}
 Summary:    Documentation for rubygem-%{gem_name}
 
 %description doc
