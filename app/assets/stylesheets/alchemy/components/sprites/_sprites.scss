@@ -3,7 +3,7 @@
 
 
 /* this needs to work for Alchemy */
-$spritePath: image-url("alchemy/icons/action-icons.png");
+$spritePath: image-url("alchemy/icons/action-icons.png") !default;
 
 [class*="_icon_grey"],
 [class*="_icon_black"],

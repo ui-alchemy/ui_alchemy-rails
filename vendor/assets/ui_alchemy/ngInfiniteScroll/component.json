@@ -1,0 +1,14 @@
+{
+  "name": "ngInfiniteScroll",
+  "version": "1.0.0",
+  "main": "./ng-infinite-scroll.js",
+  "dependencies": {},
+  "gitHead": "4afe47961d5aa5de625c8757c69215fdf78c39dd",
+  "_id": "ngInfiniteScroll@1.0.0",
+  "readme": "ERROR: No README.md file found!",
+  "description": "ERROR: No README.md file found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/BinaryMuse/ngInfiniteScroll-bower.git"
+  }
+}
