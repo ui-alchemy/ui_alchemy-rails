@@ -96,6 +96,9 @@ This package contains documentation for rubygem-%{gem_name}
 %doc %{gem_docdir}
 
 %changelog
+* Fri Apr 19 2013 Eric D Helms <ehelms@redhat.com> 1.0.7-3
+- new package built with tito
+
 * Wed Apr 10 2013 Marek Hulan <ares@igloonet.cz> 1.0.4-3
 - Fixed SCL prefixes
 
