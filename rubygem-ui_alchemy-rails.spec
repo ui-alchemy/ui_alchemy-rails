@@ -105,6 +105,9 @@ This package contains documentation for rubygem-%{gem_name}
 
 %changelog
 * Fri Apr 19 2013 Eric D Helms <ehelms@redhat.com> 1.0.7-1
+- new package built with tito
+
+* Fri Apr 19 2013 Eric D Helms <ehelms@redhat.com> 1.0.7-1
 - Version bump to 1.0.7. (ehelms@redhat.com)
 - Initializer - Fix for the paths initializer that can be ignored by projects
   that set config.assets.initialize_on_precompile = false (ehelms@redhat.com)
