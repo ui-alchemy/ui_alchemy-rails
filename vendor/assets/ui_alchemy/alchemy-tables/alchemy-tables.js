@@ -1,4 +1,4 @@
-angular.module("alch-templates").run(function($templateCache) {
+angular.module("alch-templates").run(["$templateCache", function($templateCache) {
   $templateCache.put("component/templates/table.html",
     "<thead>" +
     "  <tr>" +
@@ -47,9 +47,9 @@ angular.module("alch-templates").run(function($templateCache) {
     "  </tr>" +
     "</tbody>" +
     "");
-});
+}]);
 
-angular.module("alch-templates").run(function($templateCache) {
+angular.module("alch-templates").run(["$templateCache", function($templateCache) {
   $templateCache.put("component/templates/tool_bar.html",
     "<div ng-model=\"table.data.columns\" class=\"form table-toolbar\">" +
     "  <div class=\"fl\">" +
@@ -67,7 +67,7 @@ angular.module("alch-templates").run(function($templateCache) {
     "  </div>" +
     "</div>" +
     "");
-});
+}]);
 
 'use strict';
 
@@ -80,7 +80,7 @@ angular.module('alchemy').directive('alchTable', function(){
         },
         templateUrl: 'component/templates/table.html',
 
-        controller: function($scope){
+        controller: ['$scope', function($scope){
             if (!$scope.table.scroll_distance) {
                 $scope.table.scroll_distance = 0;
             }
@@ -125,7 +125,7 @@ angular.module('alchemy').directive('alchTable', function(){
                 more = more && $scope.table.all_selected;
                 return more;
             };
-        }
+        }]
     };
 });
 
@@ -138,10 +138,10 @@ angular.module('alchemy').directive('alchTableToolbar', function(){
         },
         templateUrl: 'component/templates/tool_bar.html',
 
-        controller: function($scope){
+        controller: ['$scope', function($scope){
             $scope.deselect_all = function(){
                 $scope.table.select_all(false);
             };
-        }
+        }]
     };
 });
