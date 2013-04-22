@@ -104,6 +104,25 @@ This package contains documentation for rubygem-%{gem_name}
 %doc %{gem_docdir}
 
 %changelog
+* Mon Apr 22 2013 Eric D Helms <ehelms@redhat.com> 1.0.8-1
+- Version bump 1.0.8. (ehelms@redhat.com)
+- Header and Tables - Updates to both components to address issues when
+  attempting to minify. (ericdhelms@gmail.com)
+- Version bump to 1.0.7. (ehelms@redhat.com)
+- Initializer - Fix for the paths initializer that can be ignored by projects
+  that set config.assets.initialize_on_precompile = false (ehelms@redhat.com)
+- Removing unneeded CSS file that doesn't exist from Alchemy repo.
+  (ehelms@redhat.com)
+- Updating font urls to be relative to engine namespace. (ehelms@redhat.com)
+- Updating Alchemy Tables to include infinite scroll support for loading more
+  rows. (ehelms@redhat.com)
+- Version bump. (ehelms@redhat.com)
+- Adding alchemy-header as a carried library. (ehelms@redhat.com)
+- Version bump. (ehelms@redhat.com)
+- Updates to move references to the alchemy component. (ehelms@redhat.com)
+- Removing forms and partials in favor of their components. (ehelms@redhat.com)
+- Adding component repositories via bower. (ehelms@redhat.com)
+
 * Fri Mar 29 2013 Eric D Helms <ehelms@redhat.com> 1.0.4-1
 - new package built with tito
 
