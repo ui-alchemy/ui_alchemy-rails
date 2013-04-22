@@ -23,58 +23,50 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+%{?scl:%scl_package rubygem-%{gem_name}}
+%{!?scl:%global pkg_name %{name}}
+
 %global gem_name ui_alchemy-rails
+%global rubyabi 1.9.1
 
-%if 0%{?rhel} == 6 || 0%{?fedora} < 17
-%define rubyabi 1.8
-%else
-%define rubyabi 1.9.1
-%endif
 
-%if 0%{?rhel} == 6
-%global gem_dir %(ruby -rubygems -e 'puts Gem::dir' 2>/dev/null)
-%global gem_docdir %{gem_dir}/doc/%{gem_name}-%{version}
-%global gem_cache %{gem_dir}/cache/%{gem_name}-%{version}.gem
-%global gem_spec %{gem_dir}/specifications/%{gem_name}-%{version}.gemspec
-%global gem_instdir %{gem_dir}/gems/%{gem_name}-%{version}
-%endif
-
-%if 0%{?fedora}
-BuildRequires:  rubygems-devel
-%endif
-
-Name:          rubygem-%{gem_name}
+Name:          %{?scl_prefix}rubygem-%{gem_name}
 Summary:       Mixing up the best that web technologies have to offer.
 Group:         Applications/System
 License:       MIT
 Version:       1.0.8
 Release:       1%{?dist}
 URL:           http://www.ui-alchemy.org
-Source0:       %{name}-%{version}.tar.gz
-BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-Requires:       ruby(abi) = %{rubyabi}
-Requires:       ruby(rubygems) 
-Requires:       rubygem(compass)
-BuildRequires:  ruby(abi) = %{rubyabi}
-BuildRequires:  ruby(rubygems) 
+Source0:       %{?scl_prefix}%{pkg_name}-%{version}.tar.gz
+BuildRoot:     %{_tmppath}/%{pkg_name}-%{version}-%{release}-root-%(%{__id_u} -n)
+Requires:       %{?scl_prefix}ruby(abi) = %{rubyabi}
+Requires:       %{?scl_prefix}ruby(rubygems) 
+Requires:       %{?scl_prefix}rubygem(compass)
+BuildRequires:  %{?scl_prefix}ruby(abi) = %{rubyabi}
+BuildRequires:  %{?scl_prefix}ruby(rubygems) 
+BuildRequires:  %{?scl_prefix}rubygems-devel
 BuildArch:      noarch
-Provides:       rubygem(%{gem_name}) = %{version}
+Provides:       %{?scl_prefix}rubygem(%{gem_name}) = %{version}
 
 %description
 A Rails engine providing a set of web assets.
 
 %prep
-%setup -q
+%setup -n %{?scl_prefix}%{pkg_name}-%{version} -q
 
 %build
+%{?scl:scl enable %{scl} - << \EOF}
 LANG=en_US.utf-8 gem build %{gem_name}.gemspec
+%{?scl:EOF}
 
 %install
+%{?scl:scl enable %{scl} "}
 gem install \
      --local \
      --install-dir %{buildroot}%{gem_dir} \
      --force \
      %{gem_name}-%{version}.gem
+%{?scl:"}
 
 mkdir -p %{buildroot}%{gem_dir}
 
@@ -94,7 +86,7 @@ rm -rf %{buildroot}%{gem_instdir}/.yardoc
 
 %package doc
 BuildArch:  noarch
-Requires:   %{name} = %{version}-%{release}
+Requires:   %{?scl_prefix}%{pkg_name} = %{version}-%{release}
 Summary:    Documentation for rubygem-%{gem_name}
 
 %description doc
@@ -105,23 +97,34 @@ This package contains documentation for rubygem-%{gem_name}
 
 %changelog
 * Mon Apr 22 2013 Eric D Helms <ehelms@redhat.com> 1.0.8-1
-- Version bump 1.0.8. (ehelms@redhat.com)
-- Header and Tables - Updates to both components to address issues when
-  attempting to minify. (ericdhelms@gmail.com)
-- Version bump to 1.0.7. (ehelms@redhat.com)
-- Initializer - Fix for the paths initializer that can be ignored by projects
-  that set config.assets.initialize_on_precompile = false (ehelms@redhat.com)
-- Removing unneeded CSS file that doesn't exist from Alchemy repo.
-  (ehelms@redhat.com)
-- Updating font urls to be relative to engine namespace. (ehelms@redhat.com)
-- Updating Alchemy Tables to include infinite scroll support for loading more
-  rows. (ehelms@redhat.com)
-- Version bump. (ehelms@redhat.com)
-- Adding alchemy-header as a carried library. (ehelms@redhat.com)
-- Version bump. (ehelms@redhat.com)
-- Updates to move references to the alchemy component. (ehelms@redhat.com)
-- Removing forms and partials in favor of their components. (ehelms@redhat.com)
-- Adding component repositories via bower. (ehelms@redhat.com)
+- new package built with tito
+
+* Fri Apr 19 2013 Eric D Helms <ehelms@redhat.com> 1.0.7-3
+- new package built with tito
+
+* Wed Apr 10 2013 Marek Hulan <ares@igloonet.cz> 1.0.4-3
+- Fixed SCL prefixes
+
+* Wed Apr 10 2013 Marek Hulan <ares@igloonet.cz> 1.0.4-3
+- Fixed build root
+
+* Tue Apr 09 2013 Marek Hulan <ares@igloonet.cz> 1.0.4-2
+- fix name of tarball
+
+* Tue Apr 09 2013 Marek Hulan <ares@igloonet.cz> 1.0.4-1
+- SCL package built with tito
+
+* Tue Apr 09 2013 Marek Hulan <ares@igloonet.cz> 1.0.4-1
+- new package built with tito
+
+* Tue Apr 09 2013 Marek Hulan <ares@igloonet.cz> 1.0.4-2
+- SCL package built with tito
+
+* Tue Apr 09 2013 Marek Hulan <ares@igloonet.cz> 1.0.4-2
+- SCL package built with tito
+
+* Tue Apr 09 2013 Marek Hulan <ares@igloonet.cz> 1.0.4-2
+- SCL version of package built with tito
 
 * Fri Mar 29 2013 Eric D Helms <ehelms@redhat.com> 1.0.4-1
 - new package built with tito
