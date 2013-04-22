@@ -47,7 +47,7 @@ Name:          rubygem-%{gem_name}
 Summary:       Mixing up the best that web technologies have to offer.
 Group:         Applications/System
 License:       MIT
-Version:       1.0.4
+Version:       1.0.8
 Release:       1%{?dist}
 URL:           http://www.ui-alchemy.org
 Source0:       %{name}-%{version}.tar.gz
