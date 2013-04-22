@@ -99,6 +99,9 @@ This package contains documentation for rubygem-%{gem_name}
 * Mon Apr 22 2013 Eric D Helms <ehelms@redhat.com> 1.0.8-1
 - new package built with tito
 
+* Mon Apr 22 2013 Eric D Helms <ehelms@redhat.com> 1.0.8-1
+- new package built with tito
+
 * Fri Apr 19 2013 Eric D Helms <ehelms@redhat.com> 1.0.7-3
 - new package built with tito
 
