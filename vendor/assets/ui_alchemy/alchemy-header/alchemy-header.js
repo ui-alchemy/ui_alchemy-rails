@@ -1,4 +1,4 @@
-angular.module("alch-templates").run(function($templateCache) {
+angular.module("alch-templates").run(["$templateCache", function($templateCache) {
   $templateCache.put("component/templates/dropdown.html",
     "<ul class=\"dropdown\" " +
     "    ng-class=\"{ 'dropdown-right' : isRight(dropdown.direction), 'dropdown-active' : dropdown.show }\">" +
@@ -14,9 +14,9 @@ angular.module("alch-templates").run(function($templateCache) {
     "  </li>" +
     "</ul>" +
     "");
-});
+}]);
 
-angular.module("alch-templates").run(function($templateCache) {
+angular.module("alch-templates").run(["$templateCache", function($templateCache) {
   $templateCache.put("component/templates/flyout.html",
     "<ul class=\"flyout\">" +
     "  <li ng-repeat=\"item in flyout\"" +
@@ -28,9 +28,9 @@ angular.module("alch-templates").run(function($templateCache) {
     "  </li>" +
     "</ul>" +
     "");
-});
+}]);
 
-angular.module("alch-templates").run(function($templateCache) {
+angular.module("alch-templates").run(["$templateCache", function($templateCache) {
   $templateCache.put("component/templates/menu.html",
     "<nav ng-class=\"menu.location\">" +
     "  <ul class=\"menu-container\">" +
@@ -51,11 +51,11 @@ angular.module("alch-templates").run(function($templateCache) {
     "  </ul>" +
     "</nav>" +
     "");
-});
+}]);
 
 'use strict';
 
-angular.module('alchemy').directive('alchMenu', function($window){
+angular.module('alchemy').directive('alchMenu', ['$window', function($window){
     return {
         restrict: 'EA',
         transclude: true,
@@ -66,7 +66,7 @@ angular.module('alchemy').directive('alchMenu', function($window){
         },
         templateUrl: 'component/templates/menu.html',
 
-        controller: function($scope) {
+        controller: ['$scope', function($scope) {
             $scope.dropdown = {};
 
             $scope.handle_hover = function(item, mousein){
@@ -84,7 +84,7 @@ angular.module('alchemy').directive('alchMenu', function($window){
                 }
             };
 
-        },
+        }],
 
         link: function(scope, element, attrs){
             if( attrs.compact !== undefined ){
@@ -101,7 +101,7 @@ angular.module('alchemy').directive('alchMenu', function($window){
             }
         }
     };
-});
+}]);
 
 angular.module('alchemy').directive('alchDropdown', function(){
     return {
@@ -113,7 +113,7 @@ angular.module('alchemy').directive('alchDropdown', function(){
         },
         templateUrl: 'component/templates/dropdown.html',
 
-        controller: function($scope){
+        controller: ['$scope', function($scope){
             $scope.set_hover = function(item, mousein){
                 if( mousein ){
                     item.active = true;
@@ -133,7 +133,7 @@ angular.module('alchemy').directive('alchDropdown', function(){
             $scope.isRight = function(direction){
                 return direction === 'right';
             };
-        }
+        }]
     };
 });
 
@@ -147,7 +147,7 @@ angular.module('alchemy').directive('alchFlyout', function(){
         },
         templateUrl: 'component/templates/flyout.html',
 
-        controller: function($scope){
+        controller: ['$scope', function($scope){
             $scope.set_hover = function(item, mousein){
                 if( mousein ){
                     item.active = true;
@@ -155,6 +155,6 @@ angular.module('alchemy').directive('alchFlyout', function(){
                     item.active = false;
                 }
             };
-        }
+        }]
     };
 });
