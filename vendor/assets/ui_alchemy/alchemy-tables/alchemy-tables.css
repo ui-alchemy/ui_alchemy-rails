@@ -66,29 +66,30 @@
   background: #eeeeee;
   overflow: auto;
   padding: 10px 12px 4px 12px;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: 1px solid #CCC;
   border-radius: 5px 5px 0 0;
 }
 
-/* line 38, ../../component/styles/tables.scss */
+/* line 39, ../../component/styles/tables.scss */
 .deselect {
   line-height: 2 !important;
 }
 
-/* line 44, ../../component/styles/tables.scss */
+/* line 45, ../../component/styles/tables.scss */
 .stable tr:last-child {
   border-collapse: separate !important;
   border-bottom: 1px solid #CCC;
 }
-/* line 48, ../../component/styles/tables.scss */
+/* line 49, ../../component/styles/tables.scss */
 .stable tr:last-child td {
   border-collapse: separate !important;
   border-bottom: 1px solid #CCC;
 }
 
 @media (min-width: 480px) {
-  /* line 56, ../../component/styles/tables.scss */
+  /* line 57, ../../component/styles/tables.scss */
   .stable {
     -webkit-transform: translate3d(0, 0, 0);
     color: #555;
@@ -101,7 +102,7 @@
     line-height: 1.333em;
     transition: all 1s ease;
   }
-  /* line 66, ../../component/styles/tables.scss */
+  /* line 67, ../../component/styles/tables.scss */
   .stable td, .stable th {
     text-align: left;
     border-bottom: 1px solid #eee;
@@ -109,35 +110,35 @@
     padding: .66666em;
     transition: padding .1s ease;
   }
-  /* line 74, ../../component/styles/tables.scss */
+  /* line 75, ../../component/styles/tables.scss */
   .stable th {
     color: #555;
     color: rgba(0, 0, 0, 0.75);
     transition: all .5s ease;
   }
 }
-/* line 82, ../../component/styles/tables.scss */
+/* line 83, ../../component/styles/tables.scss */
 .stable.focus th {
   color: #555;
   color: rgba(0, 0, 0, 0.75);
   transition: all .5s ease;
 }
-/* line 86, ../../component/styles/tables.scss */
+/* line 87, ../../component/styles/tables.scss */
 .stable.focus tr:hover td,
 .stable.focus tr.focus td {
   background-color: #139edd;
   color: #FFF;
 }
-/* line 90, ../../component/styles/tables.scss */
+/* line 91, ../../component/styles/tables.scss */
 .stable.focus.focus:hover {
   transition: all 1s ease 2s;
   color: rgba(90, 90, 90, 0.5);
 }
-/* line 96, ../../component/styles/tables.scss */
+/* line 97, ../../component/styles/tables.scss */
 .stable.focus.focus:hover td, .stable.focus.focus:hover th {
   transition: none;
 }
-/* line 98, ../../component/styles/tables.scss */
+/* line 99, ../../component/styles/tables.scss */
 .stable.focus.focus:hover th {
   transition: all .5s ease .5s;
   color: #555;
@@ -145,7 +146,7 @@
 }
 
 @media (max-width: 512px) {
-  /* line 111, ../../component/styles/tables.scss */
+  /* line 112, ../../component/styles/tables.scss */
   .stable,
   .stable tr,
   .stable td,
@@ -156,11 +157,11 @@
     padding: .333em;
   }
 
-  /* line 117, ../../component/styles/tables.scss */
+  /* line 118, ../../component/styles/tables.scss */
   .stable th {
     display: none;
   }
-  /* line 118, ../../component/styles/tables.scss */
+  /* line 119, ../../component/styles/tables.scss */
   .stable tr th:first-child, .stable td:first-child {
     font-size: 2em;
     padding: .3333em;
@@ -168,14 +169,14 @@
     width: 100%;
   }
 }
-/* line 129, ../../component/styles/tables.scss */
+/* line 130, ../../component/styles/tables.scss */
 .stable.condensed td, .stable.condensed th {
   padding: .3333em;
 }
 
 /*manually classed as condensed*/
 @media (max-height: 640px) {
-  /* line 132, ../../component/styles/tables.scss */
+  /* line 133, ../../component/styles/tables.scss */
   .stable td, .stable th {
     padding-top: .3333em;
     padding-bottom: .3333em;
@@ -183,39 +184,39 @@
 }
 @media (max-width: 740px) {
   /*when things are horizontally narrow we add in divider lines so numerical fields are still seen as separate*/
-  /* line 137, ../../component/styles/tables.scss */
+  /* line 138, ../../component/styles/tables.scss */
   .stable td, .stable th {
     padding-left: .3333em;
     padding-right: .3333em;
     border-left: 1px solid rgba(0, 0, 0, 0.05) !important;
   }
-  /* line 138, ../../component/styles/tables.scss */
+  /* line 139, ../../component/styles/tables.scss */
   .stable td:first-child, .stable th:first-child {
     border-left: none !important;
   }
 }
-/* line 144, ../../component/styles/tables.scss */
+/* line 145, ../../component/styles/tables.scss */
 .stable.stripe-row tr:nth-child(2n+2), .stable.stripe-row-even tr:nth-child(2n+2) {
   background-color: rgba(194, 200, 202, 0.15);
 }
-/* line 148, ../../component/styles/tables.scss */
+/* line 149, ../../component/styles/tables.scss */
 .stable.stripe-row-odd tr:nth-child(2n+1) {
   background-color: rgba(194, 200, 202, 0.15);
 }
-/* line 158, ../../component/styles/tables.scss */
+/* line 159, ../../component/styles/tables.scss */
 .stable.stripe-col tr th:nth-child(even),
 .stable.stripe-col tr td:nth-child(even), .stable.stripe-col-even tr th:nth-child(even),
 .stable.stripe-col-even tr td:nth-child(even) {
   background-color: rgba(194, 200, 202, 0.15);
   border-color: rgba(194, 200, 202, 0.15);
 }
-/* line 165, ../../component/styles/tables.scss */
+/* line 166, ../../component/styles/tables.scss */
 .stable.stripe-col-odd tr th:nth-child(odd),
 .stable.stripe-col-odd tr td:nth-child(odd) {
   background-color: rgba(194, 200, 202, 0.15);
   border-color: rgba(194, 200, 202, 0.15);
 }
-/* line 173, ../../component/styles/tables.scss */
+/* line 174, ../../component/styles/tables.scss */
 .stable.highlight-col1 tr th:nth-child(1),
 .stable.highlight-col1 tr td:nth-child(1) {
   background-color: rgba(255, 255, 255, 0.5);
@@ -224,7 +225,7 @@
   z-index: 2;
   position: relative;
 }
-/* line 181, ../../component/styles/tables.scss */
+/* line 182, ../../component/styles/tables.scss */
 .stable.highlight-col2 tr th:nth-child(2),
 .stable.highlight-col2 tr td:nth-child(2) {
   background-color: rgba(255, 255, 255, 0.5);
@@ -233,7 +234,7 @@
   z-index: 2;
   position: relative;
 }
-/* line 189, ../../component/styles/tables.scss */
+/* line 190, ../../component/styles/tables.scss */
 .stable.highlight-col3 tr th:nth-child(3),
 .stable.highlight-col3 tr td:nth-child(3) {
   background-color: rgba(255, 255, 255, 0.5);
@@ -242,7 +243,7 @@
   z-index: 2;
   position: relative;
 }
-/* line 197, ../../component/styles/tables.scss */
+/* line 198, ../../component/styles/tables.scss */
 .stable.highlight-col4 tr th:nth-child(4),
 .stable.highlight-col4 tr td:nth-child(4) {
   background-color: rgba(255, 255, 255, 0.5);
@@ -251,7 +252,7 @@
   z-index: 2;
   position: relative;
 }
-/* line 205, ../../component/styles/tables.scss */
+/* line 206, ../../component/styles/tables.scss */
 .stable.highlight-col5 tr th:nth-child(5),
 .stable.highlight-col5 tr td:nth-child(5) {
   background-color: rgba(255, 255, 255, 0.5);
@@ -260,7 +261,7 @@
   z-index: 2;
   position: relative;
 }
-/* line 214, ../../component/styles/tables.scss */
+/* line 215, ../../component/styles/tables.scss */
 .stable.highlight-col6 tr th:nth-child(6),
 .stable.highlight-col6 tr td:nth-child(6) {
   background-color: rgba(255, 255, 255, 0.5);

@@ -1,6 +1,6 @@
 {
   "name": "alchemy-tables",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "main": [
     "./*.js",
     "./*.scss",
@@ -17,8 +17,8 @@
     "angular-mocks": "~1.0.5",
     "angular-scenario": "~1.0.5"
   },
-  "gitHead": "2c9259003f84507e69367bfccfa3e1924e66ab87",
-  "_id": "alchemy-tables@0.0.16",
+  "gitHead": "9ff5f1ae6ad0c6bfd67cb5388d7709dbdbadb7a7",
+  "_id": "alchemy-tables@0.0.17",
   "readme": "ERROR: No README.md file found!",
   "description": "ERROR: No README.md file found!",
   "repository": {
