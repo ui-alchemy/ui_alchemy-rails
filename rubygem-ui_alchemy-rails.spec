@@ -47,7 +47,7 @@ Name:          rubygem-%{gem_name}
 Summary:       Mixing up the best that web technologies have to offer.
 Group:         Applications/System
 License:       MIT
-Version:       1.0.8
+Version:       1.0.9
 Release:       1%{?dist}
 URL:           http://www.ui-alchemy.org
 Source0:       %{name}-%{version}.tar.gz
@@ -104,6 +104,11 @@ This package contains documentation for rubygem-%{gem_name}
 %doc %{gem_docdir}
 
 %changelog
+* Mon May 06 2013 Eric D Helms <ehelms@redhat.com> 1.0.9-1
+- Version bump. (ehelms@redhat.com)
+- Updating alchemy-tables and alchemy-header. (ehelms@redhat.com)
+- Adding angular-resource to alchemy rails. (walden@redhat.com)
+
 * Mon Apr 22 2013 Eric D Helms <ehelms@redhat.com> 1.0.8-1
 - Version bump 1.0.8. (ehelms@redhat.com)
 - Header and Tables - Updates to both components to address issues when
