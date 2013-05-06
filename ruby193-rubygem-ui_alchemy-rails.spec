@@ -34,7 +34,7 @@ Name:          %{?scl_prefix}rubygem-%{gem_name}
 Summary:       Mixing up the best that web technologies have to offer.
 Group:         Applications/System
 License:       MIT
-Version:       1.0.8
+Version:       1.0.9
 Release:       1%{?dist}
 URL:           http://www.ui-alchemy.org
 Source0:       %{?scl_prefix}%{pkg_name}-%{version}.tar.gz
@@ -96,6 +96,9 @@ This package contains documentation for rubygem-%{gem_name}
 %doc %{gem_docdir}
 
 %changelog
+* Mon May 06 2013 Eric D Helms <ehelms@redhat.com> 1.0.9-1
+- new package built with tito
+
 * Wed Apr 10 2013 Marek Hulan <ares@igloonet.cz> 1.0.4-3
 - Fixed SCL prefixes
 
