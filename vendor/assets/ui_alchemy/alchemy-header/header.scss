@@ -1,10 +1,13 @@
-$nav-header_background:           orange !default;
+$nav-header_background:           #FFA500 !default;
 $logo-header_background:          darken($nav-header_background, 10%) !default;
 $menu-item_hover:                 darken($nav-header_background, 10%) !default;
 $link_color:                      #000 !default;
 $link-hover_color:                lighten($link_color, 90%) !default;
-$link-border_color:               lighten(orange, 30%) !default;
+$link-border_color:               lighten($nav-header_background, 30%) !default;
 $dropdown-link-hover_background:  #000 !default;
+$nav-header_top_border:           lighten($nav-header_background, 10%) !default;
+$menu-item_hover_background:      darken($logo-header_background, 10%) !default;
+$menu-item_active_background:     darken($logo-header_background, 10%) !default;
 
 .left { float: left; }
 .right { float: right; }
@@ -27,30 +30,29 @@ $dropdown-link-hover_background:  #000 !default;
     .menu-item {
       line-height: $logo-header_line_height;
 
-      .menu-item-link {  
-        white-space: nowrap; 
+      .menu-item-link {
+        white-space: nowrap;
         text-overflow: ellipsis;
         @include transition( all .15s ease-in);
         text-align: center;
-        text-transform: capitalize; 
-        font-family: overpass, sans-serif, sans; 
+        font-family: overpass, sans-serif, sans;
         text-decoration: none;
-        margin: 0 auto; 
+        margin: 0 auto;
 
-        &:hover { 
+        &:hover {
           @include transition( all 0.3s ease-in-out);
 
           color: $link-hover_color;
-          background: darken($logo-header_background, 10%);
+          background: $menu-item_hover_background;
         }
 
         &.active-item {
           color: $link-hover_color;
-          background: darken($logo-header_background, 10%);
-        } 
+          background: $menu-item_active_background;
+        }
       }
     }
-  } 
+  }
 
   .dropdown-active {
     box-shadow: none;
@@ -60,7 +62,7 @@ $dropdown-link-hover_background:  #000 !default;
 .nav-header {
   min-height: 40px;
   background: $nav-header_background;
-  border-top: 1px solid lighten($nav-header_background, 10%);
+  border-top: 1px solid $nav-header_top_border;
 
   .menu-item {
     font-family: Overpass;
@@ -69,31 +71,30 @@ $dropdown-link-hover_background:  #000 !default;
     font-size: 14px;
     position: relative;
 
-    .menu-item-link {  
+    .menu-item-link {
       @include transition( all .15s ease-in);
-      white-space: nowrap; 
+      white-space: nowrap;
       text-overflow: ellipsis;
       text-align: center;
-      text-transform: capitalize; 
-      font-family: overpass, sans-serif, sans; 
+      font-family: overpass, sans-serif, sans;
       text-decoration: none;
-      margin: 0 auto; 
+      margin: 0 auto;
       color: $link_color;
-        
-      &:hover { 
+
+      &:hover {
         @include transition( all 0.15s ease-in-out);
         border-bottom: 3px solid $link-border_color;
         color: $link-hover_color;
-        background: darken($nav-header_background, 10%);
-        box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125); 
+        background: $menu-item_hover_background;
+        box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
       }
 
       &.active-item {
-        box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125); 
+        box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
         color: $link-hover_color;
         border-bottom: 3px solid $link-border_color;
-        background: darken($nav-header_background, 10%);
-      } 
+        background: $menu-item_hover_background;
+      }
     }
   }
 }
@@ -131,18 +132,18 @@ $dropdown-link-hover_background:  #000 !default;
 }
 
 .compact{
-  position:fixed; 
+  position:fixed;
   vertical-align:middle;
-  top: 0; 
-  padding:0;  
-  margin: 0; 
-  width: 100%; 
+  top: 0;
+  padding:0;
+  margin: 0;
+  width: 100%;
   z-index: 100;
 }
 
 .right .menu-item .dropdown {
   right: -1px;
-  
+
 }
 
 .dropdown {
@@ -174,8 +175,8 @@ $dropdown-link-hover_background:  #000 !default;
     position: relative;
     display: block;
     clear: both;
-    
-    a, a:visited, a:active, a:link { 
+
+    a, a:visited, a:active, a:link {
       color: #000;
       text-decoration: none;
       display: block;
@@ -232,8 +233,8 @@ $dropdown-link-hover_background:  #000 !default;
     position: relative;
     display: block;
     clear: both;
-    
-    a, a:visited, a:active, a:link { 
+
+    a, a:visited, a:active, a:link {
       color: #000;
       text-decoration: none;
       display: block;

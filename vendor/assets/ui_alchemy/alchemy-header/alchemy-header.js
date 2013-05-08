@@ -93,10 +93,9 @@ angular.module('alchemy').directive('alchMenu', ['$window', function($window){
                 element_original_offset = $(element).offset().top;
 
                 angular.element($window).bind('scroll', function(){
-                    var element_position_top = $(element).position().top;
                     var window_scroll_top = $($window).scrollTop();
 
-                    if( window_scroll_top > element_original_offset ){
+                    if( window_scroll_top > element_original_offset + 2 ){
                         element.parent().addClass('compact');
                     } else if( window_scroll_top < element_original_offset ) {
                         element.parent().removeClass('compact');
@@ -121,7 +120,7 @@ angular.module('alchemy').directive('alchDropdown', function(){
             $scope.set_hover = function(item, mousein){
                 if( mousein ){
                     item.active = true;
-                    
+
                     if( item.type === 'flyout' ){
                         $scope.flyout = item.items;
                         $scope.flyout.show = true;

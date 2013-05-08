@@ -1,34 +1,34 @@
 /* Will be compiled down to a single stylesheet with your sass files */
-/* line 9, ../../component/styles/header.scss */
+/* line 12, ../../component/styles/header.scss */
 .left {
   float: left;
 }
 
-/* line 10, ../../component/styles/header.scss */
+/* line 13, ../../component/styles/header.scss */
 .right {
   float: right;
 }
 
-/* line 12, ../../component/styles/header.scss */
+/* line 15, ../../component/styles/header.scss */
 .logo-header {
   height: 25px;
   background-color: #cc8400;
   z-index: 100;
   line-height: 25px;
 }
-/* line 20, ../../component/styles/header.scss */
+/* line 23, ../../component/styles/header.scss */
 .logo-header .logo {
   margin-left: 30px;
 }
-/* line 24, ../../component/styles/header.scss */
+/* line 27, ../../component/styles/header.scss */
 .logo-header .menu-container {
   line-height: 25px;
 }
-/* line 27, ../../component/styles/header.scss */
+/* line 30, ../../component/styles/header.scss */
 .logo-header .menu-container .menu-item {
   line-height: 25px;
 }
-/* line 30, ../../component/styles/header.scss */
+/* line 33, ../../component/styles/header.scss */
 .logo-header .menu-container .menu-item .menu-item-link {
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -37,12 +37,11 @@
   -o-transition: all 0.15s ease-in;
   transition: all 0.15s ease-in;
   text-align: center;
-  text-transform: capitalize;
   font-family: overpass, sans-serif, sans;
   text-decoration: none;
   margin: 0 auto;
 }
-/* line 40, ../../component/styles/header.scss */
+/* line 42, ../../component/styles/header.scss */
 .logo-header .menu-container .menu-item .menu-item-link:hover {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -51,23 +50,23 @@
   color: #e6e6e6;
   background: #996300;
 }
-/* line 47, ../../component/styles/header.scss */
+/* line 49, ../../component/styles/header.scss */
 .logo-header .menu-container .menu-item .menu-item-link.active-item {
   color: #e6e6e6;
   background: #996300;
 }
-/* line 55, ../../component/styles/header.scss */
+/* line 57, ../../component/styles/header.scss */
 .logo-header .dropdown-active {
   box-shadow: none;
 }
 
-/* line 60, ../../component/styles/header.scss */
+/* line 62, ../../component/styles/header.scss */
 .nav-header {
   min-height: 40px;
   background: orange;
   border-top: 1px solid #ffb733;
 }
-/* line 65, ../../component/styles/header.scss */
+/* line 67, ../../component/styles/header.scss */
 .nav-header .menu-item {
   font-family: Overpass;
   line-height: 37px;
@@ -75,7 +74,7 @@
   font-size: 14px;
   position: relative;
 }
-/* line 72, ../../component/styles/header.scss */
+/* line 74, ../../component/styles/header.scss */
 .nav-header .menu-item .menu-item-link {
   -webkit-transition: all 0.15s ease-in;
   -moz-transition: all 0.15s ease-in;
@@ -84,13 +83,12 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   text-align: center;
-  text-transform: capitalize;
   font-family: overpass, sans-serif, sans;
   text-decoration: none;
   margin: 0 auto;
   color: black;
 }
-/* line 83, ../../component/styles/header.scss */
+/* line 84, ../../component/styles/header.scss */
 .nav-header .menu-item .menu-item-link:hover {
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
@@ -98,18 +96,18 @@
   transition: all 0.15s ease-in-out;
   border-bottom: 3px solid #ffdb99;
   color: #e6e6e6;
-  background: #cc8400;
+  background: #996300;
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 }
-/* line 91, ../../component/styles/header.scss */
+/* line 92, ../../component/styles/header.scss */
 .nav-header .menu-item .menu-item-link.active-item {
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
   color: #e6e6e6;
   border-bottom: 3px solid #ffdb99;
-  background: #cc8400;
+  background: #996300;
 }
 
-/* line 101, ../../component/styles/header.scss */
+/* line 102, ../../component/styles/header.scss */
 .menu-container {
   position: relative;
   left: 0;
@@ -119,14 +117,14 @@
   list-style: none;
   line-height: 40px;
 }
-/* line 110, ../../component/styles/header.scss */
+/* line 111, ../../component/styles/header.scss */
 .menu-container .menu-item {
   line-height: 37px;
   position: relative;
   margin: 0;
   float: left;
 }
-/* line 116, ../../component/styles/header.scss */
+/* line 117, ../../component/styles/header.scss */
 .menu-container .menu-item .menu-item-link {
   float: none;
   padding: 0 15px;
@@ -138,14 +136,14 @@
   box-sizing: border-box;
 }
 
-/* line 127, ../../component/styles/header.scss */
+/* line 128, ../../component/styles/header.scss */
 .menu-dropdown {
   background: white;
   position: absolute;
   z-index: 1;
 }
 
-/* line 133, ../../component/styles/header.scss */
+/* line 134, ../../component/styles/header.scss */
 .compact {
   position: fixed;
   vertical-align: middle;
@@ -156,12 +154,12 @@
   z-index: 100;
 }
 
-/* line 143, ../../component/styles/header.scss */
+/* line 144, ../../component/styles/header.scss */
 .right .menu-item .dropdown {
   right: -1px;
 }
 
-/* line 148, ../../component/styles/header.scss */
+/* line 149, ../../component/styles/header.scss */
 .dropdown {
   position: absolute;
   top: 100%;
@@ -183,7 +181,7 @@
   opacity: 1;
   font-family: "Liberation-sans";
 }
-/* line 171, ../../component/styles/header.scss */
+/* line 172, ../../component/styles/header.scss */
 .dropdown li {
   text-align: left;
   line-height: 35px;
@@ -191,35 +189,35 @@
   display: block;
   clear: both;
 }
-/* line 178, ../../component/styles/header.scss */
+/* line 179, ../../component/styles/header.scss */
 .dropdown li a, .dropdown li a:visited, .dropdown li a:active, .dropdown li a:link {
   color: #000;
   text-decoration: none;
   display: block;
   padding: 5px 0px 5px 20px;
 }
-/* line 185, ../../component/styles/header.scss */
+/* line 186, ../../component/styles/header.scss */
 .dropdown li:hover {
   background: black;
 }
-/* line 188, ../../component/styles/header.scss */
+/* line 189, ../../component/styles/header.scss */
 .dropdown li:hover .dropdown-menu-item-link {
   text-decoration: none;
   color: #e6e6e6;
 }
 
-/* line 196, ../../component/styles/header.scss */
+/* line 197, ../../component/styles/header.scss */
 .dropdown-left {
   left: 0;
 }
 
-/* line 200, ../../component/styles/header.scss */
+/* line 201, ../../component/styles/header.scss */
 .dropdown-right {
   right: 0;
   left: auto;
 }
 
-/* line 205, ../../component/styles/header.scss */
+/* line 206, ../../component/styles/header.scss */
 .dropdown-active {
   -webkit-transition: all 0.4s ease-in;
   -moz-transition: all 0.4s ease-in;
@@ -228,14 +226,14 @@
   display: block;
 }
 
-/* line 210, ../../component/styles/header.scss */
+/* line 211, ../../component/styles/header.scss */
 .flyout-indicator {
   margin-top: 10px;
   float: right;
   margin-right: 5px;
 }
 
-/* line 216, ../../component/styles/header.scss */
+/* line 217, ../../component/styles/header.scss */
 .flyout {
   padding: 0;
   list-style: none;
@@ -249,7 +247,7 @@
   z-index: 2;
   background: white;
 }
-/* line 229, ../../component/styles/header.scss */
+/* line 230, ../../component/styles/header.scss */
 .flyout li {
   text-align: left;
   line-height: 35px;
@@ -257,18 +255,18 @@
   display: block;
   clear: both;
 }
-/* line 236, ../../component/styles/header.scss */
+/* line 237, ../../component/styles/header.scss */
 .flyout li a, .flyout li a:visited, .flyout li a:active, .flyout li a:link {
   color: #000;
   text-decoration: none;
   display: block;
   padding: 5px 0px 5px 20px;
 }
-/* line 243, ../../component/styles/header.scss */
+/* line 244, ../../component/styles/header.scss */
 .flyout li:hover {
   background: black;
 }
-/* line 246, ../../component/styles/header.scss */
+/* line 247, ../../component/styles/header.scss */
 .flyout li:hover a, .flyout li:hover a:visited, .flyout li:hover a:active, .flyout li:hover a:link {
   text-decoration: none;
   color: #e6e6e6;
