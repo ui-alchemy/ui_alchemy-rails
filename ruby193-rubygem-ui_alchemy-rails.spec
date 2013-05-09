@@ -34,7 +34,7 @@ Name:          %{?scl_prefix}rubygem-%{gem_name}
 Summary:       Mixing up the best that web technologies have to offer.
 Group:         Applications/System
 License:       MIT
-Version:       1.0.9
+Version:       1.0.10
 Release:       1%{?dist}
 URL:           http://www.ui-alchemy.org
 Source0:       %{?scl_prefix}%{pkg_name}-%{version}.tar.gz
@@ -96,6 +96,9 @@ This package contains documentation for rubygem-%{gem_name}
 %doc %{gem_docdir}
 
 %changelog
+* Thu May 09 2013 Eric D Helms <ehelms@redhat.com> 1.0.10-1
+- new package built with tito
+
 * Mon May 06 2013 Eric D Helms <ehelms@redhat.com> 1.0.9-1
 - new package built with tito
 
