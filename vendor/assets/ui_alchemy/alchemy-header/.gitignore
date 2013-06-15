@@ -1,0 +1,9 @@
+node_modules
+.tmp
+.sass-cache
+demo/components
+*.swp
+*.swn
+*.swo
+dist/
+demo/
