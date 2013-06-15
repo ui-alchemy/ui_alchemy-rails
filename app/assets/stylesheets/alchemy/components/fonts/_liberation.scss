@@ -1,13 +1,14 @@
 @import "ui_alchemy/alchemy/alchemy";
 
+$font_path: 'alchemy/' !default;
 
 @font-face {
     font-family: 'Liberation Sans';
     src: local('Liberation Sans'), local('LiberationSans'), local('Liberation-Sans'),
-         url('alchemy/LiberationSans-Regular-webfont.eot?#iefix') format('eot'),
-         url('alchemy/LiberationSans-Regular-webfont.woff') format('woff'),
-         url('alchemy/LiberationSans-Regular-webfont.ttf') format('truetype'),
-         url('alchemy/LiberationSans-Regular-webfont.svg#webfontLfr8h6FA') format('svg');
+         url($font_path + 'LiberationSans-Regular-webfont.eot?#iefix') format('eot'),
+         url($font_path + 'LiberationSans-Regular-webfont.woff') format('woff'),
+         url($font_path + 'LiberationSans-Regular-webfont.ttf') format('truetype'),
+         url($font_path + 'LiberationSans-Regular-webfont.svg#webfontLfr8h6FA') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -16,9 +17,9 @@
 @font-face {
     font-family: 'Liberation Sans';
     src: local('Liberation Sans Italic'), local('LiberationSansItalic'), local('Liberation-Sans-Italic'),
-         url('alchemy/LiberationSans-Italic-webfont.woff') format('woff'),
-         url('alchemy/LiberationSans-Italic-webfont.ttf') format('truetype'),
-         url('alchemy/LiberationSans-Italic-webfont.svg#webfont8TmwkzPJ') format('svg');
+         url($font_path + 'LiberationSans-Italic-webfont.woff') format('woff'),
+         url($font_path + 'LiberationSans-Italic-webfont.ttf') format('truetype'),
+         url($font_path + 'LiberationSans-Italic-webfont.svg#webfont8TmwkzPJ') format('svg');
     font-weight: normal;
     font-style: italic;
 }
@@ -26,9 +27,9 @@
 @font-face {
     font-family: 'Liberation Sans';
     src: local('Liberation Sans Bold'), local('LiberationSansBold'), local('Liberation-Sans-Bold'),
-         url('alchemy/LiberationSans-Bold-webfont.woff') format('woff'),
-         url('alchemy/LiberationSans-Bold-webfont.ttf') format('truetype'),
-         url('alchemy/LiberationSans-Bold-webfont.svg#webfontHyWb8e07') format('svg');
+         url($font_path + 'LiberationSans-Bold-webfont.woff') format('woff'),
+         url($font_path + 'LiberationSans-Bold-webfont.ttf') format('truetype'),
+         url($font_path + 'LiberationSans-Bold-webfont.svg#webfontHyWb8e07') format('svg');
     font-weight: bold;
     font-style: normal;
 }
@@ -36,9 +37,9 @@
 @font-face {
     font-family: 'Liberation Sans';
     src: local('Liberation Sans Bold Italic'), local('LiberationSansBoldItalic'), local('Liberation-Sans-Bold-Italic'),
-         url('alchemy/LiberationSans-BoldItalic-webfont.woff') format('woff'),
-         url('alchemy/LiberationSans-BoldItalic-webfont.ttf') format('truetype'),
-         url('alchemy/LiberationSans-BoldItalic-webfont.svg#webfont8uGO27Bu') format('svg');
+         url($font_path + 'LiberationSans-BoldItalic-webfont.woff') format('woff'),
+         url($font_path + 'LiberationSans-BoldItalic-webfont.ttf') format('truetype'),
+         url($font_path + 'LiberationSans-BoldItalic-webfont.svg#webfont8uGO27Bu') format('svg');
     font-weight: bold;
     font-style: italic;
 }
