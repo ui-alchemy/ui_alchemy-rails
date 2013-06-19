@@ -1,0 +1,28 @@
+{
+  "name": "alchemy-header",
+  "version": "0.0.9",
+  "main": [
+    "*.scss",
+    "*.css",
+    ".js"
+  ],
+  "ignore": [],
+  "dependencies": {
+    "jquery": "~1.9.1",
+    "angular": "~1.0.5",
+    "alchemy": ">=0.0.1"
+  },
+  "devDependencies": {
+    "jquery": "~1.9.1",
+    "angular-mocks": "~1.0.5",
+    "font-awesome": ">=3.2.1"
+  },
+  "gitHead": "c042be273f0cfad8569aee0f73861407af640773",
+  "_id": "alchemy-header@0.0.9",
+  "readme": "ERROR: No README.md file found!",
+  "description": "ERROR: No README.md file found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ui-alchemy/alchemy-header.git"
+  }
+}
