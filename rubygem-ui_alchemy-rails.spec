@@ -1,3 +1,6 @@
+%{?scl:%scl_package rubygem-%{gem_name}}
+%{!?scl:%global pkg_name %{name}}
+
 # vim: sw=4:ts=4:et
 #
 # Copyright 2011 Red Hat, Inc.
@@ -25,13 +28,13 @@
 
 %global gem_name ui_alchemy-rails
 
-%if 0%{?rhel} == 6 || 0%{?fedora} < 17
-%define rubyabi 1.8
-%else
+%if "%{?scl}" == "ruby193" || 0%{?rhel} > 6 || 0%{?fedora} > 16
 %define rubyabi 1.9.1
+%else
+%define rubyabi 1.8
 %endif
 
-%if 0%{?rhel} == 6
+%if 0%{?rhel} == 6 && "%{?scl}" == ""
 %global gem_dir %(ruby -rubygems -e 'puts Gem::dir' 2>/dev/null)
 %global gem_docdir %{gem_dir}/doc/%{gem_name}-%{version}
 %global gem_cache %{gem_dir}/cache/%{gem_name}-%{version}.gem
@@ -39,26 +42,28 @@
 %global gem_instdir %{gem_dir}/gems/%{gem_name}-%{version}
 %endif
 
-%if 0%{?fedora}
-BuildRequires:  rubygems-devel
-%endif
+BuildRequires: %{?scl_prefix}rubygems-devel
 
-Name:          rubygem-%{gem_name}
+Name:          %{?scl_prefix}rubygem-%{gem_name}
 Summary:       Mixing up the best that web technologies have to offer.
 Group:         Applications/System
 License:       MIT
-Version:       1.0.9
+Version:       1.0.10
 Release:       1%{?dist}
 URL:           http://www.ui-alchemy.org
 Source0:       %{name}-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-Requires:       ruby(abi) = %{rubyabi}
-Requires:       ruby(rubygems) 
-Requires:       rubygem(compass)
-BuildRequires:  ruby(abi) = %{rubyabi}
-BuildRequires:  ruby(rubygems) 
+%if 0%{?fedora} > 18
+Requires:       %{?scl_prefix}ruby(release)
+%else
+Requires:       %{?scl_prefix}ruby(abi) = %{rubyabi}
+%endif
+Requires:       %{?scl_prefix}ruby(rubygems) 
+Requires:       %{?scl_prefix}rubygem(compass)
+BuildRequires:  %{?scl_prefix}ruby(abi) = %{rubyabi}
+BuildRequires:  %{?scl_prefix}ruby(rubygems) 
 BuildArch:      noarch
-Provides:       rubygem(%{gem_name}) = %{version}
+Provides:       %{?scl_prefix}rubygem(%{gem_name}) = %{version}
 
 %description
 A Rails engine providing a set of web assets.
@@ -67,16 +72,22 @@ A Rails engine providing a set of web assets.
 %setup -q
 
 %build
+%{?scl:scl enable %{scl} "}
 LANG=en_US.utf-8 gem build %{gem_name}.gemspec
+%{?scl:"}
 
 %install
+%{?scl:scl enable %{scl} "}
 gem install \
      --local \
-     --install-dir %{buildroot}%{gem_dir} \
+     --install-dir .%{gem_dir} \
      --force \
+     --no-rdoc \
+     --no-ri \
      %{gem_name}-%{version}.gem
+%{?scl:"}
 
-mkdir -p %{buildroot}%{gem_dir}
+mkdir -p .%{gem_dir}
 
 rm -rf %{buildroot}%{gem_instdir}/.yardoc
 
@@ -94,7 +105,7 @@ rm -rf %{buildroot}%{gem_instdir}/.yardoc
 
 %package doc
 BuildArch:  noarch
-Requires:   %{name} = %{version}-%{release}
+Requires:   %{?scl_prefix}%{name} = %{version}-%{release}
 Summary:    Documentation for rubygem-%{gem_name}
 
 %description doc
