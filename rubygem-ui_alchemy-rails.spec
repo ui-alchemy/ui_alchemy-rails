@@ -48,7 +48,7 @@ Name:          %{?scl_prefix}rubygem-%{gem_name}
 Summary:       Mixing up the best that web technologies have to offer.
 Group:         Applications/System
 License:       MIT
-Version:       1.0.10
+Version:       1.0.11
 Release:       1%{?dist}
 URL:           http://www.ui-alchemy.org
 Source0:       %{pkg_name}-%{version}.tar.gz
@@ -114,6 +114,19 @@ This package contains documentation for rubygem-%{gem_name}
 %doc %{gem_docdir}
 
 %changelog
+* Thu Jun 20 2013 Eric D Helms <ehelms@redhat.com> 1.0.11-1
+- Updating spec. (ehelms@redhat.com)
+- Version bump to 1.0.11 (ehelms@redhat.com)
+- Spec: Enabling SCL prefixes in spec. (ehelms@redhat.com)
+- Merge pull request #163 from ehelms/vendor-update (ericdhelms@gmail.com)
+- Alchemy-header update. (ericdhelms@gmail.com)
+- Fonts: Make setting the font_path optional. (ericdhelms@gmail.com)
+- Added support for maxlength attribute for jeditable textarea
+  (mtapaswi@redhat.com)
+- Version bump. (ehelms@redhat.com)
+- Merge pull request #159 from ehelms/component-updates (ericdhelms@gmail.com)
+- Bumping the version of Alchemy header included. (ericdhelms@gmail.com)
+
 * Mon May 06 2013 Eric D Helms <ehelms@redhat.com> 1.0.9-1
 - Version bump. (ehelms@redhat.com)
 - Updating alchemy-tables and alchemy-header. (ehelms@redhat.com)
