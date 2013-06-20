@@ -51,7 +51,7 @@ License:       MIT
 Version:       1.0.10
 Release:       1%{?dist}
 URL:           http://www.ui-alchemy.org
-Source0:       %{name}-%{version}.tar.gz
+Source0:       %{pkg_name}-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 %if 0%{?fedora} > 18
 Requires:       %{?scl_prefix}ruby(release)
@@ -69,27 +69,26 @@ Provides:       %{?scl_prefix}rubygem(%{gem_name}) = %{version}
 A Rails engine providing a set of web assets.
 
 %prep
-%setup -q
+%setup -n %{pkg_name}-%{version} -q
 
 %build
-%{?scl:scl enable %{scl} "}
+%{?scl:scl enable %{scl} - << \EOF}
 LANG=en_US.utf-8 gem build %{gem_name}.gemspec
-%{?scl:"}
+%{?scl:EOF}
 
 %install
 %{?scl:scl enable %{scl} "}
 gem install \
      --local \
-     --install-dir .%{gem_dir} \
+     --install-dir %{buildroot}%{gem_dir} \
      --force \
-     --no-rdoc \
-     --no-ri \
      %{gem_name}-%{version}.gem
 %{?scl:"}
 
-mkdir -p .%{gem_dir}
+mkdir -p %{buildroot}%{gem_dir}
 
 rm -rf %{buildroot}%{gem_instdir}/.yardoc
+
 
 %files
 %dir %{gem_instdir}
