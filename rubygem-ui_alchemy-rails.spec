@@ -28,11 +28,12 @@
 
 %global gem_name ui_alchemy-rails
 
-%if "%{?scl}" == "ruby193" || 0%{?rhel} > 6 || 0%{?fedora} > 16
+%if "%{?scl}" == "ruby193" || 0%{?rhel} > 6 || 0%{?fedora} < 19
 %define rubyabi 1.9.1
 %else
-%define rubyabi 1.8
+%define ruby(release) 2.0
 %endif
+
 
 %if 0%{?rhel} == 6 && "%{?scl}" == ""
 %global gem_dir %(ruby -rubygems -e 'puts Gem::dir' 2>/dev/null)
@@ -60,7 +61,11 @@ Requires:       %{?scl_prefix}ruby(abi) = %{rubyabi}
 %endif
 Requires:       %{?scl_prefix}ruby(rubygems) 
 Requires:       %{?scl_prefix}rubygem(compass)
-BuildRequires:  %{?scl_prefix}ruby(abi) = %{rubyabi}
+%if 0%{?fedora} > 18
+BuildRequires:       %{?scl_prefix}ruby(release)
+%else
+BuildRequires:       %{?scl_prefix}ruby(abi) = %{rubyabi}
+%endif
 BuildRequires:  %{?scl_prefix}ruby(rubygems) 
 BuildArch:      noarch
 Provides:       %{?scl_prefix}rubygem(%{gem_name}) = %{version}
