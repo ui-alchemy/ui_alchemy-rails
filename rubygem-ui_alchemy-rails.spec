@@ -30,8 +30,6 @@
 
 %if "%{?scl}" == "ruby193" || 0%{?rhel} > 6 || 0%{?fedora} < 19
 %define rubyabi 1.9.1
-%else
-%define ruby(release) 2.0
 %endif
 
 
