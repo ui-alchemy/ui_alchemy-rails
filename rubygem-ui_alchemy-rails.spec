@@ -47,7 +47,7 @@ Name:          %{?scl_prefix}rubygem-%{gem_name}
 Summary:       Mixing up the best that web technologies have to offer.
 Group:         Applications/System
 License:       MIT
-Version:       1.0.11
+Version:       1.0.12
 Release:       1%{?dist}
 URL:           http://www.ui-alchemy.org
 Source0:       %{pkg_name}-%{version}.tar.gz
@@ -117,6 +117,13 @@ This package contains documentation for rubygem-%{gem_name}
 %doc %{gem_docdir}
 
 %changelog
+* Tue Aug 27 2013 Eric D Helms <ehelms@redhat.com> 1.0.12-1
+- Version bump to 1.0.12 (ehelms@redhat.com)
+- Updating UnderscoreJS to 1.5.1 (ehelms@redhat.com)
+- Removed an unused spec macro (paji@redhat.com)
+- Changes to get alchemy building on f19 (paji@redhat.com)
+- Adding a build target for Fedora 19 (paji@redhat.com)
+
 * Thu Jun 20 2013 Eric D Helms <ehelms@redhat.com> 1.0.11-1
 - Updating spec. (ehelms@redhat.com)
 - Version bump to 1.0.11 (ehelms@redhat.com)
