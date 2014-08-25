@@ -9,10 +9,8 @@ disttag = .el6
 blacklist =
 scl = ruby193
 
-[katello-thirdparty-fedora18]
-disttag = .fc18
-blacklist = ruby193-rubygem-ui_alchemy-rails
+[katello-thirdparty-rhel7]
+disttag = .el7
+blacklist =
+scl = ruby193
 
-[katello-thirdparty-fedora19]
-disttag = .fc19
-blacklist = ruby193-rubygem-ui_alchemy-rails
